@@ -16,7 +16,7 @@ jobs:
 
         # Run tests
         - name: Test
-          run: dotnet run
+          run: dotnet test
 
         # Generate the website
         - name: Publish
