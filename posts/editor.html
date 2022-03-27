@@ -15,14 +15,24 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#!">House of Lutica</a>
+        <a class="navbar-brand" href="../index.html">House of Lutica</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/sub_title/About.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="/sub_title/contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="/posts/readside.html">Blog</a></li>
+                <script>function go_out (outside){
+                    var go_out;
+                    go_out = confirm("if you go to out, will be discard your input. Are you sure?");
+                    if(go_out){
+                        location.replace(outside)
+                    }
+                    else{
+                        
+                    };
+                }</script>
+                <li class="nav-item"><a class="nav-link" onclick = "go_out('/index.html')">Home</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="go_out('/sub_title/About.html')">About</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="go_out('/sub_title/contact.html')">Contact</a></li>
+                <li class="nav-item"><a class="nav-link active" onclick="go_out('/posts/readside.html')">Blog</a></li>
             </ul>
         </div>
     </div>
