@@ -8,10 +8,12 @@ jobs:
         # Checkout the code
         - uses: actions/checkout@v2
 
-        # Install .NET Core SDK
-        - name: Setup .NET Core
-          uses: actions/setup-dotnet@v2
-
+        # sets up .NET Core SDK 3.1
+        - name: Setup .NET Core SDK
+          uses: actions/setup-dotnet@v2.0.0
+          with: 
+            dotnet-version: 3.1
+          
         # Run tests
         - name: Test
           run: dotnet test
