@@ -5,6 +5,7 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+
 String.prototype.format = function() {
     var formatted = this;
     for( var arg in arguments ) {
@@ -12,3 +13,5 @@ String.prototype.format = function() {
     }
     return formatted;
 };
+
+
