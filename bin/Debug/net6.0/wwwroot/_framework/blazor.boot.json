@@ -196,13 +196,13 @@
       "mscorlib.dll": "sha256-c1dVVfosFaf5aiS3brr2amBi1Ue0kg6mqECzmCbGyfA=",
       "netstandard.dll": "sha256-+9Yr\/gSP3tCZAMbOdAcGhHGuMcyg\/AaxVKtt3tGsvao=",
       "System.Private.CoreLib.dll": "sha256-SnxOe5QK250duVAQOw0iWr1sODhUuVEUykExQyQ\/WSk=",
-      "Luticahouse.dll": "sha256-6sXiFs0dqSwKPNCUUkeDBntRMsazseykWGAdBc1HkjE="
+      "Luticahouse.dll": "sha256-AaimTGPUGdXjfPMJgv9448+YkCHgVfs2G3dR9zR2N4k="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Luticahouse.pdb": "sha256-VnvvSkkhVg6AjTi\/j4o4K3B9WTrF5dcCP0p+LU4Pgz8="
+      "Luticahouse.pdb": "sha256-N5A0RdbXVIyfqn+28L2RlGROoPe78Y8bWnkH5TOjRCI="
     },
     "runtime": {
       "dotnet.6.0.2.rpg49af7l3.js": "sha256-wbTVn69TU0+WI83iB+kky8tf\/BjZdYJeM0rUP96ur\/c=",

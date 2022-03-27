@@ -20,8 +20,9 @@ jobs:
 
         # Generate the website
         - name: Publish
-          run: 
-            dotnet publish Luticahouse.csproj --configuration Release
+          run: |
+            cp wwwroot/index.html 
+            dotnet publish myapp.csproj --configuration Release
 
         # Publish the website
         - name: GitHub Pages action
