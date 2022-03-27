@@ -1,7 +1,6 @@
 name: 'Publish application'
 on: 
-  push:
-    branches : [master]
+  push
 
 jobs:
   build:
