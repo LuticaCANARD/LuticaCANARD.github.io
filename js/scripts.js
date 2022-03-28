@@ -15,7 +15,7 @@ String.prototype.format = function() {
 };
 
 
-read_post_path = ""
+var read_post_path = ""
 function load_post(name){
     read_post_path = "../posts/postDB/"+name+".html";
 }
