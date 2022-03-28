@@ -14,6 +14,9 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link href="posts\postDB/pics/vir.jpg"/>
+        <script src="/js/scripts.js">
+            document.getElementById("0post_pic").src = "posts/postDB/pics/vir.jpg";
+        </script>
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -49,9 +52,6 @@
                     <div class="card mb-4">
                         <a href="/posts/readside.html" onclick = "/js/scripts.js/load_post(document.getElementById('0post_title').innerText)">
                             <img class="card-img-top" id="0post_pic" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                        <script src="/js/scripts.js">
-                            document.getElementById("0post_pic").src = "posts/postDB/pics/vir.jpg";
-                        </script>
                         <div class="card-body">
                             <div class="small text-muted" id="0post_day">January 1, 2022</div>
                             <h2 class="card-title"id="0post_title"href="/posts/readside.html" onclick = "/js/scripts.js/load_post(document.getElementById('0post_title').innerText)">2022-03-27-1</h2>
