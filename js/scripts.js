@@ -24,4 +24,8 @@ function load_post_tree (){
     fs.Dir("")
 }
 
+function readside_post_load(read_name_path){
+    document.getElementById('title_of_this_post').innerText = read_name_path.document.getElementById('title');
+}
+
 
