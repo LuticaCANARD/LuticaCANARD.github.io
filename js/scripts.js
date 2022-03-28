@@ -15,3 +15,12 @@ String.prototype.format = function() {
 };
 
 
+read_post_path = ""
+function load_post(name){
+    read_post_path = "../posts/postDB/"+name+".html";
+}
+function load_post_tree (){
+    var fs = require('fs');
+    fs.Dir("")
+}
+
