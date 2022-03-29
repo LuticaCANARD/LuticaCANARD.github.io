@@ -9,7 +9,7 @@
 		to_pic_src = id;
 	}
 	function button_fun(){
-		if (buttoncount == testpic_list.lenght-1){
+		if (buttoncount == 1){
 			buttoncount = 0;
 		}else{
 			buttoncount++;
