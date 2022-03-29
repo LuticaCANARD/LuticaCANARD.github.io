@@ -1,1 +1,13 @@
-npm run
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  label_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
+        run: |
+          npm run
