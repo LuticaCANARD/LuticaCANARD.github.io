@@ -24,8 +24,19 @@ var app = (function () {
     function safe_not_equal(a, b) {
         return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
     }
+    let src_url_equal_anchor;
+    function src_url_equal(element_src, url) {
+        if (!src_url_equal_anchor) {
+            src_url_equal_anchor = document.createElement('a');
+        }
+        src_url_equal_anchor.href = url;
+        return element_src === src_url_equal_anchor.href;
+    }
     function is_empty(obj) {
         return Object.keys(obj).length === 0;
+    }
+    function append(target, node) {
+        target.appendChild(node);
     }
     function insert(target, node, anchor) {
         target.insertBefore(node, anchor || null);
@@ -35,6 +46,22 @@ var app = (function () {
     }
     function element(name) {
         return document.createElement(name);
+    }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
+    }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
+    function attr(node, attribute, value) {
+        if (value == null)
+            node.removeAttribute(attribute);
+        else if (node.getAttribute(attribute) !== value)
+            node.setAttribute(attribute, value);
     }
     function children(element) {
         return Array.from(element.childNodes);
@@ -267,6 +294,10 @@ var app = (function () {
     function dispatch_dev(type, detail) {
         document.dispatchEvent(custom_event(type, Object.assign({ version: '3.46.4' }, detail), true));
     }
+    function append_dev(target, node) {
+        dispatch_dev('SvelteDOMInsert', { target, node });
+        append(target, node);
+    }
     function insert_dev(target, node, anchor) {
         dispatch_dev('SvelteDOMInsert', { target, node, anchor });
         insert(target, node, anchor);
@@ -274,6 +305,26 @@ var app = (function () {
     function detach_dev(node) {
         dispatch_dev('SvelteDOMRemove', { node });
         detach(node);
+    }
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
+        const modifiers = options === true ? ['capture'] : options ? Array.from(Object.keys(options)) : [];
+        if (has_prevent_default)
+            modifiers.push('preventDefault');
+        if (has_stop_propagation)
+            modifiers.push('stopPropagation');
+        dispatch_dev('SvelteDOMAddEventListener', { node, event, handler, modifiers });
+        const dispose = listen(node, event, handler, options);
+        return () => {
+            dispatch_dev('SvelteDOMRemoveEventListener', { node, event, handler, modifiers });
+            dispose();
+        };
+    }
+    function attr_dev(node, attribute, value) {
+        attr(node, attribute, value);
+        if (value == null)
+            dispatch_dev('SvelteDOMRemoveAttribute', { node, attribute });
+        else
+            dispatch_dev('SvelteDOMSetAttribute', { node, attribute, value });
     }
     function validate_slots(name, slot, keys) {
         for (const slot_key of Object.keys(slot)) {
@@ -308,24 +359,58 @@ var app = (function () {
 
     function create_fragment(ctx) {
     	let h1;
+    	let t1;
+    	let div;
+    	let img;
+    	let img_src_value;
+    	let t2;
+    	let button;
+    	let mounted;
+    	let dispose;
 
     	const block = {
     		c: function create() {
     			h1 = element("h1");
-    			h1.textContent = `Hello ${/*name*/ ctx[0]}!`;
-    			add_location(h1, file, 4, 0, 41);
+    			h1.textContent = "Lutica's test field!";
+    			t1 = space();
+    			div = element("div");
+    			img = element("img");
+    			t2 = space();
+    			button = element("button");
+    			add_location(h1, file, 20, 0, 481);
+    			attr_dev(img, "id", "image_test");
+    			if (!src_url_equal(img.src, img_src_value = /*testpic_list*/ ctx[0][/*buttoncount*/ ctx[1]])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "...");
+    			add_location(img, file, 22, 1, 531);
+    			add_location(button, file, 23, 1, 597);
+    			attr_dev(div, "id", "test");
+    			add_location(div, file, 21, 0, 512);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, img);
+    			append_dev(div, t2);
+    			append_dev(div, button);
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", button_fun(/*testpic_list*/ ctx[0], /*buttoncount*/ ctx[1]), false, false, false);
+    				mounted = true;
+    			}
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(h1);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(div);
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -340,27 +425,54 @@ var app = (function () {
     	return block;
     }
 
+    function change_pic(to_pic_src, id) {
+    }
+
+    function button_fun(list_of_src, count) {
+    	if (count == list_of_src.lenght) {
+    		count = 0;
+    	} else {
+    		count++;
+    	}
+    }
+
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
     	let name = 'world';
+    	let image_test_src = "https://pbs.twimg.com/media/FOwLE96aQAAqBzU?format=jpg&name=large";
+    	let image_test_src_2 = "https://pbs.twimg.com/media/FOwLEJbaAAEgzcG?format=jpg&name=large";
+    	let testpic_list = [image_test_src, image_test_src_2];
+    	let buttoncount = 0;
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ name });
+    	$$self.$capture_state = () => ({
+    		name,
+    		image_test_src,
+    		image_test_src_2,
+    		testpic_list,
+    		buttoncount,
+    		change_pic,
+    		button_fun
+    	});
 
     	$$self.$inject_state = $$props => {
-    		if ('name' in $$props) $$invalidate(0, name = $$props.name);
+    		if ('name' in $$props) name = $$props.name;
+    		if ('image_test_src' in $$props) image_test_src = $$props.image_test_src;
+    		if ('image_test_src_2' in $$props) image_test_src_2 = $$props.image_test_src_2;
+    		if ('testpic_list' in $$props) $$invalidate(0, testpic_list = $$props.testpic_list);
+    		if ('buttoncount' in $$props) $$invalidate(1, buttoncount = $$props.buttoncount);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [name];
+    	return [testpic_list, buttoncount];
     }
 
     class App extends SvelteComponentDev {
