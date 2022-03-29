@@ -8,11 +8,11 @@
 	function change_pic(to_pic_src,id){
 		to_pic_src = id;
 	}
-	function button_fun(list_of_src,count){
-		if (count == list_of_src.lenght){
-			count = 0;
+	function button_fun(){
+		if (buttoncount == testpic_list.lenght){
+			buttoncount = 0;
 		}else{
-			count++;
+			buttoncount++;
 		}
 	}
 
@@ -21,5 +21,5 @@
 <h1> Lutica's test field!</h1>
 <div id = "test">
 	<img id="image_test" src={testpic_list[buttoncount]} alt="..." >
-	<button on:click={button_fun(testpic_list,buttoncount)}/>
+	<button on:click={button_fun}/>
 </div>
