@@ -18,7 +18,7 @@ String.prototype.format = function() {
 var read_post_path
 function load_post(name,url){
     var local_path = "../posts/postDB/"+name+".html";
-    read_post_path = local_path;
+    read_post_path = local_path.toString;
     location.href = url
 }
 function load_post_tree (){
