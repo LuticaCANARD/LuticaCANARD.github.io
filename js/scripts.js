@@ -16,10 +16,13 @@ String.prototype.format = function() {
 
 
 var read_post_path
-function load_post(name,url){
+function save_post_loc(name,url){ // 이동및 로딩용 post 저장하기
     var local_path = "../posts/postDB/"+name+".html";
-    read_post_path = local_path.toString;
-    location.href = url
+    const fs = require('fs');
+    parsedJSON = JSON.parse('./reading_path.json');
+    delete parsedJSON['read_point'];
+    parsedJSON['read_point'] = local_path
+    location.href = url // 이동부
 }
 function load_post_tree (){
     var fs = require('fs');
