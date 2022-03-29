@@ -18,7 +18,8 @@ String.prototype.format = function() {
 var read_post_path
 function save_post_loc(name,url){ // 이동및 로딩용 post 저장하기
     var local_path = "../posts/postDB/"+name+".html";
-    parsedJSON = JSON.parse('./reading_path.json');
+    parseing_JSON = require('./reading_path.json');
+    parsedJSON = JSON.parse(parseing_JSON);
     delete parsedJSON['read_point'];
     parsedJSON['read_point'] = local_path
     location.href = url // 이동부
