@@ -1,12 +1,12 @@
 
 <script>            
                 let menu_listsk1 = [
-                    {id : 1 , label : "Home",href : "#"},
-                    {id : 2 , label : "Blog",href : "#"},
-                    {id : 3 , label : "Posts",href : "#"},
-                    {id : 4, label : "Contact" , href : "#"},
-                    {id : 5,label : "profile" , href:"#"},
-                    {id : 6, label : "Other Site",href : "#"} ];
+                    {id : 1 , label : "Home",href : "#",onclick : {}},
+                    {id : 2 , label : "Blog",href : "#",onclick : {}},
+                    {id : 3 , label : "Posts",href : "#",onclick : {}},
+                    {id : 4, label : "Contact" , href : "#",onclick : {}},
+                    {id : 5, label : "Profile" , href:"#",onclick : {}},
+                    {id : 6, label : "Other Site",href : "#",onclick : {}} ];
                     let context2 = "<h1> Welcome to Lutica's Field! <br> <br> <p1 class = 'p-2'>Here is Test Field about Svelte web blogs! ";
 						//context 불러오기 구현
 					let link;   
@@ -39,7 +39,9 @@
                             nav_bar = "navbar-light"
                             console.log("be white")
                     }}
-                    
+                    import Inner_context from "./context.svelte"
+                    let content_mode;
+
 </script>
                 
 
@@ -53,15 +55,16 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../build/styles.css" rel="stylesheet"/>
+        
     </head>
-    <body>
+    <body class = {is_darkmode_light}>
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class={"border-end "+is_darkmode_light} id="sidebar-wrapper" rel="../build/styles.css">
                <div class={"sidebar-heading border-bottom"+is_darkmode_light+font_mode}>Lutica's field</div>
                 <div class="list-group list-group-flush">
                     {#each menu_listsk1 as menu (menu.id) }
-                        <il><a class={"list-group-item list-group-item-action "+List_item_bgcolor+font_mode+" p-3"} href={menu.href}>{menu.label}</a></il>
+                        <il><a class={"list-group-item list-group-item-action "+List_item_bgcolor+font_mode+" p-3"} on:click = {()=> content_mode=menu.label} href={menu.href}>{menu.label}</a></il>
                     {/each}
                 </div>
             </div>
@@ -92,9 +95,13 @@
                 </nav>
 				<div> 
                 <!-- Page content-->
-                {@html context2}
+                <Inner_context
+                context_mode = {content_mode}
+                bg_mode = {is_darkmode_light}
+                font_mode = {font_mode}
+                size_all = "device-width"
+                size_bar = ""/>
 			</div>
-            </div>
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
