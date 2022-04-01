@@ -1,132 +1,102 @@
 
-<script>
-let scrolling;
-let toolbar_on= false;
-let bar_width =0;
-function open_close_toolbar(){
-	if(toolbar_on==false){
-		// open tool bar
-		return{
-			css : t=>{
-				return
-				width : 0;
-			}
-		}
-	}else{
-		//close tool bar
-	}
-}
-const toolbar_menu = [
-	{label : "logo",href : "#",onclick : {}},
-	{label : "menu",href : "# "},
-	{label : "post",href : "#"},
-	{label : "About", href : "#" },
-	{label : "contect", href : "#"}
-]
+<script>            
+                let menu_listsk1 = [
+                    {id : 1 , label : "Home",href : "#"},
+                    {id : 2 , label : "Blog",href : "#"},
+                    {id : 3 , label : "Posts",href : "#"},
+                    {id : 4, label : "Contact" , href : "#"},
+                    {id : 5,label : "profile" , href:"#"},
+                    {id : 6, label : "Other Site",href : "#"} ];
+                    let context2 = "<h1> Welcome to Lutica's Field! <br> <br> <p1 class = 'p-2'>Here is Test Field about Svelte web blogs! ";
+						//context 불러오기 구현
+					let link;   
+                    let dropdown = [
+                        {id : 1,label : "Action",href : "#",onclick : ""},
+                        {id : 2, label : "Other Action", href: "#", onclick :""}
+                    ];
+                    let navbar = [
+                        {id:1,label :"Home",href :"#" }
+                    ]
+                    let is_darkmode ="bg-white"
+                    let is_darkmode_light ="bg-light"
+                    let font_mode = ""
+                    let List_item_bgcolor ="list-group-item-light"
+                    let nav_bar = "navbar-light"
+                    function funis_darkmode() {
+                        if(is_darkmode=="bg-white"||is_darkmode_light=="bg-light"){
+                            font_mode = " text-white"
+                            is_darkmode = "bg-black";
+                            is_darkmode_light = "bg-dark";
+                            List_item_bgcolor ="list-group-item-dark"
+                            nav_bar = "navbar-dark"
+                            console.log("be black");
+                        }else{
+                            List_item_bgcolor ="list-group-item-light"
+                            is_darkmode = "bg-white";
+                            is_darkmode_light = "bg-light";
+                            font_mode = ""
+                            List_item_bgcolor ="list-group-item-light"
+                            nav_bar = "navbar-light"
+                            console.log("be white")
+                    }}
+                    
 </script>
+                
 
-<style type="text/scss">
-	.Cbox{
-	position: absolute;
-	top: 0px;
-	left: 0;
-	width: 100%;
-	bottom: 1500px;
-	height: 1500px;
-	background-color: black;
-	}
-	.Cbox .formal{
-	padding-left: 50%;
-	padding-top: 10%;
-	color :antiquewhite;
-	font-size: large;
-	}
-	.foreground {
-		position: absolute;
-		top: 3000px;
-		left: 0;
-		bottom:3200px;
-		width: 100%;	
-		height: 200px;
-		background-color: rgb(0, 0, 0);
-		color: white;
-		padding: 0% 0% 0% 0%;
-	}
-	.foreground .text{
-		padding: 0% 0% 0% 50%;
-		font-size: large;
-	}
-	 .runch{
-		left : 20%;
-		bottom : 30%;
-		width :auto;
-		height : auto;
-		position: absolute;
-		padding-left: 50%;
-		padding-top:10%;
-		color : red
-	}
-	.main_set{
-		position: absolute;
-		top : 1500px;
-		left : 0px;
-		right: 100%;
-		bottom: 3000px;
-		width : 100%;
-		height: 1500px;
-		color: antiquewhite;
-		background-color: goldenrod;
-	}
-	.main_set .textofmain{
-		top:50%;
-		left : 50%;
-		right : calc(50% + 100px);
-		width: 100%;
-		height: 10%;
-		padding-left: 50%;
-		padding-top: 50%;
-	}
-	.toolbar{
-		position: sticky;
-		top : 50%;
-		left :0;
-		width: {bar_width} ;
-	}
-
-</style>
-<svelte:window bind:scrollY={scrolling}></svelte:window>
-
-
- <!-- 스크롤이 덜 된경우 => propic으로 -->	
-<!--img style=""--> 
-<div   class="Cbox">
-	<div class = "formal">
-		<p1> Lutica's field</p1>
-	</div>
-</div>
-
-
-
-<!-- 스크롤이 다 된 경우 Layout으로-->
-<div class= "runch">
-	<p1> Runch </p1>
-</div>
-
-<div class = "main_set">
-
-	<p1 class="textofmain">this is main</p1>
-
-</div>
-{#if toolbar_on==true}
-<div class = "toolbar">
-	<button on:click={open_close_toolbar()}> toolbar</button>
-</div>
-{/if}
-
-<div class="foreground">
-	<br><br><br>
-	<p1 class = "text"> twitter : @presan100 </p1>
-	<p1 class = "text">scrolled : {scrolling}</p1>
-
-</div>
-
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Simple Sidebar - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../build/styles.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class={"border-end "+is_darkmode_light} id="sidebar-wrapper" rel="../build/styles.css">
+               <div class={"sidebar-heading border-bottom"+is_darkmode_light+font_mode}>Lutica's field</div>
+                <div class="list-group list-group-flush">
+                    {#each menu_listsk1 as menu (menu.id) }
+                        <il><a class={"list-group-item list-group-item-action "+List_item_bgcolor+font_mode+" p-3"} href={menu.href}>{menu.label}</a></il>
+                    {/each}
+                </div>
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class={"navbar navbar-expand-lg "+nav_bar+" "+List_item_bgcolor+" border-bottom"}>
+                    <div class="container-fluid">
+                        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class={"collapse navbar-collapse "+is_darkmode_light} id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class={"nav-item active "+is_darkmode_light+font_mode}><a class="nav-link" href="#!">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <div class={"dropdown-menu dropdown-menu-end "+is_darkmode_light} aria-labelledby="navbarDropdown">
+                                        {#each dropdown as drop}
+                                        <a class={"dropdown-item"+font_mode} href={drop.href}>{drop.label}</a>
+                                        {/each}
+                                        <div class="dropdown-divider"></div>
+                                        <a class={"dropdown-item"+font_mode} href="#!" on:click={funis_darkmode}>Change to Darkmode</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+				<div> 
+                <!-- Page content-->
+                {@html context2}
+			</div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+    </body>

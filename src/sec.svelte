@@ -1,7 +1,0 @@
-<script>
-
-
-</script>
-<html>
-    
-</html>
