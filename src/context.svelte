@@ -1,9 +1,15 @@
-<script>
+<script  src="../post_list\postList.json" type="text/javascript">
     export let context_mode;
     export let bg_mode;
     export let font_mode;
     export let size_all;
     export let size_bar;
+
+    let post_tree=[
+    {"id" : 1 ,"name" : "something","tree" : "something.html"},
+    {"id" : 2 ,"name" : "something?","tree" : "somethingj   .html"}
+
+]
 </script>
 
 <head>
@@ -44,9 +50,15 @@
                     <h1> About Lutica </h1>
                 </center>
             </div>
-            {else if context_mode =="Posts"}
+            {:else if context_mode =="Posts"}
             <div>
-                
+                <h1> Posts</h1>
+                <center>
+                    {#each post_tree as post}
+                    <a class ="" href = {"../src/post_list/"+post.tree}><p1></p1>{post.name}</a><br>
+                    {/each}
+                </center>
+
             </div>
             {:else}
             <div> 

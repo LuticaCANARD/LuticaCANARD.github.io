@@ -78,7 +78,7 @@
                         <div class={"collapse navbar-collapse "+is_darkmode_light} id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                                 <li class={"nav-item active "+is_darkmode_light+font_mode}><a class="nav-link" href="#!">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
+                                <li class={"nav-item"+is_darkmode_light+font_mode}><a class="nav-link" href="#!">Link</a></li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                                     <div class={"dropdown-menu dropdown-menu-end "+is_darkmode_light} aria-labelledby="navbarDropdown">
