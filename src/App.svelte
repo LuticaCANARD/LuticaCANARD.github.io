@@ -41,9 +41,11 @@
                     }}
                     import Inner_context from "./context.svelte"
                     let content_mode;
+                    let toggle_button;
 
 </script>
-                
+<style>
+</style>
 
     <head>
         <meta charset="utf-8" />
@@ -72,18 +74,20 @@
             <div id="page-content-wrapper">
                 <!-- Top navigation-->
                 <nav class={"navbar navbar-expand-lg "+nav_bar+" "+List_item_bgcolor+" border-bottom"}>
-                    <div class="container-fluid">
-                        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+                    <div class="container-fluid"bind:clientWidth = {toggle_button} >
+
+                        <button class="btn btn-primary" id="sidebarToggle" on:click={funis_darkmode}>Change to Darkmode</button>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <div class={"collapse navbar-collapse "+is_darkmode_light} id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                                <li class={"nav-item active "+is_darkmode_light+font_mode}><a class="nav-link" href="#!">Home</a></li>
-                                <li class={"nav-item"+is_darkmode_light+font_mode}><a class="nav-link" href="#!">Link</a></li>
+                                {#each menu_listsk1 as drop}
+                                <li class={"nav-item active "+is_darkmode_light+font_mode}><a class="nav-link" href={drop.href} on:click = {()=>content_mode=drop.label}>{drop.label}</a></li>
+                                {/each}
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">other_menu</a>
                                     <div class={"dropdown-menu dropdown-menu-end "+is_darkmode_light} aria-labelledby="navbarDropdown">
                                         {#each dropdown as drop}
-                                        <a class={"dropdown-item"+font_mode} href={drop.href}>{drop.label}</a>
+                                        <a class={"dropdown-item"+font_mode} href={drop.href} >{drop.label}</a>
                                         {/each}
                                         <div class="dropdown-divider"></div>
                                         <a class={"dropdown-item"+font_mode} href="#!" on:click={funis_darkmode}>Change to Darkmode</a>

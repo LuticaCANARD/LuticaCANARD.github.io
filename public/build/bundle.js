@@ -75,6 +75,59 @@ var app = (function () {
     function children(element) {
         return Array.from(element.childNodes);
     }
+    // unfortunately this can't be a constant as that wouldn't be tree-shakeable
+    // so we cache the result instead
+    let crossorigin;
+    function is_crossorigin() {
+        if (crossorigin === undefined) {
+            crossorigin = false;
+            try {
+                if (typeof window !== 'undefined' && window.parent) {
+                    void window.parent.document;
+                }
+            }
+            catch (error) {
+                crossorigin = true;
+            }
+        }
+        return crossorigin;
+    }
+    function add_resize_listener(node, fn) {
+        const computed_style = getComputedStyle(node);
+        if (computed_style.position === 'static') {
+            node.style.position = 'relative';
+        }
+        const iframe = element('iframe');
+        iframe.setAttribute('style', 'display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; ' +
+            'overflow: hidden; border: 0; opacity: 0; pointer-events: none; z-index: -1;');
+        iframe.setAttribute('aria-hidden', 'true');
+        iframe.tabIndex = -1;
+        const crossorigin = is_crossorigin();
+        let unsubscribe;
+        if (crossorigin) {
+            iframe.src = "data:text/html,<script>onresize=function(){parent.postMessage(0,'*')}</script>";
+            unsubscribe = listen(window, 'message', (event) => {
+                if (event.source === iframe.contentWindow)
+                    fn();
+            });
+        }
+        else {
+            iframe.src = 'about:blank';
+            iframe.onload = () => {
+                unsubscribe = listen(iframe.contentWindow, 'resize', fn);
+            };
+        }
+        append(node, iframe);
+        return () => {
+            if (crossorigin) {
+                unsubscribe();
+            }
+            else if (unsubscribe && iframe.contentWindow) {
+                unsubscribe();
+            }
+            detach(iframe);
+        };
+    }
     function custom_event(type, detail, bubbles = false) {
         const e = document.createEvent('CustomEvent');
         e.initCustomEvent(type, bubbles, false, detail);
@@ -1648,7 +1701,7 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[13] = list[i];
+    	child_ctx[16] = list[i];
     	return child_ctx;
     }
 
@@ -1658,18 +1711,24 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (66:20) {#each menu_listsk1 as menu (menu.id) }
-    function create_each_block_1(key_1, ctx) {
+    function get_each_context_2(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[21] = list[i];
+    	return child_ctx;
+    }
+
+    // (68:20) {#each menu_listsk1 as menu (menu.id) }
+    function create_each_block_2(key_1, ctx) {
     	let il;
     	let a;
-    	let t_value = /*menu*/ ctx[16].label + "";
+    	let t_value = /*menu*/ ctx[21].label + "";
     	let t;
     	let a_class_value;
     	let mounted;
     	let dispose;
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[8](/*menu*/ ctx[16]);
+    		return /*click_handler*/ ctx[9](/*menu*/ ctx[21]);
     	}
 
     	const block = {
@@ -1680,9 +1739,9 @@ var app = (function () {
     			a = element("a");
     			t = text(t_value);
     			attr_dev(a, "class", a_class_value = "list-group-item list-group-item-action " + /*List_item_bgcolor*/ ctx[2] + /*font_mode*/ ctx[1] + " p-3");
-    			attr_dev(a, "href", /*menu*/ ctx[16].href);
-    			add_location(a, file, 66, 28, 3328);
-    			add_location(il, file, 66, 24, 3324);
+    			attr_dev(a, "href", /*menu*/ ctx[21].href);
+    			add_location(a, file, 68, 28, 3367);
+    			add_location(il, file, 68, 24, 3363);
     			this.first = il;
     		},
     		m: function mount(target, anchor) {
@@ -1711,19 +1770,79 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block_1.name,
+    		id: create_each_block_2.name,
     		type: "each",
-    		source: "(66:20) {#each menu_listsk1 as menu (menu.id) }",
+    		source: "(68:20) {#each menu_listsk1 as menu (menu.id) }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (85:40) {#each dropdown as drop}
+    // (83:32) {#each menu_listsk1 as drop}
+    function create_each_block_1(ctx) {
+    	let li;
+    	let a;
+    	let t_value = /*drop*/ ctx[16].label + "";
+    	let t;
+    	let li_class_value;
+    	let mounted;
+    	let dispose;
+
+    	function click_handler_1() {
+    		return /*click_handler_1*/ ctx[10](/*drop*/ ctx[16]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			a = element("a");
+    			t = text(t_value);
+    			attr_dev(a, "class", "nav-link");
+    			attr_dev(a, "href", /*drop*/ ctx[16].href);
+    			add_location(a, file, 83, 91, 4665);
+    			attr_dev(li, "class", li_class_value = "nav-item active " + /*is_darkmode_light*/ ctx[0] + /*font_mode*/ ctx[1]);
+    			add_location(li, file, 83, 32, 4606);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, a);
+    			append_dev(a, t);
+
+    			if (!mounted) {
+    				dispose = listen_dev(a, "click", click_handler_1, false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+
+    			if (dirty & /*is_darkmode_light, font_mode*/ 3 && li_class_value !== (li_class_value = "nav-item active " + /*is_darkmode_light*/ ctx[0] + /*font_mode*/ ctx[1])) {
+    				attr_dev(li, "class", li_class_value);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1.name,
+    		type: "each",
+    		source: "(83:32) {#each menu_listsk1 as drop}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (89:40) {#each dropdown as drop}
     function create_each_block(ctx) {
     	let a;
-    	let t_value = /*drop*/ ctx[13].label + "";
+    	let t_value = /*drop*/ ctx[16].label + "";
     	let t;
     	let a_class_value;
 
@@ -1732,8 +1851,8 @@ var app = (function () {
     			a = element("a");
     			t = text(t_value);
     			attr_dev(a, "class", a_class_value = "dropdown-item" + /*font_mode*/ ctx[1]);
-    			attr_dev(a, "href", /*drop*/ ctx[13].href);
-    			add_location(a, file, 85, 40, 5168);
+    			attr_dev(a, "href", /*drop*/ ctx[16].href);
+    			add_location(a, file, 89, 40, 5308);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -1753,7 +1872,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(85:40) {#each dropdown as drop}",
+    		source: "(89:40) {#each dropdown as drop}",
     		ctx
     	});
 
@@ -1784,7 +1903,7 @@ var app = (function () {
     	let div0_class_value;
     	let t9;
     	let div1;
-    	let each_blocks_1 = [];
+    	let each_blocks_2 = [];
     	let each0_lookup = new Map();
     	let div2_class_value;
     	let t10;
@@ -1798,48 +1917,50 @@ var app = (function () {
     	let t13;
     	let div5;
     	let ul;
-    	let li0;
+    	let t14;
+    	let li;
     	let a0;
-    	let li0_class_value;
-    	let t15;
-    	let li1;
-    	let a1;
-    	let li1_class_value;
-    	let t17;
-    	let li2;
-    	let a2;
-    	let t19;
+    	let t16;
     	let div4;
-    	let t20;
+    	let t17;
     	let div3;
-    	let t21;
-    	let a3;
-    	let t22;
-    	let a3_class_value;
+    	let t18;
+    	let a1;
+    	let t19;
+    	let a1_class_value;
     	let div4_class_value;
     	let div5_class_value;
+    	let div6_resize_listener;
     	let nav_class_value;
-    	let t23;
+    	let t20;
     	let div7;
     	let inner_context;
-    	let t24;
+    	let t21;
     	let script;
     	let script_src_value;
     	let current;
     	let mounted;
     	let dispose;
-    	let each_value_1 = /*menu_listsk1*/ ctx[5];
-    	validate_each_argument(each_value_1);
-    	const get_key = ctx => /*menu*/ ctx[16].id;
-    	validate_each_keys(ctx, each_value_1, get_each_context_1, get_key);
+    	let each_value_2 = /*menu_listsk1*/ ctx[6];
+    	validate_each_argument(each_value_2);
+    	const get_key = ctx => /*menu*/ ctx[21].id;
+    	validate_each_keys(ctx, each_value_2, get_each_context_2, get_key);
 
-    	for (let i = 0; i < each_value_1.length; i += 1) {
-    		let child_ctx = get_each_context_1(ctx, each_value_1, i);
+    	for (let i = 0; i < each_value_2.length; i += 1) {
+    		let child_ctx = get_each_context_2(ctx, each_value_2, i);
     		let key = get_key(child_ctx);
-    		each0_lookup.set(key, each_blocks_1[i] = create_each_block_1(key, child_ctx));
+    		each0_lookup.set(key, each_blocks_2[i] = create_each_block_2(key, child_ctx));
     	}
 
-    	let each_value = /*dropdown*/ ctx[6];
+    	let each_value_1 = /*menu_listsk1*/ ctx[6];
+    	validate_each_argument(each_value_1);
+    	let each_blocks_1 = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+    	}
+
+    	let each_value = /*dropdown*/ ctx[7];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -1884,8 +2005,8 @@ var app = (function () {
     			t9 = space();
     			div1 = element("div");
 
-    			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].c();
+    			for (let i = 0; i < each_blocks_2.length; i += 1) {
+    				each_blocks_2[i].c();
     			}
 
     			t10 = space();
@@ -1893,74 +2014,72 @@ var app = (function () {
     			nav = element("nav");
     			div6 = element("div");
     			button0 = element("button");
-    			button0.textContent = "Toggle Menu";
+    			button0.textContent = "Change to Darkmode";
     			t12 = space();
     			button1 = element("button");
     			span = element("span");
     			t13 = space();
     			div5 = element("div");
     			ul = element("ul");
-    			li0 = element("li");
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t14 = space();
+    			li = element("li");
     			a0 = element("a");
-    			a0.textContent = "Home";
-    			t15 = space();
-    			li1 = element("li");
-    			a1 = element("a");
-    			a1.textContent = "Link";
-    			t17 = space();
-    			li2 = element("li");
-    			a2 = element("a");
-    			a2.textContent = "Dropdown";
-    			t19 = space();
+    			a0.textContent = "other_menu";
+    			t16 = space();
     			div4 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t20 = space();
+    			t17 = space();
     			div3 = element("div");
-    			t21 = space();
-    			a3 = element("a");
-    			t22 = text("Change to Darkmode");
-    			t23 = space();
+    			t18 = space();
+    			a1 = element("a");
+    			t19 = text("Change to Darkmode");
+    			t20 = space();
     			div7 = element("div");
     			create_component(inner_context.$$.fragment);
-    			t24 = space();
+    			t21 = space();
     			script = element("script");
     			attr_dev(meta0, "charset", "utf-8");
-    			add_location(meta0, file, 48, 8, 2352);
+    			add_location(meta0, file, 50, 8, 2391);
     			attr_dev(meta1, "name", "viewport");
     			attr_dev(meta1, "content", "width=device-width, initial-scale=1, shrink-to-fit=no");
-    			add_location(meta1, file, 49, 8, 2385);
+    			add_location(meta1, file, 51, 8, 2424);
     			attr_dev(meta2, "name", "description");
     			attr_dev(meta2, "content", "");
-    			add_location(meta2, file, 50, 8, 2482);
+    			add_location(meta2, file, 52, 8, 2521);
     			attr_dev(meta3, "name", "author");
     			attr_dev(meta3, "content", "");
-    			add_location(meta3, file, 51, 8, 2529);
-    			add_location(title, file, 52, 8, 2571);
+    			add_location(meta3, file, 53, 8, 2568);
+    			add_location(title, file, 54, 8, 2610);
     			attr_dev(link0, "rel", "icon");
     			attr_dev(link0, "type", "image/x-icon");
     			attr_dev(link0, "href", "assets/favicon.ico");
-    			add_location(link0, file, 54, 8, 2660);
+    			add_location(link0, file, 56, 8, 2699);
     			attr_dev(link1, "href", "../build/styles.css");
     			attr_dev(link1, "rel", "stylesheet");
-    			add_location(link1, file, 56, 8, 2786);
-    			add_location(head, file, 47, 4, 2337);
+    			add_location(link1, file, 58, 8, 2825);
+    			add_location(head, file, 49, 4, 2376);
     			attr_dev(div0, "class", div0_class_value = "sidebar-heading border-bottom" + /*is_darkmode_light*/ ctx[0] + /*font_mode*/ ctx[1]);
-    			add_location(div0, file, 63, 15, 3088);
+    			add_location(div0, file, 65, 15, 3127);
     			attr_dev(div1, "class", "list-group list-group-flush");
-    			add_location(div1, file, 64, 16, 3198);
+    			add_location(div1, file, 66, 16, 3237);
     			attr_dev(div2, "class", div2_class_value = "border-end " + /*is_darkmode_light*/ ctx[0]);
     			attr_dev(div2, "id", "sidebar-wrapper");
     			attr_dev(div2, "rel", "../build/styles.css");
-    			add_location(div2, file, 62, 12, 2980);
+    			add_location(div2, file, 64, 12, 3019);
     			attr_dev(button0, "class", "btn btn-primary");
     			attr_dev(button0, "id", "sidebarToggle");
-    			add_location(button0, file, 75, 24, 3869);
+    			add_location(button0, file, 78, 24, 3944);
     			attr_dev(span, "class", "navbar-toggler-icon");
-    			add_location(span, file, 76, 228, 4169);
+    			add_location(span, file, 79, 228, 4277);
     			attr_dev(button1, "class", "navbar-toggler");
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "data-bs-toggle", "collapse");
@@ -1968,54 +2087,45 @@ var app = (function () {
     			attr_dev(button1, "aria-controls", "navbarSupportedContent");
     			attr_dev(button1, "aria-expanded", "false");
     			attr_dev(button1, "aria-label", "Toggle navigation");
-    			add_location(button1, file, 76, 24, 3965);
-    			attr_dev(a0, "class", "nav-link");
-    			attr_dev(a0, "href", "#!");
-    			add_location(a0, file, 79, 91, 4496);
-    			attr_dev(li0, "class", li0_class_value = "nav-item active " + /*is_darkmode_light*/ ctx[0] + /*font_mode*/ ctx[1]);
-    			add_location(li0, file, 79, 32, 4437);
-    			attr_dev(a1, "class", "nav-link");
-    			attr_dev(a1, "href", "#!");
-    			add_location(a1, file, 80, 83, 4623);
-    			attr_dev(li1, "class", li1_class_value = "nav-item" + /*is_darkmode_light*/ ctx[0] + /*font_mode*/ ctx[1]);
-    			add_location(li1, file, 80, 32, 4572);
-    			attr_dev(a2, "class", "nav-link dropdown-toggle");
-    			attr_dev(a2, "id", "navbarDropdown");
-    			attr_dev(a2, "href", "#");
-    			attr_dev(a2, "role", "button");
-    			attr_dev(a2, "data-bs-toggle", "dropdown");
-    			attr_dev(a2, "aria-haspopup", "true");
-    			attr_dev(a2, "aria-expanded", "false");
-    			add_location(a2, file, 82, 36, 4766);
+    			add_location(button1, file, 79, 24, 4073);
+    			attr_dev(a0, "class", "nav-link dropdown-toggle");
+    			attr_dev(a0, "id", "navbarDropdown");
+    			attr_dev(a0, "href", "#");
+    			attr_dev(a0, "role", "button");
+    			attr_dev(a0, "data-bs-toggle", "dropdown");
+    			attr_dev(a0, "aria-haspopup", "true");
+    			attr_dev(a0, "aria-expanded", "false");
+    			add_location(a0, file, 86, 36, 4904);
     			attr_dev(div3, "class", "dropdown-divider");
-    			add_location(div3, file, 87, 40, 5327);
-    			attr_dev(a3, "class", a3_class_value = "dropdown-item" + /*font_mode*/ ctx[1]);
-    			attr_dev(a3, "href", "#!");
-    			add_location(a3, file, 88, 40, 5404);
+    			add_location(div3, file, 91, 40, 5468);
+    			attr_dev(a1, "class", a1_class_value = "dropdown-item" + /*font_mode*/ ctx[1]);
+    			attr_dev(a1, "href", "#!");
+    			add_location(a1, file, 92, 40, 5545);
     			attr_dev(div4, "class", div4_class_value = "dropdown-menu dropdown-menu-end " + /*is_darkmode_light*/ ctx[0]);
     			attr_dev(div4, "aria-labelledby", "navbarDropdown");
-    			add_location(div4, file, 83, 36, 4963);
-    			attr_dev(li2, "class", "nav-item dropdown");
-    			add_location(li2, file, 81, 32, 4699);
+    			add_location(div4, file, 87, 36, 5103);
+    			attr_dev(li, "class", "nav-item dropdown");
+    			add_location(li, file, 85, 32, 4837);
     			attr_dev(ul, "class", "navbar-nav ms-auto mt-2 mt-lg-0");
-    			add_location(ul, file, 78, 28, 4360);
+    			add_location(ul, file, 81, 28, 4468);
     			attr_dev(div5, "class", div5_class_value = "collapse navbar-collapse " + /*is_darkmode_light*/ ctx[0]);
     			attr_dev(div5, "id", "navbarSupportedContent");
-    			add_location(div5, file, 77, 24, 4244);
+    			add_location(div5, file, 80, 24, 4352);
     			attr_dev(div6, "class", "container-fluid");
-    			add_location(div6, file, 74, 20, 3815);
+    			add_render_callback(() => /*div6_elementresize_handler*/ ctx[11].call(div6));
+    			add_location(div6, file, 76, 20, 3854);
     			attr_dev(nav, "class", nav_class_value = "navbar navbar-expand-lg " + /*nav_bar*/ ctx[3] + " " + /*List_item_bgcolor*/ ctx[2] + " border-bottom");
-    			add_location(nav, file, 73, 16, 3707);
-    			add_location(div7, file, 95, 4, 5700);
+    			add_location(nav, file, 75, 16, 3746);
+    			add_location(div7, file, 99, 4, 5841);
     			attr_dev(div8, "id", "page-content-wrapper");
-    			add_location(div8, file, 71, 12, 3620);
+    			add_location(div8, file, 73, 12, 3659);
     			if (!src_url_equal(script.src, script_src_value = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file, 106, 8, 6048);
+    			add_location(script, file, 110, 8, 6189);
     			attr_dev(div9, "class", "d-flex");
     			attr_dev(div9, "id", "wrapper");
-    			add_location(div9, file, 60, 8, 2906);
+    			add_location(div9, file, 62, 8, 2945);
     			attr_dev(body, "class", /*is_darkmode_light*/ ctx[0]);
-    			add_location(body, file, 59, 4, 2863);
+    			add_location(body, file, 61, 4, 2902);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2044,8 +2154,8 @@ var app = (function () {
     			append_dev(div2, t9);
     			append_dev(div2, div1);
 
-    			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].m(div1, null);
+    			for (let i = 0; i < each_blocks_2.length; i += 1) {
+    				each_blocks_2[i].m(div1, null);
     			}
 
     			append_dev(div9, t10);
@@ -2059,35 +2169,40 @@ var app = (function () {
     			append_dev(div6, t13);
     			append_dev(div6, div5);
     			append_dev(div5, ul);
-    			append_dev(ul, li0);
-    			append_dev(li0, a0);
-    			append_dev(ul, t15);
-    			append_dev(ul, li1);
-    			append_dev(li1, a1);
-    			append_dev(ul, t17);
-    			append_dev(ul, li2);
-    			append_dev(li2, a2);
-    			append_dev(li2, t19);
-    			append_dev(li2, div4);
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(ul, null);
+    			}
+
+    			append_dev(ul, t14);
+    			append_dev(ul, li);
+    			append_dev(li, a0);
+    			append_dev(li, t16);
+    			append_dev(li, div4);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(div4, null);
     			}
 
-    			append_dev(div4, t20);
+    			append_dev(div4, t17);
     			append_dev(div4, div3);
-    			append_dev(div4, t21);
-    			append_dev(div4, a3);
-    			append_dev(a3, t22);
-    			append_dev(div8, t23);
+    			append_dev(div4, t18);
+    			append_dev(div4, a1);
+    			append_dev(a1, t19);
+    			div6_resize_listener = add_resize_listener(div6, /*div6_elementresize_handler*/ ctx[11].bind(div6));
+    			append_dev(div8, t20);
     			append_dev(div8, div7);
     			mount_component(inner_context, div7, null);
-    			append_dev(div9, t24);
+    			append_dev(div9, t21);
     			append_dev(div9, script);
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(a3, "click", /*funis_darkmode*/ ctx[7], false, false, false);
+    				dispose = [
+    					listen_dev(button0, "click", /*funis_darkmode*/ ctx[8], false, false, false),
+    					listen_dev(a1, "click", /*funis_darkmode*/ ctx[8], false, false, false)
+    				];
+
     				mounted = true;
     			}
     		},
@@ -2096,27 +2211,43 @@ var app = (function () {
     				attr_dev(div0, "class", div0_class_value);
     			}
 
-    			if (dirty & /*List_item_bgcolor, font_mode, menu_listsk1, content_mode*/ 54) {
-    				each_value_1 = /*menu_listsk1*/ ctx[5];
-    				validate_each_argument(each_value_1);
-    				validate_each_keys(ctx, each_value_1, get_each_context_1, get_key);
-    				each_blocks_1 = update_keyed_each(each_blocks_1, dirty, get_key, 1, ctx, each_value_1, each0_lookup, div1, destroy_block, create_each_block_1, null, get_each_context_1);
+    			if (dirty & /*List_item_bgcolor, font_mode, menu_listsk1, content_mode*/ 86) {
+    				each_value_2 = /*menu_listsk1*/ ctx[6];
+    				validate_each_argument(each_value_2);
+    				validate_each_keys(ctx, each_value_2, get_each_context_2, get_key);
+    				each_blocks_2 = update_keyed_each(each_blocks_2, dirty, get_key, 1, ctx, each_value_2, each0_lookup, div1, destroy_block, create_each_block_2, null, get_each_context_2);
     			}
 
     			if (!current || dirty & /*is_darkmode_light*/ 1 && div2_class_value !== (div2_class_value = "border-end " + /*is_darkmode_light*/ ctx[0])) {
     				attr_dev(div2, "class", div2_class_value);
     			}
 
-    			if (!current || dirty & /*is_darkmode_light, font_mode*/ 3 && li0_class_value !== (li0_class_value = "nav-item active " + /*is_darkmode_light*/ ctx[0] + /*font_mode*/ ctx[1])) {
-    				attr_dev(li0, "class", li0_class_value);
+    			if (dirty & /*is_darkmode_light, font_mode, menu_listsk1, content_mode*/ 83) {
+    				each_value_1 = /*menu_listsk1*/ ctx[6];
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_1[i] = create_each_block_1(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(ul, t14);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+
+    				each_blocks_1.length = each_value_1.length;
     			}
 
-    			if (!current || dirty & /*is_darkmode_light, font_mode*/ 3 && li1_class_value !== (li1_class_value = "nav-item" + /*is_darkmode_light*/ ctx[0] + /*font_mode*/ ctx[1])) {
-    				attr_dev(li1, "class", li1_class_value);
-    			}
-
-    			if (dirty & /*font_mode, dropdown*/ 66) {
-    				each_value = /*dropdown*/ ctx[6];
+    			if (dirty & /*font_mode, dropdown*/ 130) {
+    				each_value = /*dropdown*/ ctx[7];
     				validate_each_argument(each_value);
     				let i;
 
@@ -2128,7 +2259,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(div4, t20);
+    						each_blocks[i].m(div4, t17);
     					}
     				}
 
@@ -2139,8 +2270,8 @@ var app = (function () {
     				each_blocks.length = each_value.length;
     			}
 
-    			if (!current || dirty & /*font_mode*/ 2 && a3_class_value !== (a3_class_value = "dropdown-item" + /*font_mode*/ ctx[1])) {
-    				attr_dev(a3, "class", a3_class_value);
+    			if (!current || dirty & /*font_mode*/ 2 && a1_class_value !== (a1_class_value = "dropdown-item" + /*font_mode*/ ctx[1])) {
+    				attr_dev(a1, "class", a1_class_value);
     			}
 
     			if (!current || dirty & /*is_darkmode_light*/ 1 && div4_class_value !== (div4_class_value = "dropdown-menu dropdown-menu-end " + /*is_darkmode_light*/ ctx[0])) {
@@ -2179,14 +2310,16 @@ var app = (function () {
     			if (detaching) detach_dev(t7);
     			if (detaching) detach_dev(body);
 
-    			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].d();
+    			for (let i = 0; i < each_blocks_2.length; i += 1) {
+    				each_blocks_2[i].d();
     			}
 
+    			destroy_each(each_blocks_1, detaching);
     			destroy_each(each_blocks, detaching);
+    			div6_resize_listener();
     			destroy_component(inner_context);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -2291,6 +2424,7 @@ var app = (function () {
     	}
 
     	let content_mode;
+    	let toggle_button;
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -2298,6 +2432,12 @@ var app = (function () {
     	});
 
     	const click_handler = menu => $$invalidate(4, content_mode = menu.label);
+    	const click_handler_1 = drop => $$invalidate(4, content_mode = drop.label);
+
+    	function div6_elementresize_handler() {
+    		toggle_button = this.clientWidth;
+    		$$invalidate(5, toggle_button);
+    	}
 
     	$$self.$capture_state = () => ({
     		menu_listsk1,
@@ -2312,14 +2452,15 @@ var app = (function () {
     		nav_bar,
     		funis_darkmode,
     		Inner_context: Context,
-    		content_mode
+    		content_mode,
+    		toggle_button
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('menu_listsk1' in $$props) $$invalidate(5, menu_listsk1 = $$props.menu_listsk1);
+    		if ('menu_listsk1' in $$props) $$invalidate(6, menu_listsk1 = $$props.menu_listsk1);
     		if ('context2' in $$props) context2 = $$props.context2;
     		if ('link' in $$props) link = $$props.link;
-    		if ('dropdown' in $$props) $$invalidate(6, dropdown = $$props.dropdown);
+    		if ('dropdown' in $$props) $$invalidate(7, dropdown = $$props.dropdown);
     		if ('navbar' in $$props) navbar = $$props.navbar;
     		if ('is_darkmode' in $$props) is_darkmode = $$props.is_darkmode;
     		if ('is_darkmode_light' in $$props) $$invalidate(0, is_darkmode_light = $$props.is_darkmode_light);
@@ -2327,6 +2468,7 @@ var app = (function () {
     		if ('List_item_bgcolor' in $$props) $$invalidate(2, List_item_bgcolor = $$props.List_item_bgcolor);
     		if ('nav_bar' in $$props) $$invalidate(3, nav_bar = $$props.nav_bar);
     		if ('content_mode' in $$props) $$invalidate(4, content_mode = $$props.content_mode);
+    		if ('toggle_button' in $$props) $$invalidate(5, toggle_button = $$props.toggle_button);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -2339,10 +2481,13 @@ var app = (function () {
     		List_item_bgcolor,
     		nav_bar,
     		content_mode,
+    		toggle_button,
     		menu_listsk1,
     		dropdown,
     		funis_darkmode,
-    		click_handler
+    		click_handler,
+    		click_handler_1,
+    		div6_elementresize_handler
     	];
     }
 
