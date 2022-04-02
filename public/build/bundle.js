@@ -1148,7 +1148,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (93:12) {:else}
+    // (95:12) {:else}
     function create_else_block$1(ctx) {
     	let div;
     	let br;
@@ -1164,10 +1164,10 @@ var app = (function () {
     			center = element("center");
     			p1 = element("p1");
     			p1.textContent = "Welcome!";
-    			add_location(br, file$1, 93, 18, 3175);
-    			add_location(p1, file$1, 95, 16, 3223);
-    			add_location(center, file$1, 94, 16, 3197);
-    			add_location(div, file$1, 93, 12, 3169);
+    			add_location(br, file$1, 95, 18, 3320);
+    			add_location(p1, file$1, 97, 16, 3368);
+    			add_location(center, file$1, 96, 16, 3342);
+    			add_location(div, file$1, 95, 12, 3314);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1188,14 +1188,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(93:12) {:else}",
+    		source: "(95:12) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (80:45) 
+    // (82:45) 
     function create_if_block_3(ctx) {
     	let div;
     	let center;
@@ -1234,14 +1234,14 @@ var app = (function () {
     			input = element("input");
     			t2 = space();
     			create_component(page1.$$.fragment);
-    			add_location(br0, file$1, 82, 16, 2868);
-    			add_location(br1, file$1, 82, 31, 2883);
-    			add_location(h1, file$1, 82, 20, 2872);
-    			add_location(br2, file$1, 82, 40, 2892);
+    			add_location(br0, file$1, 84, 16, 3013);
+    			add_location(br1, file$1, 84, 31, 3028);
+    			add_location(h1, file$1, 84, 20, 3017);
+    			add_location(br2, file$1, 84, 40, 3037);
     			attr_dev(input, "size", "3");
-    			add_location(input, file$1, 83, 16, 2914);
-    			add_location(center, file$1, 81, 12, 2842);
-    			add_location(div, file$1, 80, 12, 2823);
+    			add_location(input, file$1, 85, 16, 3059);
+    			add_location(center, file$1, 83, 12, 2987);
+    			add_location(div, file$1, 82, 12, 2968);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1295,14 +1295,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(80:45) ",
+    		source: "(82:45) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (65:46) 
+    // (67:46) 
     function create_if_block_2(ctx) {
     	let div;
     	let center;
@@ -1353,21 +1353,23 @@ var app = (function () {
     			t9 = text("I'm seeking VRgame develop");
     			br5 = element("br");
     			hr1 = element("hr");
-    			add_location(br0, file$1, 67, 20, 2316);
-    			add_location(h2, file$1, 68, 20, 2342);
-    			add_location(br1, file$1, 69, 20, 2387);
-    			if (!src_url_equal(img.src, img_src_value = "./KakaoTalk_20220322_200232462.png")) attr_dev(img, "src", img_src_value);
-    			add_location(img, file$1, 70, 20, 2413);
-    			add_location(br2, file$1, 71, 20, 2483);
-    			add_location(hr0, file$1, 72, 20, 2509);
-    			add_location(br3, file$1, 74, 58, 2614);
-    			add_location(br4, file$1, 74, 90, 2646);
-    			add_location(br5, file$1, 74, 120, 2676);
-    			add_location(hr1, file$1, 74, 124, 2680);
+    			add_location(br0, file$1, 69, 20, 2402);
+    			add_location(h2, file$1, 70, 20, 2428);
+    			add_location(br1, file$1, 71, 20, 2473);
+    			attr_dev(img, "width", "50%");
+    			attr_dev(img, "height", "50%");
+    			if (!src_url_equal(img.src, img_src_value = "https://pbs.twimg.com/media/FMg_T6JaIAYkNQL?format=jpg&name=large")) attr_dev(img, "src", img_src_value);
+    			add_location(img, file$1, 72, 20, 2499);
+    			add_location(br2, file$1, 73, 20, 2628);
+    			add_location(hr0, file$1, 74, 20, 2654);
+    			add_location(br3, file$1, 76, 58, 2759);
+    			add_location(br4, file$1, 76, 90, 2791);
+    			add_location(br5, file$1, 76, 120, 2821);
+    			add_location(hr1, file$1, 76, 124, 2825);
     			attr_dev(p1, "class", "p-1");
-    			add_location(p1, file$1, 73, 20, 2535);
-    			add_location(center, file$1, 66, 16, 2286);
-    			add_location(div, file$1, 65, 12, 2263);
+    			add_location(p1, file$1, 75, 20, 2680);
+    			add_location(center, file$1, 68, 16, 2372);
+    			add_location(div, file$1, 67, 12, 2349);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1405,7 +1407,7 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(65:46) ",
+    		source: "(67:46) ",
     		ctx
     	});
 
@@ -1418,6 +1420,7 @@ var app = (function () {
     	let center;
     	let h3;
     	let t1;
+    	let ul;
     	let each_value = /*SNSs*/ ctx[4];
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -1433,12 +1436,15 @@ var app = (function () {
     			h3 = element("h3");
     			h3.textContent = "Lutica's contact Line :";
     			t1 = space();
+    			ul = element("ul");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
     			add_location(h3, file$1, 58, 20, 1948);
+    			attr_dev(ul, "class", "ul");
+    			add_location(ul, file$1, 59, 20, 2006);
     			add_location(center, file$1, 57, 16, 1918);
     			add_location(div, file$1, 56, 12, 1895);
     		},
@@ -1447,9 +1453,10 @@ var app = (function () {
     			append_dev(div, center);
     			append_dev(center, h3);
     			append_dev(center, t1);
+    			append_dev(center, ul);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(center, null);
+    				each_blocks[i].m(ul, null);
     			}
     		},
     		p: function update(ctx, dirty) {
@@ -1466,7 +1473,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block$1(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(center, null);
+    						each_blocks[i].m(ul, null);
     					}
     				}
 
@@ -1527,8 +1534,9 @@ var app = (function () {
     	return block;
     }
 
-    // (60:20) {#each SNSs as SNSone}
+    // (61:20) {#each SNSs as SNSone}
     function create_each_block$1(ctx) {
+    	let il;
     	let a;
     	let p1;
     	let t0_value = /*SNSone*/ ctx[10].SNS_name + "";
@@ -1538,19 +1546,23 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			il = element("il");
     			a = element("a");
     			p1 = element("p1");
     			t0 = text(t0_value);
     			t1 = space();
     			br = element("br");
     			attr_dev(p1, "class", "");
-    			add_location(p1, file$1, 60, 44, 2074);
+    			add_location(p1, file$1, 61, 61, 2128);
     			attr_dev(a, "href", /*SNSone*/ ctx[10].href);
-    			add_location(a, file$1, 60, 20, 2050);
-    			add_location(br, file$1, 60, 87, 2117);
+    			add_location(a, file$1, 61, 37, 2104);
+    			attr_dev(il, "class", "il");
+    			add_location(il, file$1, 61, 20, 2087);
+    			add_location(br, file$1, 61, 109, 2176);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, a, anchor);
+    			insert_dev(target, il, anchor);
+    			append_dev(il, a);
     			append_dev(a, p1);
     			append_dev(p1, t0);
     			insert_dev(target, t1, anchor);
@@ -1558,7 +1570,7 @@ var app = (function () {
     		},
     		p: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(a);
+    			if (detaching) detach_dev(il);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(br);
     		}
@@ -1568,7 +1580,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(60:20) {#each SNSs as SNSone}",
+    		source: "(61:20) {#each SNSs as SNSone}",
     		ctx
     	});
 
@@ -1970,7 +1982,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (71:20) {#each menu_listsk1 as menu (menu.id) }
+    // (72:20) {#each menu_listsk1 as menu (menu.id) }
     function create_each_block_2(key_1, ctx) {
     	let il;
     	let a;
@@ -1993,8 +2005,8 @@ var app = (function () {
     			t = text(t_value);
     			attr_dev(a, "class", a_class_value = "list-group-item list-group-item-action " + /*List_item_bgcolor*/ ctx[3] + /*font_mode*/ ctx[2] + " p-3");
     			attr_dev(a, "href", /*menu*/ ctx[22].href);
-    			add_location(a, file, 71, 28, 3489);
-    			add_location(il, file, 71, 24, 3485);
+    			add_location(a, file, 72, 28, 3506);
+    			add_location(il, file, 72, 24, 3502);
     			this.first = il;
     		},
     		m: function mount(target, anchor) {
@@ -2025,14 +2037,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(71:20) {#each menu_listsk1 as menu (menu.id) }",
+    		source: "(72:20) {#each menu_listsk1 as menu (menu.id) }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (86:32) {#each menu_listsk1 as drop}
+    // (87:32) {#each menu_listsk1 as drop}
     function create_each_block_1(ctx) {
     	let li;
     	let a;
@@ -2053,9 +2065,9 @@ var app = (function () {
     			t = text(t_value);
     			attr_dev(a, "class", "nav-link");
     			attr_dev(a, "href", /*drop*/ ctx[17].href);
-    			add_location(a, file, 86, 91, 4787);
+    			add_location(a, file, 87, 91, 4804);
     			attr_dev(li, "class", li_class_value = "nav-item active " + /*is_darkmode_light*/ ctx[1] + /*font_mode*/ ctx[2]);
-    			add_location(li, file, 86, 32, 4728);
+    			add_location(li, file, 87, 32, 4745);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -2085,14 +2097,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(86:32) {#each menu_listsk1 as drop}",
+    		source: "(87:32) {#each menu_listsk1 as drop}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (92:40) {#each dropdown as drop}
+    // (93:40) {#each dropdown as drop}
     function create_each_block(ctx) {
     	let a;
     	let t_value = /*drop*/ ctx[17].label + "";
@@ -2105,7 +2117,7 @@ var app = (function () {
     			t = text(t_value);
     			attr_dev(a, "class", a_class_value = "dropdown-item" + /*font_mode*/ ctx[2]);
     			attr_dev(a, "href", /*drop*/ ctx[17].href);
-    			add_location(a, file, 92, 40, 5430);
+    			add_location(a, file, 93, 40, 5447);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2125,14 +2137,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(92:40) {#each dropdown as drop}",
+    		source: "(93:40) {#each dropdown as drop}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (97:160) {:else}
+    // (98:160) {:else}
     function create_else_block(ctx) {
     	let t;
 
@@ -2152,14 +2164,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(97:160) {:else}",
+    		source: "(98:160) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (97:123) {#if is_darkmode=="bg-white"}
+    // (98:123) {#if is_darkmode=="bg-white"}
     function create_if_block(ctx) {
     	let t;
 
@@ -2179,7 +2191,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(97:123) {#if is_darkmode==\\\"bg-white\\\"}",
+    		source: "(98:123) {#if is_darkmode==\\\"bg-white\\\"}",
     		ctx
     	});
 
@@ -2364,38 +2376,38 @@ var app = (function () {
     			t21 = space();
     			script = element("script");
     			attr_dev(meta0, "charset", "utf-8");
-    			add_location(meta0, file, 53, 8, 2513);
+    			add_location(meta0, file, 54, 8, 2530);
     			attr_dev(meta1, "name", "viewport");
     			attr_dev(meta1, "content", "width=device-width, initial-scale=1, shrink-to-fit=no");
-    			add_location(meta1, file, 54, 8, 2546);
+    			add_location(meta1, file, 55, 8, 2563);
     			attr_dev(meta2, "name", "description");
     			attr_dev(meta2, "content", "");
-    			add_location(meta2, file, 55, 8, 2643);
+    			add_location(meta2, file, 56, 8, 2660);
     			attr_dev(meta3, "name", "author");
     			attr_dev(meta3, "content", "");
-    			add_location(meta3, file, 56, 8, 2690);
-    			add_location(title, file, 57, 8, 2732);
+    			add_location(meta3, file, 57, 8, 2707);
+    			add_location(title, file, 58, 8, 2749);
     			attr_dev(link0, "rel", "icon");
     			attr_dev(link0, "type", "image/x-icon");
     			attr_dev(link0, "href", "assets/favicon.ico");
-    			add_location(link0, file, 59, 8, 2821);
+    			add_location(link0, file, 60, 8, 2838);
     			attr_dev(link1, "href", "../build/styles.css");
     			attr_dev(link1, "rel", "stylesheet");
-    			add_location(link1, file, 61, 8, 2947);
-    			add_location(head, file, 52, 4, 2498);
+    			add_location(link1, file, 62, 8, 2964);
+    			add_location(head, file, 53, 4, 2515);
     			attr_dev(div0, "class", div0_class_value = "sidebar-heading border-bottom" + /*is_darkmode_light*/ ctx[1] + /*font_mode*/ ctx[2]);
-    			add_location(div0, file, 68, 15, 3249);
+    			add_location(div0, file, 69, 15, 3266);
     			attr_dev(div1, "class", "list-group list-group-flush");
-    			add_location(div1, file, 69, 16, 3359);
+    			add_location(div1, file, 70, 16, 3376);
     			attr_dev(div2, "class", div2_class_value = "border-end " + /*is_darkmode_light*/ ctx[1]);
     			attr_dev(div2, "id", "sidebar-wrapper");
     			attr_dev(div2, "rel", "../build/styles.css");
-    			add_location(div2, file, 67, 12, 3141);
+    			add_location(div2, file, 68, 12, 3158);
     			attr_dev(button0, "class", "btn btn-primary");
     			attr_dev(button0, "id", "sidebarToggle");
-    			add_location(button0, file, 81, 24, 4066);
+    			add_location(button0, file, 82, 24, 4083);
     			attr_dev(span, "class", "navbar-toggler-icon");
-    			add_location(span, file, 82, 228, 4399);
+    			add_location(span, file, 83, 228, 4416);
     			attr_dev(button1, "class", "navbar-toggler");
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "data-bs-toggle", "collapse");
@@ -2403,7 +2415,7 @@ var app = (function () {
     			attr_dev(button1, "aria-controls", "navbarSupportedContent");
     			attr_dev(button1, "aria-expanded", "false");
     			attr_dev(button1, "aria-label", "Toggle navigation");
-    			add_location(button1, file, 82, 24, 4195);
+    			add_location(button1, file, 83, 24, 4212);
     			attr_dev(a0, "class", "nav-link dropdown-toggle");
     			attr_dev(a0, "id", "navbarDropdown");
     			attr_dev(a0, "href", "#");
@@ -2411,37 +2423,37 @@ var app = (function () {
     			attr_dev(a0, "data-bs-toggle", "dropdown");
     			attr_dev(a0, "aria-haspopup", "true");
     			attr_dev(a0, "aria-expanded", "false");
-    			add_location(a0, file, 89, 36, 5026);
+    			add_location(a0, file, 90, 36, 5043);
     			attr_dev(div3, "class", "dropdown-divider");
-    			add_location(div3, file, 94, 40, 5590);
+    			add_location(div3, file, 95, 40, 5607);
     			attr_dev(a1, "class", a1_class_value = "dropdown-item" + /*font_mode*/ ctx[2]);
     			attr_dev(a1, "href", "#!");
-    			add_location(a1, file, 96, 40, 5706);
+    			add_location(a1, file, 97, 40, 5723);
     			attr_dev(div4, "class", div4_class_value = "dropdown-menu dropdown-menu-end " + /*is_darkmode_light*/ ctx[1]);
     			attr_dev(div4, "aria-labelledby", "navbarDropdown");
-    			add_location(div4, file, 90, 36, 5225);
+    			add_location(div4, file, 91, 36, 5242);
     			attr_dev(li, "class", "nav-item dropdown");
-    			add_location(li, file, 88, 32, 4959);
+    			add_location(li, file, 89, 32, 4976);
     			attr_dev(ul, "class", "navbar-nav ms-auto mt-2 mt-lg-0");
-    			add_location(ul, file, 84, 28, 4590);
+    			add_location(ul, file, 85, 28, 4607);
     			attr_dev(div5, "class", div5_class_value = "collapse navbar-collapse " + /*is_darkmode_light*/ ctx[1]);
     			attr_dev(div5, "id", "navbarSupportedContent");
-    			add_location(div5, file, 83, 24, 4474);
+    			add_location(div5, file, 84, 24, 4491);
     			attr_dev(div6, "class", "container-fluid");
     			add_render_callback(() => /*div6_elementresize_handler*/ ctx[12].call(div6));
-    			add_location(div6, file, 79, 20, 3976);
+    			add_location(div6, file, 80, 20, 3993);
     			attr_dev(nav, "class", nav_class_value = "navbar navbar-expand-lg " + /*nav_bar*/ ctx[4] + " " + /*List_item_bgcolor*/ ctx[3] + " border-bottom");
-    			add_location(nav, file, 78, 16, 3868);
-    			add_location(div7, file, 103, 4, 6052);
+    			add_location(nav, file, 79, 16, 3885);
+    			add_location(div7, file, 104, 4, 6069);
     			attr_dev(div8, "id", "page-content-wrapper");
-    			add_location(div8, file, 76, 12, 3781);
+    			add_location(div8, file, 77, 12, 3798);
     			if (!src_url_equal(script.src, script_src_value = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file, 114, 8, 6400);
+    			add_location(script, file, 115, 8, 6417);
     			attr_dev(div9, "class", "d-flex");
     			attr_dev(div9, "id", "wrapper");
-    			add_location(div9, file, 65, 8, 3067);
+    			add_location(div9, file, 66, 8, 3084);
     			attr_dev(body, "class", /*is_darkmode_light*/ ctx[1]);
-    			add_location(body, file, 64, 4, 3024);
+    			add_location(body, file, 65, 4, 3041);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

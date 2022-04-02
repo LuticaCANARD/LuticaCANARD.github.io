@@ -57,9 +57,11 @@
             <div>
                 <center>
                     <h3>  Lutica's contact Line :  </h3>
+                    <ul class="ul">
                     {#each SNSs as SNSone}
-                    <a href = {SNSone.href}><p1 class = ""> {SNSone.SNS_name}</p1></a> <br>
+                    <il class = "il"><a href = {SNSone.href}><p1 class = ""> {SNSone.SNS_name}</p1></a></il> <br>
                     {/each}
+                    </ul>
                     </center>
             </div>
             {:else if context_mode=="Profile"}
@@ -68,7 +70,7 @@
                     <br>
                     <h2> About Lutica </h2>
                     <br>
-                    <img src = "./KakaoTalk_20220322_200232462.png">
+                    <img width = "50%" height = "50%"src = "../src/KakaoTalk_20220322_200232462.png">
                     <br>
                     <hr>
                     <p1 class = "p-1"> 

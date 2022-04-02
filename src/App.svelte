@@ -45,6 +45,7 @@
                     let content_mode;
                     let toggle_button;
                     let darkmode;
+                
 
 </script>
 <style>
