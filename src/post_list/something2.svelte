@@ -6,7 +6,7 @@
 </script>
 <style>
 body{
-    padding : 2em 5em 5em;
+    padding : 2em 2em 2em;
 }
 </style>
 <head>
@@ -16,15 +16,34 @@ body{
 {#if code ==2}
 
 
+
 {:else if code ==1}
 <p1> 아직 쓸 글을 못정했습니다.</p1>
 {:else if code<=-1}
+<hr>
+<center>
+<h3></h3>
+</center>
+<p1></p1>
+<hr>
+<center>
+<h3> 04 02 14:30 </h3>
+</center>
+<p1>산책을 했다. 목련꽃이 피어있었다. 하얗고 나무같지만 꽃같기도 한 그 어중간한 느낌이 좋아서 나는 목련꽃을 좋아한다. 목련, 목련의 꽃말은 고귀함과 숭고함이라고 전해진다. 그 꽃과 아름다우면서도 투박한 그 모양에 걸맞는듯한 꽃말이 아닐까.<br>
+ 목련이 피었고, 다음주에는 벚꽃이 핀다. 벚꽃이 만들어내는 때에는 나무위를 보면 아름다운 색채가 느껴지지만, 가장 예쁜때는 만개한 뒤 지기 시작할 때이다.<br>
+삶. 삶은 벚꽃놀이와 같아서 가장 암울한 때를 지나고 난 뒤 가장 성숙해진 때가 좋은것인가. 그때가 가장 아름다운 때인가.<br>
+내 삶. 목련과 같이 일에 어중간한 정체성을 가진 나는, 목련의 꽃말과 그 아름다움을 따를 마음을 가지고 있는가. 죽는다면, 목련꽃은 땅으로 내려가 썩을뿐이다. 삶의 마지막은 이와 같다. <br>
+끝의 내 삶. 언젠가 "최첨단에 서있겠다"는 마음가짐은 잊혀져왔고, 오히려 심리적으로 최첨단에 서있게 되었다. 마지막을 맞는 나의 인생은, 분명 목련을 따라서, 그 끝에도 아름다움을 잊고싶지 않다.<br>
+처음의 내 삶. 나는 분명 처음에는 뭔가 할줄 알았다. 하지만 잊혀져왔고, 무뎌져왔고, 무기력해져왔고, 몸에는 더이상의 활력도 없었다. "빛이 있으라"던 빛도, 보이지 않고 어둠속에서 살아왔다. 그 터널을 나올때까지 버티면서 <br>
+앞으로의 내 삶. 이제 피는 목련인지, 다 펴버린 목련인지는 알 바가 없지만, 끝은 그 꽃말을 따르길. 빛이 있길. 끝이 있길. </p1><br>
+<hr>
 <center>
 <h3>04 02 10:00</h3>
 </center>
 <p1>휴학을 한게 약간은 후회가 되긴 한다. 하지만 생각해보면, 낮은 학점으로 나갈바에야 & 철도기술연구원 IPP도 못해볼 바에야 차라리 학교를 나가던지 쉬면서 일하고 상황이 나아지면 다시 학교로 오는게 저 낫겠지 싶다.<br>
 디자인 패턴공부도 이제 슬슬 방법론을 찾아서 하게되었고, 나도 뭔가 생각이 정리가 된다. <br>
 42Seoul이라는 유명한 부트캠프(?)에 La pisin이라는 과정이 있는데, 한달간 확실히 한 뒤 그 뒤에 느슨해지는 방법론을 채택했다. 생각해보면 나도 그런 방법론을 향하는게 아닐까 싶다.</p1><br>
+<hr>
 <center>
     <h3>04 01 21:30</h3>
 </center>
@@ -34,7 +53,7 @@ body{
     요근래 코딩이라는 새로운 길을 찾았다곤 하지만 가끔은 과거의 철도기관사와 같은 희망고문이 될까 많이 두렵다.<br>
     하지만 하나의 작은 섬이라도, 아마 미래에 보면 "희망봉"같은 섬이 될지도 모른다는 생각도 든다. 모르겠다. 아직은. 지금도 과거도 삶에 배신당한 일만 기억이 날뿐.<br>
     희망이 있기를.</p1> 
-
+<hr>
     <center>
         <h3>04 01 20:00 </h3>
     </center>
@@ -45,7 +64,7 @@ body{
 여름철에 바다를 가면 덥고, 물이 가장 시원하지만, 겨울철에 바다를 가면 바람이 매우 강하고 춥다. 인생의 시련이란게 그런것인가. 삶의 고통이란 그런것인가. <br>
 내가 좋아하던 음악 하나를 덧붙이고 싶다. 내가 가장 우울할때 자주 듣던 음악이었다. <br> </p1>
 <center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ypM_WGTlb1U" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="auto" height="auto" src="https://www.youtube.com/embed/ypM_WGTlb1U" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 {/if}
 </body>

@@ -557,207 +557,347 @@ var app = (function () {
 
     const file$2 = "src\\post_list\\something2.svelte";
 
-    // (21:19) 
+    // (22:19) 
     function create_if_block_2$1(ctx) {
+    	let hr0;
+    	let t0;
     	let center0;
     	let h30;
     	let t1;
     	let p10;
     	let t2;
-    	let br0;
+    	let hr1;
     	let t3;
-    	let br1;
-    	let t4;
-    	let br2;
-    	let t5;
     	let center1;
     	let h31;
-    	let t7;
+    	let t5;
     	let p11;
+    	let t6;
+    	let br0;
+    	let t7;
+    	let br1;
     	let t8;
-    	let br3;
+    	let br2;
     	let t9;
-    	let br4;
+    	let br3;
     	let t10;
-    	let br5;
+    	let br4;
     	let t11;
-    	let br6;
+    	let br5;
     	let t12;
-    	let br7;
+    	let br6;
     	let t13;
+    	let hr2;
     	let t14;
     	let center2;
     	let h32;
     	let t16;
     	let p12;
     	let t17;
-    	let br8;
+    	let br7;
     	let t18;
-    	let br9;
+    	let br8;
     	let t19;
-    	let br10;
+    	let br9;
     	let t20;
-    	let br11;
-    	let br12;
+    	let hr3;
     	let t21;
-    	let br13;
-    	let t22;
-    	let br14;
-    	let t23;
     	let center3;
+    	let h33;
+    	let t23;
+    	let p13;
+    	let t24;
+    	let br10;
+    	let t25;
+    	let br11;
+    	let t26;
+    	let br12;
+    	let t27;
+    	let br13;
+    	let t28;
+    	let br14;
+    	let t29;
+    	let t30;
+    	let hr4;
+    	let t31;
+    	let center4;
+    	let h34;
+    	let t33;
+    	let p14;
+    	let t34;
+    	let br15;
+    	let t35;
+    	let br16;
+    	let t36;
+    	let br17;
+    	let t37;
+    	let br18;
+    	let br19;
+    	let t38;
+    	let br20;
+    	let t39;
+    	let br21;
+    	let t40;
+    	let center5;
     	let iframe;
     	let iframe_src_value;
 
     	const block = {
     		c: function create() {
+    			hr0 = element("hr");
+    			t0 = space();
     			center0 = element("center");
     			h30 = element("h3");
-    			h30.textContent = "04 02 10:00";
     			t1 = space();
     			p10 = element("p1");
-    			t2 = text("휴학을 한게 약간은 후회가 되긴 한다. 하지만 생각해보면, 낮은 학점으로 나갈바에야 & 철도기술연구원 IPP도 못해볼 바에야 차라리 학교를 나가던지 쉬면서 일하고 상황이 나아지면 다시 학교로 오는게 저 낫겠지 싶다.");
-    			br0 = element("br");
-    			t3 = text("\r\n디자인 패턴공부도 이제 슬슬 방법론을 찾아서 하게되었고, 나도 뭔가 생각이 정리가 된다. ");
-    			br1 = element("br");
-    			t4 = text("\r\n42Seoul이라는 유명한 부트캠프(?)에 La pisin이라는 과정이 있는데, 한달간 확실히 한 뒤 그 뒤에 느슨해지는 방법론을 채택했다. 생각해보면 나도 그런 방법론을 향하는게 아닐까 싶다.");
-    			br2 = element("br");
-    			t5 = space();
+    			t2 = space();
+    			hr1 = element("hr");
+    			t3 = space();
     			center1 = element("center");
     			h31 = element("h3");
-    			h31.textContent = "04 01 21:30";
-    			t7 = space();
+    			h31.textContent = "04 02 14:30";
+    			t5 = space();
     			p11 = element("p1");
-    			t8 = text("어느날 문득 삶에 대한 회의가 들었다. 어떤 일이었는지는 모르지만, 무슨 일이 들어서 삶을 던지고 싶었다. 삶이 뭔데 나에게 이렇게 고통스럽게 하는지 모르겠다는 생각을 한다.");
+    			t6 = text("산책을 했다. 목련꽃이 피어있었다. 하얗고 나무같지만 꽃같기도 한 그 어중간한 느낌이 좋아서 나는 목련꽃을 좋아한다. 목련, 목련의 꽃말은 고귀함과 숭고함이라고 전해진다. 그 꽃과 아름다우면서도 투박한 그 모양에 걸맞는듯한 꽃말이 아닐까.");
+    			br0 = element("br");
+    			t7 = text("\r\n 목련이 피었고, 다음주에는 벚꽃이 핀다. 벚꽃이 만들어내는 때에는 나무위를 보면 아름다운 색채가 느껴지지만, 가장 예쁜때는 만개한 뒤 지기 시작할 때이다.");
+    			br1 = element("br");
+    			t8 = text("\r\n삶. 삶은 벚꽃놀이와 같아서 가장 암울한 때를 지나고 난 뒤 가장 성숙해진 때가 좋은것인가. 그때가 가장 아름다운 때인가.");
+    			br2 = element("br");
+    			t9 = text("\r\n내 삶. 목련과 같이 일에 어중간한 정체성을 가진 나는, 목련의 꽃말과 그 아름다움을 따를 마음을 가지고 있는가. 죽는다면, 목련꽃은 땅으로 내려가 썩을뿐이다. 삶의 마지막은 이와 같다. ");
     			br3 = element("br");
-    			t9 = text("\r\n    인생, 하나의 바다와도 같고 땅과도 같으며 우주와도 같은 미지의 세계. 삶과 바다,우주는 어찌보면 하나의 흐름일지도 모른다.");
+    			t10 = text("\r\n끝의 내 삶. 언젠가 \"최첨단에 서있겠다\"는 마음가짐은 잊혀져왔고, 오히려 심리적으로 최첨단에 서있게 되었다. 마지막을 맞는 나의 인생은, 분명 목련을 따라서, 그 끝에도 아름다움을 잊고싶지 않다.");
     			br4 = element("br");
-    			t10 = text("\r\n    삶이 바다라고 가정하면, 땅을 찾아 헤메던 나의 인생은 희망고문에 시달린걸지도 모른다. 이 방향으로 가면 땅이 나온다는 굳센 믿음으로 살아왔지만, 사실은 아무것도 없었던.");
+    			t11 = text("\r\n처음의 내 삶. 나는 분명 처음에는 뭔가 할줄 알았다. 하지만 잊혀져왔고, 무뎌져왔고, 무기력해져왔고, 몸에는 더이상의 활력도 없었다. \"빛이 있으라\"던 빛도, 보이지 않고 어둠속에서 살아왔다. 그 터널을 나올때까지 버티면서 ");
     			br5 = element("br");
-    			t11 = text("\r\n    요근래 코딩이라는 새로운 길을 찾았다곤 하지만 가끔은 과거의 철도기관사와 같은 희망고문이 될까 많이 두렵다.");
+    			t12 = text("\r\n앞으로의 내 삶. 이제 피는 목련인지, 다 펴버린 목련인지는 알 바가 없지만, 끝은 그 꽃말을 따르길. 빛이 있길. 끝이 있길. ");
     			br6 = element("br");
-    			t12 = text("\r\n    하지만 하나의 작은 섬이라도, 아마 미래에 보면 \"희망봉\"같은 섬이 될지도 모른다는 생각도 든다. 모르겠다. 아직은. 지금도 과거도 삶에 배신당한 일만 기억이 날뿐.");
-    			br7 = element("br");
-    			t13 = text("\r\n    희망이 있기를.");
+    			t13 = space();
+    			hr2 = element("hr");
     			t14 = space();
     			center2 = element("center");
     			h32 = element("h3");
-    			h32.textContent = "04 01 20:00";
+    			h32.textContent = "04 02 10:00";
     			t16 = space();
     			p12 = element("p1");
-    			t17 = text("예전에 자주 듣던 음악을 들었다. 이유는 모르겠지만 힘들때마다 듣기도 하고, 고통스러울때마다, 행복할때도 들었었다.");
+    			t17 = text("휴학을 한게 약간은 후회가 되긴 한다. 하지만 생각해보면, 낮은 학점으로 나갈바에야 & 철도기술연구원 IPP도 못해볼 바에야 차라리 학교를 나가던지 쉬면서 일하고 상황이 나아지면 다시 학교로 오는게 저 낫겠지 싶다.");
+    			br7 = element("br");
+    			t18 = text("\r\n디자인 패턴공부도 이제 슬슬 방법론을 찾아서 하게되었고, 나도 뭔가 생각이 정리가 된다. ");
     			br8 = element("br");
-    			t18 = text("\r\n그때 들었던 음악을 들으니, 과거의 내가 생각나 이유를 모을 울음을 터트렸다. 나는 내 삶을 아무도 알아 주지않던, 그리고 알아주지도 않을 세상에서 보내고 있다. 어쩔수없다.");
+    			t19 = text("\r\n42Seoul이라는 유명한 부트캠프(?)에 La pisin이라는 과정이 있는데, 한달간 확실히 한 뒤 그 뒤에 느슨해지는 방법론을 채택했다. 생각해보면 나도 그런 방법론을 향하는게 아닐까 싶다.");
     			br9 = element("br");
-    			t19 = text("\r\n나는 지금의 내가 싫고, 짜증나지만, 어떻게 살기는 할테니 미래를 개선해나가는 수 밖에 없다. 지금의 나랑 과거의 나는 다르다는점, 이것 하나는 확실해졌다.");
-    			br10 = element("br");
-    			t20 = text("\r\n과연 내가 내가 원하는 삶인지도, 왜 태어났는지도 모르지만 살겠다면 확실히 살아야지. ");
-    			br11 = element("br");
-    			br12 = element("br");
-    			t21 = text("\r\n여름철에 바다를 가면 덥고, 물이 가장 시원하지만, 겨울철에 바다를 가면 바람이 매우 강하고 춥다. 인생의 시련이란게 그런것인가. 삶의 고통이란 그런것인가. ");
-    			br13 = element("br");
-    			t22 = text("\r\n내가 좋아하던 음악 하나를 덧붙이고 싶다. 내가 가장 우울할때 자주 듣던 음악이었다. ");
-    			br14 = element("br");
-    			t23 = space();
+    			t20 = space();
+    			hr3 = element("hr");
+    			t21 = space();
     			center3 = element("center");
+    			h33 = element("h3");
+    			h33.textContent = "04 01 21:30";
+    			t23 = space();
+    			p13 = element("p1");
+    			t24 = text("어느날 문득 삶에 대한 회의가 들었다. 어떤 일이었는지는 모르지만, 무슨 일이 들어서 삶을 던지고 싶었다. 삶이 뭔데 나에게 이렇게 고통스럽게 하는지 모르겠다는 생각을 한다.");
+    			br10 = element("br");
+    			t25 = text("\r\n    인생, 하나의 바다와도 같고 땅과도 같으며 우주와도 같은 미지의 세계. 삶과 바다,우주는 어찌보면 하나의 흐름일지도 모른다.");
+    			br11 = element("br");
+    			t26 = text("\r\n    삶이 바다라고 가정하면, 땅을 찾아 헤메던 나의 인생은 희망고문에 시달린걸지도 모른다. 이 방향으로 가면 땅이 나온다는 굳센 믿음으로 살아왔지만, 사실은 아무것도 없었던.");
+    			br12 = element("br");
+    			t27 = text("\r\n    요근래 코딩이라는 새로운 길을 찾았다곤 하지만 가끔은 과거의 철도기관사와 같은 희망고문이 될까 많이 두렵다.");
+    			br13 = element("br");
+    			t28 = text("\r\n    하지만 하나의 작은 섬이라도, 아마 미래에 보면 \"희망봉\"같은 섬이 될지도 모른다는 생각도 든다. 모르겠다. 아직은. 지금도 과거도 삶에 배신당한 일만 기억이 날뿐.");
+    			br14 = element("br");
+    			t29 = text("\r\n    희망이 있기를.");
+    			t30 = space();
+    			hr4 = element("hr");
+    			t31 = space();
+    			center4 = element("center");
+    			h34 = element("h3");
+    			h34.textContent = "04 01 20:00";
+    			t33 = space();
+    			p14 = element("p1");
+    			t34 = text("예전에 자주 듣던 음악을 들었다. 이유는 모르겠지만 힘들때마다 듣기도 하고, 고통스러울때마다, 행복할때도 들었었다.");
+    			br15 = element("br");
+    			t35 = text("\r\n그때 들었던 음악을 들으니, 과거의 내가 생각나 이유를 모을 울음을 터트렸다. 나는 내 삶을 아무도 알아 주지않던, 그리고 알아주지도 않을 세상에서 보내고 있다. 어쩔수없다.");
+    			br16 = element("br");
+    			t36 = text("\r\n나는 지금의 내가 싫고, 짜증나지만, 어떻게 살기는 할테니 미래를 개선해나가는 수 밖에 없다. 지금의 나랑 과거의 나는 다르다는점, 이것 하나는 확실해졌다.");
+    			br17 = element("br");
+    			t37 = text("\r\n과연 내가 내가 원하는 삶인지도, 왜 태어났는지도 모르지만 살겠다면 확실히 살아야지. ");
+    			br18 = element("br");
+    			br19 = element("br");
+    			t38 = text("\r\n여름철에 바다를 가면 덥고, 물이 가장 시원하지만, 겨울철에 바다를 가면 바람이 매우 강하고 춥다. 인생의 시련이란게 그런것인가. 삶의 고통이란 그런것인가. ");
+    			br20 = element("br");
+    			t39 = text("\r\n내가 좋아하던 음악 하나를 덧붙이고 싶다. 내가 가장 우울할때 자주 듣던 음악이었다. ");
+    			br21 = element("br");
+    			t40 = space();
+    			center5 = element("center");
     			iframe = element("iframe");
-    			add_location(h30, file$2, 22, 0, 333);
-    			add_location(center0, file$2, 21, 0, 323);
-    			add_location(br0, file$2, 24, 124, 490);
-    			add_location(br1, file$2, 25, 50, 546);
-    			add_location(p10, file$2, 24, 0, 366);
-    			add_location(br2, file$2, 26, 113, 665);
-    			add_location(h31, file$2, 28, 4, 685);
-    			add_location(center1, file$2, 27, 0, 671);
-    			add_location(br3, file$2, 30, 102, 820);
-    			add_location(br4, file$2, 31, 73, 899);
-    			add_location(br5, file$2, 32, 99, 1004);
-    			add_location(br6, file$2, 33, 64, 1074);
-    			add_location(br7, file$2, 34, 96, 1176);
-    			add_location(p11, file$2, 30, 0, 718);
-    			add_location(h32, file$2, 38, 8, 1226);
-    			add_location(center2, file$2, 37, 4, 1208);
-    			add_location(br8, file$2, 40, 68, 1332);
-    			add_location(br9, file$2, 41, 97, 1435);
-    			add_location(br10, file$2, 42, 87, 1528);
-    			add_location(br11, file$2, 43, 48, 1582);
-    			add_location(br12, file$2, 43, 52, 1586);
-    			add_location(br13, file$2, 44, 88, 1680);
-    			add_location(br14, file$2, 45, 48, 1734);
-    			add_location(p12, file$2, 40, 0, 1264);
-    			attr_dev(iframe, "width", "560");
-    			attr_dev(iframe, "height", "315");
+    			add_location(hr0, file$2, 22, 0, 325);
+    			add_location(h30, file$2, 24, 0, 341);
+    			add_location(center0, file$2, 23, 0, 331);
+    			add_location(p10, file$2, 26, 0, 363);
+    			add_location(hr1, file$2, 27, 0, 374);
+    			add_location(h31, file$2, 29, 0, 390);
+    			add_location(center1, file$2, 28, 0, 380);
+    			add_location(br0, file$2, 31, 137, 562);
+    			add_location(br1, file$2, 32, 87, 655);
+    			add_location(br2, file$2, 33, 68, 729);
+    			add_location(br3, file$2, 34, 105, 840);
+    			add_location(br4, file$2, 35, 110, 956);
+    			add_location(br5, file$2, 36, 126, 1088);
+    			add_location(p11, file$2, 31, 0, 425);
+    			add_location(br6, file$2, 37, 77, 1171);
+    			add_location(hr2, file$2, 38, 0, 1177);
+    			add_location(h32, file$2, 40, 0, 1193);
+    			add_location(center2, file$2, 39, 0, 1183);
+    			add_location(br7, file$2, 42, 124, 1350);
+    			add_location(br8, file$2, 43, 50, 1406);
+    			add_location(p12, file$2, 42, 0, 1226);
+    			add_location(br9, file$2, 44, 113, 1525);
+    			add_location(hr3, file$2, 45, 0, 1531);
+    			add_location(h33, file$2, 47, 4, 1551);
+    			add_location(center3, file$2, 46, 0, 1537);
+    			add_location(br10, file$2, 49, 102, 1686);
+    			add_location(br11, file$2, 50, 73, 1765);
+    			add_location(br12, file$2, 51, 99, 1870);
+    			add_location(br13, file$2, 52, 64, 1940);
+    			add_location(br14, file$2, 53, 96, 2042);
+    			add_location(p13, file$2, 49, 0, 1584);
+    			add_location(hr4, file$2, 55, 0, 2068);
+    			add_location(h34, file$2, 57, 8, 2096);
+    			add_location(center4, file$2, 56, 4, 2078);
+    			add_location(br15, file$2, 59, 68, 2202);
+    			add_location(br16, file$2, 60, 97, 2305);
+    			add_location(br17, file$2, 61, 87, 2398);
+    			add_location(br18, file$2, 62, 48, 2452);
+    			add_location(br19, file$2, 62, 52, 2456);
+    			add_location(br20, file$2, 63, 88, 2550);
+    			add_location(br21, file$2, 64, 48, 2604);
+    			add_location(p14, file$2, 59, 0, 2134);
+    			attr_dev(iframe, "width", "auto");
+    			attr_dev(iframe, "height", "auto");
     			if (!src_url_equal(iframe.src, iframe_src_value = "https://www.youtube.com/embed/ypM_WGTlb1U")) attr_dev(iframe, "src", iframe_src_value);
     			attr_dev(iframe, "title", "YouTube video player");
     			attr_dev(iframe, "frameborder", "0");
     			attr_dev(iframe, "allow", "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
     			iframe.allowFullscreen = true;
-    			add_location(iframe, file$2, 47, 0, 1756);
-    			add_location(center3, file$2, 46, 0, 1746);
+    			add_location(iframe, file$2, 66, 0, 2626);
+    			add_location(center5, file$2, 65, 0, 2616);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, hr0, anchor);
+    			insert_dev(target, t0, anchor);
     			insert_dev(target, center0, anchor);
     			append_dev(center0, h30);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, p10, anchor);
-    			append_dev(p10, t2);
-    			append_dev(p10, br0);
-    			append_dev(p10, t3);
-    			append_dev(p10, br1);
-    			append_dev(p10, t4);
-    			insert_dev(target, br2, anchor);
-    			insert_dev(target, t5, anchor);
+    			insert_dev(target, t2, anchor);
+    			insert_dev(target, hr1, anchor);
+    			insert_dev(target, t3, anchor);
     			insert_dev(target, center1, anchor);
     			append_dev(center1, h31);
-    			insert_dev(target, t7, anchor);
+    			insert_dev(target, t5, anchor);
     			insert_dev(target, p11, anchor);
+    			append_dev(p11, t6);
+    			append_dev(p11, br0);
+    			append_dev(p11, t7);
+    			append_dev(p11, br1);
     			append_dev(p11, t8);
-    			append_dev(p11, br3);
+    			append_dev(p11, br2);
     			append_dev(p11, t9);
-    			append_dev(p11, br4);
+    			append_dev(p11, br3);
     			append_dev(p11, t10);
-    			append_dev(p11, br5);
+    			append_dev(p11, br4);
     			append_dev(p11, t11);
-    			append_dev(p11, br6);
+    			append_dev(p11, br5);
     			append_dev(p11, t12);
-    			append_dev(p11, br7);
-    			append_dev(p11, t13);
+    			insert_dev(target, br6, anchor);
+    			insert_dev(target, t13, anchor);
+    			insert_dev(target, hr2, anchor);
     			insert_dev(target, t14, anchor);
     			insert_dev(target, center2, anchor);
     			append_dev(center2, h32);
     			insert_dev(target, t16, anchor);
     			insert_dev(target, p12, anchor);
     			append_dev(p12, t17);
-    			append_dev(p12, br8);
+    			append_dev(p12, br7);
     			append_dev(p12, t18);
-    			append_dev(p12, br9);
+    			append_dev(p12, br8);
     			append_dev(p12, t19);
-    			append_dev(p12, br10);
-    			append_dev(p12, t20);
-    			append_dev(p12, br11);
-    			append_dev(p12, br12);
-    			append_dev(p12, t21);
-    			append_dev(p12, br13);
-    			append_dev(p12, t22);
-    			append_dev(p12, br14);
-    			insert_dev(target, t23, anchor);
+    			insert_dev(target, br9, anchor);
+    			insert_dev(target, t20, anchor);
+    			insert_dev(target, hr3, anchor);
+    			insert_dev(target, t21, anchor);
     			insert_dev(target, center3, anchor);
-    			append_dev(center3, iframe);
+    			append_dev(center3, h33);
+    			insert_dev(target, t23, anchor);
+    			insert_dev(target, p13, anchor);
+    			append_dev(p13, t24);
+    			append_dev(p13, br10);
+    			append_dev(p13, t25);
+    			append_dev(p13, br11);
+    			append_dev(p13, t26);
+    			append_dev(p13, br12);
+    			append_dev(p13, t27);
+    			append_dev(p13, br13);
+    			append_dev(p13, t28);
+    			append_dev(p13, br14);
+    			append_dev(p13, t29);
+    			insert_dev(target, t30, anchor);
+    			insert_dev(target, hr4, anchor);
+    			insert_dev(target, t31, anchor);
+    			insert_dev(target, center4, anchor);
+    			append_dev(center4, h34);
+    			insert_dev(target, t33, anchor);
+    			insert_dev(target, p14, anchor);
+    			append_dev(p14, t34);
+    			append_dev(p14, br15);
+    			append_dev(p14, t35);
+    			append_dev(p14, br16);
+    			append_dev(p14, t36);
+    			append_dev(p14, br17);
+    			append_dev(p14, t37);
+    			append_dev(p14, br18);
+    			append_dev(p14, br19);
+    			append_dev(p14, t38);
+    			append_dev(p14, br20);
+    			append_dev(p14, t39);
+    			append_dev(p14, br21);
+    			insert_dev(target, t40, anchor);
+    			insert_dev(target, center5, anchor);
+    			append_dev(center5, iframe);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(hr0);
+    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(center0);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(p10);
-    			if (detaching) detach_dev(br2);
-    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(hr1);
+    			if (detaching) detach_dev(t3);
     			if (detaching) detach_dev(center1);
-    			if (detaching) detach_dev(t7);
+    			if (detaching) detach_dev(t5);
     			if (detaching) detach_dev(p11);
+    			if (detaching) detach_dev(br6);
+    			if (detaching) detach_dev(t13);
+    			if (detaching) detach_dev(hr2);
     			if (detaching) detach_dev(t14);
     			if (detaching) detach_dev(center2);
     			if (detaching) detach_dev(t16);
     			if (detaching) detach_dev(p12);
-    			if (detaching) detach_dev(t23);
+    			if (detaching) detach_dev(br9);
+    			if (detaching) detach_dev(t20);
+    			if (detaching) detach_dev(hr3);
+    			if (detaching) detach_dev(t21);
     			if (detaching) detach_dev(center3);
+    			if (detaching) detach_dev(t23);
+    			if (detaching) detach_dev(p13);
+    			if (detaching) detach_dev(t30);
+    			if (detaching) detach_dev(hr4);
+    			if (detaching) detach_dev(t31);
+    			if (detaching) detach_dev(center4);
+    			if (detaching) detach_dev(t33);
+    			if (detaching) detach_dev(p14);
+    			if (detaching) detach_dev(t40);
+    			if (detaching) detach_dev(center5);
     		}
     	};
 
@@ -765,14 +905,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(21:19) ",
+    		source: "(22:19) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (19:19) 
+    // (20:19) 
     function create_if_block_1$1(ctx) {
     	let p1;
 
@@ -780,7 +920,7 @@ var app = (function () {
     		c: function create() {
     			p1 = element("p1");
     			p1.textContent = "아직 쓸 글을 못정했습니다.";
-    			add_location(p1, file$2, 19, 0, 275);
+    			add_location(p1, file$2, 20, 0, 277);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p1, anchor);
@@ -794,7 +934,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(19:19) ",
+    		source: "(20:19) ",
     		ctx
     	});
 
@@ -802,12 +942,12 @@ var app = (function () {
     }
 
     // (16:0) {#if code ==2}
-    function create_if_block$1(ctx) {
+    function create_if_block$2(ctx) {
     	const block = { c: noop, m: noop, d: noop };
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$1.name,
+    		id: create_if_block$2.name,
     		type: "if",
     		source: "(16:0) {#if code ==2}",
     		ctx
@@ -823,7 +963,7 @@ var app = (function () {
     	let body_class_value;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*code*/ ctx[0] == 2) return create_if_block$1;
+    		if (/*code*/ ctx[0] == 2) return create_if_block$2;
     		if (/*code*/ ctx[0] == 1) return create_if_block_1$1;
     		if (/*code*/ ctx[0] <= -1) return create_if_block_2$1;
     	}
@@ -838,7 +978,7 @@ var app = (function () {
     			body = element("body");
     			if (if_block) if_block.c();
     			add_location(head, file$2, 11, 0, 179);
-    			attr_dev(body, "class", body_class_value = "" + (null_to_empty(/*darkmode*/ ctx[1] + /*font_mode*/ ctx[2]) + " svelte-1ylk1zp"));
+    			attr_dev(body, "class", body_class_value = "" + (null_to_empty(/*darkmode*/ ctx[1] + /*font_mode*/ ctx[2]) + " svelte-1hzu1u5"));
     			add_location(body, file$2, 14, 0, 198);
     		},
     		l: function claim(nodes) {
@@ -861,7 +1001,7 @@ var app = (function () {
     				}
     			}
 
-    			if (dirty & /*darkmode, font_mode*/ 6 && body_class_value !== (body_class_value = "" + (null_to_empty(/*darkmode*/ ctx[1] + /*font_mode*/ ctx[2]) + " svelte-1ylk1zp"))) {
+    			if (dirty & /*darkmode, font_mode*/ 6 && body_class_value !== (body_class_value = "" + (null_to_empty(/*darkmode*/ ctx[1] + /*font_mode*/ ctx[2]) + " svelte-1hzu1u5"))) {
     				attr_dev(body, "class", body_class_value);
     			}
     		},
@@ -1006,7 +1146,7 @@ var app = (function () {
     }
 
     // (86:12) {:else}
-    function create_else_block(ctx) {
+    function create_else_block$1(ctx) {
     	let div;
     	let center;
     	let p1;
@@ -1036,7 +1176,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block.name,
+    		id: create_else_block$1.name,
     		type: "else",
     		source: "(86:12) {:else}",
     		ctx
@@ -1261,7 +1401,7 @@ var app = (function () {
     }
 
     // (52:12) {#if context_mode == "Home"}
-    function create_if_block(ctx) {
+    function create_if_block$1(ctx) {
     	let div;
 
     	const block = {
@@ -1282,7 +1422,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block.name,
+    		id: create_if_block$1.name,
     		type: "if",
     		source: "(52:12) {#if context_mode == \\\"Home\\\"}",
     		ctx
@@ -1366,11 +1506,11 @@ var app = (function () {
     	let current;
 
     	const if_block_creators = [
-    		create_if_block,
+    		create_if_block$1,
     		create_if_block_1,
     		create_if_block_2,
     		create_if_block_3,
-    		create_else_block
+    		create_else_block$1
     	];
 
     	const if_blocks = [];
@@ -1701,34 +1841,34 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[16] = list[i];
+    	child_ctx[17] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[16] = list[i];
+    	child_ctx[17] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[21] = list[i];
+    	child_ctx[22] = list[i];
     	return child_ctx;
     }
 
-    // (68:20) {#each menu_listsk1 as menu (menu.id) }
+    // (71:20) {#each menu_listsk1 as menu (menu.id) }
     function create_each_block_2(key_1, ctx) {
     	let il;
     	let a;
-    	let t_value = /*menu*/ ctx[21].label + "";
+    	let t_value = /*menu*/ ctx[22].label + "";
     	let t;
     	let a_class_value;
     	let mounted;
     	let dispose;
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[9](/*menu*/ ctx[21]);
+    		return /*click_handler*/ ctx[10](/*menu*/ ctx[22]);
     	}
 
     	const block = {
@@ -1738,10 +1878,10 @@ var app = (function () {
     			il = element("il");
     			a = element("a");
     			t = text(t_value);
-    			attr_dev(a, "class", a_class_value = "list-group-item list-group-item-action " + /*List_item_bgcolor*/ ctx[2] + /*font_mode*/ ctx[1] + " p-3");
-    			attr_dev(a, "href", /*menu*/ ctx[21].href);
-    			add_location(a, file, 68, 28, 3367);
-    			add_location(il, file, 68, 24, 3363);
+    			attr_dev(a, "class", a_class_value = "list-group-item list-group-item-action " + /*List_item_bgcolor*/ ctx[3] + /*font_mode*/ ctx[2] + " p-3");
+    			attr_dev(a, "href", /*menu*/ ctx[22].href);
+    			add_location(a, file, 71, 28, 3489);
+    			add_location(il, file, 71, 24, 3485);
     			this.first = il;
     		},
     		m: function mount(target, anchor) {
@@ -1757,7 +1897,7 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty & /*List_item_bgcolor, font_mode*/ 6 && a_class_value !== (a_class_value = "list-group-item list-group-item-action " + /*List_item_bgcolor*/ ctx[2] + /*font_mode*/ ctx[1] + " p-3")) {
+    			if (dirty & /*List_item_bgcolor, font_mode*/ 12 && a_class_value !== (a_class_value = "list-group-item list-group-item-action " + /*List_item_bgcolor*/ ctx[3] + /*font_mode*/ ctx[2] + " p-3")) {
     				attr_dev(a, "class", a_class_value);
     			}
     		},
@@ -1772,25 +1912,25 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(68:20) {#each menu_listsk1 as menu (menu.id) }",
+    		source: "(71:20) {#each menu_listsk1 as menu (menu.id) }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (83:32) {#each menu_listsk1 as drop}
+    // (86:32) {#each menu_listsk1 as drop}
     function create_each_block_1(ctx) {
     	let li;
     	let a;
-    	let t_value = /*drop*/ ctx[16].label + "";
+    	let t_value = /*drop*/ ctx[17].label + "";
     	let t;
     	let li_class_value;
     	let mounted;
     	let dispose;
 
     	function click_handler_1() {
-    		return /*click_handler_1*/ ctx[10](/*drop*/ ctx[16]);
+    		return /*click_handler_1*/ ctx[11](/*drop*/ ctx[17]);
     	}
 
     	const block = {
@@ -1799,10 +1939,10 @@ var app = (function () {
     			a = element("a");
     			t = text(t_value);
     			attr_dev(a, "class", "nav-link");
-    			attr_dev(a, "href", /*drop*/ ctx[16].href);
-    			add_location(a, file, 83, 91, 4665);
-    			attr_dev(li, "class", li_class_value = "nav-item active " + /*is_darkmode_light*/ ctx[0] + /*font_mode*/ ctx[1]);
-    			add_location(li, file, 83, 32, 4606);
+    			attr_dev(a, "href", /*drop*/ ctx[17].href);
+    			add_location(a, file, 86, 91, 4787);
+    			attr_dev(li, "class", li_class_value = "nav-item active " + /*is_darkmode_light*/ ctx[1] + /*font_mode*/ ctx[2]);
+    			add_location(li, file, 86, 32, 4728);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -1817,7 +1957,7 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty & /*is_darkmode_light, font_mode*/ 3 && li_class_value !== (li_class_value = "nav-item active " + /*is_darkmode_light*/ ctx[0] + /*font_mode*/ ctx[1])) {
+    			if (dirty & /*is_darkmode_light, font_mode*/ 6 && li_class_value !== (li_class_value = "nav-item active " + /*is_darkmode_light*/ ctx[1] + /*font_mode*/ ctx[2])) {
     				attr_dev(li, "class", li_class_value);
     			}
     		},
@@ -1832,17 +1972,17 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(83:32) {#each menu_listsk1 as drop}",
+    		source: "(86:32) {#each menu_listsk1 as drop}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (89:40) {#each dropdown as drop}
+    // (92:40) {#each dropdown as drop}
     function create_each_block(ctx) {
     	let a;
-    	let t_value = /*drop*/ ctx[16].label + "";
+    	let t_value = /*drop*/ ctx[17].label + "";
     	let t;
     	let a_class_value;
 
@@ -1850,16 +1990,16 @@ var app = (function () {
     		c: function create() {
     			a = element("a");
     			t = text(t_value);
-    			attr_dev(a, "class", a_class_value = "dropdown-item" + /*font_mode*/ ctx[1]);
-    			attr_dev(a, "href", /*drop*/ ctx[16].href);
-    			add_location(a, file, 89, 40, 5308);
+    			attr_dev(a, "class", a_class_value = "dropdown-item" + /*font_mode*/ ctx[2]);
+    			attr_dev(a, "href", /*drop*/ ctx[17].href);
+    			add_location(a, file, 92, 40, 5430);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
     			append_dev(a, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*font_mode*/ 2 && a_class_value !== (a_class_value = "dropdown-item" + /*font_mode*/ ctx[1])) {
+    			if (dirty & /*font_mode*/ 4 && a_class_value !== (a_class_value = "dropdown-item" + /*font_mode*/ ctx[2])) {
     				attr_dev(a, "class", a_class_value);
     			}
     		},
@@ -1872,7 +2012,61 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(89:40) {#each dropdown as drop}",
+    		source: "(92:40) {#each dropdown as drop}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (97:160) {:else}
+    function create_else_block(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Whitemode");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block.name,
+    		type: "else",
+    		source: "(97:160) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (97:123) {#if is_darkmode=="bg-white"}
+    function create_if_block(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Darkmode");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(97:123) {#if is_darkmode==\\\"bg-white\\\"}",
     		ctx
     	});
 
@@ -1941,9 +2135,9 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	let each_value_2 = /*menu_listsk1*/ ctx[6];
+    	let each_value_2 = /*menu_listsk1*/ ctx[7];
     	validate_each_argument(each_value_2);
-    	const get_key = ctx => /*menu*/ ctx[21].id;
+    	const get_key = ctx => /*menu*/ ctx[22].id;
     	validate_each_keys(ctx, each_value_2, get_each_context_2, get_key);
 
     	for (let i = 0; i < each_value_2.length; i += 1) {
@@ -1952,7 +2146,7 @@ var app = (function () {
     		each0_lookup.set(key, each_blocks_2[i] = create_each_block_2(key, child_ctx));
     	}
 
-    	let each_value_1 = /*menu_listsk1*/ ctx[6];
+    	let each_value_1 = /*menu_listsk1*/ ctx[7];
     	validate_each_argument(each_value_1);
     	let each_blocks_1 = [];
 
@@ -1960,7 +2154,7 @@ var app = (function () {
     		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
     	}
 
-    	let each_value = /*dropdown*/ ctx[7];
+    	let each_value = /*dropdown*/ ctx[8];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -1968,11 +2162,19 @@ var app = (function () {
     		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
     	}
 
+    	function select_block_type(ctx, dirty) {
+    		if (/*is_darkmode*/ ctx[0] == "bg-white") return create_if_block;
+    		return create_else_block;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type(ctx);
+
     	inner_context = new Context({
     			props: {
-    				context_mode: /*content_mode*/ ctx[4],
-    				bg_mode: /*is_darkmode_light*/ ctx[0],
-    				font_mode: /*font_mode*/ ctx[1],
+    				context_mode: /*content_mode*/ ctx[5],
+    				bg_mode: /*is_darkmode_light*/ ctx[1],
+    				font_mode: /*font_mode*/ ctx[2],
     				size_all: "device-width",
     				size_bar: ""
     			},
@@ -2041,45 +2243,46 @@ var app = (function () {
     			div3 = element("div");
     			t18 = space();
     			a1 = element("a");
-    			t19 = text("Change to Darkmode");
+    			t19 = text("Change to ");
+    			if_block.c();
     			t20 = space();
     			div7 = element("div");
     			create_component(inner_context.$$.fragment);
     			t21 = space();
     			script = element("script");
     			attr_dev(meta0, "charset", "utf-8");
-    			add_location(meta0, file, 50, 8, 2391);
+    			add_location(meta0, file, 53, 8, 2513);
     			attr_dev(meta1, "name", "viewport");
     			attr_dev(meta1, "content", "width=device-width, initial-scale=1, shrink-to-fit=no");
-    			add_location(meta1, file, 51, 8, 2424);
+    			add_location(meta1, file, 54, 8, 2546);
     			attr_dev(meta2, "name", "description");
     			attr_dev(meta2, "content", "");
-    			add_location(meta2, file, 52, 8, 2521);
+    			add_location(meta2, file, 55, 8, 2643);
     			attr_dev(meta3, "name", "author");
     			attr_dev(meta3, "content", "");
-    			add_location(meta3, file, 53, 8, 2568);
-    			add_location(title, file, 54, 8, 2610);
+    			add_location(meta3, file, 56, 8, 2690);
+    			add_location(title, file, 57, 8, 2732);
     			attr_dev(link0, "rel", "icon");
     			attr_dev(link0, "type", "image/x-icon");
     			attr_dev(link0, "href", "assets/favicon.ico");
-    			add_location(link0, file, 56, 8, 2699);
+    			add_location(link0, file, 59, 8, 2821);
     			attr_dev(link1, "href", "../build/styles.css");
     			attr_dev(link1, "rel", "stylesheet");
-    			add_location(link1, file, 58, 8, 2825);
-    			add_location(head, file, 49, 4, 2376);
-    			attr_dev(div0, "class", div0_class_value = "sidebar-heading border-bottom" + /*is_darkmode_light*/ ctx[0] + /*font_mode*/ ctx[1]);
-    			add_location(div0, file, 65, 15, 3127);
+    			add_location(link1, file, 61, 8, 2947);
+    			add_location(head, file, 52, 4, 2498);
+    			attr_dev(div0, "class", div0_class_value = "sidebar-heading border-bottom" + /*is_darkmode_light*/ ctx[1] + /*font_mode*/ ctx[2]);
+    			add_location(div0, file, 68, 15, 3249);
     			attr_dev(div1, "class", "list-group list-group-flush");
-    			add_location(div1, file, 66, 16, 3237);
-    			attr_dev(div2, "class", div2_class_value = "border-end " + /*is_darkmode_light*/ ctx[0]);
+    			add_location(div1, file, 69, 16, 3359);
+    			attr_dev(div2, "class", div2_class_value = "border-end " + /*is_darkmode_light*/ ctx[1]);
     			attr_dev(div2, "id", "sidebar-wrapper");
     			attr_dev(div2, "rel", "../build/styles.css");
-    			add_location(div2, file, 64, 12, 3019);
+    			add_location(div2, file, 67, 12, 3141);
     			attr_dev(button0, "class", "btn btn-primary");
     			attr_dev(button0, "id", "sidebarToggle");
-    			add_location(button0, file, 78, 24, 3944);
+    			add_location(button0, file, 81, 24, 4066);
     			attr_dev(span, "class", "navbar-toggler-icon");
-    			add_location(span, file, 79, 228, 4277);
+    			add_location(span, file, 82, 228, 4399);
     			attr_dev(button1, "class", "navbar-toggler");
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "data-bs-toggle", "collapse");
@@ -2087,7 +2290,7 @@ var app = (function () {
     			attr_dev(button1, "aria-controls", "navbarSupportedContent");
     			attr_dev(button1, "aria-expanded", "false");
     			attr_dev(button1, "aria-label", "Toggle navigation");
-    			add_location(button1, file, 79, 24, 4073);
+    			add_location(button1, file, 82, 24, 4195);
     			attr_dev(a0, "class", "nav-link dropdown-toggle");
     			attr_dev(a0, "id", "navbarDropdown");
     			attr_dev(a0, "href", "#");
@@ -2095,37 +2298,37 @@ var app = (function () {
     			attr_dev(a0, "data-bs-toggle", "dropdown");
     			attr_dev(a0, "aria-haspopup", "true");
     			attr_dev(a0, "aria-expanded", "false");
-    			add_location(a0, file, 86, 36, 4904);
+    			add_location(a0, file, 89, 36, 5026);
     			attr_dev(div3, "class", "dropdown-divider");
-    			add_location(div3, file, 91, 40, 5468);
-    			attr_dev(a1, "class", a1_class_value = "dropdown-item" + /*font_mode*/ ctx[1]);
+    			add_location(div3, file, 94, 40, 5590);
+    			attr_dev(a1, "class", a1_class_value = "dropdown-item" + /*font_mode*/ ctx[2]);
     			attr_dev(a1, "href", "#!");
-    			add_location(a1, file, 92, 40, 5545);
-    			attr_dev(div4, "class", div4_class_value = "dropdown-menu dropdown-menu-end " + /*is_darkmode_light*/ ctx[0]);
+    			add_location(a1, file, 96, 40, 5706);
+    			attr_dev(div4, "class", div4_class_value = "dropdown-menu dropdown-menu-end " + /*is_darkmode_light*/ ctx[1]);
     			attr_dev(div4, "aria-labelledby", "navbarDropdown");
-    			add_location(div4, file, 87, 36, 5103);
+    			add_location(div4, file, 90, 36, 5225);
     			attr_dev(li, "class", "nav-item dropdown");
-    			add_location(li, file, 85, 32, 4837);
+    			add_location(li, file, 88, 32, 4959);
     			attr_dev(ul, "class", "navbar-nav ms-auto mt-2 mt-lg-0");
-    			add_location(ul, file, 81, 28, 4468);
-    			attr_dev(div5, "class", div5_class_value = "collapse navbar-collapse " + /*is_darkmode_light*/ ctx[0]);
+    			add_location(ul, file, 84, 28, 4590);
+    			attr_dev(div5, "class", div5_class_value = "collapse navbar-collapse " + /*is_darkmode_light*/ ctx[1]);
     			attr_dev(div5, "id", "navbarSupportedContent");
-    			add_location(div5, file, 80, 24, 4352);
+    			add_location(div5, file, 83, 24, 4474);
     			attr_dev(div6, "class", "container-fluid");
-    			add_render_callback(() => /*div6_elementresize_handler*/ ctx[11].call(div6));
-    			add_location(div6, file, 76, 20, 3854);
-    			attr_dev(nav, "class", nav_class_value = "navbar navbar-expand-lg " + /*nav_bar*/ ctx[3] + " " + /*List_item_bgcolor*/ ctx[2] + " border-bottom");
-    			add_location(nav, file, 75, 16, 3746);
-    			add_location(div7, file, 99, 4, 5841);
+    			add_render_callback(() => /*div6_elementresize_handler*/ ctx[12].call(div6));
+    			add_location(div6, file, 79, 20, 3976);
+    			attr_dev(nav, "class", nav_class_value = "navbar navbar-expand-lg " + /*nav_bar*/ ctx[4] + " " + /*List_item_bgcolor*/ ctx[3] + " border-bottom");
+    			add_location(nav, file, 78, 16, 3868);
+    			add_location(div7, file, 103, 4, 6052);
     			attr_dev(div8, "id", "page-content-wrapper");
-    			add_location(div8, file, 73, 12, 3659);
+    			add_location(div8, file, 76, 12, 3781);
     			if (!src_url_equal(script.src, script_src_value = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file, 110, 8, 6189);
+    			add_location(script, file, 114, 8, 6400);
     			attr_dev(div9, "class", "d-flex");
     			attr_dev(div9, "id", "wrapper");
-    			add_location(div9, file, 62, 8, 2945);
-    			attr_dev(body, "class", /*is_darkmode_light*/ ctx[0]);
-    			add_location(body, file, 61, 4, 2902);
+    			add_location(div9, file, 65, 8, 3067);
+    			attr_dev(body, "class", /*is_darkmode_light*/ ctx[1]);
+    			add_location(body, file, 64, 4, 3024);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2189,7 +2392,8 @@ var app = (function () {
     			append_dev(div4, t18);
     			append_dev(div4, a1);
     			append_dev(a1, t19);
-    			div6_resize_listener = add_resize_listener(div6, /*div6_elementresize_handler*/ ctx[11].bind(div6));
+    			if_block.m(a1, null);
+    			div6_resize_listener = add_resize_listener(div6, /*div6_elementresize_handler*/ ctx[12].bind(div6));
     			append_dev(div8, t20);
     			append_dev(div8, div7);
     			mount_component(inner_context, div7, null);
@@ -2199,31 +2403,31 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", /*funis_darkmode*/ ctx[8], false, false, false),
-    					listen_dev(a1, "click", /*funis_darkmode*/ ctx[8], false, false, false)
+    					listen_dev(button0, "click", /*funis_darkmode*/ ctx[9], false, false, false),
+    					listen_dev(a1, "click", /*funis_darkmode*/ ctx[9], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (!current || dirty & /*is_darkmode_light, font_mode*/ 3 && div0_class_value !== (div0_class_value = "sidebar-heading border-bottom" + /*is_darkmode_light*/ ctx[0] + /*font_mode*/ ctx[1])) {
+    			if (!current || dirty & /*is_darkmode_light, font_mode*/ 6 && div0_class_value !== (div0_class_value = "sidebar-heading border-bottom" + /*is_darkmode_light*/ ctx[1] + /*font_mode*/ ctx[2])) {
     				attr_dev(div0, "class", div0_class_value);
     			}
 
-    			if (dirty & /*List_item_bgcolor, font_mode, menu_listsk1, content_mode*/ 86) {
-    				each_value_2 = /*menu_listsk1*/ ctx[6];
+    			if (dirty & /*List_item_bgcolor, font_mode, menu_listsk1, content_mode*/ 172) {
+    				each_value_2 = /*menu_listsk1*/ ctx[7];
     				validate_each_argument(each_value_2);
     				validate_each_keys(ctx, each_value_2, get_each_context_2, get_key);
     				each_blocks_2 = update_keyed_each(each_blocks_2, dirty, get_key, 1, ctx, each_value_2, each0_lookup, div1, destroy_block, create_each_block_2, null, get_each_context_2);
     			}
 
-    			if (!current || dirty & /*is_darkmode_light*/ 1 && div2_class_value !== (div2_class_value = "border-end " + /*is_darkmode_light*/ ctx[0])) {
+    			if (!current || dirty & /*is_darkmode_light*/ 2 && div2_class_value !== (div2_class_value = "border-end " + /*is_darkmode_light*/ ctx[1])) {
     				attr_dev(div2, "class", div2_class_value);
     			}
 
-    			if (dirty & /*is_darkmode_light, font_mode, menu_listsk1, content_mode*/ 83) {
-    				each_value_1 = /*menu_listsk1*/ ctx[6];
+    			if (dirty & /*is_darkmode_light, font_mode, menu_listsk1, content_mode*/ 166) {
+    				each_value_1 = /*menu_listsk1*/ ctx[7];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -2246,8 +2450,8 @@ var app = (function () {
     				each_blocks_1.length = each_value_1.length;
     			}
 
-    			if (dirty & /*font_mode, dropdown*/ 130) {
-    				each_value = /*dropdown*/ ctx[7];
+    			if (dirty & /*font_mode, dropdown*/ 260) {
+    				each_value = /*dropdown*/ ctx[8];
     				validate_each_argument(each_value);
     				let i;
 
@@ -2270,30 +2474,40 @@ var app = (function () {
     				each_blocks.length = each_value.length;
     			}
 
-    			if (!current || dirty & /*font_mode*/ 2 && a1_class_value !== (a1_class_value = "dropdown-item" + /*font_mode*/ ctx[1])) {
+    			if (current_block_type !== (current_block_type = select_block_type(ctx))) {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(a1, null);
+    				}
+    			}
+
+    			if (!current || dirty & /*font_mode*/ 4 && a1_class_value !== (a1_class_value = "dropdown-item" + /*font_mode*/ ctx[2])) {
     				attr_dev(a1, "class", a1_class_value);
     			}
 
-    			if (!current || dirty & /*is_darkmode_light*/ 1 && div4_class_value !== (div4_class_value = "dropdown-menu dropdown-menu-end " + /*is_darkmode_light*/ ctx[0])) {
+    			if (!current || dirty & /*is_darkmode_light*/ 2 && div4_class_value !== (div4_class_value = "dropdown-menu dropdown-menu-end " + /*is_darkmode_light*/ ctx[1])) {
     				attr_dev(div4, "class", div4_class_value);
     			}
 
-    			if (!current || dirty & /*is_darkmode_light*/ 1 && div5_class_value !== (div5_class_value = "collapse navbar-collapse " + /*is_darkmode_light*/ ctx[0])) {
+    			if (!current || dirty & /*is_darkmode_light*/ 2 && div5_class_value !== (div5_class_value = "collapse navbar-collapse " + /*is_darkmode_light*/ ctx[1])) {
     				attr_dev(div5, "class", div5_class_value);
     			}
 
-    			if (!current || dirty & /*nav_bar, List_item_bgcolor*/ 12 && nav_class_value !== (nav_class_value = "navbar navbar-expand-lg " + /*nav_bar*/ ctx[3] + " " + /*List_item_bgcolor*/ ctx[2] + " border-bottom")) {
+    			if (!current || dirty & /*nav_bar, List_item_bgcolor*/ 24 && nav_class_value !== (nav_class_value = "navbar navbar-expand-lg " + /*nav_bar*/ ctx[4] + " " + /*List_item_bgcolor*/ ctx[3] + " border-bottom")) {
     				attr_dev(nav, "class", nav_class_value);
     			}
 
     			const inner_context_changes = {};
-    			if (dirty & /*content_mode*/ 16) inner_context_changes.context_mode = /*content_mode*/ ctx[4];
-    			if (dirty & /*is_darkmode_light*/ 1) inner_context_changes.bg_mode = /*is_darkmode_light*/ ctx[0];
-    			if (dirty & /*font_mode*/ 2) inner_context_changes.font_mode = /*font_mode*/ ctx[1];
+    			if (dirty & /*content_mode*/ 32) inner_context_changes.context_mode = /*content_mode*/ ctx[5];
+    			if (dirty & /*is_darkmode_light*/ 2) inner_context_changes.bg_mode = /*is_darkmode_light*/ ctx[1];
+    			if (dirty & /*font_mode*/ 4) inner_context_changes.font_mode = /*font_mode*/ ctx[2];
     			inner_context.$set(inner_context_changes);
 
-    			if (!current || dirty & /*is_darkmode_light*/ 1) {
-    				attr_dev(body, "class", /*is_darkmode_light*/ ctx[0]);
+    			if (!current || dirty & /*is_darkmode_light*/ 2) {
+    				attr_dev(body, "class", /*is_darkmode_light*/ ctx[1]);
     			}
     		},
     		i: function intro(local) {
@@ -2316,6 +2530,7 @@ var app = (function () {
 
     			destroy_each(each_blocks_1, detaching);
     			destroy_each(each_blocks, detaching);
+    			if_block.d();
     			div6_resize_listener();
     			destroy_component(inner_context);
     			mounted = false;
@@ -2406,37 +2621,40 @@ var app = (function () {
 
     	function funis_darkmode() {
     		if (is_darkmode == "bg-white" || is_darkmode_light == "bg-light") {
-    			$$invalidate(1, font_mode = " text-white");
-    			is_darkmode = "bg-black";
-    			$$invalidate(0, is_darkmode_light = "bg-dark");
-    			$$invalidate(2, List_item_bgcolor = "list-group-item-dark");
-    			$$invalidate(3, nav_bar = "navbar-dark");
+    			$$invalidate(2, font_mode = " text-white");
+    			$$invalidate(0, is_darkmode = "bg-black");
+    			$$invalidate(1, is_darkmode_light = "bg-dark");
+    			$$invalidate(3, List_item_bgcolor = "list-group-item-dark");
+    			$$invalidate(4, nav_bar = "navbar-dark");
+    			darkmode = true;
     			console.log("be black");
     		} else {
-    			$$invalidate(2, List_item_bgcolor = "list-group-item-light");
-    			is_darkmode = "bg-white";
-    			$$invalidate(0, is_darkmode_light = "bg-light");
-    			$$invalidate(1, font_mode = "");
-    			$$invalidate(2, List_item_bgcolor = "list-group-item-light");
-    			$$invalidate(3, nav_bar = "navbar-light");
+    			$$invalidate(3, List_item_bgcolor = "list-group-item-light");
+    			$$invalidate(0, is_darkmode = "bg-white");
+    			$$invalidate(1, is_darkmode_light = "bg-light");
+    			$$invalidate(2, font_mode = "");
+    			$$invalidate(3, List_item_bgcolor = "list-group-item-light");
+    			$$invalidate(4, nav_bar = "navbar-light");
+    			darkmode = false;
     			console.log("be white");
     		}
     	}
 
     	let content_mode;
     	let toggle_button;
+    	let darkmode;
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
-    	const click_handler = menu => $$invalidate(4, content_mode = menu.label);
-    	const click_handler_1 = drop => $$invalidate(4, content_mode = drop.label);
+    	const click_handler = menu => $$invalidate(5, content_mode = menu.label);
+    	const click_handler_1 = drop => $$invalidate(5, content_mode = drop.label);
 
     	function div6_elementresize_handler() {
     		toggle_button = this.clientWidth;
-    		$$invalidate(5, toggle_button);
+    		$$invalidate(6, toggle_button);
     	}
 
     	$$self.$capture_state = () => ({
@@ -2453,22 +2671,24 @@ var app = (function () {
     		funis_darkmode,
     		Inner_context: Context,
     		content_mode,
-    		toggle_button
+    		toggle_button,
+    		darkmode
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('menu_listsk1' in $$props) $$invalidate(6, menu_listsk1 = $$props.menu_listsk1);
+    		if ('menu_listsk1' in $$props) $$invalidate(7, menu_listsk1 = $$props.menu_listsk1);
     		if ('context2' in $$props) context2 = $$props.context2;
     		if ('link' in $$props) link = $$props.link;
-    		if ('dropdown' in $$props) $$invalidate(7, dropdown = $$props.dropdown);
+    		if ('dropdown' in $$props) $$invalidate(8, dropdown = $$props.dropdown);
     		if ('navbar' in $$props) navbar = $$props.navbar;
-    		if ('is_darkmode' in $$props) is_darkmode = $$props.is_darkmode;
-    		if ('is_darkmode_light' in $$props) $$invalidate(0, is_darkmode_light = $$props.is_darkmode_light);
-    		if ('font_mode' in $$props) $$invalidate(1, font_mode = $$props.font_mode);
-    		if ('List_item_bgcolor' in $$props) $$invalidate(2, List_item_bgcolor = $$props.List_item_bgcolor);
-    		if ('nav_bar' in $$props) $$invalidate(3, nav_bar = $$props.nav_bar);
-    		if ('content_mode' in $$props) $$invalidate(4, content_mode = $$props.content_mode);
-    		if ('toggle_button' in $$props) $$invalidate(5, toggle_button = $$props.toggle_button);
+    		if ('is_darkmode' in $$props) $$invalidate(0, is_darkmode = $$props.is_darkmode);
+    		if ('is_darkmode_light' in $$props) $$invalidate(1, is_darkmode_light = $$props.is_darkmode_light);
+    		if ('font_mode' in $$props) $$invalidate(2, font_mode = $$props.font_mode);
+    		if ('List_item_bgcolor' in $$props) $$invalidate(3, List_item_bgcolor = $$props.List_item_bgcolor);
+    		if ('nav_bar' in $$props) $$invalidate(4, nav_bar = $$props.nav_bar);
+    		if ('content_mode' in $$props) $$invalidate(5, content_mode = $$props.content_mode);
+    		if ('toggle_button' in $$props) $$invalidate(6, toggle_button = $$props.toggle_button);
+    		if ('darkmode' in $$props) darkmode = $$props.darkmode;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -2476,6 +2696,7 @@ var app = (function () {
     	}
 
     	return [
+    		is_darkmode,
     		is_darkmode_light,
     		font_mode,
     		List_item_bgcolor,

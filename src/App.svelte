@@ -29,6 +29,7 @@
                             is_darkmode_light = "bg-dark";
                             List_item_bgcolor ="list-group-item-dark"
                             nav_bar = "navbar-dark"
+                            darkmode =true;
                             console.log("be black");
                         }else{
                             List_item_bgcolor ="list-group-item-light"
@@ -37,11 +38,13 @@
                             font_mode = ""
                             List_item_bgcolor ="list-group-item-light"
                             nav_bar = "navbar-light"
+                            darkmode=false;
                             console.log("be white")
                     }}
                     import Inner_context from "./context.svelte"
                     let content_mode;
                     let toggle_button;
+                    let darkmode;
 
 </script>
 <style>
@@ -90,7 +93,8 @@
                                         <a class={"dropdown-item"+font_mode} href={drop.href} >{drop.label}</a>
                                         {/each}
                                         <div class="dropdown-divider"></div>
-                                        <a class={"dropdown-item"+font_mode} href="#!" on:click={funis_darkmode}>Change to Darkmode</a>
+                                      
+                                        <a class={"dropdown-item"+font_mode} href="#!" on:click={funis_darkmode}>Change to {#if is_darkmode=="bg-white"}Darkmode{:else}Whitemode{/if}</a>
                                     </div>
                                 </li>
                             </ul>
