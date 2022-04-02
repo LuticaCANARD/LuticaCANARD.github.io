@@ -14,7 +14,7 @@
         {"SNS_name": "Instargram : @presan100", "href" : "https://www.instagram.com/lutica_canard"},
         {"SNS_name": "Github : LuticaCANARD ", "href" : "https://github.com/LuticaCANARD"}]
     import Page1 from"./post_list/something2.svelte"
-
+    let code_on =1;
 </script>
 <style>
 .Lutica_post{
@@ -65,26 +65,33 @@
             {:else if context_mode=="Profile"}
             <div>
                 <center>
-                    <h1> About Lutica </h1>
+                    <br>
+                    <h2> About Lutica </h2>
+                    <br>
+                    <img src = "./KakaoTalk_20220322_200232462.png">
+                    <br>
+                    <hr>
+                    <p1 class = "p-1"> 
+                        I was studied Railroad engineering<br>I'm working on Game company.<br>I'm seeking VRgame develop<br><hr> 
+                     </p1>
+
                 </center>
             </div>
             {:else if context_mode =="Posts"}
             <div>
             <center>
                 <br><h1> Posts <br></h1><br>
+                <input bind:value={code_on} size="3" >
             </center>
-            <script>
-                
-            </script>
             <Page1
-            code = 1
+            code = {code_on}
             darkmode = {bg_mode}
             font_mode = {font_mode}
             />
 
             </div>
             {:else}
-            <div> 
+            <div> <br>
                 <center>
                 <p1> Welcome!</p1>
                 </center>

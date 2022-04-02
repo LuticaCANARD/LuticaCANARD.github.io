@@ -75,6 +75,9 @@ var app = (function () {
     function children(element) {
         return Array.from(element.childNodes);
     }
+    function set_input_value(input, value) {
+        input.value = value == null ? '' : value;
+    }
     // unfortunately this can't be a constant as that wouldn't be tree-shakeable
     // so we cache the result instead
     let crossorigin;
@@ -1141,28 +1144,35 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[8] = list[i];
+    	child_ctx[10] = list[i];
     	return child_ctx;
     }
 
-    // (86:12) {:else}
+    // (93:12) {:else}
     function create_else_block$1(ctx) {
     	let div;
+    	let br;
+    	let t0;
     	let center;
     	let p1;
 
     	const block = {
     		c: function create() {
     			div = element("div");
+    			br = element("br");
+    			t0 = space();
     			center = element("center");
     			p1 = element("p1");
     			p1.textContent = "Welcome!";
-    			add_location(p1, file$1, 88, 16, 2824);
-    			add_location(center, file$1, 87, 16, 2798);
-    			add_location(div, file$1, 86, 12, 2774);
+    			add_location(br, file$1, 93, 18, 3175);
+    			add_location(p1, file$1, 95, 16, 3223);
+    			add_location(center, file$1, 94, 16, 3197);
+    			add_location(div, file$1, 93, 12, 3169);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
+    			append_dev(div, br);
+    			append_dev(div, t0);
     			append_dev(div, center);
     			append_dev(center, p1);
     		},
@@ -1178,14 +1188,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(86:12) {:else}",
+    		source: "(93:12) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (71:45) 
+    // (80:45) 
     function create_if_block_3(ctx) {
     	let div;
     	let center;
@@ -1195,14 +1205,16 @@ var app = (function () {
     	let br1;
     	let br2;
     	let t1;
-    	let script;
+    	let input;
     	let t2;
     	let page1;
     	let current;
+    	let mounted;
+    	let dispose;
 
     	page1 = new Something2({
     			props: {
-    				code: "-1",
+    				code: /*code_on*/ ctx[3],
     				darkmode: /*bg_mode*/ ctx[1],
     				font_mode: /*font_mode*/ ctx[2]
     			},
@@ -1219,16 +1231,17 @@ var app = (function () {
     			br1 = element("br");
     			br2 = element("br");
     			t1 = space();
-    			script = element("script");
+    			input = element("input");
     			t2 = space();
     			create_component(page1.$$.fragment);
-    			add_location(br0, file$1, 73, 16, 2473);
-    			add_location(br1, file$1, 73, 31, 2488);
-    			add_location(h1, file$1, 73, 20, 2477);
-    			add_location(br2, file$1, 73, 40, 2497);
-    			add_location(center, file$1, 72, 12, 2447);
-    			add_location(script, file$1, 75, 12, 2538);
-    			add_location(div, file$1, 71, 12, 2428);
+    			add_location(br0, file$1, 82, 16, 2868);
+    			add_location(br1, file$1, 82, 31, 2883);
+    			add_location(h1, file$1, 82, 20, 2872);
+    			add_location(br2, file$1, 82, 40, 2892);
+    			attr_dev(input, "size", "3");
+    			add_location(input, file$1, 83, 16, 2914);
+    			add_location(center, file$1, 81, 12, 2842);
+    			add_location(div, file$1, 80, 12, 2823);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1238,14 +1251,25 @@ var app = (function () {
     			append_dev(h1, t0);
     			append_dev(h1, br1);
     			append_dev(center, br2);
-    			append_dev(div, t1);
-    			append_dev(div, script);
+    			append_dev(center, t1);
+    			append_dev(center, input);
+    			set_input_value(input, /*code_on*/ ctx[3]);
     			append_dev(div, t2);
     			mount_component(page1, div, null);
     			current = true;
+
+    			if (!mounted) {
+    				dispose = listen_dev(input, "input", /*input_input_handler*/ ctx[7]);
+    				mounted = true;
+    			}
     		},
     		p: function update(ctx, dirty) {
+    			if (dirty & /*code_on*/ 8 && input.value !== /*code_on*/ ctx[3]) {
+    				set_input_value(input, /*code_on*/ ctx[3]);
+    			}
+
     			const page1_changes = {};
+    			if (dirty & /*code_on*/ 8) page1_changes.code = /*code_on*/ ctx[3];
     			if (dirty & /*bg_mode*/ 2) page1_changes.darkmode = /*bg_mode*/ ctx[1];
     			if (dirty & /*font_mode*/ 4) page1_changes.font_mode = /*font_mode*/ ctx[2];
     			page1.$set(page1_changes);
@@ -1262,6 +1286,8 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
     			destroy_component(page1);
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -1269,7 +1295,7 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(71:45) ",
+    		source: "(80:45) ",
     		ctx
     	});
 
@@ -1280,22 +1306,92 @@ var app = (function () {
     function create_if_block_2(ctx) {
     	let div;
     	let center;
-    	let h1;
+    	let br0;
+    	let t0;
+    	let h2;
+    	let t2;
+    	let br1;
+    	let t3;
+    	let img;
+    	let img_src_value;
+    	let t4;
+    	let br2;
+    	let t5;
+    	let hr0;
+    	let t6;
+    	let p1;
+    	let t7;
+    	let br3;
+    	let t8;
+    	let br4;
+    	let t9;
+    	let br5;
+    	let hr1;
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			center = element("center");
-    			h1 = element("h1");
-    			h1.textContent = "About Lutica";
-    			add_location(h1, file$1, 67, 20, 2297);
-    			add_location(center, file$1, 66, 16, 2267);
-    			add_location(div, file$1, 65, 12, 2244);
+    			br0 = element("br");
+    			t0 = space();
+    			h2 = element("h2");
+    			h2.textContent = "About Lutica";
+    			t2 = space();
+    			br1 = element("br");
+    			t3 = space();
+    			img = element("img");
+    			t4 = space();
+    			br2 = element("br");
+    			t5 = space();
+    			hr0 = element("hr");
+    			t6 = space();
+    			p1 = element("p1");
+    			t7 = text("I was studied Railroad engineering");
+    			br3 = element("br");
+    			t8 = text("I'm working on Game company.");
+    			br4 = element("br");
+    			t9 = text("I'm seeking VRgame develop");
+    			br5 = element("br");
+    			hr1 = element("hr");
+    			add_location(br0, file$1, 67, 20, 2316);
+    			add_location(h2, file$1, 68, 20, 2342);
+    			add_location(br1, file$1, 69, 20, 2387);
+    			if (!src_url_equal(img.src, img_src_value = "./KakaoTalk_20220322_200232462.png")) attr_dev(img, "src", img_src_value);
+    			add_location(img, file$1, 70, 20, 2413);
+    			add_location(br2, file$1, 71, 20, 2483);
+    			add_location(hr0, file$1, 72, 20, 2509);
+    			add_location(br3, file$1, 74, 58, 2614);
+    			add_location(br4, file$1, 74, 90, 2646);
+    			add_location(br5, file$1, 74, 120, 2676);
+    			add_location(hr1, file$1, 74, 124, 2680);
+    			attr_dev(p1, "class", "p-1");
+    			add_location(p1, file$1, 73, 20, 2535);
+    			add_location(center, file$1, 66, 16, 2286);
+    			add_location(div, file$1, 65, 12, 2263);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, center);
-    			append_dev(center, h1);
+    			append_dev(center, br0);
+    			append_dev(center, t0);
+    			append_dev(center, h2);
+    			append_dev(center, t2);
+    			append_dev(center, br1);
+    			append_dev(center, t3);
+    			append_dev(center, img);
+    			append_dev(center, t4);
+    			append_dev(center, br2);
+    			append_dev(center, t5);
+    			append_dev(center, hr0);
+    			append_dev(center, t6);
+    			append_dev(center, p1);
+    			append_dev(p1, t7);
+    			append_dev(p1, br3);
+    			append_dev(p1, t8);
+    			append_dev(p1, br4);
+    			append_dev(p1, t9);
+    			append_dev(p1, br5);
+    			append_dev(p1, hr1);
     		},
     		p: noop,
     		i: noop,
@@ -1322,7 +1418,7 @@ var app = (function () {
     	let center;
     	let h3;
     	let t1;
-    	let each_value = /*SNSs*/ ctx[3];
+    	let each_value = /*SNSs*/ ctx[4];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -1342,9 +1438,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(h3, file$1, 58, 20, 1929);
-    			add_location(center, file$1, 57, 16, 1899);
-    			add_location(div, file$1, 56, 12, 1876);
+    			add_location(h3, file$1, 58, 20, 1948);
+    			add_location(center, file$1, 57, 16, 1918);
+    			add_location(div, file$1, 56, 12, 1895);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1357,8 +1453,8 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*SNSs*/ 8) {
-    				each_value = /*SNSs*/ ctx[3];
+    			if (dirty & /*SNSs*/ 16) {
+    				each_value = /*SNSs*/ ctx[4];
     				validate_each_argument(each_value);
     				let i;
 
@@ -1407,7 +1503,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div = element("div");
-    			add_location(div, file$1, 52, 12, 1787);
+    			add_location(div, file$1, 52, 12, 1806);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1435,7 +1531,7 @@ var app = (function () {
     function create_each_block$1(ctx) {
     	let a;
     	let p1;
-    	let t0_value = /*SNSone*/ ctx[8].SNS_name + "";
+    	let t0_value = /*SNSone*/ ctx[10].SNS_name + "";
     	let t0;
     	let t1;
     	let br;
@@ -1448,10 +1544,10 @@ var app = (function () {
     			t1 = space();
     			br = element("br");
     			attr_dev(p1, "class", "");
-    			add_location(p1, file$1, 60, 44, 2055);
-    			attr_dev(a, "href", /*SNSone*/ ctx[8].href);
-    			add_location(a, file$1, 60, 20, 2031);
-    			add_location(br, file$1, 60, 87, 2098);
+    			add_location(p1, file$1, 60, 44, 2074);
+    			attr_dev(a, "href", /*SNSone*/ ctx[10].href);
+    			add_location(a, file$1, 60, 20, 2050);
+    			add_location(br, file$1, 60, 87, 2117);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -1551,32 +1647,32 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			if_block.c();
-    			add_location(style, file$1, 28, 4, 979);
+    			add_location(style, file$1, 28, 4, 998);
     			attr_dev(meta0, "charset", "utf-8");
-    			add_location(meta0, file$1, 38, 4, 1180);
+    			add_location(meta0, file$1, 38, 4, 1199);
     			attr_dev(meta1, "name", "viewport");
     			attr_dev(meta1, "content", "width=device-width, initial-scale=1, shrink-to-fit=no");
-    			add_location(meta1, file$1, 39, 4, 1210);
+    			add_location(meta1, file$1, 39, 4, 1229);
     			attr_dev(meta2, "name", "description");
     			attr_dev(meta2, "content", "");
-    			add_location(meta2, file$1, 40, 4, 1304);
+    			add_location(meta2, file$1, 40, 4, 1323);
     			attr_dev(meta3, "name", "author");
     			attr_dev(meta3, "content", "");
-    			add_location(meta3, file$1, 41, 4, 1348);
-    			add_location(title, file$1, 42, 4, 1387);
+    			add_location(meta3, file$1, 41, 4, 1367);
+    			add_location(title, file$1, 42, 4, 1406);
     			attr_dev(link0, "rel", "icon");
     			attr_dev(link0, "type", "image/x-icon");
     			attr_dev(link0, "href", "assets/favicon.ico");
-    			add_location(link0, file$1, 44, 4, 1470);
+    			add_location(link0, file$1, 44, 4, 1489);
     			attr_dev(link1, "href", "../build/styles.css");
     			attr_dev(link1, "rel", "stylesheet");
-    			add_location(link1, file$1, 46, 4, 1590);
-    			add_location(head, file$1, 27, 0, 967);
-    			add_location(div0, file$1, 50, 8, 1726);
+    			add_location(link1, file$1, 46, 4, 1609);
+    			add_location(head, file$1, 27, 0, 986);
+    			add_location(div0, file$1, 50, 8, 1745);
     			attr_dev(div1, "id", "all_wrap");
-    			add_location(div1, file$1, 49, 4, 1693);
+    			add_location(div1, file$1, 49, 4, 1712);
     			attr_dev(body, "class", body_class_value = "" + (null_to_empty(/*bg_mode*/ ctx[1] + /*font_mode*/ ctx[2]) + " svelte-vnh244"));
-    			add_location(body, file$1, 48, 0, 1652);
+    			add_location(body, file$1, 48, 0, 1671);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1706,18 +1802,24 @@ var app = (function () {
     		}
     	];
 
+    	let code_on = 1;
     	const writable_props = ['context_mode', 'bg_mode', 'font_mode', 'size_all', 'size_bar'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Context> was created with unknown prop '${key}'`);
     	});
 
+    	function input_input_handler() {
+    		code_on = this.value;
+    		$$invalidate(3, code_on);
+    	}
+
     	$$self.$$set = $$props => {
     		if ('context_mode' in $$props) $$invalidate(0, context_mode = $$props.context_mode);
     		if ('bg_mode' in $$props) $$invalidate(1, bg_mode = $$props.bg_mode);
     		if ('font_mode' in $$props) $$invalidate(2, font_mode = $$props.font_mode);
-    		if ('size_all' in $$props) $$invalidate(4, size_all = $$props.size_all);
-    		if ('size_bar' in $$props) $$invalidate(5, size_bar = $$props.size_bar);
+    		if ('size_all' in $$props) $$invalidate(5, size_all = $$props.size_all);
+    		if ('size_bar' in $$props) $$invalidate(6, size_bar = $$props.size_bar);
     	};
 
     	$$self.$capture_state = () => ({
@@ -1729,25 +1831,36 @@ var app = (function () {
     		readmode,
     		post_tree,
     		SNSs,
-    		Page1: Something2
+    		Page1: Something2,
+    		code_on
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('context_mode' in $$props) $$invalidate(0, context_mode = $$props.context_mode);
     		if ('bg_mode' in $$props) $$invalidate(1, bg_mode = $$props.bg_mode);
     		if ('font_mode' in $$props) $$invalidate(2, font_mode = $$props.font_mode);
-    		if ('size_all' in $$props) $$invalidate(4, size_all = $$props.size_all);
-    		if ('size_bar' in $$props) $$invalidate(5, size_bar = $$props.size_bar);
+    		if ('size_all' in $$props) $$invalidate(5, size_all = $$props.size_all);
+    		if ('size_bar' in $$props) $$invalidate(6, size_bar = $$props.size_bar);
     		if ('readmode' in $$props) readmode = $$props.readmode;
     		if ('post_tree' in $$props) post_tree = $$props.post_tree;
-    		if ('SNSs' in $$props) $$invalidate(3, SNSs = $$props.SNSs);
+    		if ('SNSs' in $$props) $$invalidate(4, SNSs = $$props.SNSs);
+    		if ('code_on' in $$props) $$invalidate(3, code_on = $$props.code_on);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [context_mode, bg_mode, font_mode, SNSs, size_all, size_bar];
+    	return [
+    		context_mode,
+    		bg_mode,
+    		font_mode,
+    		code_on,
+    		SNSs,
+    		size_all,
+    		size_bar,
+    		input_input_handler
+    	];
     }
 
     class Context extends SvelteComponentDev {
@@ -1758,8 +1871,8 @@ var app = (function () {
     			context_mode: 0,
     			bg_mode: 1,
     			font_mode: 2,
-    			size_all: 4,
-    			size_bar: 5
+    			size_all: 5,
+    			size_bar: 6
     		});
 
     		dispatch_dev("SvelteRegisterComponent", {
@@ -1784,11 +1897,11 @@ var app = (function () {
     			console.warn("<Context> was created without expected prop 'font_mode'");
     		}
 
-    		if (/*size_all*/ ctx[4] === undefined && !('size_all' in props)) {
+    		if (/*size_all*/ ctx[5] === undefined && !('size_all' in props)) {
     			console.warn("<Context> was created without expected prop 'size_all'");
     		}
 
-    		if (/*size_bar*/ ctx[5] === undefined && !('size_bar' in props)) {
+    		if (/*size_bar*/ ctx[6] === undefined && !('size_bar' in props)) {
     			console.warn("<Context> was created without expected prop 'size_bar'");
     		}
     	}
