@@ -504,7 +504,222 @@ var app = (function () {
 
     const file$2 = "src\\post_list\\something2.svelte";
 
-    // (15:0) {#if code >=1}
+    // (21:19) 
+    function create_if_block_2$1(ctx) {
+    	let center0;
+    	let h30;
+    	let t1;
+    	let p10;
+    	let t2;
+    	let br0;
+    	let t3;
+    	let br1;
+    	let t4;
+    	let br2;
+    	let t5;
+    	let center1;
+    	let h31;
+    	let t7;
+    	let p11;
+    	let t8;
+    	let br3;
+    	let t9;
+    	let br4;
+    	let t10;
+    	let br5;
+    	let t11;
+    	let br6;
+    	let t12;
+    	let br7;
+    	let t13;
+    	let t14;
+    	let center2;
+    	let h32;
+    	let t16;
+    	let p12;
+    	let t17;
+    	let br8;
+    	let t18;
+    	let br9;
+    	let t19;
+    	let br10;
+    	let t20;
+    	let br11;
+    	let br12;
+    	let t21;
+    	let br13;
+    	let t22;
+    	let br14;
+    	let t23;
+    	let center3;
+    	let iframe;
+    	let iframe_src_value;
+
+    	const block = {
+    		c: function create() {
+    			center0 = element("center");
+    			h30 = element("h3");
+    			h30.textContent = "04 02 10:00";
+    			t1 = space();
+    			p10 = element("p1");
+    			t2 = text("휴학을 한게 약간은 후회가 되긴 한다. 하지만 생각해보면, 낮은 학점으로 나갈바에야 & 철도기술연구원 IPP도 못해볼 바에야 차라리 학교를 나가던지 쉬면서 일하고 상황이 나아지면 다시 학교로 오는게 저 낫겠지 싶다.");
+    			br0 = element("br");
+    			t3 = text("\r\n디자인 패턴공부도 이제 슬슬 방법론을 찾아서 하게되었고, 나도 뭔가 생각이 정리가 된다. ");
+    			br1 = element("br");
+    			t4 = text("\r\n42Seoul이라는 유명한 부트캠프(?)에 La pisin이라는 과정이 있는데, 한달간 확실히 한 뒤 그 뒤에 느슨해지는 방법론을 채택했다. 생각해보면 나도 그런 방법론을 향하는게 아닐까 싶다.");
+    			br2 = element("br");
+    			t5 = space();
+    			center1 = element("center");
+    			h31 = element("h3");
+    			h31.textContent = "04 01 21:30";
+    			t7 = space();
+    			p11 = element("p1");
+    			t8 = text("어느날 문득 삶에 대한 회의가 들었다. 어떤 일이었는지는 모르지만, 무슨 일이 들어서 삶을 던지고 싶었다. 삶이 뭔데 나에게 이렇게 고통스럽게 하는지 모르겠다는 생각을 한다.");
+    			br3 = element("br");
+    			t9 = text("\r\n    인생, 하나의 바다와도 같고 땅과도 같으며 우주와도 같은 미지의 세계. 삶과 바다,우주는 어찌보면 하나의 흐름일지도 모른다.");
+    			br4 = element("br");
+    			t10 = text("\r\n    삶이 바다라고 가정하면, 땅을 찾아 헤메던 나의 인생은 희망고문에 시달린걸지도 모른다. 이 방향으로 가면 땅이 나온다는 굳센 믿음으로 살아왔지만, 사실은 아무것도 없었던.");
+    			br5 = element("br");
+    			t11 = text("\r\n    요근래 코딩이라는 새로운 길을 찾았다곤 하지만 가끔은 과거의 철도기관사와 같은 희망고문이 될까 많이 두렵다.");
+    			br6 = element("br");
+    			t12 = text("\r\n    하지만 하나의 작은 섬이라도, 아마 미래에 보면 \"희망봉\"같은 섬이 될지도 모른다는 생각도 든다. 모르겠다. 아직은. 지금도 과거도 삶에 배신당한 일만 기억이 날뿐.");
+    			br7 = element("br");
+    			t13 = text("\r\n    희망이 있기를.");
+    			t14 = space();
+    			center2 = element("center");
+    			h32 = element("h3");
+    			h32.textContent = "04 01 20:00";
+    			t16 = space();
+    			p12 = element("p1");
+    			t17 = text("예전에 자주 듣던 음악을 들었다. 이유는 모르겠지만 힘들때마다 듣기도 하고, 고통스러울때마다, 행복할때도 들었었다.");
+    			br8 = element("br");
+    			t18 = text("\r\n그때 들었던 음악을 들으니, 과거의 내가 생각나 이유를 모을 울음을 터트렸다. 나는 내 삶을 아무도 알아 주지않던, 그리고 알아주지도 않을 세상에서 보내고 있다. 어쩔수없다.");
+    			br9 = element("br");
+    			t19 = text("\r\n나는 지금의 내가 싫고, 짜증나지만, 어떻게 살기는 할테니 미래를 개선해나가는 수 밖에 없다. 지금의 나랑 과거의 나는 다르다는점, 이것 하나는 확실해졌다.");
+    			br10 = element("br");
+    			t20 = text("\r\n과연 내가 내가 원하는 삶인지도, 왜 태어났는지도 모르지만 살겠다면 확실히 살아야지. ");
+    			br11 = element("br");
+    			br12 = element("br");
+    			t21 = text("\r\n여름철에 바다를 가면 덥고, 물이 가장 시원하지만, 겨울철에 바다를 가면 바람이 매우 강하고 춥다. 인생의 시련이란게 그런것인가. 삶의 고통이란 그런것인가. ");
+    			br13 = element("br");
+    			t22 = text("\r\n내가 좋아하던 음악 하나를 덧붙이고 싶다. 내가 가장 우울할때 자주 듣던 음악이었다. ");
+    			br14 = element("br");
+    			t23 = space();
+    			center3 = element("center");
+    			iframe = element("iframe");
+    			add_location(h30, file$2, 22, 0, 333);
+    			add_location(center0, file$2, 21, 0, 323);
+    			add_location(br0, file$2, 24, 124, 490);
+    			add_location(br1, file$2, 25, 50, 546);
+    			add_location(p10, file$2, 24, 0, 366);
+    			add_location(br2, file$2, 26, 113, 665);
+    			add_location(h31, file$2, 28, 4, 685);
+    			add_location(center1, file$2, 27, 0, 671);
+    			add_location(br3, file$2, 30, 102, 820);
+    			add_location(br4, file$2, 31, 73, 899);
+    			add_location(br5, file$2, 32, 99, 1004);
+    			add_location(br6, file$2, 33, 64, 1074);
+    			add_location(br7, file$2, 34, 96, 1176);
+    			add_location(p11, file$2, 30, 0, 718);
+    			add_location(h32, file$2, 38, 8, 1226);
+    			add_location(center2, file$2, 37, 4, 1208);
+    			add_location(br8, file$2, 40, 68, 1332);
+    			add_location(br9, file$2, 41, 97, 1435);
+    			add_location(br10, file$2, 42, 87, 1528);
+    			add_location(br11, file$2, 43, 48, 1582);
+    			add_location(br12, file$2, 43, 52, 1586);
+    			add_location(br13, file$2, 44, 88, 1680);
+    			add_location(br14, file$2, 45, 48, 1734);
+    			add_location(p12, file$2, 40, 0, 1264);
+    			attr_dev(iframe, "width", "560");
+    			attr_dev(iframe, "height", "315");
+    			if (!src_url_equal(iframe.src, iframe_src_value = "https://www.youtube.com/embed/ypM_WGTlb1U")) attr_dev(iframe, "src", iframe_src_value);
+    			attr_dev(iframe, "title", "YouTube video player");
+    			attr_dev(iframe, "frameborder", "0");
+    			attr_dev(iframe, "allow", "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+    			iframe.allowFullscreen = true;
+    			add_location(iframe, file$2, 47, 0, 1756);
+    			add_location(center3, file$2, 46, 0, 1746);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, center0, anchor);
+    			append_dev(center0, h30);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, p10, anchor);
+    			append_dev(p10, t2);
+    			append_dev(p10, br0);
+    			append_dev(p10, t3);
+    			append_dev(p10, br1);
+    			append_dev(p10, t4);
+    			insert_dev(target, br2, anchor);
+    			insert_dev(target, t5, anchor);
+    			insert_dev(target, center1, anchor);
+    			append_dev(center1, h31);
+    			insert_dev(target, t7, anchor);
+    			insert_dev(target, p11, anchor);
+    			append_dev(p11, t8);
+    			append_dev(p11, br3);
+    			append_dev(p11, t9);
+    			append_dev(p11, br4);
+    			append_dev(p11, t10);
+    			append_dev(p11, br5);
+    			append_dev(p11, t11);
+    			append_dev(p11, br6);
+    			append_dev(p11, t12);
+    			append_dev(p11, br7);
+    			append_dev(p11, t13);
+    			insert_dev(target, t14, anchor);
+    			insert_dev(target, center2, anchor);
+    			append_dev(center2, h32);
+    			insert_dev(target, t16, anchor);
+    			insert_dev(target, p12, anchor);
+    			append_dev(p12, t17);
+    			append_dev(p12, br8);
+    			append_dev(p12, t18);
+    			append_dev(p12, br9);
+    			append_dev(p12, t19);
+    			append_dev(p12, br10);
+    			append_dev(p12, t20);
+    			append_dev(p12, br11);
+    			append_dev(p12, br12);
+    			append_dev(p12, t21);
+    			append_dev(p12, br13);
+    			append_dev(p12, t22);
+    			append_dev(p12, br14);
+    			insert_dev(target, t23, anchor);
+    			insert_dev(target, center3, anchor);
+    			append_dev(center3, iframe);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(center0);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(p10);
+    			if (detaching) detach_dev(br2);
+    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(center1);
+    			if (detaching) detach_dev(t7);
+    			if (detaching) detach_dev(p11);
+    			if (detaching) detach_dev(t14);
+    			if (detaching) detach_dev(center2);
+    			if (detaching) detach_dev(t16);
+    			if (detaching) detach_dev(p12);
+    			if (detaching) detach_dev(t23);
+    			if (detaching) detach_dev(center3);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_2$1.name,
+    		type: "if",
+    		source: "(21:19) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (19:19) 
     function create_if_block_1$1(ctx) {
     	let p1;
 
@@ -512,7 +727,7 @@ var app = (function () {
     		c: function create() {
     			p1 = element("p1");
     			p1.textContent = "아직 쓸 글을 못정했습니다.";
-    			add_location(p1, file$2, 15, 0, 221);
+    			add_location(p1, file$2, 19, 0, 275);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p1, anchor);
@@ -526,112 +741,22 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(15:0) {#if code >=1}",
+    		source: "(19:19) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (18:0) {#if code<=-1}
+    // (16:0) {#if code ==2}
     function create_if_block$1(ctx) {
-    	let center;
-    	let h3;
-    	let t1;
-    	let p1;
-    	let t2;
-    	let br0;
-    	let t3;
-    	let br1;
-    	let t4;
-    	let br2;
-    	let t5;
-    	let br3;
-    	let br4;
-    	let t6;
-    	let br5;
-    	let t7;
-    	let br6;
-    	let t8;
-    	let iframe;
-    	let iframe_src_value;
-
-    	const block = {
-    		c: function create() {
-    			center = element("center");
-    			h3 = element("h3");
-    			h3.textContent = "04 01 20:00";
-    			t1 = space();
-    			p1 = element("p1");
-    			t2 = text("예전에 자주 듣던 음악을 들었다. 이유는 모르겠지만 힘들때마다 듣기도 하고, 고통스러울때마다, 행복할때도 들었었다.");
-    			br0 = element("br");
-    			t3 = text("\r\n그때 들었던 음악을 들으니, 과거의 내가 생각나 이유를 모을 울음을 터트렸다. 나는 내 삶을 아무도 알아 주지않던, 그리고 알아주지도 않을 세상에서 보내고 있다. 어쩔수없다.");
-    			br1 = element("br");
-    			t4 = text("\r\n나는 지금의 내가 싫고, 짜증나지만, 어떻게 살기는 할테니 미래를 개선해나가는 수 밖에 없다. 지금의 나랑 과거의 나는 다르다는점, 이것 하나는 확실해졌다.");
-    			br2 = element("br");
-    			t5 = text("\r\n과연 내가 내가 원하는 삶인지도, 왜 태어났는지도 모르지만 살겠다면 확실히 살아야지. ");
-    			br3 = element("br");
-    			br4 = element("br");
-    			t6 = text("\r\n여름철에 바다를 가면 덥고, 물이 가장 시원하지만, 겨울철에 바다를 가면 바람이 매우 강하고 춥다. 인생의 시련이란게 그런것인가. 삶의 고통이란 그런것인가. ");
-    			br5 = element("br");
-    			t7 = text("\r\n내가 좋아하던 음악 하나를 덧붙이고 싶다. 내가 가장 우울할때 자주 듣던 음악이었다. ");
-    			br6 = element("br");
-    			t8 = space();
-    			iframe = element("iframe");
-    			add_location(h3, file$2, 19, 8, 293);
-    			add_location(center, file$2, 18, 4, 275);
-    			add_location(br0, file$2, 21, 68, 399);
-    			add_location(br1, file$2, 22, 97, 502);
-    			add_location(br2, file$2, 23, 87, 595);
-    			add_location(br3, file$2, 24, 48, 649);
-    			add_location(br4, file$2, 24, 52, 653);
-    			add_location(br5, file$2, 25, 88, 747);
-    			add_location(br6, file$2, 26, 48, 801);
-    			add_location(p1, file$2, 21, 0, 331);
-    			attr_dev(iframe, "width", "560");
-    			attr_dev(iframe, "height", "315");
-    			if (!src_url_equal(iframe.src, iframe_src_value = "https://www.youtube.com/embed/ypM_WGTlb1U")) attr_dev(iframe, "src", iframe_src_value);
-    			attr_dev(iframe, "title", "YouTube video player");
-    			attr_dev(iframe, "frameborder", "0");
-    			attr_dev(iframe, "allow", "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
-    			iframe.allowFullscreen = true;
-    			add_location(iframe, file$2, 28, 0, 814);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, center, anchor);
-    			append_dev(center, h3);
-    			insert_dev(target, t1, anchor);
-    			insert_dev(target, p1, anchor);
-    			append_dev(p1, t2);
-    			append_dev(p1, br0);
-    			append_dev(p1, t3);
-    			append_dev(p1, br1);
-    			append_dev(p1, t4);
-    			append_dev(p1, br2);
-    			append_dev(p1, t5);
-    			append_dev(p1, br3);
-    			append_dev(p1, br4);
-    			append_dev(p1, t6);
-    			append_dev(p1, br5);
-    			append_dev(p1, t7);
-    			append_dev(p1, br6);
-    			insert_dev(target, t8, anchor);
-    			insert_dev(target, iframe, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(center);
-    			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(p1);
-    			if (detaching) detach_dev(t8);
-    			if (detaching) detach_dev(iframe);
-    		}
-    	};
+    	const block = { c: noop, m: noop, d: noop };
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(18:0) {#if code<=-1}",
+    		source: "(16:0) {#if code ==2}",
     		ctx
     	});
 
@@ -640,57 +765,47 @@ var app = (function () {
 
     function create_fragment$2(ctx) {
     	let head;
-    	let t0;
+    	let t;
     	let body;
-    	let t1;
     	let body_class_value;
-    	let if_block0 = /*code*/ ctx[0] >= 1 && create_if_block_1$1(ctx);
-    	let if_block1 = /*code*/ ctx[0] <= -1 && create_if_block$1(ctx);
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*code*/ ctx[0] == 2) return create_if_block$1;
+    		if (/*code*/ ctx[0] == 1) return create_if_block_1$1;
+    		if (/*code*/ ctx[0] <= -1) return create_if_block_2$1;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type && current_block_type(ctx);
 
     	const block = {
     		c: function create() {
     			head = element("head");
-    			t0 = space();
+    			t = space();
     			body = element("body");
-    			if (if_block0) if_block0.c();
-    			t1 = space();
-    			if (if_block1) if_block1.c();
-    			add_location(head, file$2, 10, 0, 150);
+    			if (if_block) if_block.c();
+    			add_location(head, file$2, 11, 0, 179);
     			attr_dev(body, "class", body_class_value = "" + (null_to_empty(/*darkmode*/ ctx[1] + /*font_mode*/ ctx[2]) + " svelte-1ylk1zp"));
-    			add_location(body, file$2, 13, 0, 169);
+    			add_location(body, file$2, 14, 0, 198);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, head, anchor);
-    			insert_dev(target, t0, anchor);
+    			insert_dev(target, t, anchor);
     			insert_dev(target, body, anchor);
-    			if (if_block0) if_block0.m(body, null);
-    			append_dev(body, t1);
-    			if (if_block1) if_block1.m(body, null);
+    			if (if_block) if_block.m(body, null);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (/*code*/ ctx[0] >= 1) {
-    				if (if_block0) ; else {
-    					if_block0 = create_if_block_1$1(ctx);
-    					if_block0.c();
-    					if_block0.m(body, t1);
-    				}
-    			} else if (if_block0) {
-    				if_block0.d(1);
-    				if_block0 = null;
-    			}
+    			if (current_block_type !== (current_block_type = select_block_type(ctx))) {
+    				if (if_block) if_block.d(1);
+    				if_block = current_block_type && current_block_type(ctx);
 
-    			if (/*code*/ ctx[0] <= -1) {
-    				if (if_block1) ; else {
-    					if_block1 = create_if_block$1(ctx);
-    					if_block1.c();
-    					if_block1.m(body, null);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(body, null);
     				}
-    			} else if (if_block1) {
-    				if_block1.d(1);
-    				if_block1 = null;
     			}
 
     			if (dirty & /*darkmode, font_mode*/ 6 && body_class_value !== (body_class_value = "" + (null_to_empty(/*darkmode*/ ctx[1] + /*font_mode*/ ctx[2]) + " svelte-1ylk1zp"))) {
@@ -701,10 +816,12 @@ var app = (function () {
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(head);
-    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(t);
     			if (detaching) detach_dev(body);
-    			if (if_block0) if_block0.d();
-    			if (if_block1) if_block1.d();
+
+    			if (if_block) {
+    				if_block.d();
+    			}
     		}
     	};
 
@@ -725,7 +842,8 @@ var app = (function () {
     	let { code } = $$props;
     	let { darkmode } = $$props;
     	let { font_mode } = $$props;
-    	const writable_props = ['code', 'darkmode', 'font_mode'];
+    	let { link_of_post } = $$props;
+    	const writable_props = ['code', 'darkmode', 'font_mode', 'link_of_post'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Something2> was created with unknown prop '${key}'`);
@@ -735,27 +853,35 @@ var app = (function () {
     		if ('code' in $$props) $$invalidate(0, code = $$props.code);
     		if ('darkmode' in $$props) $$invalidate(1, darkmode = $$props.darkmode);
     		if ('font_mode' in $$props) $$invalidate(2, font_mode = $$props.font_mode);
+    		if ('link_of_post' in $$props) $$invalidate(3, link_of_post = $$props.link_of_post);
     	};
 
-    	$$self.$capture_state = () => ({ code, darkmode, font_mode });
+    	$$self.$capture_state = () => ({ code, darkmode, font_mode, link_of_post });
 
     	$$self.$inject_state = $$props => {
     		if ('code' in $$props) $$invalidate(0, code = $$props.code);
     		if ('darkmode' in $$props) $$invalidate(1, darkmode = $$props.darkmode);
     		if ('font_mode' in $$props) $$invalidate(2, font_mode = $$props.font_mode);
+    		if ('link_of_post' in $$props) $$invalidate(3, link_of_post = $$props.link_of_post);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [code, darkmode, font_mode];
+    	return [code, darkmode, font_mode, link_of_post];
     }
 
     class Something2 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$2, create_fragment$2, safe_not_equal, { code: 0, darkmode: 1, font_mode: 2 });
+
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, {
+    			code: 0,
+    			darkmode: 1,
+    			font_mode: 2,
+    			link_of_post: 3
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -777,6 +903,10 @@ var app = (function () {
 
     		if (/*font_mode*/ ctx[2] === undefined && !('font_mode' in props)) {
     			console.warn("<Something2> was created without expected prop 'font_mode'");
+    		}
+
+    		if (/*link_of_post*/ ctx[3] === undefined && !('link_of_post' in props)) {
+    			console.warn("<Something2> was created without expected prop 'link_of_post'");
     		}
     	}
 
@@ -803,6 +933,14 @@ var app = (function () {
     	set font_mode(value) {
     		throw new Error("<Something2>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get link_of_post() {
+    		throw new Error("<Something2>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set link_of_post(value) {
+    		throw new Error("<Something2>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src\context.svelte generated by Svelte v3.46.4 */
@@ -826,9 +964,9 @@ var app = (function () {
     			center = element("center");
     			p1 = element("p1");
     			p1.textContent = "Welcome!";
-    			add_location(p1, file$1, 88, 16, 2823);
-    			add_location(center, file$1, 87, 16, 2797);
-    			add_location(div, file$1, 86, 12, 2773);
+    			add_location(p1, file$1, 88, 16, 2824);
+    			add_location(center, file$1, 87, 16, 2798);
+    			add_location(div, file$1, 86, 12, 2774);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -871,7 +1009,7 @@ var app = (function () {
 
     	page1 = new Something2({
     			props: {
-    				code: "1",
+    				code: "-1",
     				darkmode: /*bg_mode*/ ctx[1],
     				font_mode: /*font_mode*/ ctx[2]
     			},
