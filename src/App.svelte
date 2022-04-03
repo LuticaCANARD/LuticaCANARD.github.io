@@ -61,6 +61,7 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../build/styles.css" rel="stylesheet"/>
+    
         
     </head>
     <body class = {is_darkmode_light}>
@@ -80,7 +81,7 @@
                 <nav class={"navbar navbar-expand-lg "+nav_bar+" "+List_item_bgcolor+" border-bottom"}>
                     <div class="container-fluid"bind:clientWidth = {toggle_button} >
 
-                        <button class="btn btn-primary" id="sidebarToggle" on:click={funis_darkmode}>Change to Darkmode</button>
+                        <button class="btn btn-primary" id="sidebarToggle" on:click={funis_darkmode}>Change to {#if is_darkmode=="bg-white"}Dark {:else}White {/if}mode</button>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <div class={"collapse navbar-collapse "+is_darkmode_light} id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
