@@ -72,9 +72,7 @@ export default {
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
 		production && terser(),
-		json( {compact:true
-
-		} )
+		json( {compact:true} )
 	],
 	watch: {
 		clearScreen: false
