@@ -25,5 +25,7 @@
     <p1> {@html post['context']} </p1>
     <hr>
     {/each}
+    {:else if code==3}
+    
     {/if}
     </body>
