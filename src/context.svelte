@@ -1,5 +1,5 @@
 <script  src="../post_list\postList.json" type="text/javascript">
-    export let context_mode;
+    export let context_mode = "Home";
     export let bg_mode;
     export let font_mode;
     export let size_all;
@@ -53,9 +53,12 @@
     <div  id = "all_wrap" >
         <div>
             {#if context_mode == "Home"}
-            <div>
-
-            </div>
+            <center>
+            <div><br>
+                <b><h1> Welcome to my field!</h1></b><br>
+                <br><p1>Here is my playground for learning svelte! a static blog, by GitHub.io</p1>
+                <br><p1> I used <a href = "https://startbootstrap.com/template/simple-sidebar">this template</a></p1>
+            </div></center>
             {:else if context_mode=="Contact"}
             <div>
                 <center>
@@ -100,7 +103,7 @@
             {:else}
             <div> <br>
                 <center>
-                <p1> Welcome!</p1>
+                <p1> Welcome! , Buildeing in progress</p1>
                 </center>
             </div>
             {/if}

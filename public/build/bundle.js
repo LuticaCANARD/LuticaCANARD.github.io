@@ -1771,7 +1771,7 @@ function get_each_context$1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (100:12) {:else}
+// (103:12) {:else}
 function create_else_block$1(ctx) {
 	let div;
 	let br;
@@ -1786,11 +1786,11 @@ function create_else_block$1(ctx) {
 			t0 = space();
 			center = element("center");
 			p1 = element("p1");
-			p1.textContent = "Welcome!";
-			add_location(br, file$1, 100, 18, 3611);
-			add_location(p1, file$1, 102, 16, 3659);
-			add_location(center, file$1, 101, 16, 3633);
-			add_location(div, file$1, 100, 12, 3605);
+			p1.textContent = "Welcome! , Buildeing in progress";
+			add_location(br, file$1, 103, 18, 3932);
+			add_location(p1, file$1, 105, 16, 3980);
+			add_location(center, file$1, 104, 16, 3954);
+			add_location(div, file$1, 103, 12, 3926);
 		},
 		m: function mount(target, anchor) {
 			insert_dev(target, div, anchor);
@@ -1811,14 +1811,14 @@ function create_else_block$1(ctx) {
 		block,
 		id: create_else_block$1.name,
 		type: "else",
-		source: "(100:12) {:else}",
+		source: "(103:12) {:else}",
 		ctx
 	});
 
 	return block;
 }
 
-// (85:45) 
+// (88:45) 
 function create_if_block_3(ctx) {
 	let div;
 	let center;
@@ -1865,12 +1865,12 @@ function create_if_block_3(ctx) {
 
 			t2 = space();
 			create_component(page1.$$.fragment);
-			add_location(br0, file$1, 87, 16, 3120);
-			add_location(br1, file$1, 87, 31, 3135);
-			add_location(h1, file$1, 87, 20, 3124);
-			add_location(br2, file$1, 87, 40, 3144);
-			add_location(center, file$1, 86, 12, 3094);
-			add_location(div, file$1, 85, 12, 3075);
+			add_location(br0, file$1, 90, 16, 3441);
+			add_location(br1, file$1, 90, 31, 3456);
+			add_location(h1, file$1, 90, 20, 3445);
+			add_location(br2, file$1, 90, 40, 3465);
+			add_location(center, file$1, 89, 12, 3415);
+			add_location(div, file$1, 88, 12, 3396);
 		},
 		m: function mount(target, anchor) {
 			insert_dev(target, div, anchor);
@@ -1941,14 +1941,14 @@ function create_if_block_3(ctx) {
 		block,
 		id: create_if_block_3.name,
 		type: "if",
-		source: "(85:45) ",
+		source: "(88:45) ",
 		ctx
 	});
 
 	return block;
 }
 
-// (70:46) 
+// (73:46) 
 function create_if_block_2(ctx) {
 	let div;
 	let center;
@@ -1999,23 +1999,23 @@ function create_if_block_2(ctx) {
 			t9 = text("I'm seeking VRgame develop");
 			br5 = element("br");
 			hr1 = element("hr");
-			add_location(br0, file$1, 72, 20, 2535);
-			add_location(h2, file$1, 73, 20, 2561);
-			add_location(br1, file$1, 74, 20, 2606);
+			add_location(br0, file$1, 75, 20, 2856);
+			add_location(h2, file$1, 76, 20, 2882);
+			add_location(br1, file$1, 77, 20, 2927);
 			attr_dev(img, "width", "50%");
 			attr_dev(img, "height", "50%");
 			if (!src_url_equal(img.src, img_src_value = "../src/KakaoTalk_20220322_200232462.png")) attr_dev(img, "src", img_src_value);
-			add_location(img, file$1, 75, 20, 2632);
-			add_location(br2, file$1, 76, 20, 2735);
-			add_location(hr0, file$1, 77, 20, 2761);
-			add_location(br3, file$1, 79, 58, 2866);
-			add_location(br4, file$1, 79, 90, 2898);
-			add_location(br5, file$1, 79, 120, 2928);
-			add_location(hr1, file$1, 79, 124, 2932);
+			add_location(img, file$1, 78, 20, 2953);
+			add_location(br2, file$1, 79, 20, 3056);
+			add_location(hr0, file$1, 80, 20, 3082);
+			add_location(br3, file$1, 82, 58, 3187);
+			add_location(br4, file$1, 82, 90, 3219);
+			add_location(br5, file$1, 82, 120, 3249);
+			add_location(hr1, file$1, 82, 124, 3253);
 			attr_dev(p1, "class", "p-1");
-			add_location(p1, file$1, 78, 20, 2787);
-			add_location(center, file$1, 71, 16, 2505);
-			add_location(div, file$1, 70, 12, 2482);
+			add_location(p1, file$1, 81, 20, 3108);
+			add_location(center, file$1, 74, 16, 2826);
+			add_location(div, file$1, 73, 12, 2803);
 		},
 		m: function mount(target, anchor) {
 			insert_dev(target, div, anchor);
@@ -2053,14 +2053,14 @@ function create_if_block_2(ctx) {
 		block,
 		id: create_if_block_2.name,
 		type: "if",
-		source: "(70:46) ",
+		source: "(73:46) ",
 		ctx
 	});
 
 	return block;
 }
 
-// (59:46) 
+// (62:46) 
 function create_if_block_1$1(ctx) {
 	let div;
 	let center;
@@ -2088,11 +2088,11 @@ function create_if_block_1$1(ctx) {
 				each_blocks[i].c();
 			}
 
-			add_location(h3, file$1, 61, 20, 2081);
+			add_location(h3, file$1, 64, 20, 2402);
 			attr_dev(ul, "class", "ul");
-			add_location(ul, file$1, 62, 20, 2139);
-			add_location(center, file$1, 60, 16, 2051);
-			add_location(div, file$1, 59, 12, 2028);
+			add_location(ul, file$1, 65, 20, 2460);
+			add_location(center, file$1, 63, 16, 2372);
+			add_location(div, file$1, 62, 12, 2349);
 		},
 		m: function mount(target, anchor) {
 			insert_dev(target, div, anchor);
@@ -2142,7 +2142,7 @@ function create_if_block_1$1(ctx) {
 		block,
 		id: create_if_block_1$1.name,
 		type: "if",
-		source: "(59:46) ",
+		source: "(62:46) ",
 		ctx
 	});
 
@@ -2151,21 +2151,77 @@ function create_if_block_1$1(ctx) {
 
 // (55:12) {#if context_mode == "Home"}
 function create_if_block$1(ctx) {
+	let center;
 	let div;
+	let br0;
+	let t0;
+	let b;
+	let h1;
+	let br1;
+	let t2;
+	let br2;
+	let p10;
+	let t4;
+	let br3;
+	let p11;
+	let t5;
+	let a;
 
 	const block = {
 		c: function create() {
+			center = element("center");
 			div = element("div");
-			add_location(div, file$1, 55, 12, 1939);
+			br0 = element("br");
+			t0 = space();
+			b = element("b");
+			h1 = element("h1");
+			h1.textContent = "Welcome to my field!";
+			br1 = element("br");
+			t2 = space();
+			br2 = element("br");
+			p10 = element("p1");
+			p10.textContent = "Here is my playground for learning svelte! a static blog, by GitHub.io";
+			t4 = space();
+			br3 = element("br");
+			p11 = element("p1");
+			t5 = text("I used ");
+			a = element("a");
+			a.textContent = "this template";
+			add_location(br0, file$1, 56, 17, 1975);
+			add_location(h1, file$1, 57, 19, 2000);
+			add_location(b, file$1, 57, 16, 1997);
+			add_location(br1, file$1, 57, 53, 2034);
+			add_location(br2, file$1, 58, 16, 2056);
+			add_location(p10, file$1, 58, 20, 2060);
+			add_location(br3, file$1, 59, 16, 2157);
+			attr_dev(a, "href", "https://startbootstrap.com/template/simple-sidebar");
+			add_location(a, file$1, 59, 32, 2173);
+			add_location(p11, file$1, 59, 20, 2161);
+			add_location(div, file$1, 56, 12, 1970);
+			add_location(center, file$1, 55, 12, 1948);
 		},
 		m: function mount(target, anchor) {
-			insert_dev(target, div, anchor);
+			insert_dev(target, center, anchor);
+			append_dev(center, div);
+			append_dev(div, br0);
+			append_dev(div, t0);
+			append_dev(div, b);
+			append_dev(b, h1);
+			append_dev(div, br1);
+			append_dev(div, t2);
+			append_dev(div, br2);
+			append_dev(div, p10);
+			append_dev(div, t4);
+			append_dev(div, br3);
+			append_dev(div, p11);
+			append_dev(p11, t5);
+			append_dev(p11, a);
 		},
 		p: noop,
 		i: noop,
 		o: noop,
 		d: function destroy(detaching) {
-			if (detaching) detach_dev(div);
+			if (detaching) detach_dev(center);
 		}
 	};
 
@@ -2180,7 +2236,7 @@ function create_if_block$1(ctx) {
 	return block;
 }
 
-// (89:16) {#each code_list as codenate}
+// (92:16) {#each code_list as codenate}
 function create_each_block_1$1(ctx) {
 	let button;
 	let t_value = /*codenate*/ ctx[15] + "";
@@ -2200,7 +2256,7 @@ function create_each_block_1$1(ctx) {
 			attr_dev(button, "type", "button");
 			attr_dev(button, "class", "btn btn-outline-primary");
 			attr_dev(button, "href", "#");
-			add_location(button, file$1, 89, 16, 3213);
+			add_location(button, file$1, 92, 16, 3534);
 		},
 		m: function mount(target, anchor) {
 			insert_dev(target, button, anchor);
@@ -2225,14 +2281,14 @@ function create_each_block_1$1(ctx) {
 		block,
 		id: create_each_block_1$1.name,
 		type: "each",
-		source: "(89:16) {#each code_list as codenate}",
+		source: "(92:16) {#each code_list as codenate}",
 		ctx
 	});
 
 	return block;
 }
 
-// (64:20) {#each SNSs as SNSone}
+// (67:20) {#each SNSs as SNSone}
 function create_each_block$1(ctx) {
 	let il;
 	let a;
@@ -2251,12 +2307,12 @@ function create_each_block$1(ctx) {
 			t1 = space();
 			br = element("br");
 			attr_dev(p1, "class", "");
-			add_location(p1, file$1, 64, 61, 2261);
+			add_location(p1, file$1, 67, 61, 2582);
 			attr_dev(a, "href", /*SNSone*/ ctx[12].href);
-			add_location(a, file$1, 64, 37, 2237);
+			add_location(a, file$1, 67, 37, 2558);
 			attr_dev(il, "class", "il");
-			add_location(il, file$1, 64, 20, 2220);
-			add_location(br, file$1, 64, 109, 2309);
+			add_location(il, file$1, 67, 20, 2541);
+			add_location(br, file$1, 67, 109, 2630);
 		},
 		m: function mount(target, anchor) {
 			insert_dev(target, il, anchor);
@@ -2278,7 +2334,7 @@ function create_each_block$1(ctx) {
 		block,
 		id: create_each_block$1.name,
 		type: "each",
-		source: "(64:20) {#each SNSs as SNSone}",
+		source: "(67:20) {#each SNSs as SNSone}",
 		ctx
 	});
 
@@ -2357,32 +2413,32 @@ function create_fragment$1(ctx) {
 			div1 = element("div");
 			div0 = element("div");
 			if_block.c();
-			add_location(style, file$1, 31, 4, 1131);
+			add_location(style, file$1, 31, 4, 1140);
 			attr_dev(meta0, "charset", "utf-8");
-			add_location(meta0, file$1, 41, 4, 1332);
+			add_location(meta0, file$1, 41, 4, 1341);
 			attr_dev(meta1, "name", "viewport");
 			attr_dev(meta1, "content", "width=device-width, initial-scale=1, shrink-to-fit=no");
-			add_location(meta1, file$1, 42, 4, 1362);
+			add_location(meta1, file$1, 42, 4, 1371);
 			attr_dev(meta2, "name", "description");
 			attr_dev(meta2, "content", "");
-			add_location(meta2, file$1, 43, 4, 1456);
+			add_location(meta2, file$1, 43, 4, 1465);
 			attr_dev(meta3, "name", "author");
 			attr_dev(meta3, "content", "");
-			add_location(meta3, file$1, 44, 4, 1500);
-			add_location(title, file$1, 45, 4, 1539);
+			add_location(meta3, file$1, 44, 4, 1509);
+			add_location(title, file$1, 45, 4, 1548);
 			attr_dev(link0, "rel", "icon");
 			attr_dev(link0, "type", "image/x-icon");
 			attr_dev(link0, "href", "assets/favicon.ico");
-			add_location(link0, file$1, 47, 4, 1622);
+			add_location(link0, file$1, 47, 4, 1631);
 			attr_dev(link1, "href", "../build/styles.css");
 			attr_dev(link1, "rel", "stylesheet");
-			add_location(link1, file$1, 49, 4, 1742);
-			add_location(head, file$1, 30, 0, 1119);
-			add_location(div0, file$1, 53, 8, 1878);
+			add_location(link1, file$1, 49, 4, 1751);
+			add_location(head, file$1, 30, 0, 1128);
+			add_location(div0, file$1, 53, 8, 1887);
 			attr_dev(div1, "id", "all_wrap");
-			add_location(div1, file$1, 52, 4, 1845);
+			add_location(div1, file$1, 52, 4, 1854);
 			attr_dev(body, "class", body_class_value = "" + (null_to_empty(/*bg_mode*/ ctx[1] + /*font_mode*/ ctx[2]) + " svelte-vnh244"));
-			add_location(body, file$1, 51, 0, 1804);
+			add_location(body, file$1, 51, 0, 1813);
 		},
 		l: function claim(nodes) {
 			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2473,7 +2529,7 @@ function create_fragment$1(ctx) {
 function instance$1($$self, $$props, $$invalidate) {
 	let { $$slots: slots = {}, $$scope } = $$props;
 	validate_slots('Context', slots, []);
-	let { context_mode } = $$props;
+	let { context_mode = "Home" } = $$props;
 	let { bg_mode } = $$props;
 	let { font_mode } = $$props;
 	let { size_all } = $$props;
@@ -2603,10 +2659,6 @@ class Context extends SvelteComponentDev {
 
 		const { ctx } = this.$$;
 		const props = options.props || {};
-
-		if (/*context_mode*/ ctx[0] === undefined && !('context_mode' in props)) {
-			console.warn("<Context> was created without expected prop 'context_mode'");
-		}
 
 		if (/*bg_mode*/ ctx[1] === undefined && !('bg_mode' in props)) {
 			console.warn("<Context> was created without expected prop 'bg_mode'");
