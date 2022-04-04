@@ -12,7 +12,7 @@
     {#each postsk['post_nomal'] as post}
 
     <center>
-        <h3> {post['title']} </h3>
+       <strong> <h3> {post['title']} </h3></strong>
         </center>
         <p1> {@html post['context']} </p1>
         <hr>
@@ -20,7 +20,7 @@
     {:else if code == 2}
     {#each postsk['post_tech'] as post}
     <center>
-    <h3> {post['title']} </h3>
+        <strong><h3> {post['title']} </h3></strong>
     </center>
     <p1> {@html post['context']} </p1>
     <hr>
