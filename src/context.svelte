@@ -15,6 +15,9 @@
         {"SNS_name": "Github : LuticaCANARD ", "href" : "https://github.com/LuticaCANARD"}]
     import Page1 from"./post_list/something2.svelte"
     let code_on =1;
+    const code_list = ["nomal post","tech post","test post"]
+    const code_book = {"nomal post" :1,"tech post":2,"test post":3}
+
 </script>
 <style>
 .Lutica_post{
@@ -83,7 +86,9 @@
             <div>
             <center>
                 <br><h1> Posts <br></h1><br>
-                <input bind:value={code_on} size="3" >
+                {#each code_list as codenate}
+                <button id="change_button" type="button" class="btn btn-outline-primary" on:click = {()=>code_on = code_book[codenate]} href ="#">{codenate}</button> 
+                {/each}
             </center>
             <Page1
             code = {code_on}
