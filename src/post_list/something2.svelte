@@ -5,7 +5,6 @@
     import Depressful from "./depressContest.svelte"
     export let link_of_post
     import Nomal from "./nomallt.svelte"
-    import Tech from "./tech.svelte"
 </script>
 <style>
 body{
@@ -16,17 +15,12 @@ body{
 
 </head>
 <body class ={darkmode+font_mode}>
-{#if code ==2}
-
-<Tech
-darkmode = {darkmode}
-fontmode = {font_mode}/>
-
-{:else if code ==1}
+{#if code ==1}
 <div>
     <Nomal
     darkmode = {darkmode}
-    fontmode = {font_mode}/>
+    fontmode = {font_mode}
+    code = {code}/>
 </div>
 {:else if code==-1.12}
 <div>
