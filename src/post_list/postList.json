@@ -5,7 +5,7 @@
     ],
     "post_tech" :[
         {"title" : "project android-window controller" ,"context" : "프로젝트 개요 : 안드로이드 스마트폰의 음량 통제기능을 통하여 윈도우 컴퓨터의 사운드(추가 : 밝기)를 통제하는 App를 만든다. <br>중간 통신 방안 : bluetooth를 사용하여 시리얼 통신으로 한다<br>작용 기전 : <br>1. Android 혹은 ios cellphone으로 음량버튼을 누른다<br>2. 백그라운드에서 가동중인 cellphone 측 App가 bluetooth를 통해 연결된 window 컴퓨터를 조작하라는 명령을 내린다<br>3. Window측 app가 이 명령을 백그라운드에서 수신하고, 소리를 줄인다.<br><br> 선결조건 : C#개발이므로, Nuget을 잘 찾을 필요가 있음. 컴퓨터측 APP와 cellphone측 APP는 서로 다른 프로젝트로 생성<br> 고려사안 : 보안을 위한 암호화, bluetooth의 통신 방안."},
-        {"title" : "code convention" ,"context" : "Coding conventions are a set of guidelines for a specific programming language that recommend programming style, practices, and methods for each aspect of a program written in that language.<br> code convention  : 프로그램 작성시에 추천되는 스타일, 관습, 그리고 문법상에서의 각각의 요소를 의미한다. <br>naming convention : 가독성을 좋게 하기위하여, 변수명을 naming할때 쓰는 규칙, 카멜, 파스칼 케이스 등이 있다.<br>"},
+        {"title" : "code convention" ,"context" : "Coding conventions are a set of guidelines for a specific programming language that recommend programming style, practices, and methods for each aspect of a program written in that language.<br> code convention  : 프로그램 작성시에 추천되는 스타일, 관습, 그리고 문법상에서의 각각의 요소를 의미한다. <br>naming convention : 가독성을 좋게 하기위하여, 변수명을 naming할때 쓰는 규칙, 카멜, 파스칼 케이스 등이 있다.<br> 개인적으로 잘 안지키지만 생각보다 유지보수에 있어선 매우 중요한 원칙인 것 같다. co-op 때는 잘 지켜야지"},
         {"title" : "" ,"context" : ""}
     ]
 }   

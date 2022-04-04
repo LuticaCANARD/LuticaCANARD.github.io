@@ -5,6 +5,9 @@
     export let size_all;
     export let size_bar;
     let readmode = false;
+    let input_text;
+    let input_text_replace;
+
 
     let post_tree=[
     {"id" : 1 ,"name" : "something","tree" : "something.html","time" : "2022.04.01", "readmode" : false},
@@ -15,8 +18,8 @@
         {"SNS_name": "Github : LuticaCANARD ", "href" : "https://github.com/LuticaCANARD"}]
     import Page1 from"./post_list/something2.svelte"
     let code_on =1;
-    const code_list = ["nomal post","tech post","test post"]
-    const code_book = {"nomal post" :1,"tech post":2,"test post":3}
+    const code_list = ["nomal post","tech post","test post","write post"]
+    const code_book = {"nomal post" :1,"tech post":2,"test post":3,"write post":4}
 
 </script>
 <style>
@@ -61,11 +64,13 @@
             </div></center>
             {:else if context_mode=="Contact"}
             <div>
+                <br>
                 <center>
                     <h3>  Lutica's contact Line :  </h3>
+                    <br><br>
                     <ul class="ul">
                     {#each SNSs as SNSone}
-                    <il class = "il"><a href = {SNSone.href}><p1 class = ""> {SNSone.SNS_name}</p1></a></il> <br>
+                    <il class = "il"><a href = {SNSone.href}><button class = "btn btn-secondary active" > {SNSone.SNS_name}</button></a></il><br><br>
                     {/each}
                     </ul>
                     </center>
@@ -76,7 +81,7 @@
                     <br>
                     <h2> About Lutica </h2>
                     <br>
-                    <img width = "50%" height = "50%"src = "../src/KakaoTalk_20220322_200232462.png">
+                    <img width = "70%" height = "70%"src = "../src/KakaoTalk_20220322_200232462.png">
                     <br>
                     <hr>
                     <p1 class = "p-1"> 
@@ -100,10 +105,13 @@
             />
 
             </div>
+            {:else if context_mode == "Other Site" }
+            <p1><a href = "https://www.conquerx2.com/">Conqure X2</a></p1>
+
             {:else}
             <div> <br>
                 <center>
-                <p1> Welcome! , Buildeing in progress</p1>
+                <p1> Welcome! , Building in progress</p1>
                 </center>
             </div>
             {/if}
