@@ -1,6 +1,6 @@
 <script>
     import postsk from "./postList.json"
-    //import TEST_bed from "../src/TESTpost.svelte"
+    import TEST_bed from "./TESTpost.svelte"
     export let darkmode
     export let fontmode
     export let code
