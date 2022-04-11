@@ -42,7 +42,7 @@
         <h3> return : </h3>
         <br>
         <input type = "search" bind:value={input_text} size="60%"><br>
-        <p1> put in the json! </p1>
+        <p1> put this in the json! </p1>
     </center>
     {/if}
     </body>
