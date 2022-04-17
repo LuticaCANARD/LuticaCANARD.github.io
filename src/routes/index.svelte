@@ -1,2 +1,6 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<svelte:head>
+
+</svelte:head>
+<svelte:body>
+<p1> Lutica's blog is building now, sorry to this inconvenience</p1>
+</svelte:body>
