@@ -1,8 +1,6 @@
 import adapter from "@sveltejs/adapter-static"; 
 // was "@sveltejs/adapter-auto"
 
-const dev = "production" === "development";
-
 /** @type {import(""@sveltejs/kit").Config} */
 const config = {
     kit: {
@@ -12,7 +10,7 @@ const config = {
         }),
         paths: {
             // change below to your repo name
-            base: "" ,
+            base: "/luticablog/docs" ,
         },
         // hydrate the <div id="svelte"> element in src/app.html
         //target: "#svelte"
