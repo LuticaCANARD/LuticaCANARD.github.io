@@ -10,7 +10,7 @@ const config = {
         }),
         paths: {
             // change below to your repo name
-            base: "/luticablog/docs" ,
+            base: "" ,
         },
         // hydrate the <div id="svelte"> element in src/app.html
         //target: "#svelte"
