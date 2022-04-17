@@ -21,5 +21,8 @@
     "prettier-plugin-svelte": "^2.5.0",
     "svelte": "^3.44.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "rollup-plugin-css-only": "^3.1.0"
+  }
 }
