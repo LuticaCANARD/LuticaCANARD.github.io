@@ -4,6 +4,9 @@
 	import About from "./about.svelte"
 	import Contact from "./contact.svelte"
 	import Post from "./post.svelte"
+    let GL_Link;
+    let GL_piclink;
+    let GL_headlink;
 </script>
 <html lang="en">
     <head>
@@ -48,7 +51,9 @@
 		<Contact />
 		{:else if (viewmode=="Post")}
 		<Post 
-		 Link = 0/>
+		 Link = {GL_headlink};
+         piclink = {GL_piclink};
+         headlink = {GL_headlink};/>
 
 		{/if}
 
