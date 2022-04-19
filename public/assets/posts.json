@@ -1,0 +1,6 @@
+{
+    "posts":
+    [
+        { "Link" : "../asserts/posts/first.html","piclink" : "../img/post-bg.jpg","title":"story","subtitle" : "about Lu","date": "1999.08.21","headlink" : "../assets/posts/first.html"}
+    ]
+}

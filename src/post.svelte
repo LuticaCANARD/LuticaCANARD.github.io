@@ -1,17 +1,18 @@
 <script>
 
     export let Link ;
-    export let headlink;
+    export let SL_headlink;
     export let piclink;
-    import Head from headlink;
-    import POST from Link;
+    headhtml = SL_headlink;
+    linkhtml = Link;
+
 </script>
 <header class="masthead" style="background-image: url('{piclink}')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="post-heading">
-                </Head>
+                {@html headhtml}
                 </div>
             </div>
         </div>
@@ -22,7 +23,7 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-            </POST>
+                {@html linkhtml}
             </div>
         </div>
     </div>
