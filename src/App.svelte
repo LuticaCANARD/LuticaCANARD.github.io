@@ -7,12 +7,9 @@ import Document from './lib/document.svelte'
 let postmode;
 let array = [{name:'profile',link:'profile'},{name:'posts',link:'posts'},{name:'webasm',link:'webasm'}]
 let mobiletag = false;
-let postin = {};
-const changepost = post => () => {
-    postin = post;
-    changename('document');
-}
-const changename = name => () => postmode = name;
+var postin={};
+
+const changename = (name) => () => {postmode = name;}
 </script>
 <div class="navbar">
     <div style="width: 27%;text-align: center;padding-top: 0px;" on:click={changename('')} ><h3 style="margin-top:10px">Lutica's bar</h3></div>
@@ -54,15 +51,15 @@ const changename = name => () => postmode = name;
     <div id="blog">
     {#if postmode=='profile'}
         <Profile></Profile>
-        <Posts postarray={postnames} documentcontrol={changepost}></Posts>
+        <Posts postarray={postnames} bind:selectedpost={postin} documentcontoroll={changename('document')}></Posts>
     {:else if postmode=='document'}
         <Document post={postin}></Document>
-        <Posts postarray={postnames} documentcontrol={changepost}></Posts>
+        <Posts postarray={postnames} bind:selectedpost={postin} documentcontoroll={changename('document')}></Posts>
     {:else if postmode=='webasm'}
         <Webasm></Webasm>
-        <Posts postarray={postnames} documentcontrol={changepost}></Posts>
+        <Posts postarray={postnames} bind:selectedpost={postin} documentcontoroll={changename('document')}></Posts>
     {:else if postmode=='posts'}
-         <Posts postarray={postnames} documentcontrol={changepost}></Posts>
+         <Posts postarray={postnames} bind:selectedpost={postin} documentcontoroll={changename('document')}></Posts>
     {:else}
         <Profile></Profile>
     {/if}

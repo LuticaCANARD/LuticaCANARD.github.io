@@ -1,11 +1,17 @@
 <script>
-let name = '';
+
 export let postarray
-export var documentcontrol
+export let selectedpost
+export var documentcontoroll
+function selectpost (post)
+{
+    selectedpost = post
+    documentcontoroll();
+}
 </script>
 <div id="posts">
     {#each postarray as post}
-    <il class="post" on:click={documentcontrol(post)}>
+    <il class="post" on:click={selectpost(post)}>
         <h3>{post.name}</h3>
         <p1>{post.subname}</p1>
     </il>
