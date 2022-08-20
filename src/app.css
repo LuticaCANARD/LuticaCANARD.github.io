@@ -84,7 +84,7 @@ body
 {
   border-left:1px solid gray;
   flex:1;
-  background-color: aliceblue;
+  background-color: white;
  
   width:100px;
 text-align: center;
@@ -109,10 +109,12 @@ text-align: center;
 }
 .post
 {
-
+  border: 1px solid gray;
+  padding-left: 10%;
 }
-#inputing
+#document
 {
+  margin:2%;
 }
 #profile
 {

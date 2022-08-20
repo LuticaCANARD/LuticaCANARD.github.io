@@ -11,9 +11,15 @@
 
     </center>
     <div style="text-align : right; ">
-        <p1 >
+        <p1>
             Twitter : <a href="https://twitter.com/presan100">@presan100</a><br>
             Twitter (VRC) : <a href = "https://twitter.com/presan100_JP">@presan100_jp</a><br>
         </p1>
     </div>
+    <div style="text-align:center">
+        <p1>
+            Hello! I'm Lutica on VRC , Twitter, Github, ... etc!
+        </p1>
+    </div>
+    <br><br>
 </div>

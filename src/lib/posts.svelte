@@ -1,18 +1,13 @@
 <script>
-$: arraya = ['as','fd','ll','jj','jj','jjfd','gfjd','fdsfsd','asdasd'];
 let name = '';
-function addpost()
-{
-    arraya = [...arraya,name]
-}
+export let postarray
+export var documentcontrol
 </script>
 <div id="posts">
-    {#each arraya as post}
-    <il class="post">
-        <h3>{post}</h3>
+    {#each postarray as post}
+    <il class="post" on:click={documentcontrol(post)}>
+        <h3>{post.name}</h3>
+        <p1>{post.subname}</p1>
     </il>
     {/each}
-    <div id = "inputing">
-        <input id="postadd" bind:value={name}><button on:click={addpost}>추가</button>
-    </div>
 </div>

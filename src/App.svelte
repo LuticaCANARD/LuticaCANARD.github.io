@@ -1,14 +1,21 @@
 <script>
-import Document from './lib/document.svelte';
+import Webasm from './lib/webasm.svelte'
 import Posts from './lib/posts.svelte';
 import Profile from './lib/profile.svelte';
+import postnames from './assets/posts.json';
+import Document from './lib/document.svelte'
 let postmode;
-let array = [{name:'profile',link:'profile'},{name:'posts',link:'posts'},{name:'document',link:'document'}]
+let array = [{name:'profile',link:'profile'},{name:'posts',link:'posts'},{name:'webasm',link:'webasm'}]
 let mobiletag = false;
-const changename = name=> () =>postmode = name
+let postin = {};
+const changepost = post => () => {
+    postin = post;
+    changename('document');
+}
+const changename = name => () => postmode = name;
 </script>
 <div class="navbar">
-    <div style="width: 20%;text-align: center;padding-top: 0px;" ><h3 style="margin:0%">Lutica's bar</h3></div>
+    <div style="width: 27%;text-align: center;padding-top: 0px;" on:click={changename('')} ><h3 style="margin-top:10px">Lutica's bar</h3></div>
     <div class="container" >
     {#each array as datak}
         <il class="navitem">
@@ -37,7 +44,6 @@ const changename = name=> () =>postmode = name
 </div>
 <main>
     <br><br>
-
     {#if postmode!=undefined}
     <h1>{postmode}</h1>
     {:else}
@@ -48,12 +54,15 @@ const changename = name=> () =>postmode = name
     <div id="blog">
     {#if postmode=='profile'}
         <Profile></Profile>
-        <Posts></Posts>
+        <Posts postarray={postnames} documentcontrol={changepost}></Posts>
     {:else if postmode=='document'}
-        <Document></Document>
-        <Posts></Posts>
+        <Document post={postin}></Document>
+        <Posts postarray={postnames} documentcontrol={changepost}></Posts>
+    {:else if postmode=='webasm'}
+        <Webasm></Webasm>
+        <Posts postarray={postnames} documentcontrol={changepost}></Posts>
     {:else if postmode=='posts'}
-        <Posts></Posts>
+         <Posts postarray={postnames} documentcontrol={changepost}></Posts>
     {:else}
         <Profile></Profile>
     {/if}
