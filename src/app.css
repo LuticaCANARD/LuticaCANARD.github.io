@@ -110,11 +110,12 @@ text-align: center;
 .post
 {
   border: 1px solid gray;
-  padding-left: 10%;
+  padding-left: 30px;
+  padding-bottom: 25px;
 }
 #document
 {
-  margin:2%;
+  margin:4%;
 }
 #profile
 {

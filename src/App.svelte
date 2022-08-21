@@ -1,48 +1,34 @@
 <script>
+
+
 import Webasm from './lib/webasm.svelte'
 import Posts from './lib/posts.svelte';
 import Profile from './lib/profile.svelte';
 import postnames from './assets/posts.json';
-import Document from './lib/document.svelte'
+import Document from './lib/document.svelte';
+import Header from './lib/header.svelte'
+
 let postmode;
 let array = [{name:'profile',link:'profile'},{name:'posts',link:'posts'},{name:'webasm',link:'webasm'}]
 let mobiletag = false;
 var postin={};
+let date = new Date();
+$: birthdate = date.getMonth()==7 && date.getDate() == 21
 
 const changename = (name) => () => {postmode = name;}
 </script>
-<div class="navbar">
-    <div style="width: 27%;text-align: center;padding-top: 0px;" on:click={changename('')} ><h3 style="margin-top:10px">Lutica's bar</h3></div>
-    <div class="container" >
-    {#each array as datak}
-        <il class="navitem">
-           <div on:click={changename(datak.link)} style ='text-decoration:none;color: black; width:100%;height:30px; padding-top:10px'> <p1>
-                {datak.name}
-            </p1></div>
-        </il>
-    {/each}
-    </div>
+{#if birthdate==true }
+<div>
+    <Profile></Profile>
+    <div style="text-align:center"><h1> today is my birthday!</h1></div>
 </div>
-<div class="mobile_navbar">
-    {#if mobiletag==true}
-    <div on:click={()=>mobiletag=false} style="width: 20%;text-align: center;padding-top: 10px;">OFF</div>
-    <div class="container_m">
-    {#each array as datak}
-        <il class="navitem_m">
-            <div on:click={changename(datak.link)} style ='text-decoration:none;color: black; width:100%;height:30px; padding-top:10px'> <p1>
-                {datak.name}
-            </p1></div>
-        </il>
-    {/each}
-    </div>
-    {:else}
-    <div on:click={()=>mobiletag=true} style="width: 20%;text-align: center;padding-top: 10px;">ON</div>
-    {/if}
-</div>
+<p1>check : </p1><input type='checkbox' bind:value={birthdate}>
+{:else}
+<Header bind:array={array} changename = {changename} bind:mobiletag={mobiletag}></Header>
 <main>
     <br><br>
     {#if postmode!=undefined}
-    <h1>{postmode}</h1>
+    <h1 style="margin:30px 50px">{postmode}</h1>
     {:else}
     <div style="text-align:center">
         <h1>Lutica's blog</h1>
@@ -67,3 +53,4 @@ const changename = (name) => () => {postmode = name;}
     
 
 </main>
+{/if}
