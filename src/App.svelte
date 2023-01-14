@@ -15,9 +15,11 @@ let mobiletag = false;
 var postin={};
 let date = new Date();
 $: birthdate = date.getMonth()==7 && date.getDate() == 21
-
+let scy = 0;
 const changename = (name) => () => {postmode = name;}
 </script>
+<svelte:window bind:scrollY={scy}/>
+
 {#if birthdate==true }
 <div>
     <Profile></Profile>
@@ -50,6 +52,7 @@ const changename = (name) => () => {postmode = name;}
     {:else}
         <Profile></Profile>
     {/if}
+    {scy}
 </div>
     <!--간단한 형식으로 리모델링.-->
 

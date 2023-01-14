@@ -186,18 +186,29 @@
   }
   .card
   {
+    width:50%;
     margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    overflow:auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
     .card__first_warpper
     {
+      padding:10px;
+      border-radius: 5px;
+      background-color: goldenrod;
       display: flex;
       .card__second_warpper
       {
-
         display: flex;
         flex-direction:column;
-        
+        .card__title
+        {
+          font-size: larger;
+        }
+        .card__desc
+        {
+          font-size: small;
+        }
       }
     }
   }
