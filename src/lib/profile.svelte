@@ -3,9 +3,11 @@
 </script>
 <div id="profile">
     <center>
-        <img src="{profilepic}" alt="kyoko"style="width:min(80vw,500px)">
         <h1>
         Hi! , I'm Lutica!
+        </h1>
+        <h1>
+            "Here is under renovating now."
         </h1>
 
 

@@ -1,19 +1,14 @@
 <script>
 
-export let postarray
+import Store from '../store.js'
+var store = new Store()
 export let selectedpost
 export var documentcontoroll
-function selectpost (post)
-{
-    selectedpost = post
-    documentcontoroll();
-}
+import Card from './profile_card.svelte'
 </script>
 <div id="posts">
-    {#each postarray as post}
-    <il class="post" on:click={selectpost(post)}>
-        <h3>{post.name}</h3>
-        <p1>{post.subname}</p1>
-    </il>
+    {#each store.array_of_post as post} 
+    <Card pic_code=post.pic desc =post.title title=post.title></Card>
     {/each}
+
 </div>
