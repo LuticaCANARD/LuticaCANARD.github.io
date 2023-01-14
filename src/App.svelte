@@ -40,15 +40,13 @@ const changename = (name) => () => {postmode = name;}
     <div id="blog">
     {#if postmode=='profile'}
         <Profile></Profile>
-        <Posts postarray={postnames} bind:selectedpost={postin} documentcontoroll={changename('document')}></Posts>
     {:else if postmode=='document'}
         <Document post={postin}></Document>
         <Posts postarray={postnames} bind:selectedpost={postin} documentcontoroll={changename('document')}></Posts>
     {:else if postmode=='webasm'}
         <Webasm></Webasm>
-        <Posts postarray={postnames} bind:selectedpost={postin} documentcontoroll={changename('document')}></Posts>
     {:else if postmode=='posts'}
-         <Posts postarray={postnames} bind:selectedpost={postin} documentcontoroll={changename('document')}></Posts>
+        <Posts postarray={postnames} bind:selectedpost={postin} documentcontoroll={changename('document')}></Posts>
     {:else}
         <Profile></Profile>
     {/if}

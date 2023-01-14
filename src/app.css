@@ -136,12 +136,6 @@ body {
   height: 100%;
 }
 
-.post {
-  border: 1px solid gray;
-  padding-left: 30px;
-  padding-bottom: 25px;
-}
-
 #document {
   margin: 4%;
 }
@@ -161,4 +155,23 @@ main {
 
 .pointer {
   cursor: pointer;
+}
+
+.post {
+  border: 1px solid gray;
+  padding-left: 30px;
+  padding-bottom: 25px;
+}
+
+.card {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.card .card__first_warpper {
+  display: flex;
+}
+.card .card__first_warpper .card__second_warpper {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=app.css.map */
