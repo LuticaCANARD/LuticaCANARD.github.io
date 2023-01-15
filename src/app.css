@@ -1,23 +1,23 @@
 @media (prefers-color-scheme: dark) {
   body {
-    background: #000;
-    color: #fff;
+    background: rgb(3, 2, 14);
+    color: rgb(219, 219, 219);
   }
   .navbar {
-    background: #000;
-    color: #fff;
+    background: rgb(3, 2, 14);
+    color: rgb(219, 219, 219);
   }
   .mobile_navbar {
-    background: #000;
-    color: #fff;
+    background: rgb(3, 2, 14);
+    color: rgb(219, 219, 219);
   }
   .navitem_m {
-    background: #000;
-    color: #fff;
+    background: rgb(3, 2, 14);
+    color: rgb(219, 219, 219);
   }
   .navitem {
-    background: #000;
-    color: #fff;
+    background: rgb(3, 2, 14);
+    color: rgb(219, 219, 219);
   }
 }
 @media (prefers-color-scheme: light) {
@@ -51,7 +51,7 @@ body {
   display: flex;
   position: fixed;
   width: 100vw;
-  height: 40px;
+  height: 50px;
   border: 1px solid gray;
   opacity: 1;
   z-index: 1;
@@ -107,9 +107,9 @@ body {
   flex-wrap: nowrap;
   flex-direction: row;
   right: 0px;
-  height: 40px;
+  height: 100%;
   float: right;
-  position: fixed;
+  position: absolute;
 }
 
 .navitem {
@@ -132,7 +132,8 @@ body {
   top: 40px;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  margin: 0 auto;
+  width: min(1000px, 100%);
   height: 100%;
 }
 
@@ -164,17 +165,32 @@ main {
 }
 
 .card {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
-  overflow: auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  overflow: none;
+  margin-top: min(5%, 50px);
+  margin-bottom: min(5%, 50px);
 }
 .card .card__first_warpper {
+  margin: 0 auto;
   padding: 10px;
+  width: 50%;
   border-radius: 5px;
-  background-color: goldenrod;
   display: flex;
+}
+@media (prefers-color-scheme: light) {
+  .card .card__first_warpper {
+    background-color: rgb(218, 165, 32);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .card .card__first_warpper {
+    background-color: rgb(81, 57, 0);
+  }
+}
+.card .card__first_warpper .card__pic {
+  width: 50px;
+  height: 50px;
 }
 .card .card__first_warpper .card__second_warpper {
   display: flex;

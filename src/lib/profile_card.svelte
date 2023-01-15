@@ -11,9 +11,16 @@
     let now_scy = 0;
     let now_scy_show = 0;
     let postcard_obj;
-    //function show_ani(node,{top,left},)
+    let show_ = true
+    function show_ani(node,{ duration })
     {
-
+		return {duration,
+		css: timer=> {
+			return `
+			transform: rotateX(${timer * 360}deg) translate(calc(100% - ${timer * 100}%),0px);
+			`
+		    }
+        };
     }
     //const showing_animation;
     onMount(()=>
@@ -23,10 +30,7 @@
         console.log(posts_po)
         if ( now_scy < now_scy_show )
         {
-            postcard_obj.style.display="none"
-            // 여기에 애니메이션을 시작하면 된다.
-            //console.log(postcard_obj)
-            console.log('m')
+            show_ = false
         }
     })
     
@@ -36,16 +40,18 @@
         now_scy = scy + inner_height
         if ( now_scy > now_scy_show )
         {
-            postcard_obj.style.display="flex"
             // 여기에 애니메이션을 시작하면 된다.
             //console.log(postcard_obj)
             console.log('m')
+            show_ = true
         }
     }) 
 </script>
 <svelte:window bind:scrollY={scy} bind:innerHeight={inner_height}/>
+
 <div class="card" bind:this={post_obj}>
-    <div class="card__first_warpper" bind:this={postcard_obj} transition:fade>
+    {#if show_}
+    <div class="card__first_warpper" style="translate(100%,0px)" bind:this={postcard_obj} in:show_ani="{{duration:1000}}">
         <!--Animation 적용시 유의점 : 시간차를 조금 둬서 user가 인지할 수 있게 할 것.-->
         {#if post.pic_code!= undefined}
         <div class="card__pic">
@@ -61,4 +67,5 @@
             </div>
         </div>
     </div>
+    {/if}
 </div>

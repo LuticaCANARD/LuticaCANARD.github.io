@@ -9,11 +9,13 @@
         <h3 style="margin-top:10px">Lutica's bar</h3></div>
     <div class="container" >
     {#each array as datak}
-        <il class="navitem">
-           <div on:click={changename(datak.link)} style ='text-decoration:none; width:100%;height:30px; padding-top:10px' class="pointer">
-                 <p1>
-                 {datak.name}
-                </p1>
+        <il class="navitem"  >
+           <div style ='text-decoration:none; width:100%;height:100%;margin-top:0px' on:click={changename(datak.link)}  class="pointer">
+                <div style="padding-top:calc(50% - 2em);">
+                    <p1>
+                    {datak.name}
+                    </p1>
+                </div>
             </div>
         </il>
     {/each}
