@@ -9,14 +9,14 @@ let scy = 0;
 let inner_height = 0;
 let card;
 let posts_postion = 0;
-let posts_object;
+var posts_object;
 </script>
 <svelte:window bind:scrollY={scy} bind:innerHeight={inner_height}/>
 {scy}
 {posts_object?.offsetTop}
 <div id="posts" bind:clientHeight={posts_postion} bind:this={posts_object}>
     {#each postarray as post} 
-    <Card post={post} posts_po={posts_object?.offsetTop}></Card>
+    <Card post={post}></Card>
     {/each}
 </div>
 
