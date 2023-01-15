@@ -1,10 +1,10 @@
 @mixin darkSide()
 {
-    background:rgb(3, 2, 14);color: rgb(219, 219, 219);
+  background:rgb(9, 9, 11);color: rgb(219, 219, 219);
 }
 @mixin lightSide()
 {
-    background:rgb(255, 255, 255);color: rgb(0, 0, 0);
+  background:rgb(255, 255, 255);color: rgb(0, 0, 0);
 }
 @media (prefers-color-scheme: dark) {
     body
@@ -194,7 +194,6 @@
     margin-bottom: min(5%,50px);
     .card__first_warpper
     {
-
       margin: 0 auto;
       padding:10px;
       width:50%;
@@ -205,7 +204,7 @@
       }
       @media (prefers-color-scheme: dark) 
       {
-        background-color: rgb(81, 57, 0);
+        background-color: rgba(29, 29, 29, 0.484);
       }
       display: flex;
       .card__pic

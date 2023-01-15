@@ -1,22 +1,22 @@
 @media (prefers-color-scheme: dark) {
   body {
-    background: rgb(3, 2, 14);
+    background: rgb(9, 9, 11);
     color: rgb(219, 219, 219);
   }
   .navbar {
-    background: rgb(3, 2, 14);
+    background: rgb(9, 9, 11);
     color: rgb(219, 219, 219);
   }
   .mobile_navbar {
-    background: rgb(3, 2, 14);
+    background: rgb(9, 9, 11);
     color: rgb(219, 219, 219);
   }
   .navitem_m {
-    background: rgb(3, 2, 14);
+    background: rgb(9, 9, 11);
     color: rgb(219, 219, 219);
   }
   .navitem {
-    background: rgb(3, 2, 14);
+    background: rgb(9, 9, 11);
     color: rgb(219, 219, 219);
   }
 }
@@ -185,7 +185,7 @@ main {
 }
 @media (prefers-color-scheme: dark) {
   .card .card__first_warpper {
-    background-color: rgb(81, 57, 0);
+    background-color: rgba(29, 29, 29, 0.484);
   }
 }
 .card .card__first_warpper .card__pic {
