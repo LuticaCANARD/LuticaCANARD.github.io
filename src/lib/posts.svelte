@@ -12,8 +12,6 @@ let posts_postion = 0;
 var posts_object;
 </script>
 <svelte:window bind:scrollY={scy} bind:innerHeight={inner_height}/>
-{scy}
-{posts_object?.offsetTop}
 <div id="posts" bind:clientHeight={posts_postion} bind:this={posts_object}>
     {#each postarray as post} 
     <Card post={post}></Card>
