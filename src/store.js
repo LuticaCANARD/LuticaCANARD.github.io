@@ -3,7 +3,6 @@ class Store{
     {
         console.log('v')
     }
-    array_of_post = []
 }
 
 export default Store
