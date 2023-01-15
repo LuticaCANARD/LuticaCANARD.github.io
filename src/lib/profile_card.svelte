@@ -1,6 +1,5 @@
 <script>
     export let post
-    export let posts_po
     import { onMount } from 'svelte';
     import { fade } from 'svelte/transition';
     let piclink = '../assets/' + post.pic_code + '.png'
@@ -12,6 +11,7 @@
     let now_scy_show = 0;
     let postcard_obj;
     let show_ = true
+    let ani_set =  {duration:100};
     function show_ani(node,{ duration })
     {
 		return {duration,
@@ -27,10 +27,14 @@
     {
         now_scy_show = post_obj?.offsetTop;
         now_scy = scy + inner_height
-        console.log(posts_po)
-        if ( now_scy < now_scy_show )
+        if ( now_scy < now_scy_show+100 )
         {
             show_ = false
+            ani_set = {duration:200}
+        }
+        else
+        {
+            ani_set = {duration:100}
         }
     })
     
@@ -38,11 +42,10 @@
     {
         now_scy_show = post_obj?.offsetTop;
         now_scy = scy + inner_height
-        if ( now_scy > now_scy_show )
-        {
+        if ( now_scy > now_scy_show-10 )
+        {            
             // 여기에 애니메이션을 시작하면 된다.
             //console.log(postcard_obj)
-            console.log('m')
             show_ = true
         }
     }) 
@@ -51,7 +54,24 @@
 
 <div class="card" bind:this={post_obj}>
     {#if show_}
-    <div class="card__first_warpper" style="translate(100%,0px)" bind:this={postcard_obj} in:show_ani="{{duration:1000}}">
+    <div class="card__first_warpper" style="translate(100%,0px)" bind:this={postcard_obj} in:show_ani="{ani_set}">
+        <!--Animation 적용시 유의점 : 시간차를 조금 둬서 user가 인지할 수 있게 할 것.-->
+        {#if post.pic_code!= undefined}
+        <div class="card__pic">
+            <img src="{post.piclink}" class="card_pic">
+        </div>
+        {/if}
+        <div class="card__second_warpper">
+            <div class="card__title">
+                {post.name}
+            </div>
+            <div class="card__desc">
+                {post.subname}
+            </div>
+        </div>
+    </div>
+    {:else}
+    <div class="card__first_warpper" style="translate(100%,0px);display:none" bind:this={postcard_obj} in:show_ani="{ani_set}">
         <!--Animation 적용시 유의점 : 시간차를 조금 둬서 user가 인지할 수 있게 할 것.-->
         {#if post.pic_code!= undefined}
         <div class="card__pic">
