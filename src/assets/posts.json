@@ -2,46 +2,46 @@
     {
         "name":"두번째 스벨트 프로젝트",
         "subname":"이 프로젝트는 스벨트로 만든 두번째 블로그입니다.",
-        "post":"<p1>이 프로젝트는 정적인 github.io 프로젝트입니다. 이 프로젝트는 반응형 웹으로 설계되어있으며, 다양한 환경에서의 포스트 보기, 웹 어셈블리 사용등을 추구하고 있습니다.<br> 이 블로그는 twitter:@presan100 에 의해 관리됩니다.</p1>"
+        "postlink":"introduce"
     },    
     {
         "name":"Post2",
         "subname":"sub2",
-        "post":"test2"   
+        "postlink":"test2"   
     },    
     {
         "name":"Post3",
         "subname":"sub3",
-        "post":"test3"   
+        "postlink":"test3"   
     },    
     {
         "name":"Post4",
         "subname":"sub4",
-        "post":"test4"   
+        "postlink":"test4"   
     },    
     {
         "name":"Post5",
         "subname":"sub5",
-        "post":"test5"   
+        "postlink":"test5"   
     },    
     {
         "name":"Post6",
         "subname":"sub6",
-        "post":"test6"   
+        "postlink":"test6"   
     },    
     {
         "name":"Post7",
         "subname":"sub7",
-        "post":"test7"   
+        "postlink":"test7"   
     },    
     {
         "name":"Post8",
         "subname":"sub8",
-        "post":"test8"   
+        "postlink":"test8"   
     },    
     {
         "name":"Post9",
         "subname":"sub9",
-        "post":"test9"   
+        "postlink":"test9"   
     }
 ]
