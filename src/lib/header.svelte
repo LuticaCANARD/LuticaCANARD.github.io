@@ -1,6 +1,6 @@
 
 <script>
-    export let array;
+    export let MainbarArray;
     export var changename;
     export let mobiletag;
 </script>
@@ -8,7 +8,7 @@
     <div style="width: 27%;text-align: center;padding-top: 0px;" on:click={changename('')} >
         <h3 style="margin-top:10px">Lutica's bar</h3></div>
     <div class="container" >
-    {#each array as datak}
+    {#each MainbarArray as datak}
         <il class="navitem"  >
            <div style ='text-decoration:none; width:100%;height:100%;margin-top:0px' on:click={changename(datak.link)}  class="pointer">
                 <div style="padding-top:calc(50% - 2em);">
