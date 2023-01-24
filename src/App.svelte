@@ -45,7 +45,7 @@ onMount(() => {
 <p1>check : </p1><input type='checkbox' bind:value={birthdate}>
 {:else}
 <div id="header_div">
-    <Header bind:array={array} changename = {changename} bind:mobiletag={mobiletag}></Header>
+    <Header bind:MainbarArray={array} changename = {changename} bind:mobiletag={mobiletag}></Header>
 </div>
 <main>
 

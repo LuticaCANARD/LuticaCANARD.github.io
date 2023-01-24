@@ -126,17 +126,21 @@
     display: flex;
     flex-wrap: nowrap;
     flex-direction:row;
-    right: 0px;
+    right: 2%;
     height:100%;
     float: right;
     position: absolute;
   }
   .navitem
   {
-    border-left:1px solid gray;
+    /*border:1px solid gray;*/
     flex:1;
     width:100px;
     text-align: center;
+  }
+  .navitem:hover
+  {
+     background-color: rgba(100, 100, 100,0.6);
   }
   .navitem_m
   {
@@ -190,6 +194,7 @@
     margin-bottom: min(5%,50px);
     .card__first_warpper
     {
+      
       margin: 0 auto;
       padding:10px;
       width:50%;
@@ -221,6 +226,10 @@
           font-size: small;
         }
       }
+    }
+    .card__first_warpper:hover
+    {
+      background-color: rgba(100, 100, 100,0.6);
     }
   }
   .article_warp

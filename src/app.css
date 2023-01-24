@@ -106,17 +106,21 @@ body {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  right: 0px;
+  right: 2%;
   height: 100%;
   float: right;
   position: absolute;
 }
 
 .navitem {
-  border-left: 1px solid gray;
+  /*border:1px solid gray;*/
   flex: 1;
   width: 100px;
   text-align: center;
+}
+
+.navitem:hover {
+  background-color: rgba(100, 100, 100, 0.6);
 }
 
 .navitem_m {
@@ -197,6 +201,9 @@ main {
 }
 .card .card__first_warpper .card__second_warpper .card__desc {
   font-size: small;
+}
+.card .card__first_warpper:hover {
+  background-color: rgba(100, 100, 100, 0.6);
 }
 
 .article_warp {
