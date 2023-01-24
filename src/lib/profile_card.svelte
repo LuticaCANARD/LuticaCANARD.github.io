@@ -59,7 +59,7 @@
         <!--Animation 적용시 유의점 : 시간차를 조금 둬서 user가 인지할 수 있게 할 것.-->
         {#if post.pic_code!= undefined}
         <div class="card__pic">
-            <img src="{post.piclink}" class="card_pic">
+            <img src="{post.piclink}" class="card_pic" alt="NON">
         </div>
         {/if}
         <div class="card__second_warpper">
@@ -76,7 +76,7 @@
         <!--Animation 적용시 유의점 : 시간차를 조금 둬서 user가 인지할 수 있게 할 것.-->
         {#if post.pic_code!= undefined}
         <div class="card__pic">
-            <img src="{post.piclink}" class="card_pic">
+            <img src="{post.piclink}" class="card_pic" alt="NON">
         </div>
         {/if}
         <div class="card__second_warpper">
