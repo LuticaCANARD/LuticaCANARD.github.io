@@ -10,6 +10,7 @@ let inner_height = 0;
 let card;
 let posts_postion = 0;
 var posts_object;
+
 </script>
 <svelte:window bind:scrollY={scy} bind:innerHeight={inner_height}/>
 <div id="posts" bind:clientHeight={posts_postion} bind:this={posts_object}>
