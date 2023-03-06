@@ -1,6 +1,6 @@
 @mixin darkSide()
 {
-  background:rgb(9, 9, 10);color: rgb(219, 219, 219);
+  background:#1e1e1f;color: rgb(219, 219, 219);
 }
 @mixin lightSide()
 {
@@ -157,7 +157,7 @@
     display: flex;
     flex-direction: column;
     margin:0 auto;
-    width:min(1000px,100%);
+    width: unquote("min(1000px,100%)");
     height: 100%;
   }
   
@@ -177,7 +177,7 @@
   }
   .pointer
   {
-    cursor: pointer;;
+    cursor: pointer;
   }
   .post
   {
@@ -190,8 +190,8 @@
     width:100%;
     margin: 0 auto;
     overflow:none;
-    margin-top: min(5%,50px);
-    margin-bottom: min(5%,50px);
+    margin-top: unquote("min(5%,50px)");
+    margin-bottom: unquote("min(5%,50px)");
     .card__first_warpper
     {
       
@@ -249,16 +249,16 @@
     }
     @media (max-width:1230px)
     {
-      margin: 1% calc(max(10%,5px) - 15px);
-      width: min(calc(100vw - 10px) , 80%),
+      margin: 1% unquote("calc(max(10%,5px) - 15px)");
+      width: unquote("min(calc(100vw - 10px) , 80%)");
     }
     @media (min-width:1231px)
     {
-      margin: 1% calc(calc(100% - 1015px) / 2);
+      margin: 1% unquote("calc(calc(100% - 1015px) / 2)");
       width:1000px;
     }
    
-    height:max(50vh , 100%);
+    height:unquote("max(50vh , 100%)");
     position: absolute;
     padding: 15px;
     border-radius: 15px;
