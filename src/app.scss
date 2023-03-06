@@ -6,6 +6,17 @@
 {
   background:rgb(255, 255, 255);color: rgb(0, 0, 0);
 }
+@mixin make_dark()
+{
+  @media (prefers-color-scheme: dark) 
+  {
+    filter:invert(1)
+  }
+  @media (prefers-color-scheme: light) 
+  {
+    filter:invert(0)
+  }
+}
 @media (prefers-color-scheme: dark) {
     body
     {
@@ -273,7 +284,47 @@
   }
   .history_element{
     display: flex;
+    margin: 0 auto;
+  }
+  .history_element_stack
+  {
+    display: flex;
+    flex-direction: row;
+    border-bottom: gray 1px solid;
+    padding: 10px;
+    word-break:break-all;
 
+  }
+  .stacks_img
+  {
+    .need_invert{
+      @include make_dark();
+    }
+    width: 60px;
+  }
+  .stacks
+  {
+    margin: 5px;
+  }
+  .stacks_name h3{
+    margin: 0px;
+  }
+  .history_element_name
+  {
+    display: flex;
+    border-right: gray 1px solid;
+    align-items: center;
+  }
+  .history_element_name_text
+  {
+    margin: 10px;
+    word-break:break-all;
+  }
+  .proj_war
+  {
+    display: flex;
+    justify-content: center;
+    border: 1px gray solid;
   }
   
   

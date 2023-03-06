@@ -6,24 +6,26 @@
             stacks : [
                 {
                     name: "Python",
-                    imglink:"",
-                    desc: " SERVER "
+                    imglink:"Python/black",
+                    desc: " SERVER ",
+                    need_invert : true
                 },                
                 {
                     name: "C# / Unity",
-                    imglink:"",
-                    desc: " Unity Client "
+                    imglink:"Unity/black",
+                    desc: " Unity Client ",
+                    need_invert : true
                 },
                 {
                     name: "JS",
-                    imglink:"",
+                    imglink:"JavaScript",
                     desc: " Web Client "
                 },
             ],
             desc : "# projects to ..."
         }
     ]
-    import SvelteMarkdown from 'svelte-markdown'
+    import Project_card from '../lib/project_card.svelte'
  
 </script>
 <div id="profile">
@@ -34,30 +36,8 @@
             <!-- 약력 -->
             <div id="profile_history">
                 {#each history as story}
-                    <div class="history_element">
-                        <!--이름, 스택, 서술-->
-                        <div class="history_element_name">
-                            {story.name}
-                        </div>
-                        <div class="history_element_stack">
-                            {#each story.stacks as stack}
-                                <div class="stacks">
-                                    <div class="stacks_img">
-                                        <img src={stack.imglink}/>
-                                    </div>
-                                    <div class="stacks_name">
-                                        <h3>{stack.name}</h3>
-                                    </div>
-                                    <div class="stacks_desc">
-                                        <p1>{stack.desc}</p1>
-                                    </div>
-                                </div>
-                            {/each}
-                        </div>
-                        <div class="history_element_desc">
-                            <SvelteMarkdown source={story.desc}></SvelteMarkdown>
-                        </div>
-                    </div>
+                   <Project_card story={story}>
+                   </Project_card>
                 {/each}
             </div>
             <!-- 진행중인 프로젝트 -->
