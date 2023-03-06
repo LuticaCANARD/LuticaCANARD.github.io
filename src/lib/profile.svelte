@@ -1,46 +1,58 @@
 <script>
     import profilepic from '../assets/profile.png'
-    const history = [
-        {
-            name : "Lathion_project",
-            stacks : [
-                {
-                    name: "Python",
-                    imglink:"Python/black",
-                    desc: " SERVER ",
-                    need_invert : true
-                },                
-                {
-                    name: "C# / Unity",
-                    imglink:"Unity/black",
-                    desc: " Unity Client ",
-                    need_invert : true
-                },
-                {
-                    name: "JS",
-                    imglink:"JavaScript",
-                    desc: " Web Client "
-                },
-            ],
-            desc : "# projects to ..."
-        }
-    ]
-    import Project_card from '../lib/project_card.svelte'
- 
+    import projects from '../assets/project.json'
+    const project = projects["body"]
+    import historys from '../assets/history.json'
+    const history = historys["body"]
+    import stackss from '../assets/stacks.json'
+    const stacks = stackss
+    const sva = Object.keys(stackss)
+    import Project_card from '../lib/sub-lib/project_card.svelte'
+    import History_card from '../lib/sub-lib/history_card.svelte'
+    import Stacks from '../lib/sub-lib/stacks.svelte'
 </script>
 <div id="profile">
     <center>
         <div>
             <!-- 프로필 사진 -->
-            
+            <div id="profile_pic">
+                <img src={profilepic}>
+            </div>
+            <!-- NAME 등 -->
+            <div>
+                <h1>Lutica CANARD</h1>
+            </div>
+            <!-- 스택 -->
+            <div id="stack_groups">
+                {#each sva as stack_group}
+                    <div class="stack_domain_warp">
+                        <div class="stack_domain">
+                            <h2>
+                                {stack_group}
+                            </h2>
+                        </div>
+                        <div class="stack_group">
+                            {#each stacks[stack_group] as stack_gp}
+                            <Stacks stack={stack_gp}></Stacks>
+                            {/each}
+                        </div>
+                    </div>
+                {/each}
+            </div>
             <!-- 약력 -->
+            <div id="history_list">
+                {#each history as strs}
+                <History_card history={strs}>
+                </History_card>
+                {/each}
+            </div>
+            <!-- 진행중인 프로젝트 -->
             <div id="profile_history">
-                {#each history as story}
+                {#each project as story}
                    <Project_card story={story}>
                    </Project_card>
                 {/each}
             </div>
-            <!-- 진행중인 프로젝트 -->
             <!-- GITHUB Link 등 -->
         </div>
     </center>

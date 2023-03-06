@@ -1,0 +1,15 @@
+<script>
+
+    export let stack;
+    let is_desc = false
+</script>
+<div class="stack" on:click={()=>{is_desc = !is_desc}}>
+    <div class={is_desc?"card_show":"card_back"}>
+        <div class="card_name">
+            <h4>{stack.name}</h4>
+        </div>
+    </div>
+    <div class={is_desc?"card_back":"card_show"}>
+        <img src={"https://cdn.simpleicons.org/"+stack.name+"/"+stack.color} class="stack_image">
+    </div>
+</div>
