@@ -263,5 +263,17 @@
     padding: 15px;
     border-radius: 15px;
   }
+
+  // PROFILE 
+  #profile_history{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+  }
+  .history_element{
+    display: flex;
+
+  }
   
   
