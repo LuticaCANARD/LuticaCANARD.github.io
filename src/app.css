@@ -261,16 +261,6 @@ main {
 .stacks_img {
   width: 60px;
 }
-@media (prefers-color-scheme: dark) {
-  .stacks_img .need_invert {
-    filter: invert(1);
-  }
-}
-@media (prefers-color-scheme: light) {
-  .stacks_img .need_invert {
-    filter: invert(0);
-  }
-}
 
 .stacks {
   margin: 5px;
@@ -295,4 +285,142 @@ main {
   display: flex;
   justify-content: center;
   border: 1px gray solid;
+}
+
+#profile_pic {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+#profile_pic img {
+  width: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .need_invert {
+    filter: invert(1);
+  }
+}
+@media (prefers-color-scheme: light) {
+  .need_invert {
+    filter: invert(0);
+  }
+}
+
+#stack_groups {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.stack_group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+}
+
+.stack {
+  width: min(100%, 80px);
+  height: min(15vw, 80px);
+  margin: 10px;
+  padding: 5px;
+  background-color: #13131d;
+  border-radius: 20px;
+}
+
+.stack_domain_warp {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  word-break: break-all;
+}
+
+.stack_name {
+  word-break: break-all;
+}
+
+.stack_domain {
+  height: 80px;
+}
+
+.stack:hover {
+  transform: scale(1.5);
+  animation-name: stack_onhover;
+  animation-duration: 0.5s;
+}
+
+.card_back {
+  display: none;
+}
+
+.stack_image {
+  border-radius: 10px;
+}
+
+.card_show {
+  margin: auto;
+  animation-name: card_on;
+  animation-duration: 0.5s;
+}
+
+.card_back {
+  animation-name: card_off;
+  animation-duration: 0.5s;
+}
+
+@keyframes card_on {
+  from {
+    opacity: 0;
+  }
+  32% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  99% {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+  to {
+    visibility: collapse;
+  }
+}
+@keyframes card_off {
+  from {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    display: block;
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.9;
+  }
+  31% {
+    opacity: 0;
+  }
+  99% {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    display: block;
+  }
+  to {
+    transform: matrix(0, 0, 0, 1, 0, 0);
+    visibility: hidden;
+  }
+}
+.card_name {
+  margin: 25px auto 0px;
+}
+
+@keyframes stack_onhover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
 }/*# sourceMappingURL=app.css.map */

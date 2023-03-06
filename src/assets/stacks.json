@@ -1,0 +1,73 @@
+
+{
+    ".NET, GAME" :
+    [
+        {
+            "name":"Csharp",
+            "color":"BLACK"
+        },    
+        {
+            "name":"Unity",
+            "color":"BLACK"
+        },    
+        {
+            "name":".NET",
+            "color":""
+        }
+    ],
+    "WEB" :
+    [
+        {
+            "name":"HTML5",
+            "color":"BLACK"
+        },
+        {
+            "name":"CSS3",
+            "color":"BLACK"
+        },
+        {
+            "name":"Javascript",
+            "color":""
+        },        
+        {
+            "name":"SASS",
+            "color":"BLACK"
+        },
+        {
+            "name":"svelte",
+            "color":""
+        },
+        {
+            "name":"jQuery",
+            "color":""
+        }
+    ],
+    "devops" :
+    [
+        {
+            "name":"Docker",
+            "color":"BLACK"
+        }
+
+    ],
+    "server" :
+    [
+        
+        {
+            "name":"Flask",
+            "color":"BLACK"
+        },
+        {
+            "name":"PHP",
+            "color":"BLACK"
+        },
+        {
+            "name":"PostgreSQL",
+            "color":"BLACK"
+        },
+        {
+            "name":"MySQL",
+            "color":"BLACK"
+        }
+    ]
+}
