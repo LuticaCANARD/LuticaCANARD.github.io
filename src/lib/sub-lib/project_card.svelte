@@ -1,19 +1,7 @@
 <script>
     export let story;
     import SvelteMarkdown from 'svelte-markdown'
-    const uril = '../../assets/projects/'+story.desc+'.md';
-    let tn;
-    import { onMount } from 'svelte';
-    const request = new XMLHttpRequest();
-    onMount(()=>
-    {
-        request.open('GET', uril, true);
-        request.onload = function () {
-            tn = request.responseText;
-        };
-        request.send();
-    })
-    
+    import tn from '../../assets/projects/${story.desc}.md'
 </script>
 
 <div class="history_element">
