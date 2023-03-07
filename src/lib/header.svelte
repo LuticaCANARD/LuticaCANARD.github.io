@@ -3,8 +3,10 @@
     export let MainbarArray;
     export var changename;
     export let mobiletag;
+    let scys;
 </script>
-<div class="navbar dark-mode-toolbar">
+<svelte:window bind:scrollY = {scys} />
+<div class="navbar dark-mode-toolbar" style={scys<=15?"position:relative":"position:fixed"}>
     <div style="width: 27%;text-align: center;padding-top: 0px;" on:click={changename('')} >
         <h3 style="margin-top:10px">Lutica's bar</h3></div>
     <div class="container" >
@@ -22,7 +24,7 @@
     </div>
 </div>
 
-<div class="mobile_navbar dark-mode-toolbar">
+<div class="mobile_navbar dark-mode-toolbar" style={scys<=15?"position:relative":"position:fixed"}>
     {#if mobiletag==true}
     <div on:click={()=>mobiletag=false} style="width: 20%;text-align: center;padding-top: 10px;">OFF</div>
     <div class="container_m">

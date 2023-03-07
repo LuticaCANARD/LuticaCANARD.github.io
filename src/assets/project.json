@@ -22,7 +22,7 @@
                 "need_invert" : true
             }
         ],
-        "desc" : "# projects to ..."
+        "desc" : "cryptoconquer"
     },
     {
         "name" : "LUNEER_official_site",
@@ -34,7 +34,7 @@
                 "need_invert" : true
             }
         ],
-        "desc" : "# Official Site Of Luneer"
+        "desc" : "conquer_api"
     },
     {
         "name" : "Conquer_AI_Simulator",
@@ -58,7 +58,7 @@
                 "need_invert" : true
             }
         ],
-        "desc" : "# Official Site Of Luneer"
+        "desc" : "conquer_api"
     },
     {
         "name" : "Age_Of_Galaxy_2",
@@ -82,7 +82,7 @@
                 "need_invert" : true
             }
         ],
-        "desc" : "API For Game"
+        "desc" : "AOG2"
     },
     {
         "name" : "Lathion_project",
@@ -105,7 +105,7 @@
                 "desc": " Web Client "
             }
         ],
-        "desc" : "API For Game"
+        "desc" : "Lathion"
     }
     
 ]}

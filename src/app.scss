@@ -414,6 +414,7 @@ main
 .history_desci
 {
   float: left;
+  margin: 2px;
 }
 
 //STACKS 
@@ -564,5 +565,31 @@ main
   to{
     transform: scale(1.5);
   }
+}
+//contact
+#contact
+{
+  display: flex;
+  width:85%;
+  max-width: 850px;
+  margin-bottom: 50px;
+}
+.contact_warp
+{
+  max-width: 80px;
+  display: flex;
+  width:100%;
+  flex-direction: column;
+  margin: auto;
+}
+.cont_pic{
+  width: 100%;
+}
+//footer
+footer{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 

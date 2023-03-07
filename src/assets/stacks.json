@@ -52,10 +52,10 @@
     ],
     "Server" :
     [
-        
         {
             "name":"Flask",
-            "color":"BLACK"
+            "color":"BLACK",
+            "need_invert" : true
         },
         {
             "name":"PHP",
