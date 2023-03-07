@@ -22,7 +22,7 @@ import Router from 'svelte-spa-router';
   };
 
 let postmode;
-let array = [{name:'profile',link:'profile'},{name:'posts',link:'posts'},{name:'webasm',link:'webasm'}]
+let array = [{name:'profile',link:'Profile'},{name:'posts',link:'Posts'},{name:'webasm',link:'webasm'}]
 let mobiletag = false;
 var postin={};
 let date = new Date();
