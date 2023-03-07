@@ -315,7 +315,7 @@ main
 .history_element_name
 {
   @media (min-width:301px) {
-    width:min(20vw, 200px);
+    width:min(19.5vw, 200px);
   }
   @media (max-width:300px) {
     width:100%;
@@ -337,11 +337,11 @@ main
 .proj_war
 {
   @media (min-width:301px) {
-    width:min(1000px,100vw);
+    width:min(1000px,99.5vw);
     flex-direction: row; 
   }
   @media (max-width:300px) {
-    width:100vw;
+    width:99.5vw;
     flex-direction: column; 
     
   }
