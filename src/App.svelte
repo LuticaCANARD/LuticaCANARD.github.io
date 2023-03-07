@@ -50,14 +50,6 @@ onMount(() => {
 <main>
 
     <br><br>
-
-    {#if postmode!=undefined &&postmode!='profile' }
-    <h1 style="margin:30px 50px">{postmode}</h1>
-    {:else}
-    <div style="text-align:center">
-        <h1>Lutica's blog</h1>
-    </div>
-    {/if}
     <div id="blog">
     {#if postmode=='profile'}
         <Profile></Profile>

@@ -335,36 +335,50 @@ main
 }
 
 //HISTORY
-
+#history_list
+{
+  width: 85%;
+}
 .history_card
 {
-
+  border-bottom: gray 1px solid;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
 }
 .history_title
 {
-  
+  h1{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+ 
 }
   
 
 .history_time
 {
-  
+  font-size: larger;
+  margin-bottom: 5px;
 }
   
 
 .history_desc
 {
-  
+  font-size: larger;
+  margin-bottom: 3px;
 }
   
 
 .history_desc2
 {
-  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .history_desci
 {
-  
+  float: left;
 }
 
 //STACKS 
@@ -390,13 +404,16 @@ main
   width: 100%;
 
 }
-.stack{
-  width: min(100%,60px);
-  height: min(calc(30vw * 0.5), 60px);
+@mixin stacksize(){
+  width: 60px;
+  height: 60px;
   margin: 10px;
   padding: 5px;
   background-color: #13131d;
-  border-radius : 20px
+  border-radius : 20px;
+}
+.stack{
+  @include stacksize();
 }
 .stack_domain_warp
 {
@@ -405,6 +422,7 @@ main
   flex-direction: row;
   align-items: center;
   word-break: break-all;
+  border-bottom: gray 1px solid;
 }
 .stack_name{
   word-break: break-all;
@@ -428,12 +446,8 @@ main
   animation-duration: 0.5s;
 }
 .stack_init{
-  width: min(100%,60px);
-  height: min(calc(30vw * 0.5), 60px);
-  margin: 10px;
-  padding: 5px;
-  background-color: #13131d;
-  border-radius : 20px;
+  @include stacksize();
+
   transform: scale(1);
 }
 .card_back{

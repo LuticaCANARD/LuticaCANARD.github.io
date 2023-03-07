@@ -19,10 +19,15 @@
                 <img src={profilepic}>
             </div>
             <!-- NAME 등 -->
+            
             <div>
                 <h1>Lutica CANARD</h1>
+                <hr>
+                <h1> STACKS </h1>
+                <hr>
             </div>
             <!-- 스택 -->
+            
             <div id="stack_groups">
                 {#each sva as stack_group}
                     <div class="stack_domain_warp">
@@ -39,12 +44,21 @@
                     </div>
                 {/each}
             </div>
+            <div>
+                <hr>
+                <h1> HISTORY </h1>
+                <hr>
+            </div>
             <!-- 약력 -->
             <div id="history_list">
                 {#each history as strs}
                 <History_card history={strs}>
                 </History_card>
                 {/each}
+            </div>
+            <div>
+                <hr>
+                <h1> PROJECTS </h1>
             </div>
             <!-- 진행중인 프로젝트 -->
             <div id="profile_history">
@@ -55,6 +69,7 @@
             </div>
             <!-- GITHUB Link 등 -->
         </div>
+
     </center>
     <div style="text-align : right; ">
         <p1>

@@ -2,8 +2,8 @@
     "body" : 
     [
         {
-            "title" : "Nano inc",
-            "time"  : "Junior Game Developer, 2022 ~ " ,
+            "title" : "Nano Interactive",
+            "time"  : "2022 ~ " ,
             "desc"  : "Game Developer.", 
             "desc2" :[
                 "- Crypto Conquer Developer (web, 2022.03 ~ 2022.12)",
@@ -13,7 +13,7 @@
         },
         {
             "title" : "Luneer",
-            "time"  : "Web Developer, 2022 ~ " ,
+            "time"  : " 2022 ~ " ,
             "desc"  : "Web Developer, Team Luneer", 
             "desc2" :[
                 "- Luneer Official Website (Sveltekit, 2023.02 ~ )"
@@ -21,7 +21,7 @@
         },
         {
             "title" : "Lathion Team",
-            "time"  : "Manager of Tech, 2023 ~ " ,
+            "time"  : "2023 ~ " ,
             "desc"  : "Tech Manager of Team Lathion", 
             "desc2" :[
                 "- Lathion Game Server (Python-FastApi, 2023.03 ~ )"

@@ -16,7 +16,7 @@
     </div>
     <div class="history_desc2">
         {#each history.desc2 as desci}
-        <div class="desc2_i">
+        <div class="history_desci">
             {desci}
         </div>
         {/each}
