@@ -1,18 +1,18 @@
 <script>
-    import profilepic from '../assets/profile.png'
-    import projects from '../assets/project.json'
+    import profilepic from '../../assets/profile.png'
+    import projects from '../../assets/project.json'
     const project = projects["body"]
-    import historys from '../assets/history.json'
+    import historys from '../../assets/history.json'
     const history = historys["body"]
-    import stackss from '../assets/stacks.json'
+    import stackss from '../../assets/stacks.json'
     const stacks = stackss
     const sva = Object.keys(stackss)
-    import Project_card from '../lib/sub-lib/project_card.svelte'
-    import History_card from '../lib/sub-lib/history_card.svelte'
-    import Stacks from '../lib/sub-lib/stacks.svelte'
-    import Contactso from '../assets/contacts.json'
+    import Project_card from '../../lib/sub-lib/project_card.svelte'
+    import History_card from '../../lib/sub-lib/history_card.svelte'
+    import Stacks from '../../lib/sub-lib/stacks.svelte'
+    import Contactso from '../../assets/contacts.json'
     const contacts = Contactso["body"]
-    import Contactcard from '../lib/sub-lib/contact.svelte'
+    import Contactcard from '../../lib/sub-lib/contact.svelte'
 </script>
 <div id="profile">
     <center>

@@ -10,7 +10,7 @@
     <div class="container" >
     {#each MainbarArray as datak}
         <il class="navitem"  >
-           <div style ='text-decoration:none; width:100%;height:100%;margin-top:0px' on:click={()=>{location.href=datak.link}}  class="pointer">
+           <div style ='text-decoration:none; width:100%;height:100%;margin-top:0px' on:click={()=>{location.href="/#/"+datak.link}}  class="pointer">
                 <div style="padding-top:calc(50% - 2em);">
                     <p1>
                     {datak.name}

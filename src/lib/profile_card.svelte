@@ -1,8 +1,10 @@
 <script>
-    export let post
     import { onMount } from 'svelte';
     import { fade } from 'svelte/transition';
-    export var showPost;
+    let postin;
+    let postmode;
+    const showPost = (name,_post) => () => {postmode = name;postin = _post;}
+    export let post ;
     let piclink = '../assets/' + post.pic_code + '.png'
     let height_ = 0;
     let post_obj;
