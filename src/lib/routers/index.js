@@ -5,6 +5,7 @@ import Document from './document.svelte';
 import Rpmap from './map_title.svelte'
 
 export default {
+    '/': Profile,
     '/Profile': Profile,
     '/webasm': Webasm,
     '/Posts': Posts,

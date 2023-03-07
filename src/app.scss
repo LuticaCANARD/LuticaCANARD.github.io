@@ -24,6 +24,9 @@
   {
     @include darkSide();
   }
+  main{
+    @include darkSide();
+  }
   .navbar
   {
     @include darkSide();
