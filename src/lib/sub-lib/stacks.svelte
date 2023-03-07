@@ -1,9 +1,10 @@
 <script>
 
     export let stack;
-    let is_desc = false
+    let is_desc = false;
+    let hovered = null;
 </script>
-<div class="stack" on:click={()=>{is_desc = !is_desc}}>
+<div on:mouseover={()=>{hovered=true}} class= {hovered==null?"stack_init":"stack"} on:click={()=>{is_desc = !is_desc}}>
     <div class={is_desc?"card_show":"card_back"}>
         <div class="card_name">
             <h4>{stack.name}</h4>
