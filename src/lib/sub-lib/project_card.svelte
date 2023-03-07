@@ -11,7 +11,7 @@
                 {story.name}
             </div>
         </div>
-        <div>
+        <div class="project_desc_">
             <div class="history_element_stack">
                 {#each story.stacks as stack}
                     <div class="stacks">
