@@ -10,7 +10,7 @@
     import Project_card from '../lib/sub-lib/project_card.svelte'
     import History_card from '../lib/sub-lib/history_card.svelte'
     import Stacks from '../lib/sub-lib/stacks.svelte'
-    import Contactso from '../assets/contact.json'
+    import Contactso from '../assets/contacts.json'
     const contacts = Contactso["body"]
     import Contactcard from '../lib/sub-lib/contact.svelte'
 </script>
