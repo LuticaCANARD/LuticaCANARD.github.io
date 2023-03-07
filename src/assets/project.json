@@ -1,5 +1,90 @@
 {"body":[
     {
+        "name" : "Crypto_Conquer",
+        "stacks" : [
+                          
+            {
+                "name": "JavaScript/Jquery",
+                "imglink":"Jquery/black",
+                "desc": " Client ",
+                "need_invert" : true
+            },
+            {
+                "name": "PHP",
+                "imglink":"PHP/black",
+                "desc": " SERVER ",
+                "need_invert" : true
+            },                
+            {
+                "name": "PostgreSQL",
+                "imglink":"PostgreSQL/black",
+                "desc": " DataBase ",
+                "need_invert" : true
+            }
+        ],
+        "desc" : "cryptoconquer"
+    },
+    {
+        "name" : "LUNEER_official_site",
+        "stacks" : [
+            {
+                "name": "SvelteKit / JS",
+                "imglink":"Svelte/black",
+                "desc": " SERVER/Web Client ",
+                "need_invert" : true
+            }
+        ],
+        "desc" : "conquer_api"
+    },
+    {
+        "name" : "Conquer_AI_Simulator",
+        "stacks" : [
+            {
+                "name": "Python / Flask",
+                "imglink":"flask/black",
+                "desc": " SERVER ",
+                "need_invert" : true
+            },                
+            {
+                "name": "Docker",
+                "imglink":"docker/black",
+                "desc": " DevOps ",
+                "need_invert" : true
+            },
+            {
+                "name": "PostgreSQL",
+                "imglink":"PostgreSQL/black",
+                "desc": " DataBase ",
+                "need_invert" : true
+            }
+        ],
+        "desc" : "conquer_api"
+    },
+    {
+        "name" : "Age_Of_Galaxy_2",
+        "stacks" : [
+            {
+                "name": "C# / Unity",
+                "imglink":"Unity/black",
+                "desc": " Unity Client ",
+                "need_invert" : true
+            },
+            {
+                "name": "PHP",
+                "imglink":"PHP/black",
+                "desc": " SERVER ",
+                "need_invert" : true
+            },                
+            {
+                "name": "PostgreSQL",
+                "imglink":"PostgreSQL/black",
+                "desc": " DataBase ",
+                "need_invert" : true
+            }
+        ],
+        "desc" : "AOG2"
+    },
+    {
         "name" : "Lathion_project",
         "stacks" : [
             {
@@ -20,6 +105,7 @@
                 "desc": " Web Client "
             }
         ],
-        "desc" : "# projects to ..."
+        "desc" : "Lathion"
     }
+    
 ]}

@@ -1,6 +1,19 @@
 <script>
     export let story;
     import SvelteMarkdown from 'svelte-markdown'
+    const uril = '../../src/assets/projects/'+story.desc+'.md';
+    let tn;
+    import { onMount } from 'svelte';
+    const request = new XMLHttpRequest();
+    onMount(()=>
+    {
+        request.open('GET', uril, true);
+        request.onload = function () {
+            tn = request.responseText;
+        };
+        request.send();
+    })
+    
 </script>
 
 <div class="history_element">
@@ -8,10 +21,10 @@
     <div class="proj_war">
         <div class="history_element_name">
             <div class="history_element_name_text">
-                {story.name}
+                <h4>{story.name}</h4>
             </div>
         </div>
-        <div>
+        <div class="project_desc_">
             <div class="history_element_stack">
                 {#each story.stacks as stack}
                     <div class="stacks">
@@ -28,7 +41,7 @@
                 {/each}
             </div>
             <div class="history_element_desc">
-                <SvelteMarkdown source={story.desc}></SvelteMarkdown>
+                <SvelteMarkdown source={tn}></SvelteMarkdown>
             </div>
         </div>
     </div>

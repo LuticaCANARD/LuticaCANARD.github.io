@@ -1,10 +1,9 @@
 <script>
 
-import Store from '../store.js'
+import Store from '../../store.js'
 var store = new Store()
-export let postarray
-export var showPost
-import Card from './profile_card.svelte'
+import postarray from '../../assets/posts.json'
+import Card from '../profile_card.svelte'
 let scy = 0;
 let inner_height = 0;
 let card;
@@ -15,7 +14,7 @@ var posts_object;
 <svelte:window bind:scrollY={scy} bind:innerHeight={inner_height}/>
 <div id="posts" bind:clientHeight={posts_postion} bind:this={posts_object}>
     {#each postarray as post} 
-    <Card post={post} showPost={showPost}></Card>
+    <Card post={post}></Card>
     {/each}
 </div>
 

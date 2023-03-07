@@ -1,3 +1,5 @@
+
+
 @mixin darkSide()
 {
   background:#1e1e1f;color: rgb(219, 219, 219);
@@ -75,7 +77,7 @@ body
   position: fixed;
   width:100vw;
   height: 50px;
-  border:1px solid gray;
+  border-bottom:1px solid gray;
   opacity :1;
   z-index: 1;
 }
@@ -290,6 +292,7 @@ main
 {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   border-bottom: gray 1px solid;
   padding: 10px;
   word-break:break-all;
@@ -308,20 +311,51 @@ main
 }
 .history_element_name
 {
+  @media (min-width:301px) {
+    width:min(20vw, 200px);
+  }
+  @media (max-width:300px) {
+    width:100%;
+    border-bottom: gray 1px solid;
+  }
+  justify-content: center;
+
+  min-width: 50px;
   display: flex;
   border-right: gray 1px solid;
   align-items: center;
 }
 .history_element_name_text
 {
+ 
   margin: 10px;
   word-break:break-all;
 }
 .proj_war
 {
+  @media (min-width:301px) {
+    width:min(1000px,100vw);
+    flex-direction: row; 
+  }
+  @media (max-width:300px) {
+    width:100vw;
+    flex-direction: column; 
+    
+  }
   display: flex;
   justify-content: center;
   border: 1px gray solid;
+}
+.project_desc_
+{
+  @media (min-width:301px) {
+    width:min(80vw, 800px);
+
+  }
+  @media (max-width:300px) {
+    width:100%;
+
+  }
 }
 //PROFILE
 
@@ -337,6 +371,7 @@ main
 //HISTORY
 #history_list
 {
+  max-width: 600px;
   width: 85%;
 }
 .history_card
@@ -379,6 +414,7 @@ main
 .history_desci
 {
   float: left;
+  margin: 2px;
 }
 
 //STACKS 
@@ -529,5 +565,31 @@ main
   to{
     transform: scale(1.5);
   }
+}
+//contact
+#contact
+{
+  display: flex;
+  width:85%;
+  max-width: 850px;
+  margin-bottom: 50px;
+}
+.contact_warp
+{
+  max-width: 80px;
+  display: flex;
+  width:100%;
+  flex-direction: column;
+  margin: auto;
+}
+.cont_pic{
+  width: 100%;
+}
+//footer
+footer{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 

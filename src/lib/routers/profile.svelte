@@ -1,15 +1,18 @@
 <script>
-    import profilepic from '../assets/profile.png'
-    import projects from '../assets/project.json'
+    import profilepic from '../../assets/profile.png'
+    import projects from '../../assets/project.json'
     const project = projects["body"]
-    import historys from '../assets/history.json'
+    import historys from '../../assets/history.json'
     const history = historys["body"]
-    import stackss from '../assets/stacks.json'
+    import stackss from '../../assets/stacks.json'
     const stacks = stackss
     const sva = Object.keys(stackss)
-    import Project_card from '../lib/sub-lib/project_card.svelte'
-    import History_card from '../lib/sub-lib/history_card.svelte'
-    import Stacks from '../lib/sub-lib/stacks.svelte'
+    import Project_card from '../../lib/sub-lib/project_card.svelte'
+    import History_card from '../../lib/sub-lib/history_card.svelte'
+    import Stacks from '../../lib/sub-lib/stacks.svelte'
+    import Contactso from '../../assets/contacts.json'
+    const contacts = Contactso["body"]
+    import Contactcard from '../../lib/sub-lib/contact.svelte'
 </script>
 <div id="profile">
     <center>
@@ -69,18 +72,15 @@
             </div>
             <!-- GITHUB Link 등 -->
         </div>
+        <!--컨택-->
+        <hr>
+        <h1>CONTACT</h1>
+        <div id="contact">
+            {#each contacts as contact}
+            <Contactcard tact={contact}>
+            </Contactcard>
+            {/each}
+        </div>
 
     </center>
-    <div style="text-align : right; ">
-        <p1>
-            Twitter : <a href="https://twitter.com/presan100">@presan100</a><br>
-            Twitter (VRC) : <a href = "https://twitter.com/presan100_JP">@presan100_jp</a><br>
-        </p1>
-    </div>
-    <div style="text-align:center">
-        <p1>
-            Hello! I'm Lutica on VRC , Twitter, Github, ... etc!
-        </p1>
-    </div>
-    <br><br>
 </div>

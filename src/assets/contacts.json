@@ -1,0 +1,28 @@
+{
+    "body":[
+        {
+            "link" : "https://twitter.com/presan100",
+            "imglink" :"Twitter/Black",
+            "desc" : "Twitter"
+        },
+        {
+            "link" : "https://twitter.com/presan100_VRC",
+            "imglink" :"Twitter/Black",
+            "desc" : "Twitter (VRC)"
+        },
+        {
+            "link" : "https://github.com/LuticaCANARD",
+            "imglink" :"GITHUB/Black",
+            "desc" : "GitHub",
+            "need_invert" : true
+        },
+        {
+            "link" : "https://vrchat.com/home/user/usr_56863b5f-9906-40c3-ac2a-8008c708488c",
+            "imglink" :"https://logos-world.net/wp-content/uploads/2021/04/VRChat-Emblem.png",
+            "desc" : "VRCHAT",
+            "need_invert" : true,
+            "otherlink" : true
+        }
+
+    ]
+}
