@@ -1,7 +1,7 @@
 <script>
     export let story;
     import SvelteMarkdown from 'svelte-markdown'
-    const uril = '../assets/projects/'+story.desc+'.md';
+    const uril = '../../assets/projects/'+story.desc+'.md';
     let tn;
     import { onMount } from 'svelte';
     const request = new XMLHttpRequest();
