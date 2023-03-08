@@ -24,3 +24,7 @@ dist-ssr
 /dist/*
 /src/*.css
 /src/*.css.map
+
+# IF YOU FOUND THIS, CANA IS FEELING SUICIDAL.
+/public/Posts/end.md
+/docs/Posts/end.md

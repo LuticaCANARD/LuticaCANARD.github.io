@@ -14,14 +14,18 @@
     {
         request.open('GET', url, true);
         request.onload = function () {
+            if(request.status !=200){
+                adv_applied_desc = ["ERROR! - "+request.status]
+                return
+            }
             htmlText = request.responseText;
             let sc = htmlText.split(met_token)
             metadata = sc[0]
-            console.log(sc)
+            //console.log(sc)
             adv_applied_desc = sc[1].split(adv_token)
         };
         request.send();
-        console.log(params.id)
+        //console.log(params.id)
        
 
     })
