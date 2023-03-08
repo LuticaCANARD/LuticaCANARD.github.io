@@ -13,9 +13,13 @@
             htmlText = request.responseText;
         };
         request.send();
+
     })
    
 </script>
+<!--token : *^*MET*^*-->
+
+<!--token : *^*ADV*^*-->
 <div id="document" class="article_type">
     {@html htmlText}
 </div>
