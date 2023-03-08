@@ -41,6 +41,7 @@
 {#if params.id=='undefined' || params.id==undefined || params.id==''}
 <center>
     <div>
+        <!--비정상적인 접근-->
         <h1>OOPS!, There is an ERROR!</h1>
     </div>
 </center>
