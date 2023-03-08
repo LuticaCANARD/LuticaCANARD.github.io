@@ -78,7 +78,6 @@ body
 {
   display: flex;
   position: fixed;
-  width:100vw;
   height: 50px;
   border-bottom:1px solid gray;
   opacity :1;
@@ -341,7 +340,7 @@ main
     flex-direction: row; 
   }
   @media (max-width:300px) {
-    width:100vw;
+    width:90vw;
     flex-direction: column; 
     
   }
