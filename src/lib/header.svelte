@@ -7,7 +7,7 @@
 </script>
 <svelte:window bind:scrollY = {scys} />
 <div class="navbar dark-mode-toolbar" style={scys<=15?"position:relative":"position:fixed"}>
-    <div style="width: 27%;text-align: center;padding-top: 0px;" on:click={changename('')} >
+    <div style="width: 27%;text-align: center;padding-top: 0px;"  >
         <h3 style="margin-top:10px">Lutica's bar</h3></div>
     <div class="container" >
     {#each MainbarArray as datak}
@@ -30,7 +30,7 @@
     <div class="container_m">
     {#each MainbarArray as datak}
         <il class="navitem_m">
-            <div on:click={changename(datak.link)} style ='text-decoration:none; width:100%;height:30px; padding-top:10px' class="pointer"> <p1>
+            <div on:click={()=>{location.href="/#/"+datak.link}} style ='text-decoration:none; width:100%;height:30px; padding-top:10px' class="pointer"> <p1>
                 {datak.name}
             </p1></div>
         </il>

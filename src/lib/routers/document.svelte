@@ -1,11 +1,11 @@
 <script>
-    export let post
+    export let params;
     let htmlText = '' 
     import { onMount } from 'svelte';
-
+    // 여기서 현시
     const request = new XMLHttpRequest();
-    let join_url = window.location.href 
-    const url = join_url+'/posts/'+post.postlink+'.html'; 
+    const url = '/posts/'+params.id+'.html'; 
+    // md vs html 
     onMount(()=>
     {
         request.open('GET', url, true);

@@ -3,12 +3,13 @@
 import Store from '../../store.js'
 var store = new Store()
 import postarray from '../../assets/posts.json'
-import Card from '../profile_card.svelte'
+import Card from '../sub-lib/profile_card.svelte'
 let scy = 0;
 let inner_height = 0;
 let card;
 let posts_postion = 0;
 var posts_object;
+// 여기서 제어.
 
 </script>
 <svelte:window bind:scrollY={scy} bind:innerHeight={inner_height}/>
