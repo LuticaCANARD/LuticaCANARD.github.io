@@ -337,11 +337,11 @@ main
 .proj_war
 {
   @media (min-width:301px) {
-    width:min(1000px,95vw);
+    width:min(1000px,90vw);
     flex-direction: row; 
   }
   @media (max-width:300px) {
-    width:99.5vw;
+    width:100vw;
     flex-direction: column; 
     
   }
