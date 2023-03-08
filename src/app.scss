@@ -253,6 +253,9 @@ main
   width:100%;
 
 }
+#document{
+  height: 100%;
+}
 .article_type
 {
   @media (prefers-color-scheme: light) 
@@ -274,8 +277,7 @@ main
     width:1000px;
   }
   
-  height:unquote("max(50vh , 100%)");
-  position: absolute;
+  height:100%;
   padding: 15px;
   border-radius: 15px;
 }

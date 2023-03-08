@@ -4,22 +4,49 @@
     import { onMount } from 'svelte';
     // 여기서 현시
     const request = new XMLHttpRequest();
-    const url = '/posts/'+params.id+'.html'; 
+    const url = '/Posts/'+params.id+'.md'; 
     // md vs html 
+    let metadata = ''
+    let adv_applied_desc = []
+    let met_token = '*^*MET*^*'
+    let adv_token = '*^*ADV*^*'
     onMount(()=>
     {
         request.open('GET', url, true);
         request.onload = function () {
             htmlText = request.responseText;
+            let sc = htmlText.split(met_token)
+            metadata = sc[0]
+            console.log(sc)
+            adv_applied_desc = sc[1].split(adv_token)
         };
         request.send();
+        console.log(params.id)
+       
 
     })
+    import SvelteMarkdown from 'svelte-markdown'
+ 
    
 </script>
-<!--token : *^*MET*^*-->
-
-<!--token : *^*ADV*^*-->
+<svelte:head>
+    {#key metadata}
+    <title>{metadata!=''?'Lutica\'s bar :: '+metadata:'Lutica\'s bar'}</title>
+    {/key}
+</svelte:head>
+{#if params.id=='undefined' || params.id==undefined || params.id==''}
+<center>
+    <div>
+        <h1>OOPS!, There is an ERROR!</h1>
+    </div>
+</center>
+{:else}
+{#key adv_applied_desc}
 <div id="document" class="article_type">
-    {@html htmlText}
+    {#each adv_applied_desc as desc}
+    <SvelteMarkdown source={desc}></SvelteMarkdown>
+    <!--광고영역!-->
+    {/each}
 </div>
+{/key}
+{/if}
