@@ -502,6 +502,8 @@ main
   margin: auto;
   animation-name: card_on;
   animation-duration: 0.5s;
+  width:100%;
+  height:100%;
 }
 .card_back{
   animation-name: card_off;
@@ -559,7 +561,11 @@ main
 }
 
 .card_name{
-  margin : 25px auto 0px; 
+  h4{
+    
+    margin-top: 20%;
+
+  }
 }
 
 @keyframes stack_onhover
@@ -569,7 +575,7 @@ main
   }
   to{
     transform: scale(1.5);
-  }
+  } 
 }
 //contact
 #contact
