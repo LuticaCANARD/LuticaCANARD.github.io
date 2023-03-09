@@ -11,7 +11,7 @@ import Router from 'svelte-spa-router';
   //path와 라우팅 할 컴포넌트
 
 let postmode;
-let array = [{name:'profile',link:'Profile'},{name:'posts',link:'Posts'},{name:'webasm',link:'webasm'}]
+
 let mobiletag = false;
 var postin={};
 let date = new Date();
@@ -44,7 +44,7 @@ onMount(() => {
 <p1>check : </p1><input type='checkbox' bind:value={birthdate}>
 {:else}
 <div id="header_div">
-    <Header bind:MainbarArray={array} changename = {changename} bind:mobiletag={mobiletag}></Header>
+    <Header></Header>
 </div>
 <main>
 

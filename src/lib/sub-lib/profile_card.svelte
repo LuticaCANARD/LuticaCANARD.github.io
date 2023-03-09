@@ -3,8 +3,8 @@
     import { fade } from 'svelte/transition';
     let postin;
     let postmode;
-    const showPost = (name,_post) => () => {postmode = name;postin = _post;}
     export let post ;
+    export let linking;
     let piclink = '../assets/' + post.pic_code + '.png'
     let height_ = 0;
     let post_obj;
@@ -56,10 +56,11 @@
 <svelte:window bind:scrollY={scy} bind:innerHeight={inner_height}/>
 
 <div class="card" bind:this={post_obj}>
+    
     {#if show_}
-    <div class="card__first_warpper pointer" style="translate(100%,0px)" bind:this={postcard_obj} in:show_ani="{ani_set}" on:click={()=>{location.href="/#/Document/"+post.link}}>
+    <div class="card__first_warpper pointer" style="translate(100%,0px)" bind:this={postcard_obj} in:show_ani="{ani_set}" on:click={()=>{location.href="/#/Document/"+linking+post.link}}>
         <!--Animation 적용시 유의점 : 시간차를 조금 둬서 user가 인지할 수 있게 할 것.-->
-        {#if post.pic_code!= undefined}
+        {#if post.piclink!= undefined}
         <div class="card__pic">
             <img src="{post.piclink}" class="card_pic" alt="NON">
         </div>
@@ -76,7 +77,7 @@
     {:else}
     <div class="card__first_warpper" style="translate(100%,0px);display:none" bind:this={postcard_obj} in:show_ani="{ani_set}">
         <!--Animation 적용시 유의점 : 시간차를 조금 둬서 user가 인지할 수 있게 할 것.-->
-        {#if post.pic_code!= undefined}
+        {#if post.piclink!= undefined}
         <div class="card__pic">
             <img src="{post.piclink}" class="card_pic" alt="NON">
         </div>

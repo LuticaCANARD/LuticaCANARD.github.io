@@ -1,47 +1,13 @@
-[
-    {
-        "name":"두번째 스벨트 프로젝트",
-        "subname":"이 프로젝트는 스벨트로 만든 두번째 블로그입니다.",
-        "postlink":"id"
-    },    
-    {
-        "name":"Post2",
-        "subname":"sub2",
-        "postlink":"test2"   
-    },    
-    {
-        "name":"Post3",
-        "subname":"sub3",
-        "postlink":"test3"   
-    },    
-    {
-        "name":"Post4",
-        "subname":"sub4",
-        "postlink":"test4"   
-    },    
-    {
-        "name":"Post5",
-        "subname":"sub5",
-        "postlink":"test5"   
-    },    
-    {
-        "name":"Post6",
-        "subname":"sub6",
-        "postlink":"test6"   
-    },    
-    {
-        "name":"Post7",
-        "subname":"sub7",
-        "postlink":"test7"   
-    },    
-    {
-        "name":"Post8",
-        "subname":"sub8",
-        "postlink":"test8"   
-    },    
-    {
-        "name":"Post9",
-        "subname":"sub9",
-        "postlink":"test9"   
+{
+    "daibunrui":{
+        "so_post_t":{
+            "post_name":{
+                "name" : "제목",
+                "subname": "소 제목",
+                "piclink" : "",
+                "link" : "test2"
+            }
+           
+        }
     }
-]
+}
