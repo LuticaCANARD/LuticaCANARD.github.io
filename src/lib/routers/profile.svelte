@@ -1,5 +1,5 @@
 <script>
-    import profilepic from '../../assets/profile.png'
+    const profilepic = '/profile.png'
     import projects from '../../assets/project.json'
     const project = projects["body"]
     import historys from '../../assets/history.json'
@@ -13,6 +13,8 @@
     import Contactso from '../../assets/contacts.json'
     const contacts = Contactso["body"]
     import Contactcard from '../../lib/sub-lib/contact.svelte'
+
+
 </script>
 <div id="profile">
     <center>
