@@ -27,7 +27,6 @@
         request.send();
         //console.log(params.id)
        
-
     })
     import SvelteMarkdown from 'svelte-markdown'
  
