@@ -23,7 +23,7 @@ onMount(() => {
     url = url.replace('https://','')
     url = url.replace('http://','')
     let argus = url.split('/')
-    console.log(argus)
+    //console.log(argus)
     if( argus.length > 1)
     {
         postmode = argus[1]
@@ -34,7 +34,9 @@ onMount(() => {
 
 
 </script>
-
+<svelte:head>
+   
+</svelte:head>
 
 {#if birthdate==true}
 <div>
