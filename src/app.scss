@@ -308,6 +308,7 @@ main
   border-bottom: gray 1px solid;
   padding: 10px;
   word-break:break-all;
+  flex-wrap:wrap;
 
 }
 .stacks_img
@@ -591,6 +592,7 @@ main
   width:85%;
   max-width: 850px;
   margin-bottom: 50px;
+  flex-wrap: wrap;
 }
 .contact_warp
 {
@@ -598,10 +600,14 @@ main
   display: flex;
   width:100%;
   flex-direction: column;
-  margin: auto;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 .cont_pic{
   width: 100%;
+}
+.contact_img {
+  height: 80px;
 }
 //footer
 footer{
@@ -611,3 +617,10 @@ footer{
   justify-content: space-around;
 }
 
+//DOCUMENT
+#document{
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}

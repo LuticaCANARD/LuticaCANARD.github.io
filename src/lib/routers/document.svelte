@@ -33,6 +33,7 @@
    
 </script>
 <svelte:head>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     {#key metadata}
     <title>{metadata!=''?'Lutica\'s bar :: '+metadata:'Lutica\'s bar'}</title>
     {/key}
@@ -46,7 +47,13 @@
 </center>
 {:else}
 {#key adv_applied_desc}
+
 <div id="document" class="article_type">
+    <div>
+        <h1>
+        {metadata}
+        </h1>
+    </div>
     {#each adv_applied_desc as desc}
     <SvelteMarkdown source={desc}></SvelteMarkdown>
     <!--광고영역!-->
