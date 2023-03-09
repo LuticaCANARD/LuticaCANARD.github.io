@@ -46,6 +46,9 @@
     {#each adv_applied_desc as desc}
     <SvelteMarkdown source={desc}></SvelteMarkdown>
     <!--광고영역!-->
+    <center>
+        광고
+    </center>
     {/each}
 </div>
 {/key}
