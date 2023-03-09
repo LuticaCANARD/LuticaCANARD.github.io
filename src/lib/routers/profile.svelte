@@ -13,7 +13,6 @@
     import Contactso from '../../assets/contacts.json'
     const contacts = Contactso["body"]
     import Contactcard from '../../lib/sub-lib/contact.svelte'
-    import { onMount } from 'svelte';
 
 
 </script>
