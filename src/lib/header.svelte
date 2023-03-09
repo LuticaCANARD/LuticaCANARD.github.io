@@ -7,7 +7,7 @@
 </script>
 <svelte:window bind:scrollY = {scys} />
 <div class="navbar dark-mode-toolbar" style={scys<=15?"position:relative":"position:fixed"}>
-    <div style="width: 27%;text-align: center;padding-top: 0px;"  >
+    <div on:click={()=>{location.href="/#/"}} style="width: 27%;text-align: center;padding-top: 0px;" class="pointer">
         <h3 style="margin-top:10px">Lutica's bar</h3></div>
     <div class="container" >
     {#each MainbarArray as datak}
