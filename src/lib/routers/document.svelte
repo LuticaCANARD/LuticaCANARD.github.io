@@ -30,9 +30,7 @@
     })
     import SvelteMarkdown from 'svelte-markdown'
     import 'code-prettify'
-
- 
-   
+    import 'code-prettify/styles/Desert.css'
 </script>
 
 <svelte:head>
@@ -58,7 +56,17 @@
         </h1>
     </div>
     {#each adv_applied_desc as desc}
-    <SvelteMarkdown source={desc} on:parsed={()=>{PR.prettyPrint()}}></SvelteMarkdown>
+    <SvelteMarkdown source={desc} on:parsed={()=>{
+        PR.prettyPrint()
+        let imgs=document.getElementsByTagName('img')
+
+        for(let i=0; i<imgs.length; i++){
+            let element = imgs[i]
+            element.setAttribute('onclick','window.open(this.src, \'_blank\')')
+
+        }
+        
+        }}></SvelteMarkdown>
     <!--광고영역!-->
     <center>
         광고

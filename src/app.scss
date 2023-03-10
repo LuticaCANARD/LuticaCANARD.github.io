@@ -625,20 +625,45 @@ footer{
     width: auto;
   }
   .prettyprinted{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    
     @media (prefers-color-scheme: dark) {
-      filter: invert(1);
+      background-color: rgb(28, 28, 32);
     }
-    background-color: rgb(245, 245, 245);
+    @media (prefers-color-scheme: light) {
+      background-color: rgb(245, 245, 245);
+
+    }
     border :  gray 1px solid;
-    padding:25px 5px;overflow: scroll;
+    padding:25px 5px;
+    overflow: scroll;
+
     code{
-      .kwd{
-        color:rgb(100,100,100)
+      @mixin setCodeColor($white_color,$dark_color)
+      {
+        @media (prefers-color-scheme: dark) {
+          color:$dark_color ;
+    
+        }
+        @media (prefers-color-scheme: light) {
+          color: $white_color;
+        }
       }
+      /*.kwd{
+        @include setCodeColor(rgb(0, 54, 105),rgb(88, 138, 204))
+      }*/
       .pln{
-        color:rgb(100,1,1)
+        @include setCodeColor(rgb(204, 156, 0),rgb(255, 252, 77))
       }
+      /*.str{
+        @include setCodeColor(rgb(90, 77, 0),rgb(161, 119, 64))
+      }
+      .pun{
+        @include setCodeColor(rgb(0, 0, 0),rgb(255, 255, 255))
+      }
+      */
     }
   }
+}
+.prettyprinted::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
