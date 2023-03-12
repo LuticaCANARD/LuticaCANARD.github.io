@@ -35,8 +35,8 @@
 
 <svelte:head>
 
-    {#key metadata}
-    <title>{metadata!=''?'Lutica\'s bar :: '+metadata:'Lutica\'s bar'}</title>
+    {#key params.id}
+    <title>{params.id!=''?'Lutica\'s bar :: '+params.id:'Lutica\'s bar'}</title>
     {/key}
 </svelte:head>
 {#if params.id=='undefined' || params.id==undefined || params.id==''}
