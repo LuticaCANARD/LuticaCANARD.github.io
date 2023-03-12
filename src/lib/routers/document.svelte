@@ -1,7 +1,7 @@
 <script>
     export let params;
     let htmlText = '';
-    let metadata = params.metadata;
+    //let metadata = params.metadata;
     import { onMount } from 'svelte';
     // 여기서 현시
     const request = new XMLHttpRequest();
@@ -76,13 +76,12 @@
         <p1>If you want write comment, plase login with github first please</p1>
     </div>
     <hr>
-    {#key metadata}
+    {#key params.id}
     <div class="comment">
-        { metadata}
     <Utterances
     repo="LuticaCANARD/LuticaCANARD.github.io"
     theme="preferred-color-scheme"
-    issueTerm="COMMENTS on {metadata}"
+    issueTerm="COMMENTS on {params.id}"
     label="COMENT"
     crossorigin="anonymous"/>
     </div>  
