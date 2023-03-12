@@ -36,7 +36,7 @@
         </il>
     {#each MainbarArray as menu}
         <il class="navitem_m">
-            <div on:click={()=>{location.href="/#/"+menu.link}} style ='text-decoration:none; width:100%;height:30px; padding-top:10px' class="pointer"> <p1>
+            <div on:click={()=>{mobiletag = false;location.href="/#/"+menu.link}} style ='text-decoration:none; width:100%;height:30px; padding-top:10px' class="pointer"> <p1>
                 {menu.name}
             </p1></div>
         </il>

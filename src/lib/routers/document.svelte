@@ -9,12 +9,14 @@
     // md vs html 
     let adv_applied_desc = []
     let adv_token = '*^*ADV*^*'
+    let get_err = false
     onMount(()=>
     {
         request.open('GET', url, true);
         request.onload = function () {
             if(request.status !=200){
                 adv_applied_desc = ["ERROR! - "+request.status]
+                get_err = true
                 return
             }
             htmlText = request.responseText;
@@ -39,11 +41,15 @@
     <title>{params.id!=''?'Lutica\'s bar :: '+params.id:'Lutica\'s bar'}</title>
     {/key}
 </svelte:head>
-{#if params.id=='undefined' || params.id==undefined || params.id==''}
+{#key params.id}
+{#if params.id=='undefined' || params.id==undefined || params.id=='' || get_err==true}
 <center>
     <div>
         <!--비정상적인 접근-->
         <h1>OOPS!, There is an ERROR!</h1>
+        {#if get_err==true}
+        <p1> {adv_applied_desc[0]}</p1>
+        {/if}
     </div>
 </center>
 {:else}
@@ -89,3 +95,4 @@
 </div>
 
 {/if}
+{/key}
