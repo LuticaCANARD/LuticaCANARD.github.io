@@ -29,8 +29,11 @@
 
 <div class="mobile_navbar dark-mode-toolbar" style={scys<=15?"position:relative":"position:fixed;top:0;"}>
     {#if mobiletag==true}
-    <div on:click={()=>mobiletag=false} style="width: 20%;text-align: center;padding-top: 10px;">OFF</div>
+    <div on:click={()=>mobiletag=false} class="pointer" style="width: 20%;text-align: center;padding-top: 10px;">OFF</div>
     <div class="container_m">
+        <il style="height:100px;border-bottom:1px gray solid">
+
+        </il>
     {#each MainbarArray as menu}
         <il class="navitem_m">
             <div on:click={()=>{location.href="/#/"+menu.link}} style ='text-decoration:none; width:100%;height:30px; padding-top:10px' class="pointer"> <p1>
@@ -38,8 +41,11 @@
             </p1></div>
         </il>
     {/each}
+    <il>
+
+    </il>
     </div>
     {:else}
-    <div on:click={()=>mobiletag=true} style="width: 20%;text-align: center;padding-top: 10px;">ON</div>
+    <div on:click={()=>mobiletag=true} class="pointer mu_off" style="width: 20%;text-align: center;padding-top: 10px;">ON</div>
     {/if}
 </div>

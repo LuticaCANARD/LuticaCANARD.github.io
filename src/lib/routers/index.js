@@ -10,6 +10,6 @@ export default {
     '/webasm': Webasm,
     '/Posts': Posts,
     '/Rpmap': Rpmap,
-    '/Document/:id':Document
+    '/Document/:id/:metadata':Document
 
   };

@@ -1,14 +1,13 @@
 <script>
     export let params;
-    let htmlText = '' 
+    let htmlText = '';
+    let metadata = params.metadata;
     import { onMount } from 'svelte';
     // 여기서 현시
     const request = new XMLHttpRequest();
     const url = '/Posts/'+params.id+'.md'; 
     // md vs html 
-    let metadata = ''
     let adv_applied_desc = []
-    let met_token = '*^*MET*^*'
     let adv_token = '*^*ADV*^*'
     onMount(()=>
     {
@@ -19,10 +18,8 @@
                 return
             }
             htmlText = request.responseText;
-            let sc = htmlText.split(met_token)
-            metadata = sc[0]
             //console.log(sc)
-            adv_applied_desc = sc[1].split(adv_token)
+            adv_applied_desc = htmlText.split(adv_token)
         };
         request.send();
         //console.log(params.id)
@@ -31,7 +28,8 @@
     import SvelteMarkdown from 'svelte-markdown'
     import 'code-prettify'
     import 'code-prettify/styles/Desert.css'
-    import { Utterances } from 'utterances-svelte-component'    
+    import { Utterances } from 'utterances-svelte-component'   
+ 
 </script>
 
 
@@ -52,11 +50,6 @@
 {#key adv_applied_desc}
 
 <div id="document" class="article_type">
-    <div>
-        <h1>
-        {metadata}
-        </h1>
-    </div>
     {#each adv_applied_desc as desc}
     <SvelteMarkdown source={desc} on:parsed={()=>{
         PR.prettyPrint()
