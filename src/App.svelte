@@ -35,7 +35,9 @@ onMount(() => {
 
 </script>
 <svelte:head>
-   
+    {#key postmode}
+    <title>{postmode!='Document'?'Lutica\'s bar':false}</title>
+    {/key}
 </svelte:head>
 
 {#if birthdate==true}

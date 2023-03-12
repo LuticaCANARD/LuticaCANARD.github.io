@@ -274,6 +274,12 @@ main
 .post_category_closed{
   
 }
+.big_category_closed{
+  
+}
+.big_category_opened{
+  
+}
 #document{
   height: 100%;
 }
@@ -680,4 +686,15 @@ footer{
 }
 .prettyprinted::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
+}
+//COMENT
+.comment{
+  position: relative;
+}
+.utterances-frame{
+}
+.comment_warp{
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }

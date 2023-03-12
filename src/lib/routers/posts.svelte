@@ -3,7 +3,7 @@
 import Store from '../../store.js'
 var store = new Store()
 import postarray from '../../assets/posts.json'
-import DictPosts from '../sub-lib/DictPosts.svelte'
+import BigCartegoryCard from '../sub-lib/postcards/bigcategory.svelte'
 let scy = 0;
 let inner_height = 0;
 let card;
@@ -16,11 +16,14 @@ var posts_object;
 //]
 //}*/
 //let postarray = import.meta.glob('/Posts')
+let bigcar_open = false;
 </script>
 <svelte:window bind:scrollY={scy} bind:innerHeight={inner_height}/>
+<!--대분류 !-->
 <div id="posts" bind:clientHeight={posts_postion} bind:this={posts_object}>
+
     {#each Object.keys(postarray) as _dist} 
-    <DictPosts dist={postarray[_dist]} dest={_dist}/>
+        <BigCartegoryCard big_car={postarray[_dist]} name={_dist}/>
     {/each}
 </div>
 

@@ -1,13 +1,52 @@
 {
     "daibunrui":{
         "so_post_t":{
-            "post_name":{
+            "test1":{
+                "name" : "제목",
+                "subname": "소 제목",
+                "piclink" : "",
+                "link" : "test2"
+            },
+            "test2":{
                 "name" : "제목",
                 "subname": "소 제목",
                 "piclink" : "",
                 "link" : "test2"
             }
            
+        },
+        "so_test_t2":{
+            "test3":{
+                "name" : "제목",
+                "subname": "소 제목",
+                "piclink" : "",
+                "link" : "comment_pj"
+            }
+        }
+    },
+    "daibunrui2":{
+        "so_post_t":{
+            "test1":{
+                "name" : "제목",
+                "subname": "소 제목",
+                "piclink" : "",
+                "link" : "test2"
+            },
+            "test2":{
+                "name" : "제목",
+                "subname": "소 제목",
+                "piclink" : "",
+                "link" : "test2"
+            }
+           
+        },
+        "so_test_t2":{
+            "test3":{
+                "name" : "제목",
+                "subname": "소 제목",
+                "piclink" : "",
+                "link" : "comment_pj"
+            }
         }
     }
 }

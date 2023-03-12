@@ -31,7 +31,9 @@
     import SvelteMarkdown from 'svelte-markdown'
     import 'code-prettify'
     import 'code-prettify/styles/Desert.css'
+    import { Utterances } from 'utterances-svelte-component'    
 </script>
+
 
 <svelte:head>
 
@@ -59,10 +61,10 @@
     <SvelteMarkdown source={desc} on:parsed={()=>{
         PR.prettyPrint()
         let imgs=document.getElementsByTagName('img')
-
         for(let i=0; i<imgs.length; i++){
             let element = imgs[i]
             element.setAttribute('onclick','window.open(this.src, \'_blank\')')
+            element.setAttribute('alt','if you want to see it, please click here')
 
         }
         
@@ -72,6 +74,26 @@
         광고
     </center>
     {/each}
+   
 </div>
 {/key}
+<div class="article_type">
+    <div class="comment_warp">
+        <center><h1>COMENT<h1></center>
+        <p1>If you want write comment, plase login with github first please</p1>
+    </div>
+    <hr>
+    {#key metadata}
+    <div class="comment">
+        { metadata}
+    <Utterances
+    repo="LuticaCANARD/LuticaCANARD.github.io"
+    theme="preferred-color-scheme"
+    issueTerm="COMMENTS on {metadata}"
+    label="COMENT"
+    crossorigin="anonymous"/>
+    </div>  
+    {/key}  
+</div>
+
 {/if}
