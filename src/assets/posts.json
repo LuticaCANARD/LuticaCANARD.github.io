@@ -57,6 +57,14 @@
                 "link" : "ML1"
             }
            
+        },
+        "Computer Ach":{
+            "CA1":{
+                "name" : "컴퓨터 아키텍처 2주차",
+                "subname": "2주차 강의 ",
+                "link" : "cal1"
+            }
+           
         }
     }
 }
