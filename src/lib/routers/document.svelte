@@ -81,7 +81,7 @@
 {/key}
 <div class="article_type">
     <div class="comment_warp">
-        <center><h1>COMENT<h1></center>
+        <center><h1>COMENT</h1></center>
         <p1>If you want write comment, plase login with github first please</p1>
     </div>
     <hr>
