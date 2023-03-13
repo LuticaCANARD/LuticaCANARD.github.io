@@ -8,6 +8,8 @@
     const url = '/Posts/'+params.id+'.md'; 
     // md vs html 
     let adv_applied_desc = []
+    let met_token = '*^*MET*^*'
+    let metadata = params.id
     let adv_token = '*^*ADV*^*'
     let get_err = false
     onMount(()=>
@@ -20,8 +22,15 @@
                 return
             }
             htmlText = request.responseText;
+            let sc = htmlText.split(met_token)
+            if (sc.length==1){
+                adv_applied_desc = sc[0].split(adv_token)
+            }
+            else{
+                metadata = sc[0];
+                adv_applied_desc = sc[1].split(adv_token)
+            }
             //console.log(sc)
-            adv_applied_desc = htmlText.split(adv_token)
         };
         request.send();
         //console.log(params.id)
@@ -37,8 +46,8 @@
 
 <svelte:head>
 
-    {#key params.id}
-    <title>{params.id!=''?'Lutica\'s bar :: '+params.id:'Lutica\'s bar'}</title>
+    {#key metadata}
+    <title>{metadata!=''?'Lutica\'s bar :: '+metadata:'Lutica\'s bar'}</title>
     {/key}
 </svelte:head>
 {#key params.id}
@@ -70,7 +79,7 @@
 
         }
         
-        }}></SvelteMarkdown>
+        }}/>
     <!--광고영역!-->
     <center>
         광고
@@ -81,8 +90,10 @@
 {/key}
 <div class="article_type">
     <div class="comment_warp">
-        <center><h1>COMENT</h1></center>
-        <p1>If you want write comment, plase login with github first please</p1>
+        <center>
+            <h1>COMMENT</h1>
+            <p1>If you want write comment, plase login with github first.</p1>
+        </center>
     </div>
     <hr>
     {#key params.id}
