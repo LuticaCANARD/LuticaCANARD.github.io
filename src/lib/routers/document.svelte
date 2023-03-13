@@ -63,7 +63,10 @@
         for(let i=0; i<imgs.length; i++){
             let element = imgs[i]
             element.setAttribute('onclick','window.open(this.src, \'_blank\')')
-            element.setAttribute('alt','if you want to see it, please click here')
+            if (element.alt==null){
+                element.setAttribute('alt','if you want to see it, please click here')
+            }
+            element.class+=' pointer'
 
         }
         
