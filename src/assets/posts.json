@@ -74,5 +74,14 @@
             }
            
         }
+    },
+    "Projects":{
+        "Lathion":{
+            "pj1":{
+                "name" : "Lathion Project 를 시작하며",
+                "subname": " 프로젝트의 시작 ",
+                "link" : "Lathion_pj1"
+            }
+        }
     }
 }

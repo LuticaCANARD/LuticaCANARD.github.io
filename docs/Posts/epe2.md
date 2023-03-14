@@ -67,6 +67,7 @@ $$e^{j\theta} = \cos{\theta} + j\sin{\theta} $$
 ## Phasor 와 Impedance 
 
 - 임피던스 / 어드미턴스
+  $$ Z={1\over Y} $$
 - 서세턴스
 - 전류<>전압을 물리적으로 연결함. 
 - "옴의 법칙"의 확장 
