@@ -1,0 +1,9 @@
+name: gitbuild
+run-name: ON BUILD 
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm run build
