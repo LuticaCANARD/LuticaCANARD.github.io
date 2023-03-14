@@ -27,7 +27,7 @@
     </div>
 </div>
 
-<div class="mobile_navbar dark-mode-toolbar" style={scys<=15?"position:relative":"position:fixed;top:0;"}>
+<div class="mobile_navbar dark-mode-toolbar" style={scys<1?"position:relative":"position:fixed;top:0;"}>
     {#if mobiletag==true}
     <div on:click={()=>mobiletag=false} class="pointer" style="width: 20%;text-align: center;padding-top: 10px;">OFF</div>
     <div class="container_m">
