@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies2
         run: npm install
       - name: Install dependencies2
-        run: npm install node-sass
+        run: npm install sass
       - name: cv scss to css
         run: npm run sass
       - name: Build project
