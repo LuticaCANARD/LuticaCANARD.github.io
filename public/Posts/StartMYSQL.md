@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-sad
-=======
 MYSQL 2주차
 *^*MET*^*
 
@@ -9,4 +6,3 @@ MYSQL 2주차
 ```SQL
 SELECT * FROM tb_a WHERE a=b;
 ```
->>>>>>> parent of da80faf (kill public and integraled)
