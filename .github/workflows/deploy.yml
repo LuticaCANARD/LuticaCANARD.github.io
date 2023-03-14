@@ -23,6 +23,8 @@ jobs:
         uses: bahmutov/npm-install@v1
       - name: Install dependencies2
         run: npm install
+      - name: cv scss to css
+        run: sass app.scss app.css
       - name: Build project
         run: npm run build
 
