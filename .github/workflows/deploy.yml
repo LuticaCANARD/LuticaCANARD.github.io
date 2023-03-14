@@ -30,13 +30,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@v1
-        with:
-          name: github-pages
-          path: docs/
-      - name: Upload production-ready build files
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
           path: docs/
