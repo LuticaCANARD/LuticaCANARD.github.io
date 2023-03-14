@@ -26,7 +26,7 @@
                 {#each story.stacks as stack}
                     <div class="stacks">
                         <div class="stacks_img">
-                            <img src={"https://cdn.simpleicons.org/"+stack.imglink} class={stack.need_invert?"need_invert":""}/>
+                            <img src={"https://cdn.simpleicons.org/"+stack.imglink} class={stack.need_invert?"need_invert":""} alt={stack.imglink}/>
                         </div>
                         <div class="stacks_name">
                             <h3>{stack.name}</h3>

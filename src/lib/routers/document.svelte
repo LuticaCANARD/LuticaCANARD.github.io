@@ -30,6 +30,18 @@
                 metadata = sc[0];
                 adv_applied_desc = sc[1].split(adv_token)
             }
+            for (let k=0;k<adv_applied_desc.length;k++){
+                adv_applied_desc[k]=adv_applied_desc[k].replace(/\$\$(.+?)\$\$/g, (match, p1) => {
+            
+            try {
+
+                return '<div class="math_div">'+katex.renderToString(p1, { displayMode: true })+'</div>';
+    
+            } catch {
+
+                return match;
+            }
+        });}
             //console.log(sc)
         };
         request.send();
@@ -41,11 +53,25 @@
     import 'code-prettify/styles/Desert.css'
     import { Utterances } from 'utterances-svelte-component'
     import katex from 'katex'
- 
+    let counterp = 0;
+    function rend(){
+        PR.prettyPrint()
+        
+        let imgs=document.getElementsByTagName('img')
+        for(let i=0; i<imgs.length; i++){
+            let element = imgs[i]
+            element.setAttribute('onclick','window.open(this.src, \'_blank\')')
+            if (element.alt==null){
+                element.setAttribute('alt','if you want to see it, please click here')
+            }
+            element.class+=' pointer'
+
+        }
+        
+
+    }
 </script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous"/>
 
 <svelte:head>
 
@@ -70,31 +96,13 @@
 <div id="document" class="article_type">
     {#each adv_applied_desc as desc}
     <SvelteMarkdown source={desc} on:parsed={()=>{
-        document.body.innerHTML=document.body.innerHTML.replace(/\$\$(.+?)\$\$/g, (match, p1) => {
-        try {
-            return katex.renderToString(p1, { displayMode: true });
-
-        } catch {
-            return match;
+        counterp+=1
+        if (counterp==adv_applied_desc.length){
+            rend()
         }
-        });
-        PR.prettyPrint()
-        let imgs=document.getElementsByTagName('img')
-        for(let i=0; i<imgs.length; i++){
-            let element = imgs[i]
-            element.setAttribute('onclick','window.open(this.src, \'_blank\')')
-            if (element.alt==null){
-                element.setAttribute('alt','if you want to see it, please click here')
-            }
-            element.class+=' pointer'
-
-        }
-
-        
         }}/>
     <!--광고영역!-->
     <center>
-        $$  $$
         광고
     </center>
     {/each}

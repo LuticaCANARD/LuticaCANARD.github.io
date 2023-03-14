@@ -21,7 +21,7 @@
         <div>
             <!-- 프로필 사진 -->
             <div id="profile_pic">
-                <img src={profilepic}>
+                <img src={profilepic} alt="Profile Picture">
             </div>
             <!-- NAME 등 -->
             

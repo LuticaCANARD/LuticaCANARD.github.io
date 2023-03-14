@@ -736,7 +736,11 @@ footer{
 //blockquote
 #document blockquote{
   margin-left: 20px;
-  padding-left: 5px;
+  padding: 1px min(15px,1%);
   background-color: rgba(29, 29, 29, 0.484);
   border-left: rgba(0, 0, 0, 1) 5px solid;
+}
+//math
+.katex-html{
+  display: none;
 }
