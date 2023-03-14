@@ -1,7 +1,6 @@
 class RPConnection{
     constructor()
     {
-        console.log('v')
     }
 }
 
