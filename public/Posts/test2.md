@@ -16,7 +16,7 @@
 >
 > ㅋㅋ
 
-``` js prettyprint-js
+``` js
 function a (){
     import a from '../'
     console.log('YEE')

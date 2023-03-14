@@ -48,6 +48,7 @@
         //console.log(params.id)
 
     })
+
     import SvelteMarkdown from 'svelte-markdown'
     import 'code-prettify'
     import 'code-prettify/styles/Desert.css'
@@ -55,6 +56,13 @@
     import katex from 'katex'
     let counterp = 0;
     function rend(){
+        // 반복렌더링 to 단일렌더링
+        let codes = document.getElementsByTagName('pre')
+        for (let k=0;k<codes.length;k++)
+        {
+            console.log(codes[k].class)
+            codes[k].className = 'prettyprint-'+codes[k].className
+        }
         PR.prettyPrint()
         
         let imgs=document.getElementsByTagName('img')
@@ -91,7 +99,7 @@
     </div>
 </center>
 {:else}
-{#key adv_applied_desc}
+{#key params.id,adv_applied_desc}
 
 <div id="document" class="article_type">
     {#each adv_applied_desc as desc}
