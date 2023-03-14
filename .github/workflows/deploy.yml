@@ -52,7 +52,7 @@ jobs:
           path: ./docs
 
       - name: Deploy to GitHub Pages
-        id: deployment
+        id: production-files
         uses: actions/deploy-pages@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
