@@ -51,7 +51,6 @@
 
     import SvelteMarkdown from 'svelte-markdown'
     import 'code-prettify'
-    import 'code-prettify/styles/Desert.css'
     import { Utterances } from 'utterances-svelte-component'
     import katex from 'katex'
     let counterp = 0;
