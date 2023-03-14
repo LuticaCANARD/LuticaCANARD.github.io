@@ -18,7 +18,7 @@
 
 ``` js
 function a (){
-    import a from '../'
+    import a from 
     console.log('YEE')
 }
 
