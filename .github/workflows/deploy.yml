@@ -31,7 +31,7 @@ jobs:
         run: npm run build
 
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@main
+        uses: actions/upload-artifact@v2
         with:
           name: github-pages
           path: ./docs
