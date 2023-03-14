@@ -23,7 +23,7 @@ jobs:
         uses: bahmutov/npm-install@v1
       - name: Install dependencies2
         run: npm install
-      - name: Install dependencies2
+      - name: Install dependencies sass
         run: npm install sass
       - name: cv scss to css
         run: npm run sass
@@ -31,7 +31,7 @@ jobs:
         run: npm run build
 
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@main
         with:
           name: production-files
           path: ./docs
@@ -44,9 +44,12 @@ jobs:
     permissions:
       pages: write      # to deploy to Pages
       id-token: write   # to verify the deployment originates from an appropriate source
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@main
         with:
           name: production-files
           path: ./docs
