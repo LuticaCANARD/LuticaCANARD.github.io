@@ -39,7 +39,9 @@
     import SvelteMarkdown from 'svelte-markdown'
     import 'code-prettify'
     import 'code-prettify/styles/Desert.css'
-    import { Utterances } from 'utterances-svelte-component'   
+    import { Utterances } from 'utterances-svelte-component'
+    import katex from 'katex'
+    import 'katex/dist/katex.css'
  
 </script>
 
@@ -67,6 +69,14 @@
 <div id="document" class="article_type">
     {#each adv_applied_desc as desc}
     <SvelteMarkdown source={desc} on:parsed={()=>{
+        document.body.innerHTML=document.body.innerHTML.replace(/\$\$(.+?)\$\$/g, (match, p1) => {
+        try {
+            return katex.renderToString(p1, { displayMode: true });
+
+        } catch {
+            return match;
+        }
+        });
         PR.prettyPrint()
         let imgs=document.getElementsByTagName('img')
         for(let i=0; i<imgs.length; i++){
@@ -78,10 +88,12 @@
             element.class+=' pointer'
 
         }
+
         
         }}/>
     <!--광고영역!-->
     <center>
+        $$  $$
         광고
     </center>
     {/each}

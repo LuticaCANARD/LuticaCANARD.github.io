@@ -65,6 +65,14 @@
                 "link" : "cal1"
             }
            
+        },
+        "Eletronic Power":{
+            "CA1":{
+                "name" : "전철전력 2/3주차 ",
+                "subname": " 교류 기초 ",
+                "link" : "epe2"
+            }
+           
         }
     }
 }
