@@ -668,7 +668,16 @@ footer{
   align-items: center;
   justify-content: space-around;
 }
-
+@mixin setCodeColor($white_color,$dark_color)
+      {
+        @media (prefers-color-scheme: dark) {
+          color:$dark_color ;
+    
+        }
+        @media (prefers-color-scheme: light) {
+          color: $white_color;
+        }
+      }
 //DOCUMENT
 #document{
   img{
@@ -688,34 +697,45 @@ footer{
     border :  gray 1px solid;
     padding:25px 5px;
     overflow: scroll;
-
-    code{
-      @mixin setCodeColor($white_color,$dark_color)
-      {
-        @media (prefers-color-scheme: dark) {
-          color:$dark_color ;
-    
-        }
-        @media (prefers-color-scheme: light) {
-          color: $white_color;
-        }
-      }
-      /*.kwd{
-        @include setCodeColor(rgb(0, 54, 105),rgb(88, 138, 204))
-      }*/
-      .pln{
-        @include setCodeColor(rgb(204, 156, 0),rgb(255, 252, 77))
-      }
-      /*.str{
-        @include setCodeColor(rgb(90, 77, 0),rgb(161, 119, 64))
-      }
-      .pun{
-        @include setCodeColor(rgb(0, 0, 0),rgb(255, 255, 255))
-      }
-      */
-    }
   }
 }
+.prettyprint-js{
+  code{
+  
+  .kwd{
+    @include setCodeColor(rgb(0, 54, 105),rgb(150, 148, 255))
+  }
+  .pln{
+    @include setCodeColor(rgb(0, 120, 124),rgb(0, 214, 221))
+  }
+  /*.str{
+    @include setCodeColor(rgb(90, 77, 0),rgb(161, 119, 64))
+  }
+  .pun{
+    @include setCodeColor(rgb(0, 0, 0),rgb(255, 255, 255))
+  }
+  */
+}
+}
+.prettyprint-SQL{
+  code{
+  
+  .pln{
+    @include setCodeColor(rgb(105, 33, 0),rgb(255, 164, 148))
+  }
+  .kwd{
+    @include setCodeColor(rgb(0, 120, 124),rgb(0, 214, 221))
+  }
+  /*.str{
+    @include setCodeColor(rgb(90, 77, 0),rgb(161, 119, 64))
+  }
+  .pun{
+    @include setCodeColor(rgb(0, 0, 0),rgb(255, 255, 255))
+  }
+  */
+}
+}
+
 .prettyprinted::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
 }
