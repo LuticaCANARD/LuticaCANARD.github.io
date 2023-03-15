@@ -73,6 +73,14 @@
                 "link" : "epe2"
             }
            
+        },
+        "Algorythm":{
+            "let1":{
+                "name" : "알고리즘 2주차",
+                "subname": " 알고리즘 기초 ",
+                "link" : "algo1"
+            }
+           
         }
     },
     "Projects":{
