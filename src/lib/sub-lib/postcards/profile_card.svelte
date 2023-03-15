@@ -58,22 +58,24 @@
 <div class="card" bind:this={post_obj}>
     
     {#if show_}
-    <div class="card__first_warpper pointer" style="translate(100%,0px)" bind:this={postcard_obj} in:show_ani="{ani_set}" on:click={()=>{location.href="/#/Document/"+linking+post.link}}>
-        <!--Animation 적용시 유의점 : 시간차를 조금 둬서 user가 인지할 수 있게 할 것.-->
-        {#if post.piclink!= undefined}
-        <div class="card__pic">
-            <img src="{post.piclink}" class="card_pic" alt="NON">
-        </div>
-        {/if}
-        <div class="card__second_warpper">
-            <div class="card__title">
-                {post.name}
+    <a href={"/#/Document/"+linking+post.link} class="card_a">
+        <div class="card__first_warpper pointer" style="translate(100%,0px)" bind:this={postcard_obj} in:show_ani="{ani_set}" >
+            <!--Animation 적용시 유의점 : 시간차를 조금 둬서 user가 인지할 수 있게 할 것.-->
+            {#if post.piclink!= undefined}
+            <div class="card__pic">
+                <img src="{post.piclink}" class="card_pic" alt="NON">
             </div>
-            <div class="card__desc">
-                {post.subname}
+            {/if}
+            <div class="card__second_warpper">
+                <div class="card__title">
+                    {post.name}
+                </div>
+                <div class="card__desc">
+                    {post.subname}
+                </div>
             </div>
         </div>
-    </div>
+    </a>
     {:else}
     <div class="card__first_warpper" style="translate(100%,0px);display:none" bind:this={postcard_obj} in:show_ani="{ani_set}">
         <!--Animation 적용시 유의점 : 시간차를 조금 둬서 user가 인지할 수 있게 할 것.-->
