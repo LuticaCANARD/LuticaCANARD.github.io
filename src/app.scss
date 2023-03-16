@@ -1,81 +1,101 @@
 
 $mobile-decide-width:500px;
 $desktop-decide-width:501px;
+
+@mixin whitemodetemplate(){
+  --background: rgb(200, 200, 200);
+  --fontcolor:rgb(0,0,0);
+  --make_dark:invert(0);
+  --card_background : rgb(190, 190, 190);
+  --postcard_background : rgb(190,190,190);
+  --sub_postcard_color : rgba(160,160,160,0.7);
+}
+@mixin darkmotemplate(){
+  --background: #171718;
+  --fontcolor:rgb(200, 200, 200);
+  --make_dark:invert(1);
+  --card_background : rgb(30, 30, 30);
+  --postcard_background : rgb(50,50,50);
+  --sub_postcard_color : rgba(40,40,40,0.7);
+}
+main[islight="dark"]{
+  @include darkmotemplate();
+}
+#header_div[islight="dark"]{
+  @include darkmotemplate();
+}
+footer[islight="dark"]{
+  @include darkmotemplate();
+  background: var(--background);
+  color: var(--fontcolor)
+}
+
+main[islight="light"]{
+  @include whitemodetemplate();
+}
+#header_div[islight="light"]{
+  @include whitemodetemplate();
+}
+footer[islight="light"]{
+  @include whitemodetemplate();
+  background: var(--background);
+  color: var(--fontcolor)
+
+}
+
+.light{
+  @include whitemodetemplate();
+  background: var(--background);
+  
+}
+.dark{
+  @include darkmotemplate();
+  background: var(--background);
+}
+
+
 @mixin darkSide()
 {
-  background:#1e1e1f;color: rgb(200, 200, 200);
+  background:var(--background);
+  color:var( --fontcolor);
 }
 @mixin lightSide()
 {
-  background:rgb(200, 200, 200);color: rgb(0, 0, 0);
+  background:var(--background);
+  color: var(--fontcolor);
 }
 @mixin make_dark()
 {
-  @media (prefers-color-scheme: dark) 
-  {
-    filter:invert(1)
-  }
-  @media (prefers-color-scheme: light) 
-  {
-    filter:invert(0)
-  }
+  filter:var(--make_dark);
 }
-@media (prefers-color-scheme: dark) {
-  body
-  {
-    @include darkSide();
-  }
-  main{
-    @include darkSide();
-  } 
-  .navbar
-  {
-    @include darkSide();
-    
-  }
-  .mobile_navbar 
-  {
-    @include darkSide();
-  }
-  .navitem_m
-  {
-    @include darkSide();
-  }
-  .navitem
-  {
-    @include darkSide();
-  }
-  .container_m{
-    @include darkSide();
-  }
+main{
+  @include darkSide();
+} 
+.navbar
+{
+  @include darkSide();
+  
 }
-@media (prefers-color-scheme: light) {
-  body
-  {
-    @include lightSide();
-  }
-  .navbar
-  {
-    @include lightSide();
-  }
-  .mobile_navbar 
-  {
-    @include lightSide();
-  }
-  .navitem_m
-  {
-    @include lightSide();
-  }
-  .navitem
-  {
-    @include lightSide();   
-  }
-  .container_m{
-    @include lightSide();
-  }
+.mobile_navbar 
+{
+  @include darkSide();
 }
+.navitem_m
+{
+  @include darkSide();
+}
+.navitem
+{
+  @include darkSide();
+}
+.container_m{
+  @include darkSide();
+}
+
+
 body
 {
+  @include darkSide();
   margin: 0%;
   font-family:Arial, Helvetica, sans-serif;
 }
@@ -234,14 +254,7 @@ main
     padding:10px;
     width:50%;
     border-radius: 5px;
-    @media (prefers-color-scheme: light) 
-    {
-      background-color: rgb(218, 165, 32);
-    }
-    @media (prefers-color-scheme: dark) 
-    {
-      background-color: rgba(29, 29, 29, 0.484);
-    }
+    background-color: var(--sub_postcard_color);
     display: flex;
     .card__pic
     {
@@ -301,7 +314,7 @@ main
   flex-direction:column;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: rgb(40,40,40);
+  background-color: var(--postcard_background);
   margin-top: 25px;
   margin-bottom: 25px;
   border-radius: 15px 15px 4px 4px;
@@ -321,14 +334,7 @@ main
 }
 .article_type
 {
-  @media (prefers-color-scheme: light) 
-  {
-    background-color: rgb(146, 145, 145);
-  }
-  @media (prefers-color-scheme: dark) 
-  {
-    background-color: rgba(46, 46, 46, 0.5);
-  }
+  background-color: var(--postcard_background);
   @media (max-width:1230px)
   {
     margin: 1% unquote("calc(max(10%,5px) - 15px)");
@@ -491,6 +497,7 @@ main
 .need_invert{
   @include make_dark();
 }
+
 #stack_groups
 {
   display: flex;
@@ -514,7 +521,7 @@ main
   height: 60px;
   margin: 10px;
   padding: 5px;
-  background-color: #13131d;
+  background-color: var(--card_background);
   border-radius : 20px;
 }
 .stack{
@@ -681,14 +688,7 @@ footer{
     width: auto;
   }
   .prettyprinted{
-    
-    @media (prefers-color-scheme: dark) {
-      background-color: rgb(28, 28, 32);
-    }
-    @media (prefers-color-scheme: light) {
-      background-color: rgb(245, 245, 245);
-
-    }
+    background: var(--card_background);
     border :  gray 1px solid;
     padding:25px 5px;
     overflow: scroll;
@@ -741,7 +741,7 @@ footer{
 #document blockquote{
   margin-left: 20px;
   padding: 3px min(15px,1%);
-  background-color: rgba(29, 29, 29, 0.484);
+  background-color: var(--sub_postcard_color);
   border-left: rgba(0, 0, 0, 1) 5px solid;
 }
 //math

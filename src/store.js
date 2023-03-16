@@ -1,7 +1,5 @@
-class Store{
-    constructor()
-    {
-    }
-}
+import { writable } from 'svelte/store';
 
-export default Store
+const darkmode = writable(null);
+
+export {darkmode}
