@@ -42,6 +42,11 @@
                 "name" : "PGSQL과 MySQL",
                 "subname": "PGSQL과 MySQL의 차이",
                 "link" : "let_*_31_*_SQL_*_PGSQLvsMysql"
+            },
+            "let1":{
+                "name" : "데이터베이스 기본(3주차 강의)",
+                "subname": "데이터베이스 3주차 강의",
+                "link" : "let_*_31_*_SQL_*_let1"
             }
            
         },
