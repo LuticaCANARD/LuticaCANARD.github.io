@@ -5,8 +5,10 @@
     import { onMount } from 'svelte';
     // 여기서 현시
     const request = new XMLHttpRequest();
-    const url = '/Posts/'+params.id+'.md'; 
+    let file_name=params.id.replaceAll('_*_','/');
+    const url = '/Posts/'+file_name+'.md'; 
     // md vs html 
+    console.log(params)
     let adv_applied_desc = []
     let met_token = '*^*MET*^*'
     let metadata = params.id

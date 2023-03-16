@@ -27,7 +27,7 @@ $desktop-decide-width:501px;
   }
   main{
     @include darkSide();
-  }
+  } 
   .navbar
   {
     @include darkSide();

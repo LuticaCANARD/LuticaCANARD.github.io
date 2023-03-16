@@ -36,12 +36,12 @@
             "install Database":{
                 "name" : "MYSQL 입문",
                 "subname": "MYSQL 시작하기",
-                "link" : "StartMYSQL"
+                "link" : "let_*_31_*_SQL_*_StartMYSQL"
             },
             "PGSQLvsMysql":{
                 "name" : "PGSQL과 MySQL",
                 "subname": "PGSQL과 MySQL의 차이",
-                "link" : "PGSQLvsMysql"
+                "link" : "let_*_31_*_SQL_*_PGSQLvsMysql"
             }
            
         },
@@ -54,7 +54,7 @@
             "ML1":{
                 "name" : "기계학습 1주차",
                 "subname": "기계학습 1주차 공부내용",
-                "link" : "ML1"
+                "link" : "let_*_31_*_ML_*_let1"
             }
            
         },
@@ -62,15 +62,15 @@
             "CA1":{
                 "name" : "컴퓨터 아키텍처 2주차",
                 "subname": "2주차 강의 ",
-                "link" : "cal1"
+                "link" : "let_*_31_*_cal_*_let1"
             }
            
         },
         "Eletronic Power":{
             "CA1":{
-                "name" : "전철전력 2/3주차 ",
+                "name" : "전철전력 2 / 3주차 ",
                 "subname": " 교류 기초 ",
-                "link" : "epe2"
+                "link" : "let_*_31_*_epe_*_let1"
             }
            
         },
@@ -78,9 +78,16 @@
             "let1":{
                 "name" : "알고리즘 2주차",
                 "subname": " 알고리즘 기초 ",
-                "link" : "algo1"
+                "link" : "let_*_31_*_algo_*_let1"
             }
            
+        },
+        "Control":{
+            "let1":{
+                "name" : "제어공학 2 / 3주차",
+                "subname": " 제어공학 2 / 3주 ",
+                "link" : "let_*_31_*_contol_*_let1"
+            }
         }
     },
     "Projects":{
