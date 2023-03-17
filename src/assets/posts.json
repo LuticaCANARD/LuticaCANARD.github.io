@@ -33,11 +33,6 @@
     },
     "Study":{
         "Database":{
-            "install Database":{
-                "name" : "MYSQL 입문",
-                "subname": "MYSQL 시작하기",
-                "link" : "let_*_31_*_SQL_*_StartMYSQL"
-            },
             "PGSQLvsMysql":{
                 "name" : "PGSQL과 MySQL",
                 "subname": "PGSQL과 MySQL의 차이",
