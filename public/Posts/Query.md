@@ -26,3 +26,5 @@ LAT
 
 __SLOW BRAIN FREQUENCY__
 
+__higher suicidal, higher stress, highest aloneness.... IDK I CAN SOLVE WITHOUT SUICIDE__
+
