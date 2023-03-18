@@ -1,5 +1,7 @@
 # QUERY
-To self. 
+
+To self.     
+
 ```SQL
   --STRESS OF RECENT IS NOT DEPRESS
   --THAT IS HIGH-TENSION STRESS, AND UPSTREAM STRESS.
@@ -8,8 +10,8 @@ To self.
   --
   --IF ANYONE FOUND THIS DOCUMENT, IT'S HELPFUL THAT TALKING WITH CANARD....
 ```
-
-TOC
+    
+TOC    
 ```SQL
 --DESC GUIDEMODE ON
 --DESC OBSERVE FRIDAY CAN EFFECT TO EVENT ON /" TO BY DM."
@@ -18,13 +20,13 @@ TOC
 --TAKE DO STRICT.
 --EVALING NOW 
 ```
-
-LAT
+    
+LAT    
 ```SQL
 --AS LEADER OF TECH.TEAM, DO CARE.
 ```
-
+    
 __SLOW BRAIN FREQUENCY__
-
+    
 __higher suicidal, higher stress, highest aloneness.... IDK I CAN SOLVE WITHOUT SUICIDE__
 
