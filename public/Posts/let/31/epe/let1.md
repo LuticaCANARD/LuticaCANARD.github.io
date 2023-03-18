@@ -79,7 +79,7 @@ $$ R_{a} = R_{1}+R_{2} $$
 
 ### 복소 임피던스의 계산
 - 페이저 접근
-$$ {\phase{}a^\circ \over {\phase{}b^\circ}}=\phase{}a-b^\circ $$
+$$ {\phase{a}^\circ \over {\phase{b}^\circ}}=\phase{a}-b^\circ $$
 
 - 복소평면 접근
 > X축은 실수, Y축은 허수인 복소평면을 생각한다.   
