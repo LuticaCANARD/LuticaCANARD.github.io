@@ -77,6 +77,10 @@ $$e^{j\theta} = \cos{\theta} + j\sin{\theta} $$
 > 일반 저항의 계산법과 같다. 병렬저항의 계산법, 직렬 저항의 계산법은 모두 동일하다.     
 $$ R_{a} = R_{1}+R_{2} $$
 
-- 복소 임피던스의 계산
-> 
-$$ {\phase{a^\circ} \over {\phase{b^\circ}}}=\phase{a-b^\circ} $$
+### 복소 임피던스의 계산
+- 페이저 접근
+$$ {\phase{}a^\circ \over {\phase{}b^\circ}}=\phase{}a-b^\circ $$
+
+- 복소평면 접근
+> X축은 실수, Y축은 허수인 복소평면을 생각한다.   
+> 페이저 to 복소평면은 각도와 삼각함수로 변환한다.
