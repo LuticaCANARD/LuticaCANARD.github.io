@@ -71,3 +71,12 @@ $$e^{j\theta} = \cos{\theta} + j\sin{\theta} $$
 - 서세턴스
 - 전류<>전압을 물리적으로 연결함. 
 - "옴의 법칙"의 확장 
+
+## Phaser, Impedance의 계산과 방법
+- 임피던스
+> 일반 저항의 계산법과 같다. 병렬저항의 계산법, 직렬 저항의 계산법은 모두 동일하다.     
+$$ R_{a} = R_{1}+R_{2} $$
+
+- 복소 임피던스의 계산
+> 
+$$ {\phase{a^\circ} \over {\phase{b^\circ}}}=\phase{a-b^\circ} $$
