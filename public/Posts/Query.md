@@ -1,6 +1,6 @@
 # QUERY
 
-To self.     
+To self    
 
 ```SQL
   --STRESS OF RECENT IS NOT DEPRESS
