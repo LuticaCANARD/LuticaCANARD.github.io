@@ -19,7 +19,7 @@ $$ V(s) = I(s) * {1 \over Cs}$$
 # 회로의 행렬풀이
 - Laplace 변환이 이루어진 상태에서
 
-$$ \begin{vmatrix}R_{11} & -R_{12}& -R_{13}\\-R_{21} & R_{22}& -R_{23}\\-R_{31} & -R_{32}& R_{33}\end{vmatrix} \begin{vmatrix} I_1\\I_2\\I_3 \end{vmatrix} = \begin{vmatrix} V_1\\V_2\\V_3\end{vmatrix} $$
+$$ \begin{vmatrix}R_{11} & -R_{12} & -R_{13} \\-R_{21} & R_{22}& -R_{23} \\-R_{31} & -R_{32} & R_{33}\end{vmatrix} \begin{vmatrix} I_1 \\I_2 \\I_3 \end{vmatrix} = \begin{vmatrix} V_1 \\V_2\\V_3\end{vmatrix} $$
 
 > 이를 **CRAMMER's RULE** 를 통해서  
 >  I1,I2,I3를 구해낸다. (T/F 구하기.)
