@@ -38,7 +38,7 @@ GIT의 개념과 사용방법
   > 사용방법은, GitHub의 원하는 레포지스트리에 들어가서, Pullrequest를 눌러서 사용하시면 됩니다!
 
 ## GIT 전략
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EV3FZ3cWBp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/EV3FZ3cWBp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### GitFlow
 - Main branch
