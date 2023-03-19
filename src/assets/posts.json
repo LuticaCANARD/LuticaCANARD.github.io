@@ -14,6 +14,14 @@
                 "subname": "스벨트를 위한 환경구축",
                 "link" : "sveltestart"
             }
+        },
+        "Git":{
+            "gitstart":
+            {
+                "name" : "Git 시작하기",
+                "subname": "Git을 사용하는 방법과 규칙",
+                "link" : "GitTutorial"
+            }
         }
     },
     "Game":{
