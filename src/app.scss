@@ -9,6 +9,7 @@ $desktop-decide-width:501px;
   --card_background : rgb(190, 190, 190);
   --postcard_background : rgb(190,190,190);
   --sub_postcard_color : rgba(160,160,160,0.7);
+  --href_color:rgb(50,50,200);
 }
 @mixin darkmotemplate(){
   --background: #171718;
@@ -17,6 +18,7 @@ $desktop-decide-width:501px;
   --card_background : rgb(30, 30, 30);
   --postcard_background : rgb(50,50,50);
   --sub_postcard_color : rgba(40,40,40,0.7);
+  --href_color:rgb(149, 149, 194);
 }
 main[islight="dark"]{
   @include darkmotemplate();
@@ -718,6 +720,13 @@ footer{
       }
       */
     }
+  }
+  iframe{
+    width:100%;
+    height: 100%;
+  }
+  a{
+    color: var(--href_color);
   }
 }
 .prettyprinted::-webkit-scrollbar {
