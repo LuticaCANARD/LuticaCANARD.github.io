@@ -1,13 +1,15 @@
 
 $mobile-decide-width:500px;
 $desktop-decide-width:501px;
+:root{
+}
 @mixin darkSide()
 {
   background:#1e1e1f;color: rgb(200, 200, 200);
 }
 @mixin lightSide()
 {
-  background:rgb(200, 200, 200);color: rgb(0, 0, 0);
+  background:rgb(241, 241, 241);color: rgb(0, 0, 0);
 }
 @mixin make_dark()
 {
