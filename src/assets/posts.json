@@ -14,6 +14,14 @@
                 "subname": "스벨트를 위한 환경구축",
                 "link" : "sveltestart"
             }
+        },
+        "Git":{
+            "gitstart":
+            {
+                "name" : "Git 시작하기",
+                "subname": "Git을 사용하는 방법과 규칙",
+                "link" : "GitTutorial"
+            }
         }
     },
     "Game":{
@@ -33,11 +41,6 @@
     },
     "Study":{
         "Database":{
-            "install Database":{
-                "name" : "MYSQL 입문",
-                "subname": "MYSQL 시작하기",
-                "link" : "let_*_31_*_SQL_*_StartMYSQL"
-            },
             "PGSQLvsMysql":{
                 "name" : "PGSQL과 MySQL",
                 "subname": "PGSQL과 MySQL의 차이",
@@ -59,7 +62,7 @@
             "ML1":{
                 "name" : "기계학습 1주차",
                 "subname": "기계학습 1주차 공부내용",
-                "link" : "let_*_31_*_ML_*_let1"
+                "link" : "let_*_31_*_ml_*_let1"
             }
            
         },
@@ -101,6 +104,15 @@
                 "name" : "Lathion Project 를 시작하며",
                 "subname": " 프로젝트의 시작 ",
                 "link" : "Lathion_pj1"
+            }
+        }
+    },
+    "Life":{
+        "2023":{
+              "March":{
+                "name" : "2023 년 3월의 회고",
+                "subname": " 혼란의 봄 ",
+                "link" : "life_2023march"
             }
         }
     }

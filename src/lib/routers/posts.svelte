@@ -1,7 +1,4 @@
 <script>
-
-import Store from '../../store.js'
-var store = new Store()
 import postarray from '../../assets/posts.json'
 import BigCartegoryCard from '../sub-lib/postcards/bigcategory.svelte'
 let scy = 0;

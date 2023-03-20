@@ -45,7 +45,7 @@
     {
         now_scy_show = post_obj?.offsetTop;
         now_scy = scy + inner_height
-        if ( now_scy > now_scy_show-10 )
+        if ( now_scy > now_scy_show-60 )
         {            
             // 여기에 애니메이션을 시작하면 된다.
             //console.log(postcard_obj)
