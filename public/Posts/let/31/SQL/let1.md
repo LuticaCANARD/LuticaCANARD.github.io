@@ -106,4 +106,21 @@ SELECT * FROM indexTBL;
 -- PGSQL의 index기능과는 다른점이 보인다.
 ```
 
+## 스튜어드 
+- PGSQL function 처럼 사용가능한 기능.
+
+## 트리거
+```SQL
+DELIMITER //
+CREATE TRIGGER trg_deletedMemberTBL 
+AFTER DELETE -- DELETE 후
+ON tb_deletedMember
+FOR EACH ROW 
+BEGIN
+    --내용
+END
+DELIMITER;
+-- PGSQL과는 좀 다르다. function이 아니라 DELIMITER로 씀.
+```
+
 
