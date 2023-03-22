@@ -27,6 +27,8 @@ LAT
 ```
     
 __SLOW BRAIN FREQUENCY__
+
+## LOGS FROM SP.T.
     
 ~~__higher suicidal, higher stress, highest aloneness.... IDK I CAN SOLVE WITHOUT SUICIDE__~~    
 
