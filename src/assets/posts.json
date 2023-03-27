@@ -110,6 +110,13 @@
                 "subname": " 프로젝트의 시작 ",
                 "link" : "Lathion_pj1"
             }
+        },
+        "KNUT Web Study" :{
+            "devcul":{
+                "name" : "개발문화에 대한 단상",
+                "subname": " 웹개발 스터디의 시작과 개발문화에 대한 고찰. ",
+                "link" : "knutstudy_*_devculture"
+            }
         }
     },
     "Life":{
