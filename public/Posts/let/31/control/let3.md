@@ -53,9 +53,13 @@ $$  \frac{C(s)}{R(s)}= \frac{G(s)}{(1+G(s)H(s))} $$
 4. case4 :
 - pickoff 분배가 가능하다.
 
-### EX 5.1 
-
-
-## 신호흐름 선도
+## Signal flow 신호흐름 선도
 - 시간영역의 그림화
 - Moson's role로 단순화
+### 구성요소
+- Line : T/F
+- Node : Signal
+> Summing Junction, Pickoff는 없다.     
+->- : line 
+0 : node
+
