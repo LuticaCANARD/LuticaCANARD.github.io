@@ -62,4 +62,5 @@ $$  \frac{C(s)}{R(s)}= \frac{G(s)}{(1+G(s)H(s))} $$
 > Summing Junction, Pickoff는 없다.     
 ->- : line 
 0 : node
+### Transform From Block Diagram
 
