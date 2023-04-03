@@ -121,6 +121,10 @@ BEGIN
 END
 DELIMITER;
 -- PGSQL과는 좀 다르다. function이 아니라 DELIMITER로 씀.
+
+USE db_name
+-- DBname은 이렇게...
+VIEW -- VIEW기능
 ```
 
 
