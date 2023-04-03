@@ -15,10 +15,30 @@ $$T.F = C(sIA^{-1}B + D)$$
 ## 블록선도 5.2
 - 주파수 영역의 그림화
 - Block Diagram Algebra 로 단순화 
-1. Block : system (TF)
+1. Block : system (TF).. 곱하기
 2. Arrow(Line) : signal
 3. Summing Junction : 계산 > 원형으로 되어있음.
 4. Pickoff Point : R(s)가 모든 포인트로 동일하게 나감. 
+
+### Cascade (종속형)
+- G1 G2 G3가 LINE로 되어있는데, 이를 줄이고 싶음.
+- 입력은 U(s)
+- U(s) * G1 * G2 * G3 로 줄일 수 있다.
+### Parallel(병렬)
+- G1, G2, G3가 모두 병렬이고, 최후에는 더할 때.
+- U(s)가 입력될 떄...
+- U(s) * (G1+G2+G3) 으로 줄일 수 있다. 
+### Feedback (피드백)
+- G(s) , H(s)
+- R(s)가 입력, C(s)가 출력
+- E(s)를 중간 입력이라 하자...
+- E(s) = R(s) - H(s)C(s)
+- C(s) = G(s)E(s)
+- C(s) = G(s)R(s)-G(s)H(s)C(s)
+- (1+G(s)H(s))*C(s) = G(s)R(s)
+- 따라서...
+$$  \frac{C(s)}{R(s)}= \frac{G(s)}{(1+G(s)H(s))} $$
+
 ## 신호흐름 선도
 - 시간영역의 그림화
 - Moson's role로 단순화
