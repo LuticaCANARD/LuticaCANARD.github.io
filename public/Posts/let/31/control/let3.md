@@ -64,3 +64,44 @@ $$  \frac{C(s)}{R(s)}= \frac{G(s)}{(1+G(s)H(s))} $$
 0 : node
 ### Transform From Block Diagram
 
+# Mason's rule
+- (그림 5.20)
+
+## loop gate
+- loop
+- 돌아오는 것이 loop gate
+- G2H1 , G4H2, 
+## Forward Path Gate
+- 경로
+- 123457
+- 123467
+
+## non-touching loop gate
+- 안만나는 게이트(두 게이트가 안만나는 경우)
+
+## T/F 
+1 - loop gain의 합
+G(s) = c/r = Forward합/1-Loop합+(non-touching Loop)-3중루프.....
+- 교집합 구하기!
+
+R->(T.F)->C
+
+# SSD. To SFG
+
+$$x_1` = 2x_1 -5x_2 +2r \\ x_2` = -6x_1 -2x_2 +5r \\ y = -4x_1 + 6x_2 $$
+
+- 정리하고 풀기
+
+# 상태공간의 다른표현
+- Phase Variable Canonical Form
+
+- Cascade Form
+> 선도 그리고 라플라스 역변환으로 original Form으로 변환    
+> 각자나온걸 잡았다.    
+
+- Parallel
+> 부분분수로 나누고 블록선도 +로.   
+> 상태변수를 1차 결과로 잡는다.     
+
+- Controller canonical Form
+> 변수 행렬속 순서가 역순이다!
