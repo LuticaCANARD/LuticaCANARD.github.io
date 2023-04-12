@@ -82,6 +82,11 @@
             },
             "CA2":{
                 "name" : "전철전력 2 ",
+                "subname": " 3상전력 등.. ",
+                "link" : "let_*_31_*_epe_*_let2"
+            },
+            "CA3":{
+                "name" : "전철전력 3 ",
                 "subname": " 단위법 등.. ",
                 "link" : "let_*_31_*_epe_*_let2"
             }
