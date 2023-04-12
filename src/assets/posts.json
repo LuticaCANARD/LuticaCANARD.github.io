@@ -79,6 +79,11 @@
                 "name" : "전철전력 2 / 3주차 ",
                 "subname": " 교류 기초 ",
                 "link" : "let_*_31_*_epe_*_let1"
+            },
+            "CA2":{
+                "name" : "전철전력 2 ",
+                "subname": " 단위법 등.. ",
+                "link" : "let_*_31_*_epe_*_let2"
             }
            
         },
