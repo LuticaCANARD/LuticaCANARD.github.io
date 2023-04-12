@@ -105,3 +105,52 @@ $$x_1` = 2x_1 -5x_2 +2r \\ x_2` = -6x_1 -2x_2 +5r \\ y = -4x_1 + 6x_2 $$
 
 - Controller canonical Form
 > 변수 행렬속 순서가 역순이다!
+
+- observer canonical Form
+> phase canonical From으로부터 역행렬을 취하여 쉽게 얻을 수 있다.
+
+# 5.8 유사변환
+$$ \frac{dx}{dt} = AX+BU\\Y=CX+DU (X=PZ) \\ P\frac{dz}{dt} = ApZ + BU\\Y=CPZ+DU\\\frac{dz}{dt} = P^{-1}APZ + P^{-1}BU\\Y=CPZ=PU $$
+이를...
+$$A`=P^{-1}AP\\B`=P^{-1}B\\ C`=CP\\D`=D$$
+
+A\`를 dingonal matrix로 만들기 위해, P를 A의 고유벡터로 선정하면, A\`P-1AP응 diagonal이 된다.
+
+* 고유벡터 :
+$$A=x_i = \lambda_ix_i$$
+* 고유치 :
+$$ (A - \lambda_iI) x_i = 0 $$
+
+# 1차 system
+
+## 시정수 time constant. T
+- at = 1인 t값
+
+## 상승시간 Rise Time. Tr
+-  응답이 0.1~0.9까지 도달하는데 걸리는 시간
+
+## 정착시간 Settling Time. Ts
+- 응답이 final value의 +- 2%에 머무는데 걸리는 시간
+
+# 2차 시스템 개요
+- 식의 형태에 따라서 pole의 갯수가 달라진다.
+- (둘 다 실수/둘 다 복소수/ 둘 다 숭허수 / 둘 다 실수 중근)
+
+## 둘 다 실수인 경우
+- 과감쇠 over-damped
+- L>1
+
+## 둘 다 복소수
+- 미흡감쇠 under-damped
+- 0< L <1
+
+## 둘 다 순허수
+- 무감쇠 un-damped
+- L=0
+## 둘이 실수 중근 
+- 임계감쇠 critically damped
+- L=1
+## 2차시스템의 구성
+
+$$\frac{w_n^2}{s^2+2Lw_nS+w_n^2}$$
+* L = 감뇌비 (damping ratio)
