@@ -55,3 +55,9 @@ $$\cos(a - b) = \cos a \cos b + \sin a \sin b$$
 $$e^{-t}\sqrt{\frac{5}{4}}(\cos(2t-\pi))$$
 - 단, arctan pi== 1/2
 - Case 3
+- 미흡감쇄 :
+- 
+$$C(s) = \frac{w_n^2}{s^2+syw_nS+w_n^2}\times\frac{1}{s} = \frac{k_1}{s}+\frac{k_2s+k_3}{s^2+2yw_ns+w_n^2}\\-\frac{S+2\Zeta\omega_n}{S^2+2Ys+\omega_n} \\= -(\frac{s+\zeta\omega_n}{(s+L\omega_n)^2+\omega_n(1-\zeta^2)}+\frac{\zeta\omega_n}{(s+L\omega_n)^2+\omega_n(1-\zeta^2)})\\C(t) = u(t) - (e^(-\zeta\omega t)\times\cos(\omega_n\sqrt{1-\zeta^2})\times(\frac{\zeta}{\sqrt{1-\zeta^2}})) \\= \frac{\zeta}{\sqrt{1-\zeta^2}}\times e^{-\zeta\omega_n t}\sin({\omega_n\sqrt{1-\zeta^2}\times t})\\c(t) = 1-e^{\zeta\omega_n t}(\cos(\omega_n\sqrt{1-\zeta}\times t)+\frac{\zeta}{\sqrt{1-\zeta^2}}\sin(\omega_n\sqrt{1-\zeta^2} t))$$
+
+> 복소평면으로 나타내서 cos를 x,    
+> sin를 y로 ... 이걸 붙인다. 
