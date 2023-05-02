@@ -127,6 +127,13 @@
                 "subname": " 웹개발 스터디의 시작과 개발문화에 대한 고찰. ",
                 "link" : "knutstudy_*_devculture"
             }
+        },
+        "Vrchat World" :{
+            "rinlib":{
+                "name" : "Cana Rinn 도서관 개발 사업 I",
+                "subname": " Vrchat 월드 개발의 생각과 그 시작 ",
+                "link" : "CanaRinLib"
+            }
         }
     },
     "Life":{
