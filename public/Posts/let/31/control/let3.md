@@ -153,4 +153,4 @@ $$ (A - \lambda_iI) x_i = 0 $$
 ## 2차시스템의 구성
 
 $$\frac{w_n^2}{s^2+2Lw_nS+w_n^2}$$
-* L = 감뇌비 (damping ratio)
+* L = 감쇠비 (damping ratio)
