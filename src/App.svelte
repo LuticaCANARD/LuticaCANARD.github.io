@@ -61,6 +61,7 @@ onMount(() => {
     <title>{postmode!='Document'?'Lutica\'s bar':false}</title>
     {/key}
 </svelte:head>
+
 {#key darkmode_onoff}
 {#if birthdate==true}
 <div>
