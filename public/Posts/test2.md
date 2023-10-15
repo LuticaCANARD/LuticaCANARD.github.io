@@ -10,6 +10,7 @@
 4. 아마도 이글은 테스트입니다.
 
 <img src="/img/test.png" alt="테스트하는거">
+<img src="/img/test.jpg" alt="테스트하는거">
 
 
 > 아마도 좋을듯
