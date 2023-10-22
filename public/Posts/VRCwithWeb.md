@@ -40,7 +40,11 @@
 - 
 #### Server
 - Request에 따라서 Response를 응답해주는 존재입니다. 
-- 
+
+#### DataBase
+- 데이터를 보존하는 Base
+- 데이터 중심인 현대사회에서의 인프라.
+- 표 방식인 SQL과 표 이외의 방식인 NoSQL로 구분됩니다.
 ### HTTP?
 
 ### JSON?
