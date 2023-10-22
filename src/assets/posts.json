@@ -35,6 +35,11 @@
                 "name" : "VRC 월드 만들기",
                 "subname": "VRC 월드 만드는 프로젝트",
                 "link" : "VRChatWorld"
+            },
+            "VRCWithWeb":{
+                "name" : "VRC With Web",
+                "subname": "VRC 와 Web의 연동을 위한 StringLoader/ImageLoader의 개요와 사용법.",
+                "link" : "VRCWithWeb"
             }
            
         }
