@@ -27,7 +27,7 @@
 
 ### Vket2023 Summer의 가능성
 - [**VCAP**](https://twitter.com/VCApi_Proj) 의 경우, Message 기믹과 Qv펜 보존 기믹을 통하여 Web통신을 통한 인스턴스간 통신과 데이터의 보존 가능성을 보여주었습니다.
-- [**YAIBA**](https://x.com/Virtual_Market_/status/1680833734394929157?s=20)의 경우, Vket 동선 추적을 통한 빅데이터 기반의 월드제작 가능성을 보여주었습니다.
+- [**YAIBA**](https://note.com/cocu_tan/n/n70972d7646bd)의 경우, Vket 동선 추적을 통한 빅데이터 기반의 월드제작 가능성을 보여주었습니다.
 
 ### 그 외
 - [**CBS**](https://twitter.com/CBS_VRC)의 경우, Udon Chips와 WebApi를 접목 가능함을 보여주었습니다.
