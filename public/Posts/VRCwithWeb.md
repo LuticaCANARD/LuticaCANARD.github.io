@@ -142,7 +142,8 @@ public override void OnStringLoadError()
 - single web application server를 구축가능하시다면, 보통 문제는 없으실 것입니다.
 
 ### Response를 만들때 주의할 사항
-
+- Body는 최대 100MB입니다.
+- 
 
 ## 마치면서 : Loader를 둘러싼 이슈
 
