@@ -29,11 +29,11 @@
 ## Web와 VRC의 가능성.
 
 ### Vket2023 Summer의 가능성
-- [**VCAP**](https://twitter.com/VCApi_Proj) 의 경우, Message 기믹과 Qv펜 보존 기믹을 통하여 Web통신을 통한 인스턴스간 통신과 데이터의 보존 가능성을 보여주었습니다.
+- [**VCAP**](https://x.com/VCApi_Proj) 의 경우, Message 기믹과 Qv펜 보존 기믹을 통하여 Web통신을 통한 인스턴스간 통신과 데이터의 보존 가능성을 보여주었습니다.
 - [**YAIBA**](https://note.com/cocu_tan/n/n70972d7646bd)의 경우, Vket 동선 추적을 통한 빅데이터 기반의 월드제작 가능성을 보여주었습니다.
 
 ### 그 외
-- [**CBS**](https://twitter.com/CBS_VRC)의 경우, Udon Chips와 WebApi를 접목 가능함을 보여주었습니다.
+- [**CBS**](https://x.com/CBS_VRC)의 경우, Udon Chips와 WebApi를 접목 가능함을 보여주었습니다.
 
 ## 알아둬야하는 기반지식
 ### 웹은 무엇으로 이루어져있는가?
@@ -58,7 +58,8 @@
 
 #### PROXY?
 - 프록시란, 서버가 직접 클라이언트랑 맞닿지않고 간접적으로 HTTP통신을 연결해주는 중간체입니다.
-- DDOS공격을 막을 수 있게 해줍니다. 
+- DDOS공격을 막거나, 접속의 부하를 경감시켜줄 수 있게 해줍니다.
+> side : CloudFlare, AWS ALB, nginX등이 해당합니다.
 
 ### JSON?
 - 웹에서 사용되는 경량의 데이터 상호교환규격입니다.
@@ -84,8 +85,23 @@
 ### Unity상에서의 구현 원리와 그 특징
 - Header를 보면, **UnityWebRequest**를 통하여 보내게 되어있습니다.
 - 이는, vrc 서버를 경유하지 않고 유저 각자의 클라이언트가 웹 브라우저처럼 작용하여 request를 보냄을 시사합니다.
+
+#### 간단한 사용예제
 ```cs
-aaaa
+
+void Start()
+{
+
+}
+public override void OnStringLoadSuccess()
+{
+
+}
+public override void OnStringLoadError()
+{
+
+}
+
 ```
 #### VRCUrl의 특징
 
@@ -105,7 +121,7 @@ aaaa
 - 결과가 2DTexture 로 기대되는 경우.
 
 ### JSON 데이터의 U#에서의 분해와 해석
-- 이경우, VRCJson 정적class에 있는 `TryDeserillizeJson(string,datatoken)`을 통하여 string으로 되어있는 json데이터를 u#에서 다룰 수 있게 역직렬화 할 수 있습니다.
+- 이경우, VRCJson 정적class에 있는 `TryDeserillizeJson (String, Datatoken)`을 통하여 string으로 되어있는 json데이터를 u#에서 다룰 수 있게 역직렬화 할 수 있습니다.
 
  
 
