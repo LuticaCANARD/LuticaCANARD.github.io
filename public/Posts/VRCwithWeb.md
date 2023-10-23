@@ -7,6 +7,9 @@
 - 그러함에도, 아무래도 업데이트에 대한 자료가 부족하고 어려운 감이 있어서, 이곳에 정리하려합니다.
 - 이 글을 보시는 모든분들이 상상력에 제한없이 월드를 구축하셨으면 좋겠습니다. 
 
+## 면책사항
+- 2023년 10월 22일의 저는 대학생이자 초보개발자로서, 이 문서에서 미숙한 면이 있을 수 있습니다. 이점을 양해해주시고, 읽으시다가 지적하고싶으신게 있으시다면 이슈혹은 덧글로 코멘트 부탁드립니다.
+
 ## 참고영상
 <iframe src="https://www.youtube.com/embed/dAVi2ns0YEA?si=_URbOOXHbcZO6swx&t=5631" title="제 4회 한국 월드 제작자 심포지움" frameborder="0" allow=" accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" style="width:100%;height:500px; " allowfullscreen></iframe>
 
@@ -46,13 +49,22 @@
 - 데이터 중심인 현대사회에서의 인프라.
 - 표 방식인 SQL과 표 이외의 방식인 NoSQL로 구분됩니다.
 ### HTTP?
+- Http란, 두 컴퓨터간의 소통에 있어서 가장 추상화된 연결규약 중 하나(OSI 7계층)입니다.
+- 
+
+#### HTTPS?
+- HTTPS란, 통신내용이 탈취되지않게 암호화된 통신으로 연결된 HTTP연결을 의미합니다.
+
+#### PROXY?
+- 프록시란, 서버가 직접 클라이언트랑 맞닿지않고 간접적으로 HTTP통신을 연결해주는 중간체입니다.
+- DDOS공격을 막을 수 있게 해줍니다. 
 
 ### JSON?
-- 웹에서 사용되는 경량의 데이터 상호교환규격.
-- JSON아래에 들어올 수 있는 Type는 아래와 같다.
+- 웹에서 사용되는 경량의 데이터 상호교환규격입니다.
+- JSON아래에 들어올 수 있는 Type는 아래와 같습니다.
 
 #### Object
-- Key-Value pair를 통하여 데이터를 접근 가능하게 하는 요소. 
+- Key-Value pair를 통하여 데이터를 접근 가능하게 하는 자료형입니다.
 
 #### Array
 - 열거(enumeration)형식으로 구현된 요소.
@@ -104,5 +116,7 @@ aaaa
 
 
 ## 마치면서 : Loader를 둘러싼 이슈
+
+### IP및 정보수집의 법률적 문제
 
 
