@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "sass": "sass ./src/app.scss ./src/app.css"
+    "sass": "sass ./src/app.scss ./src/app.css",
+    "deploy":"node ./scripts/deploy_post.js"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
