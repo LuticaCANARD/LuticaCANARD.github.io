@@ -123,6 +123,13 @@ public override void OnStringLoadError()
 ### JSON 데이터의 U#에서의 분해와 해석
 - 이경우, VRCJson 정적class에 있는 `TryDeserillizeJson (String, Datatoken)`을 통하여 string으로 되어있는 json데이터를 u#에서 다룰 수 있게 역직렬화 할 수 있습니다.
 
+```cs
+class v{
+    void fun(){
+        
+    }
+}
+```
  
 
 
@@ -135,7 +142,7 @@ public override void OnStringLoadError()
 > (HTTP/2.0으로 응답하는지 잘 모르겠습니다. 또한 그 이점도 잘 안 느껴질 것이라 생각되구요.)
 - Creator가 모든유저에게 접근가능성를 원한다면, Trusted Url를 사용하는 서버를 구축하여야 합니다. 아래 방법을 권장합니다.
 > Github CI/CD + Docker 를 통한 정적 서버 구축
-> pastebin을 통한 
+> pastebin을 통한 soft-coding.
 
 ### 서버입장에서는 어떤 주의를 갖추어야하는가?
 
