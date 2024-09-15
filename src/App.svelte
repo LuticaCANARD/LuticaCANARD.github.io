@@ -1,10 +1,6 @@
 
 <script>
 
-import Profile from './lib/routers/profile.svelte';
-
-import rout from './lib/routers/index.js'
-import Header from './lib/header.svelte'
 import { onMount } from 'svelte';
 import Router from 'svelte-spa-router';
 import { darkmode } from './store.js';
@@ -24,33 +20,24 @@ darkmode.subscribe((darkmode) => {
 })
 
 function changeTheme() {
-    if (prefersDarkMode) {
-        document.body.style='background: #171718';
+    if (prefersDarkMode) 
+    {
+        document.body.style.background = '#171718';
+        document.body.style.color = 'white';
     }
-    else{
-        document.body.style='background: rgb(200, 200, 200)'
+    else
+    {
+        document.body.style.background = 'rgb(200, 200, 200)'
+        document.body.style.color = 'black'
     }
-    darkmode_onoff = prefersDarkMode?"dark":"light"
+    darkmode_onoff = prefersDarkMode ? "dark":"light"
 }
 
 
 let postmode;
-let mobiletag = false;
-var postin={};
-let date = new Date();
-$: birthdate = date.getMonth()==7 && date.getDate() == 21
-const changename = (name) => () => {postmode = name;}
 let url = ``;
 onMount(() => {
-    url = window.location.href
-    url = url.replace('https://','')
-    url = url.replace('http://','')
-    let argus = url.split('/')
-    //console.log(argus)
-    if( argus.length > 1)
-    {
-        postmode = argus[1]
-    }
+    
 });
 
 
@@ -63,26 +50,16 @@ onMount(() => {
 </svelte:head>
 
 {#key darkmode_onoff}
-{#if birthdate==true}
-<div>
-    <Profile></Profile>
-    <div style="text-align:center"><h1> today is my birthday!</h1></div>
-</div>
-<p1>check : </p1><input type='checkbox' bind:value={birthdate}>
-{:else}
+<div id="header_div">
 
-<div id="header_div" islight={darkmode_onoff}>
-    <Header></Header>
 </div>
-<main islight={darkmode_onoff}>
-
-    <div id="blog" >
-        <Router routes={rout} />
+<main>
+    <div id="blog">
+        <p1>HI !</p1>
     </div>
     <!--간단한 형식으로 리모델링.-->
 </main>
-{/if}
-<footer islight={darkmode_onoff}>
+<footer>
     <div>
         <p1>
             Lutica's blog
