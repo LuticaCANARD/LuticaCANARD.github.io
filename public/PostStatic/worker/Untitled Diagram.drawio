@@ -1,0 +1,141 @@
+<mxfile host="app.diagrams.net" modified="2024-06-05T18:09:15.774Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="jobrRpuHO-U_6xZHQNj2" version="24.4.14" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1728" dy="915" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-44" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="30" y="60" width="800" height="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-5" value="UserPlay" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="70" y="90" width="280" height="540" as="geometry">
+            <mxRectangle x="140" y="90" width="90" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-12" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;UserPlay(bool)&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- 게임을 생성한다. 주어진 parameter가 true라면, Play시 마다 컴퓨터의 선 후공 결정에 관여한다.&lt;/font&gt;&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-5" vertex="1">
+          <mxGeometry y="30" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-6" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;setInput&lt;/font&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;- 유저의 입력을 받는 함수 (예외 처리 포함)&lt;br&gt;- Board의&amp;nbsp;setInput를 호출하여 Board에 말을 삽입함.&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-5" vertex="1">
+          <mxGeometry y="100" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-7" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Play&lt;/font&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- 선 후공 설정(UserPlay에 의해 정의)에 따라서, 유저의 입력을 받고,&amp;nbsp;isGameEnd()를 호출하여 게임에서 모두가 둘 수 없는 상황인지 확인한다.&lt;br&gt;&amp;lt;IF&amp;gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- 모두가 둘 수 없는 상황이면, 게임을 끝낸다.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- 유저만 둘 수 있는 상황이면, 컴퓨터는 예측을 하지 않고 유저에게 턴을 넘긴다. (둘의 처리는 같지만, 상위 main함수에서의 처리가 다르다.)&lt;br&gt;&amp;lt;END IF&amp;gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- 컴퓨터 선공이면 유저와 컴퓨터가 바뀐다.&lt;span style=&quot;background-color: initial;&quot;&gt;- 만약 컴퓨터가 둘 수 있는 상황이면,&amp;nbsp;predict를 통하여 컴퓨터가 둘 수 있는 최선의 수를 예측한다.&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- 그리고 예측된 최선의 수를 둔다.&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-5" vertex="1">
+          <mxGeometry y="170" width="280" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-8" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;getEnded&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- 게임이 끝났는지 확인한다.&lt;br&gt;- 이때, 보드에서 &quot;선 후공 모두가&quot; 더 이상의 수를 둘 수 없을 때 게임이 종료된 것으로 판단한다.&amp;nbsp;&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-5" vertex="1">
+          <mxGeometry y="360" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-9" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;getGameResult&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- 현재 게임의 결과를 return한다.&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-5" vertex="1">
+          <mxGeometry y="430" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-10" value="showBoard&lt;br&gt;- 보드를 보여준다." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-5" vertex="1">
+          <mxGeometry y="480" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-5" vertex="1">
+          <mxGeometry y="510" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.017;entryY=0.132;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="nndRhzMpZOMBTP4WqLoM-5" target="nndRhzMpZOMBTP4WqLoM-19" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="591.6000000000001" y="96.39999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.009;entryY=0.175;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="nndRhzMpZOMBTP4WqLoM-7" target="nndRhzMpZOMBTP4WqLoM-23" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-19" value="BoardDraw" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="570" y="90" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-20" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;draw&lt;/font&gt;&lt;br&gt;- 보드 기물들의 컴퓨터/유저 배치 상황을 불러와, 순회하며 표시한다." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-19" vertex="1">
+          <mxGeometry y="30" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-23" value="ComPlay" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="570" y="220" width="180" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-24" value="ComPlay(Board*)&lt;br&gt;- Board를 등록한 예언자를 만든다&lt;br&gt;- 가중치인 predictWeight를 생성한다. 이때 이 가중치는 보드의 크기별로 달라진다." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-23" vertex="1">
+          <mxGeometry y="30" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-25" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;predict&lt;/font&gt;&lt;br&gt;- 컴퓨터가 둘 수 있는 위치 중&amp;nbsp; 두었을 때 가장 유리한 위치를 추천해 준다.&lt;div&gt;- 이때, 가장 유리한 위치는 &quot;컴퓨터가 그 곳에 두었을 때, 컴퓨터의 가중치가 가장 높은 지점&quot; 을 의미한다.&amp;nbsp;&lt;br&gt;- 이 예측에는 멀티 스레딩을 활용하여 각 시나리오를 병렬 프로그래밍하였다.&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;(Async사용 : Threading은 스레드 풀 관리등의 오버헤드가 커서 패스함.)&lt;/font&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-23" vertex="1">
+          <mxGeometry y="150" width="180" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-27" value="BoardCheck" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="500" y="640" width="320" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-28" value="getUserScore&lt;br&gt;- 보드를 순회하며 유저 말의 갯수를 조사." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-27" vertex="1">
+          <mxGeometry y="30" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-32" value="getComputerScore&lt;br&gt;- 보드를 순회하며 컴퓨터 말의 개수를 조사" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-27" vertex="1">
+          <mxGeometry y="110" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-31" value="checkGameResult&lt;br&gt;- 게임이 끝났는지 확인하고, 게임이 끝났다면 유저 임장에서의 게임 결과를 return, 아니라면 진행중임을 return" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-27" vertex="1">
+          <mxGeometry y="170" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-36" value="isGameEnd&lt;br&gt;- 게임을 더 진행할 수 있는지 확인한다. 이때, 보드가 다 찼는지 확인하는한다.&lt;br&gt;&lt;br&gt;- 그다음, 보드를 통해 getCanSetListOnBoard를 호출하여 컴퓨터와 플레이어가 둘 수 있는 수의 갯수를 추출한다.&lt;br&gt;&lt;br&gt;- 만약 둘 다 둘 수 없다면 끝난 것으로, 아니라면 PASS를 준다.&lt;br&gt;&lt;br&gt;- 둘 다 둘 수 있다면 진행 가능하다는 BOTH를 줌으로서 게임을 진행시킨다." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-27" vertex="1">
+          <mxGeometry y="250" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-35" value="getCanSetListOnBoard&lt;br&gt;- 주어진 보드에서 둘 수 있는 모든 수를 조사하여 return&lt;br&gt;(그림 1 참조)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-27" vertex="1">
+          <mxGeometry y="440" width="320" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.002;entryY=0.065;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="nndRhzMpZOMBTP4WqLoM-7" target="nndRhzMpZOMBTP4WqLoM-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.007;entryY=0.461;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="nndRhzMpZOMBTP4WqLoM-8" target="nndRhzMpZOMBTP4WqLoM-36" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="800" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="400" y="485" />
+              <mxPoint x="400" y="982" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-45" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="840" y="60" width="280" height="730" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-39" value="Board" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="860" y="90" width="220" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-40" value="보드를 나타내는 Class&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- board : Piece*[][]로서, 현재 보드의 배치를 나타내는 프라이빗 변수이다.&amp;nbsp;&lt;br&gt;- size : 보드의 크기이다.&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-39" vertex="1">
+          <mxGeometry y="30" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-41" value="setInput(x,y,computer)&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- x,y지점에 배치할 수 있는지 확인한다.&lt;br&gt;- 이때, 그 지점에 배치 가능한지 확인하기 위해서, 주변에 적 기물이 있는지 확인한다.&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- 또한, 경계에서 벗어나는지도 확인하고, 그 자리에 이미 배치되어있는지도 확인한다.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- 만약 단 한 조건이라도 문제가 있다면, 그에 맞는 에러 코드를 return하고 끝냄.&lt;br&gt;- 그렇지 않다면, board에 배치하고, 그 이후 (별첨 2)에 있는 알고리즘에 따라서 아군과 아군 사이의 적 기물을 역전 시키는 &quot;기물 역전&quot; 연산을 수행함.&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-39" vertex="1">
+          <mxGeometry y="120" width="220" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="nndRhzMpZOMBTP4WqLoM-42" value="getPieceCode&lt;br&gt;- board에 접근하여 그 지점의 소유권을 return" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nndRhzMpZOMBTP4WqLoM-39" vertex="1">
+          <mxGeometry y="330" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BkWSzV101Hb2WlGDAGEn-3" value="searchCanSetInThisPoint&lt;br&gt;- 별첨 2에 따라서, &quot;기물 역전&quot;이 일어날 수 있는 배치인지 확인해주는 함수.&lt;div&gt;- true라면 최소 1개이상의 적 기물을 뒤집을 수 있다.&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nndRhzMpZOMBTP4WqLoM-39">
+          <mxGeometry y="390" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="BkWSzV101Hb2WlGDAGEn-1" value="getBoardInfo&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- 보드를 순회하면서 기물의 소유권을 확인하고 이것이 담긴 동적 배열을 반환&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nndRhzMpZOMBTP4WqLoM-39">
+          <mxGeometry y="480" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BkWSzV101Hb2WlGDAGEn-4" value="Pieces" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="860" y="650" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="BkWSzV101Hb2WlGDAGEn-5" value="- 기물을 표현&lt;br&gt;bool computer : true면 컴퓨터의 기물" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="BkWSzV101Hb2WlGDAGEn-4">
+          <mxGeometry y="30" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BkWSzV101Hb2WlGDAGEn-6" value="reverse : 기물을 뒤집는 역할" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="BkWSzV101Hb2WlGDAGEn-4">
+          <mxGeometry y="80" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BkWSzV101Hb2WlGDAGEn-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="nndRhzMpZOMBTP4WqLoM-41" target="BkWSzV101Hb2WlGDAGEn-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="315" />
+              <mxPoint x="1100" y="705" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BkWSzV101Hb2WlGDAGEn-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="BkWSzV101Hb2WlGDAGEn-10" target="nndRhzMpZOMBTP4WqLoM-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BkWSzV101Hb2WlGDAGEn-10" value="x,y,가중치가 저장된 DataAction" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="450" y="562" width="120" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="BkWSzV101Hb2WlGDAGEn-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="nndRhzMpZOMBTP4WqLoM-25" target="BkWSzV101Hb2WlGDAGEn-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
