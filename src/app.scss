@@ -3,8 +3,9 @@
 $mobile-decide-width:500px;
 $desktop-decide-width:501px;
 
-@use 'scss/darkmode.scss';
-@use 'scss/md.scss';
+@forward 'scss/darkmode.scss';
+@forward 'scss/md.scss';
+@forward 'scss/ui.scss';
 
 @media(max-width:$mobile-decide-width){
     
@@ -401,7 +402,7 @@ main
 //STACKS 
 
 .need_invert{
-  @include make_dark();
+  filter:var(--make_dark);
 }
 
 #stack_groups

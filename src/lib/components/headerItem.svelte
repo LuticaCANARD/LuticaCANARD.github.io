@@ -21,7 +21,7 @@
     }
 </style>
 {#if displayHeader && $isLoading === false }
-<div>
+<il>
     {#if displayHeader}
         <a href={displayHeader.url} use:link>
             <div>
@@ -29,5 +29,5 @@
             </div>
         </a>
     {/if}
-</div>
+</il>
 {/if}

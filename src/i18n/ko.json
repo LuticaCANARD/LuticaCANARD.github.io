@@ -3,5 +3,6 @@
     "error404" : "원하는 페이지를 찾을 수 없습니다.",
     "menu-home": "Home",
     "menu-about": "About",
-    "menu-contact": "Contact"
+    "menu-contact": "Contact",
+    "labname" : "루티카 연구소"
 }
