@@ -1,0 +1,100 @@
+
+@mixin whitemodetemplate(){
+    --background: rgb(200, 200, 200);
+    --fontcolor:rgb(0,0,0);
+    --make_dark:invert(0);
+    --card_background : rgb(190, 190, 190);
+    --postcard_background : rgb(190,190,190);
+    --sub_postcard_color : rgba(160,160,160,0.7);
+    --href_color:rgb(50,50,200);
+  }
+  @mixin darkmotemplate(){
+    --background: #171718;
+    --fontcolor:rgb(200, 200, 200);
+    --make_dark:invert(1);
+    --card_background : rgb(30, 30, 30);
+    --postcard_background : rgb(50,50,50);
+    --sub_postcard_color : rgba(40,40,40,0.7);
+    --href_color:rgb(149, 149, 194);
+  }
+  main[islight="dark"]{
+    @include darkmotemplate();
+  }
+  #header_div[islight="dark"]{
+    @include darkmotemplate();
+  }
+  footer[islight="dark"]{
+    @include darkmotemplate();
+    background: var(--background);
+    color: var(--fontcolor)
+  }
+  
+  main[islight="light"]{
+    @include whitemodetemplate();
+  }
+  #header_div[islight="light"]{
+    @include whitemodetemplate();
+  }
+  footer[islight="light"]{
+    @include whitemodetemplate();
+    background: var(--background);
+    color: var(--fontcolor)
+  
+  }
+  
+  .light{
+    @include whitemodetemplate();
+    background: var(--background);
+    
+  }
+  .dark{
+    @include darkmotemplate();
+    background: var(--background);
+  }
+  
+  
+  @mixin darkSide()
+  {
+    background:var(--background);
+    color:var( --fontcolor);
+  }
+  @mixin lightSide()
+  {
+    background:var(--background);
+    color: var(--fontcolor);
+  }
+  @mixin make_dark()
+  {
+    filter:var(--make_dark);
+  }
+  main{
+    @include darkSide();
+  } 
+  .navbar
+  {
+    @include darkSide();
+    
+  }
+  .mobile_navbar 
+  {
+    @include darkSide();
+  }
+  .navitem_m
+  {
+    @include darkSide();
+  }
+  .navitem
+  {
+    @include darkSide();
+  }
+  .container_m{
+    @include darkSide();
+  }
+  
+  
+  body
+  {
+    @include darkSide();
+    margin: 0%;
+    font-family:Arial, Helvetica, sans-serif;
+  }

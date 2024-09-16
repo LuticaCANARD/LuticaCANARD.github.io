@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "sass": "sass ./src/app.scss ./src/app.css",
-    "deploy":"node ./scripts/deploy_post.js"
+    "deploy": "node ./scripts/deploy_post.js"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.1.2",
@@ -23,6 +23,7 @@
     "katex": "^0.16.11",
     "sass": "^1.78.0",
     "scss": "^0.2.4",
+    "svelte-i18n": "^4.0.0",
     "svelte-katex": "^0.1.2",
     "svelte-markdown": "^0.4.1",
     "svelte-prism": "^1.1.6",
