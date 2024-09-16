@@ -1,4 +1,7 @@
 {
     "main-title": "Bar of Lutica",
-    "error404" : "404 Not Found"
+    "error404" : "404 Not Found",
+    "menu-home": "Home",
+    "menu-about": "About",
+    "menu-contact": "Contact"
 }

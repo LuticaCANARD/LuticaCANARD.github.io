@@ -1,4 +1,7 @@
 {
     "main-title": "Bar of Lutica",
-    "error404" : "원하는 페이지를 찾을 수 없습니다."
+    "error404" : "원하는 페이지를 찾을 수 없습니다.",
+    "menu-home": "Home",
+    "menu-about": "About",
+    "menu-contact": "Contact"
 }

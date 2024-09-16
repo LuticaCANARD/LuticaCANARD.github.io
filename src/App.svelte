@@ -7,7 +7,7 @@ import { darkmode } from './store.js';
 import Header from './lib/global/header.svelte';
 import routes from './lib/routers/route.js';
 import Footer from './lib/global/footer.svelte';
-import('./i18n.js');
+import i18nInit from './i18n.js';
 import { _  as i18,isLoading } from 'svelte-i18n'
 
 // 다크모드 선호 조사.
@@ -48,23 +48,34 @@ function changeTheme() {
 }
 import { params } from "svelte-spa-router";
 const id = params
-
-let postmode;
+let loaded = false;
 let url = ``;
+let startLoad = false;
+i18nInit();
+isLoading.subscribe((loading) => {
+    if(loading === true){
+        console.log("loading")
+        startLoad = true;
+    }
+    if(loading === false && startLoad === true){
+        console.log("loading2")
+        loaded = true;
+    }
+})
 onMount(() => {
     
 });
-
-
 
 </script>
 <svelte:head>
     <title>Lutica's bar</title>
 </svelte:head>
-{#if $isLoading}
-    <div>Loading...</div>
+{#if $isLoading === true}
+    <div>
+        <p1>Loading...</p1>
+    </div>
 {:else}
-    {#key darkmode_onoff}
+    {#key loaded}
     <Header/>
     <main>
         <Router routes={routes}/>
