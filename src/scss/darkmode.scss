@@ -1,36 +1,35 @@
-
 @mixin white_mode_template(){
-    --background: rgb(200, 200, 200);
-    --font-color:rgb(0,0,0);
-    --make-dark:invert(0);
-    --card-background : rgb(190, 190, 190);
-    --postcard-background : rgb(190,190,190);
-    --sub-postcard-color : rgba(160,160,160,0.7);
-    --href-color:rgb(50,50,200);
-  }
-  @mixin dark_mode_template(){
-    --background: #171718;
-    --font-color:rgb(200, 200, 200);
-    --make-dark:invert(1);
-    --card-background : rgb(30, 30, 30);
-    --postcard-background : rgb(50,50,50);
-    --sub-postcard-color : rgba(40,40,40,0.7);
-    --href-color:rgb(149, 149, 194);
-  }
-  body[is_light="dark"]{
-    @include dark_mode_template();
-    color: var(--font-color);
-    background: var(--background);
-  }
-  #header_div[is_light="dark"]{
-    @include dark_mode_template();
-  }
-  footer[is_light="dark"]{
-    @include dark_mode_template();
-    background: var(--background);
-    color: var(--font-color)
-  }
-  
-  body[is_light="light"]{
-    @include white_mode_template();
-  }
+  --background: rgb(200, 200, 200);
+  --font-color:rgb(0,0,0);
+  --make-dark:invert(0);
+  --card-background : rgb(190, 190, 190);
+  --postcard-background : rgb(190,190,190);
+  --sub-postcard-color : rgba(160,160,160,0.7);
+  --href-color:rgb(50,50,200);
+}
+@mixin dark_mode_template(){
+  --background: #171718;
+  --font-color:rgb(200, 200, 200);
+  --make-dark:invert(1);
+  --card-background : rgb(30, 30, 30);
+  --postcard-background : rgb(50,50,50);
+  --sub-postcard-color : rgba(40,40,40,0.7);
+  --href-color:rgb(149, 149, 194);
+}
+body[is_light="dark"]{
+  @include dark_mode_template();
+  color: var(--font-color);
+  background: var(--background);
+}
+#header_div[is_light="dark"]{
+  @include dark_mode_template();
+}
+footer[is_light="dark"]{
+  @include dark_mode_template();
+  background: var(--background);
+  color: var(--font-color)
+}
+
+body[is_light="light"]{
+  @include white_mode_template();
+}
