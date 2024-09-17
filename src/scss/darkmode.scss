@@ -1,5 +1,5 @@
 
-@mixin whitemodetemplate(){
+@mixin white_mode_template(){
     --background: rgb(200, 200, 200);
     --fontcolor:rgb(0,0,0);
     --make_dark:invert(0);
@@ -7,8 +7,10 @@
     --postcard_background : rgb(190,190,190);
     --sub_postcard_color : rgba(160,160,160,0.7);
     --href_color:rgb(50,50,200);
+    --dark-back-ground:rgba(250,250,250,1);
+    --dark-text:rgba(22,22,22,1);
   }
-  @mixin darkmotemplate(){
+  @mixin dark_mode_template(){
     --background: #171718;
     --fontcolor:rgb(200, 200, 200);
     --make_dark:invert(1);
@@ -16,85 +18,21 @@
     --postcard_background : rgb(50,50,50);
     --sub_postcard_color : rgba(40,40,40,0.7);
     --href_color:rgb(149, 149, 194);
+    --dark-back-ground:rgba(22,22,22,1);
+    --dark-text:rgba(250,250,250,1);;
   }
-  main[islight="dark"]{
-    @include darkmotemplate();
+  body[is_light="dark"]{
+    @include dark_mode_template();
   }
-  #header_div[islight="dark"]{
-    @include darkmotemplate();
+  #header_div[is_light="dark"]{
+    @include dark_mode_template();
   }
-  footer[islight="dark"]{
-    @include darkmotemplate();
+  footer[is_light="dark"]{
+    @include dark_mode_template();
     background: var(--background);
     color: var(--fontcolor)
   }
   
-  main[islight="light"]{
-    @include whitemodetemplate();
-  }
-  #header_div[islight="light"]{
-    @include whitemodetemplate();
-  }
-  footer[islight="light"]{
-    @include whitemodetemplate();
-    background: var(--background);
-    color: var(--fontcolor)
-  
-  }
-  
-  .light{
-    @include whitemodetemplate();
-    background: var(--background);
-    
-  }
-  .dark{
-    @include darkmotemplate();
-    background: var(--background);
-  }
-  
-  
-  @mixin darkSide()
-  {
-    background:var(--background);
-    color:var( --fontcolor);
-  }
-  @mixin lightSide()
-  {
-    background:var(--background);
-    color: var(--fontcolor);
-  }
-  @mixin make_dark()
-  {
-    filter:var(--make_dark);
-  }
-  main{
-    @include darkSide();
-  } 
-  .navbar
-  {
-    @include darkSide();
-    
-  }
-  .mobile_navbar 
-  {
-    @include darkSide();
-  }
-  .navitem_m
-  {
-    @include darkSide();
-  }
-  .navitem
-  {
-    @include darkSide();
-  }
-  .container_m{
-    @include darkSide();
-  }
-  
-  
-  body
-  {
-    @include darkSide();
-    margin: 0%;
-    font-family:Arial, Helvetica, sans-serif;
+  body[is_light="light"]{
+    @include white_mode_template();
   }
