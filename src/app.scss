@@ -161,7 +161,7 @@ main
     padding:10px;
     width:50%;
     border-radius: 5px;
-    background-color: var(--sub_postcard_color);
+    background-color: var(--sub-postcard-color);
     display: flex;
     .card__pic
     {
@@ -221,7 +221,7 @@ main
   flex-direction:column;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: var(--postcard_background);
+  background-color: var(--postcard-background);
   margin-top: 25px;
   margin-bottom: 25px;
   border-radius: 15px 15px 4px 4px;
@@ -241,7 +241,7 @@ main
 }
 .article_type
 {
-  background-color: var(--postcard_background);
+  background-color: var(--postcard-background);
   @media (max-width:1230px)
   {
     margin: 1% unquote("calc(max(10%,5px) - 15px)");
@@ -402,7 +402,7 @@ main
 //STACKS 
 
 .need_invert{
-  filter:var(--make_dark);
+  filter:var(--make-dark);
 }
 
 #stack_groups
@@ -428,7 +428,7 @@ main
   height: 60px;
   margin: 10px;
   padding: 5px;
-  background-color: var(--card_background);
+  background-color: var(--card-background);
   border-radius : 20px;
 }
 .stack{

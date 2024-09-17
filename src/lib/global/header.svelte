@@ -27,7 +27,7 @@
         color: white;
         padding-right: 1rem;
         padding-left: 1rem;
-        padding-bottom: 1rem;
+        padding-bottom: 0.1rem;
         padding-top: 0.1rem;
         text-align: center;
         font-size: 1.5rem;
@@ -36,13 +36,13 @@
         max-width: 1500px;
         margin: auto;
     }
-    
+    header{
+        border-bottom: white 1px solid;
+    }
     header div {
         display: inline-block;
     }
-    header div:hover {
-        cursor: pointer;
-    }
+    
     nav>ul{
         display: flex;
         justify-content: space-around;
@@ -53,7 +53,6 @@
         display: flex;
         align-items: center;
         width: 50%;
-        
     }
     #logo img {
         max-width: 100px;
@@ -61,7 +60,7 @@
     }
     #logo h2 {
         margin-left: 1.1rem;
-        color:var(--dark-text);
+        color:var(--font-color);
     }
     ul{
         margin: 0;

@@ -6,7 +6,7 @@
         width: auto;
     }
     .prettyprinted{
-        background: var(--card_background);
+        background: var(--card-background);
         border :  gray 1px solid;
         padding:25px 5px;
         overflow: scroll;
@@ -42,7 +42,7 @@
         height: 100%;
     }
     a{
-        color: var(--href_color);
+        color: var(--href-color);
     }
 }
 .prettyprinted::-webkit-scrollbar {
@@ -66,7 +66,7 @@
 #document blockquote{
     margin-left: 20px;
     padding: 3px min(15px,1%);
-    background-color: var(--sub_postcard_color);
+    background-color: var(--sub-postcard-color);
     border-left: rgba(0, 0, 0, 1) 5px solid;
 }
 //math

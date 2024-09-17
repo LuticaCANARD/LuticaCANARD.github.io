@@ -13,9 +13,12 @@ import { params } from "svelte-spa-router";
 
 // 다크모드 선호 조사.
 let prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-let darkmode_onoff = prefersDarkMode ? "dark":"light"
 
 
+// root에 다크모드 적용
+function changeTheme() {
+    document.body.setAttribute('is_light',prefersDarkMode ? "dark":"light")
+}
 // 다크모드 변경시 이벤트
 darkmode.subscribe((darkmode) => { 
     if(darkmode==undefined){
@@ -26,32 +29,7 @@ darkmode.subscribe((darkmode) => {
     }
     changeTheme()
 })
-
-// root에 다크모드 적용
-function changeTheme() {
-    if (prefersDarkMode) 
-    {
-        // Dark mode on
-        document.body.style.background = '#171718';
-        document.body.style.color = 'white';
-        document.body.style.setProperty('--dark-back-ground', 'rdba(22,22,22,1)')
-        document.body.style.setProperty('--dark-text', 'rgba(250,250,250,1)')
-        document.body.setAttribute('is_light',"dark")
-    }
-    else
-    {
-        // Dark mode off
-        document.body.style.background = 'rgb(200, 200, 200)'
-        document.body.style.color = 'black'
-        document.body.style.setProperty('--dark-back-ground', 'rgba(250,250,250,1)')
-        document.body.style.setProperty('--dark-text', 'rdba(22,22,22,1)')
-        document.body.setAttribute('is_light',"light")
-    }
-    darkmode_onoff = prefersDarkMode ? "dark":"light"
-}
-const id = params
 let loaded = false;
-let url = ``;
 let startLoad = false;
 i18nInit();
 isLoading.subscribe((loading) => {

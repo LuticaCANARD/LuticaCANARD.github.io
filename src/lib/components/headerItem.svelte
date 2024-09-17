@@ -18,8 +18,11 @@
 
 <style lang="scss">
     a{
-        color:var(--dark-text);
+        color:var(--font-color);
         text-decoration: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
     il{
         display: flex;
