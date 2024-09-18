@@ -42,7 +42,6 @@
 
         <SpringImage 
             imageSettings={{src:'/img/introduce/metabus_intro.png',alt:'metabus',style:'',class:'',curve:(s)=>{
-
                 return {
                     x:s > 0 ? 0 : s,
                     y:0
