@@ -1,7 +1,13 @@
+@use "./utils/variables.scss" as *;
 .linknone{
   text-decoration: none;
 }
 main{
   display: block;
   min-height: 80vh;
+  max-width: $max-blog-width;
+  margin: auto;
+}
+body{
+  --main-max-width: #{$max-blog-width};
 }

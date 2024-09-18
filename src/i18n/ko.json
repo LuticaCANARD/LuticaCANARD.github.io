@@ -12,6 +12,9 @@
         },
         "contact": "Contact"
     },
+    "settings":{
+        "darkMode" : "다크 모드"
+    },
     "about-me" : {
         "title" : "About Me",
         "p1" : "I am a software engineer with a passion for AI, web development."

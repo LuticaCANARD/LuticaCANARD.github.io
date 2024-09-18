@@ -15,6 +15,10 @@
         "contact": {
             "main":"Contact"
         }
+        
+    },
+    "settings":{
+        "darkMode" : "Dark Mode"
     },
     "about-me" : {
         "title" : "About Me",

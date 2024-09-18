@@ -25,11 +25,13 @@
         font-size: 1.5rem;
         display: flex;
         justify-content: space-between;
-        max-width: 1500px;
+        max-width: var(--main-max-width);
         margin: auto;
     }
     header{
         border-bottom: white 1px solid;
+        max-width: var(--main-max-width);
+        margin: auto;
     }
     header div {
         display: inline-block;

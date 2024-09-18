@@ -7,7 +7,7 @@
     }
     onMount(() => {
         darkMode.subscribe((val)=>{
-            
+
         })
     })
 </script>
@@ -17,5 +17,5 @@
 </style>
 
 <div>
-    <button on:click={setDarkMode}>{$i18n('menu.darkMode')}</button>
+    <button on:click={setDarkMode}>{$i18n('settings.darkMode')}</button>
 </div>
