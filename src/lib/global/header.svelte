@@ -1,5 +1,4 @@
 <script>
-    import { darkmode } from '../../store.js';
     import { onMount } from 'svelte';
     import LangChoice from '../components/langChoice.svelte';
     import { _ as i18,isLoading } from 'svelte-i18n'
@@ -11,10 +10,6 @@
                 {name : "menu-about", url : "/about", icon : "info"},
                 {name : "menu-contact", url : "/contact", icon : "contact_mail"},
             ]
-    $: isDarkMode = false;
-    darkmode.subscribe(value => {
-        isDarkMode = value;
-    })
     $: innerW = 0; 
     onMount(()=>{
         

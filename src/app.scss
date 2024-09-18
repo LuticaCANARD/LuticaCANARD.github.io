@@ -5,10 +5,10 @@
 @forward 'scss/ui.scss';
 @forward 'scss/footer.scss';
 
-@media(max-width:$mobile-decide-width){
+@media(max-width:$mobile-max-width){
     
 }
-@media(min-width:$desktop-decide-width){
+@media(min-width:$desktop-min-width){
     
 }
 
@@ -49,7 +49,7 @@
     display: none; /* Chrome, Safari, Opera*/
 }
 
-@media(max-width:$mobile-decide-width)
+@media(max-width:$mobile-max-width)
 {
   .navbar
   {
@@ -63,7 +63,7 @@
     display: none; /* Chrome, Safari, Opera*/
   }
 }
-@media(min-width:$desktop-decide-width)
+@media(min-width:$desktop-min-width)
 {
   .navbar
   {
@@ -297,10 +297,10 @@ main
   display: flex;
   border-right: gray 1px solid;
   align-items: center;
-  @media (min-width:$mobile-decide-width) {
+  @media (min-width:$mobile-max-width) {
     width:min(19.5vw, 200px);
   }
-  @media (max-width:$desktop-decide-width) {
+  @media (max-width:$desktop-min-width) {
     width:100%;
     border-bottom: gray 1px solid;
   }
@@ -316,11 +316,11 @@ main
   justify-content: center;
   border: 1px gray solid;
 
-  @media (min-width:$desktop-decide-width) {
+  @media (min-width:$desktop-min-width) {
     width:min(1000px,90vw);
     flex-direction: row; 
   }
-  @media (max-width:$mobile-decide-width) {
+  @media (max-width:$mobile-max-width) {
     width:90vw;
     flex-direction: column; 
     
@@ -328,11 +328,11 @@ main
 }
 .project_desc_
 {
-  @media (min-width:$desktop-decide-width) {
+  @media (min-width:$desktop-min-width) {
     width:min(80vw, 800px);
 
   }
-  @media (max-width:$mobile-decide-width) {
+  @media (max-width:$mobile-max-width) {
     width:100%;
 
   }
