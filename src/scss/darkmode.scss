@@ -6,6 +6,7 @@
   --postcard-background : rgb(190,190,190);
   --sub-postcard-color : rgba(160,160,160,0.7);
   --href-color:rgb(50,50,200);
+  --background-hover : rgba(50,50,50,0.3);
 }
 @mixin dark_mode_template(){
   --background: #171718;
@@ -15,6 +16,7 @@
   --postcard-background : rgb(50,50,50);
   --sub-postcard-color : rgba(40,40,40,0.7);
   --href-color:rgb(149, 149, 194);
+  --background-hover : rgba(160, 160, 160, 0.3);
 }
 body[is_light="dark"]{
   @include dark_mode_template();

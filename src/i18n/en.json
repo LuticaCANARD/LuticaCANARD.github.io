@@ -1,8 +1,23 @@
 {
-    "main-title": "Bar of Lutica",
+    "main-title": "Lutica Lab",
     "error404" : "404 Not Found",
-    "menu-home": "Home",
-    "menu-about": "About",
-    "menu-contact": "Contact",
-    "labname" : "Lutica Lab"
+    "menus":{
+        "home": {
+            "main":"Home"
+        },
+        "about": {
+            "AIData" : "AI&Data",
+            "metabus" : "Metabus",
+            "web" : "Web",
+            "network" : "Network",
+            "main": "About Me"
+        },
+        "contact": {
+            "main":"Contact"
+        }
+    },
+    "about-me" : {
+        "title" : "About Me",
+        "p1" : "I am a software engineer with a passion for AI, web development."
+    }
 }

@@ -1,0 +1,23 @@
+[
+    {
+        "name" : "home", "url" : "/", "icon" : "home", "tabindex" : 1,
+        "submenus":[
+
+        ]
+    },
+    {
+        "name" : "about", "url" : "/about", "icon" : "info", "tabindex" : 2,
+        "submenus":[
+            {"name" : "metabus", "url" : "/about/metabus"},
+            {"name" : "AIData", "url" : "/about/AIData"},
+            {"name" : "web", "url" : "/about/web"},
+            {"name" : "network", "url" : "/about/network"}
+        ]
+    },
+    {
+        "name" : "contact", "url" : "/contact", "icon" : "contact_mail", "tabindex" : 3,
+        "submenus":[
+
+        ]
+    }
+]

@@ -16,7 +16,7 @@ onMount(() => {
 
 </script>
 <svelte:head>
-    <title>Lutica's bar</title>
+    <title>{$i18('main-title')}</title>
 </svelte:head>
 {#if $isLoading === true}
     <div>

@@ -2,14 +2,11 @@
     import { onMount } from 'svelte';
     import LangChoice from '../components/langChoice.svelte';
     import { _ as i18,isLoading } from 'svelte-i18n'
-    import HeaderItem from '../components/headerItem.svelte';
+    import HeaderItem from '../components/header/headerItem.svelte';
+    import HeaderData from '../../assets/headerMenus.json';
     import { link } from 'svelte-spa-router'
     import { MOBILE_HEADER_WIDTH } from '../../constants.js'
-    const menu = [
-                {name : "menu-home", url : "/", icon : "home"},
-                {name : "menu-about", url : "/about", icon : "info"},
-                {name : "menu-contact", url : "/contact", icon : "contact_mail"},
-            ]
+    const menu = HeaderData;
     $: innerW = 0; 
     onMount(()=>{
         
@@ -74,7 +71,7 @@
                 <img src="/img/logo/logo.png" alt="logo of Lutica Lab">
             </a>
             <a href="/" use:link class="linknone">
-                <h2 class="linknone">{$i18('labname')}</h2>
+                <h2 class="linknone">{$i18('main-title')}</h2>
             </a>
         </div>
         <ul>
@@ -91,7 +88,7 @@
         </a>
         {#if innerW > 200}
         <a href="/" use:link class="linknone">
-            <h2 class="linknone">{$i18('labname')}</h2>
+            <h2 class="linknone">{$i18('main-title')}</h2>
         </a>
         {/if}
         {#if innerW > 250}
