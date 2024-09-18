@@ -54,7 +54,7 @@
                 <div class="header-item-parent">
                     <span>{menu.name}</span>
                     {#if menu.submenus.length > 0}
-                    <button on:click|preventDefault={() => submenu_on = !submenu_on}>+</button>
+                    <button on:click|preventDefault|stopPropagation={() => submenu_on = !submenu_on}>+</button>
                     {/if}
                 </div>
             </a>
