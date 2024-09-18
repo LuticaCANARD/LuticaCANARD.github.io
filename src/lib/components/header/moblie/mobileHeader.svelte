@@ -1,4 +1,7 @@
 <script>
+  import { link } from "svelte-spa-router"
+  import MobileSubmenu from "./mobileSubmenu.svelte"
+
     
     /**@type {{
             name: string;
@@ -13,6 +16,9 @@
     * 
     */
     export let menuInfo;
+
+    $: submenu_on = false;
+
 </script>
 
 <style lang="scss">
@@ -44,12 +50,17 @@
 <div class="bg-all">
     <div class="bg-mobile-menu">
         {#each menuInfo as menu}
-            <a href={menu.url} tabindex={menu.tabindex}>
+            <a href={menu.url} tabindex={menu.tabindex} use:link>
                 <div class="header-item-parent">
-                    <img src={menu.icon} alt={menu.name} />
                     <span>{menu.name}</span>
+                    {#if menu.submenus.length > 0}
+                    <button on:click|preventDefault|stopPropagation={() => submenu_on = !submenu_on}>+</button>
+                    {/if}
                 </div>
             </a>
+            {#if submenu_on}
+                <MobileSubmenu submenus={menu.submenus}/>
+            {/if}
         {/each}
     </div>
 </div>

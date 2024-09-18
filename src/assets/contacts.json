@@ -26,6 +26,12 @@
             "desc" : "VRCHAT",
             "need_invert" : true,
             "other_link" : true
+        },
+        {
+            "link" : "https://velog.io/@presan100/posts",
+            "imglink" :"GITHUB/Black",
+            "desc" : "Velog",
+            "need_invert" : true
         }
     ]
 }
