@@ -3,12 +3,16 @@
         {
             "link" : "https://twitter.com/presan100",
             "imglink" :"X/Black",
-            "desc" : "Twitter"
+            "desc" : "Twitter / X",
+            "need_invert" : true
+
         },
         {
             "link" : "https://twitter.com/presan100_VRC",
             "imglink" :"X/Black",
-            "desc" : "Twitter (VRC)"
+            "desc" : "Twitter / X (VRC)",
+            "need_invert" : true
+
         },
         {
             "link" : "https://github.com/LuticaCANARD",
