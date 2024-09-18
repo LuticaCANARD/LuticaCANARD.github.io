@@ -2,13 +2,17 @@
     "body":[
         {
             "link" : "https://twitter.com/presan100",
-            "imglink" :"Twitter/Black",
-            "desc" : "Twitter"
+            "imglink" :"X/Black",
+            "desc" : "Twitter / X",
+            "need_invert" : true
+
         },
         {
             "link" : "https://twitter.com/presan100_VRC",
-            "imglink" :"Twitter/Black",
-            "desc" : "Twitter (VRC)"
+            "imglink" :"X/Black",
+            "desc" : "Twitter / X (VRC)",
+            "need_invert" : true
+
         },
         {
             "link" : "https://github.com/LuticaCANARD",
@@ -21,8 +25,7 @@
             "imglink" :"https://logos-world.net/wp-content/uploads/2021/04/VRChat-Emblem.png",
             "desc" : "VRCHAT",
             "need_invert" : true,
-            "otherlink" : true
+            "other_link" : true
         }
-
     ]
 }

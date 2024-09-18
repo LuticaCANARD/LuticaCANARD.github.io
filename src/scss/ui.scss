@@ -1,0 +1,27 @@
+@use "./utils/variables.scss" as *;
+.linknone{
+  text-decoration: none;
+}
+main{
+  display: block;
+  min-height: 80vh;
+  //max-width: $max-blog-width;
+  margin: auto;
+}
+body{
+  --main-max-width: #{$max-blog-width};
+  --mobile-max-width: #{$mobile-max-width};
+  --desktop-min-width: #{$desktop-min-width};
+  margin: 0;
+}
+.do-not-display-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+.do-not-display-scroll-bar {
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+.main-class{
+  max-width:var(--main-max-width);
+  margin: auto;
+}

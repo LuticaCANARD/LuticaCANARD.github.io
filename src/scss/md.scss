@@ -1,0 +1,78 @@
+//DOCUMENT
+#document{
+    img{
+        
+        max-width: 100%;
+        width: auto;
+    }
+    .prettyprinted{
+        background: var(--card-background);
+        border :  gray 1px solid;
+        padding:25px 5px;
+        overflow: scroll;
+        
+        code{
+            @mixin setCodeColor($white_color,$dark_color)
+            {
+                @media (prefers-color-scheme: dark) {
+                    color:$dark_color ;
+                    
+                }
+                @media (prefers-color-scheme: light) {
+                    color: $white_color;
+                }
+            }
+            /*.kwd{
+            @include setCodeColor(rgb(0, 54, 105),rgb(88, 138, 204))
+            }*/
+            .pln{
+                @include setCodeColor(rgb(204, 156, 0),rgb(255, 252, 77))
+            }
+            /*.str{
+            @include setCodeColor(rgb(90, 77, 0),rgb(161, 119, 64))
+            }
+            .pun{
+            @include setCodeColor(rgb(0, 0, 0),rgb(255, 255, 255))
+            }
+            */
+        }
+    }
+    iframe{
+        width:100%;
+        height: 100%;
+    }
+    a{
+        color: var(--href-color);
+    }
+}
+.prettyprinted::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+//COMENT
+.comment{
+    position: relative;
+}
+.utterances-frame{
+}
+.comment_warp{
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+//MARKDOWN
+
+//blockquote
+#document blockquote{
+    margin-left: 20px;
+    padding: 3px min(15px,1%);
+    background-color: var(--sub-postcard-color);
+    border-left: rgba(0, 0, 0, 1) 5px solid;
+}
+//math
+.katex-html{
+    display: none;
+}
+.katex{
+    white-space: pre-wrap !important;
+}

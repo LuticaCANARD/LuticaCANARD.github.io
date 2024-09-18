@@ -1,0 +1,52 @@
+{
+    "main-title": "Lutica Lab",
+    "error404" : "원하는 페이지를 찾을 수 없습니다.",
+    "menus":{
+        "home": {
+            "main":"메인"
+        },
+        "about": {
+            "AIData" : "AI Data",
+            "metabus" : "Metabus",
+            "web" : "Web",
+            "network" : "Network",
+            "about": "About Me",
+            "main" : "소개"
+        },
+        "contact": {
+            "main":"연락처"
+        }
+    },
+    "settings":{
+        "darkMode" : "다크 모드"
+    },
+    "about-me" : {
+        "title" : "Lutica에 대해",
+        "p1" : "저는 AI, 웹 개발에 열정을 가진 소프트웨어 엔지니어입니다."
+    },
+    "about":{
+        "metabus":{
+            "title":"Beyond Virtual, Beyond Real",
+            "subtitle": "Metabus",
+            "p1":{
+                "title":"메타버스",
+                "content":"메타버스는 가상과 현실을 넘어서는 새로운 세계입니다."
+            }
+        },
+        "network":{
+            "title":"Network, Connecting To Everything",
+            "p1":"Network"
+        },
+        "web":{
+            "title":"모두를 위한 웹",
+            "p1":"Web"
+        },
+        "ai":{
+            "title":"숨겨진 데이터에서 찾는 비전",
+            "p1":"AI & Data"
+        }
+    },
+    "contact":{
+        "toemail" : "이메일로 연락하기"
+    }
+}

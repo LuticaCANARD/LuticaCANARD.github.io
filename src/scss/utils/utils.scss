@@ -1,0 +1,9 @@
+
+@forward './variables.scss';
+.need_invert{
+    filter:var(--make-dark);
+}
+.pointer
+{
+    cursor: pointer;
+}

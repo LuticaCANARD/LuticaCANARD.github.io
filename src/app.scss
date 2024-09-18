@@ -1,116 +1,20 @@
 
-$mobile-decide-width:500px;
-$desktop-decide-width:501px;
+@use 'scss/utils/variables.scss' as *;
+@forward 'scss/darkmode.scss';
+@forward 'scss/md.scss';
+@forward 'scss/ui.scss';
+@forward 'scss/footer.scss';
+@forward 'scss/utils/utils.scss';
 
-@mixin whitemodetemplate(){
-  --background: rgb(200, 200, 200);
-  --fontcolor:rgb(0,0,0);
-  --make_dark:invert(0);
-  --card_background : rgb(190, 190, 190);
-  --postcard_background : rgb(190,190,190);
-  --sub_postcard_color : rgba(160,160,160,0.7);
-  --href_color:rgb(50,50,200);
-}
-@mixin darkmotemplate(){
-  --background: #171718;
-  --fontcolor:rgb(200, 200, 200);
-  --make_dark:invert(1);
-  --card_background : rgb(30, 30, 30);
-  --postcard_background : rgb(50,50,50);
-  --sub_postcard_color : rgba(40,40,40,0.7);
-  --href_color:rgb(149, 149, 194);
-}
-main[islight="dark"]{
-  @include darkmotemplate();
-}
-#header_div[islight="dark"]{
-  @include darkmotemplate();
-}
-footer[islight="dark"]{
-  @include darkmotemplate();
-  background: var(--background);
-  color: var(--fontcolor)
-}
-
-main[islight="light"]{
-  @include whitemodetemplate();
-}
-#header_div[islight="light"]{
-  @include whitemodetemplate();
-}
-footer[islight="light"]{
-  @include whitemodetemplate();
-  background: var(--background);
-  color: var(--fontcolor)
-
-}
-
-.light{
-  @include whitemodetemplate();
-  background: var(--background);
-  
-}
-.dark{
-  @include darkmotemplate();
-  background: var(--background);
-}
-
-
-@mixin darkSide()
-{
-  background:var(--background);
-  color:var( --fontcolor);
-}
-@mixin lightSide()
-{
-  background:var(--background);
-  color: var(--fontcolor);
-}
-@mixin make_dark()
-{
-  filter:var(--make_dark);
-}
-main{
-  @include darkSide();
-} 
-.navbar
-{
-  @include darkSide();
-  
-}
-.mobile_navbar 
-{
-  @include darkSide();
-}
-.navitem_m
-{
-  @include darkSide();
-}
-.navitem
-{
-  @include darkSide();
-}
-.container_m{
-  @include darkSide();
-}
-
-
-body
-{
-  @include darkSide();
-  margin: 0%;
-  font-family:Arial, Helvetica, sans-serif;
-}
-
-@media(max-width:$mobile-decide-width){
+@media(max-width:$mobile-max-width){
     
 }
-@media(min-width:$desktop-decide-width){
+@media(min-width:$desktop-min-width){
     
 }
+
 .navbar
 {
- 
   display: flex;
   position: fixed;
   width:100%;
@@ -146,7 +50,7 @@ body
     display: none; /* Chrome, Safari, Opera*/
 }
 
-@media(max-width:$mobile-decide-width)
+@media(max-width:$mobile-max-width)
 {
   .navbar
   {
@@ -160,7 +64,7 @@ body
     display: none; /* Chrome, Safari, Opera*/
   }
 }
-@media(min-width:$desktop-decide-width)
+@media(min-width:$desktop-min-width)
 {
   .navbar
   {
@@ -227,10 +131,7 @@ main
 {
   position:relative;
 }
-.pointer
-{
-  cursor: pointer;
-}
+
 //POST CARDS
 .card_a{
   text-decoration: none;
@@ -256,7 +157,7 @@ main
     padding:10px;
     width:50%;
     border-radius: 5px;
-    background-color: var(--sub_postcard_color);
+    background-color: var(--sub-postcard-color);
     display: flex;
     .card__pic
     {
@@ -288,24 +189,6 @@ main
   width:100%;
 
 }
-.post_category{
-
-}
-.post_category_init{
-
-}
-.post_category_open{
-
-}
-.post_category_closed{
-  
-}
-.big_category_closed{
-  
-}
-.big_category_opened{
-  
-}
 .category_title_name{
   width: calc(100% - 80px);
   word-break: break-all;
@@ -316,7 +199,7 @@ main
   flex-direction:column;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: var(--postcard_background);
+  background-color: var(--postcard-background);
   margin-top: 25px;
   margin-bottom: 25px;
   border-radius: 15px 15px 4px 4px;
@@ -336,7 +219,10 @@ main
 }
 .article_type
 {
-  background-color: var(--postcard_background);
+  background-color: var(--postcard-background);
+  height:100%;
+  padding: 15px;
+  border-radius: 15px;
   @media (max-width:1230px)
   {
     margin: 1% unquote("calc(max(10%,5px) - 15px)");
@@ -348,9 +234,7 @@ main
     width:1000px;
   }
   
-  height:100%;
-  padding: 15px;
-  border-radius: 15px;
+
 }
 
 // PROFILE 
@@ -388,48 +272,47 @@ main
 }
 .history_element_name
 {
-  @media (min-width:$mobile-decide-width) {
-    width:min(19.5vw, 200px);
-  }
-  @media (max-width:$desktop-decide-width) {
-    width:100%;
-    border-bottom: gray 1px solid;
-  }
   justify-content: center;
-
   min-width: 50px;
   display: flex;
   border-right: gray 1px solid;
   align-items: center;
+  @media (min-width:$mobile-max-width) {
+    width:min(19.5vw, 200px);
+  }
+  @media (max-width:$desktop-min-width) {
+    width:100%;
+    border-bottom: gray 1px solid;
+  }
 }
 .history_element_name_text
 {
- 
   margin: 10px;
   word-break:break-all;
 }
 .proj_war
 {
-  @media (min-width:$desktop-decide-width) {
+  display: flex;
+  justify-content: center;
+  border: 1px gray solid;
+
+  @media (min-width:$desktop-min-width) {
     width:min(1000px,90vw);
     flex-direction: row; 
   }
-  @media (max-width:$mobile-decide-width) {
+  @media (max-width:$mobile-max-width) {
     width:90vw;
     flex-direction: column; 
     
   }
-  display: flex;
-  justify-content: center;
-  border: 1px gray solid;
 }
 .project_desc_
 {
-  @media (min-width:$desktop-decide-width) {
+  @media (min-width:$desktop-min-width) {
     width:min(80vw, 800px);
 
   }
-  @media (max-width:$mobile-decide-width) {
+  @media (max-width:$mobile-max-width) {
     width:100%;
 
   }
@@ -496,10 +379,6 @@ main
 
 //STACKS 
 
-.need_invert{
-  @include make_dark();
-}
-
 #stack_groups
 {
   display: flex;
@@ -523,7 +402,7 @@ main
   height: 60px;
   margin: 10px;
   padding: 5px;
-  background-color: var(--card_background);
+  background-color: var(--card-background);
   border-radius : 20px;
 }
 .stack{
@@ -658,105 +537,4 @@ main
   max-width: 850px;
   margin-bottom: 50px;
   flex-wrap: wrap;
-}
-.contact_warp
-{
-  max-width: 80px;
-  display: flex;
-  width:100%;
-  flex-direction: column;
-  margin: 0 auto;
-  justify-content: space-between;
-}
-.cont_pic{
-  width: 100%;
-}
-.contact_img {
-  height: 80px;
-}
-//footer
-footer{
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-//DOCUMENT
-#document{
-  img{
-    
-    max-width: 100%;
-    width: auto;
-  }
-  .prettyprinted{
-    background: var(--card_background);
-    border :  gray 1px solid;
-    padding:25px 5px;
-    overflow: scroll;
-
-    code{
-      @mixin setCodeColor($white_color,$dark_color)
-      {
-        @media (prefers-color-scheme: dark) {
-          color:$dark_color ;
-    
-        }
-        @media (prefers-color-scheme: light) {
-          color: $white_color;
-        }
-      }
-      /*.kwd{
-        @include setCodeColor(rgb(0, 54, 105),rgb(88, 138, 204))
-      }*/
-      .pln{
-        @include setCodeColor(rgb(204, 156, 0),rgb(255, 252, 77))
-      }
-      /*.str{
-        @include setCodeColor(rgb(90, 77, 0),rgb(161, 119, 64))
-      }
-      .pun{
-        @include setCodeColor(rgb(0, 0, 0),rgb(255, 255, 255))
-      }
-      */
-    }
-  }
-  iframe{
-    width:100%;
-    height: 100%;
-  }
-  a{
-    color: var(--href_color);
-  }
-}
-.prettyprinted::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
-}
-//COMENT
-.comment{
-  position: relative;
-}
-.utterances-frame{
-}
-.comment_warp{
-  position: relative;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-
-//MARKDOWN
-
-//blockquote
-#document blockquote{
-  margin-left: 20px;
-  padding: 3px min(15px,1%);
-  background-color: var(--sub_postcard_color);
-  border-left: rgba(0, 0, 0, 1) 5px solid;
-}
-//math
-.katex-html{
-  display: none;
-}
-.katex{
-white-space: pre-wrap !important;
 }
