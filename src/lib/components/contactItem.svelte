@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte"
-    
+    import { darkMode } from "../../store.js"
     /**
     * @type {{
     *  link: string,
@@ -10,10 +10,15 @@
     *  other_link?: boolean
     * }}
     */
-    export const contactInfo = null;
-    
+    export let contactInfo;
     onMount(()=>{
-        console.log(contactInfo)
+        darkMode.subscribe((darkMode) => { 
+            if(darkMode == true) {
+                
+            } else {
+
+            }
+        })
     })
 </script>
 
@@ -24,6 +29,7 @@
     .contact_img {
         height: 80px;
     }
+
     .contact_warp
     {
         max-width: 80px;

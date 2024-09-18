@@ -3,7 +3,7 @@
 
 import { onMount } from 'svelte';
 import Router from 'svelte-spa-router';
-import { darkmode } from './store.js';
+import { darkMode } from './store.js';
 import Header from './lib/global/header.svelte';
 import routes from './lib/routers/route.js';
 import Footer from './lib/global/footer.svelte';
@@ -19,8 +19,9 @@ i18nInit();
 function changeTheme() {
     document.body.setAttribute('is_light',prefersDarkMode ? "dark":"light")
 }
+darkMode.set(prefersDarkMode)
 // 다크모드 변경시 이벤트
-darkmode.subscribe((darkMode) => { 
+darkMode.subscribe((darkMode) => { 
     if(darkMode!=undefined){
         prefersDarkMode=darkMode
     }
