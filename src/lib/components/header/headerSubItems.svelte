@@ -13,10 +13,26 @@ export let menuItem;
         display: flex;
         align-items: center;
     }
+    .submenu-item{
+        padding-bottom: 10px;
+        background-color: var(--background);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 15px;
+        z-index: 100;
+    }
+    .submenu-wrapper{
+        position: relative;
+        width: 100%;
+        border-bottom: 1px solid var(--font-color);
+    }
+
 </style>
-<div>
+<div class="submenu-wrapper">
     <a href={submenuInfo.url} use:link>
-        <div>
+        <div class="submenu-item">
             {#if !$isLoading}
             <p1>{$i18n(`menus.${menuItem}.${submenuInfo.name}`)}</p1>
             {/if}

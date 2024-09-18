@@ -8,6 +8,6 @@
 </style>
 
 <div>
-    <h1>{$i18n('about-me.title')}</h1>
-    <p>{$i18n('about-metabus-p1')}</p>
+    <h1>{$i18n('about.ai.title')}</h1>
+    <p>{$i18n('about.ai.p1')}</p>
 </div>

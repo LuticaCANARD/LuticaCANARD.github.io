@@ -28,7 +28,7 @@
     .header-item-parent{
         position: absolute;
         padding-bottom: 10px;
-        background-color: antiquewhite;
+        background-color: var(--background);
         width: 100%;
         display: flex;
         align-items: center;

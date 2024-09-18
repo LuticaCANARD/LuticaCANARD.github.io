@@ -15,7 +15,6 @@
         "contact": {
             "main":"Contact"
         }
-        
     },
     "settings":{
         "darkMode" : "Dark Mode"
@@ -23,5 +22,27 @@
     "about-me" : {
         "title" : "About Me",
         "p1" : "I am a software engineer with a passion for AI, web development."
+    },
+    "about":{
+        "metabus":{
+            "title":"Beyond Virtual, Beyond Real",
+            "subtitle": "Metabus",
+            "p1":{
+                "title":"Metabus",
+                "content":"Metabus"
+            }
+        },
+        "network":{
+            "title":"Network, Connecting To Everything",
+            "p1":"Network"
+        },
+        "web":{
+            "title":"Web Development",
+            "p1":"Web"
+        },
+        "ai":{
+            "title":"AI & Data",
+            "p1":"AI & Data"
+        }
     }
 }

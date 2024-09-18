@@ -9,6 +9,7 @@ import Footer from './lib/global/footer.svelte';
 import { _  as i18,isLoading } from 'svelte-i18n'
 import { params } from "svelte-spa-router";
 import { appInit } from './init.js';
+import { routePath } from './store.js';
 appInit();
 onMount(() => {
     
@@ -25,7 +26,12 @@ onMount(() => {
 {:else}
     <Header/>
     <main>
-        <Router routes={routes}/>
+        <Router 
+            routes={routes}
+            on:routeLoaded={(e) => {
+                $routePath = (e.detail.location)
+            }}
+        />
     </main>
     <Footer/>
 {/if}
