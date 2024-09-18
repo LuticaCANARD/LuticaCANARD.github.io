@@ -1,9 +1,10 @@
 
-@use 'scss/variables.scss' as *;
+@use 'scss/utils/variables.scss' as *;
 @forward 'scss/darkmode.scss';
 @forward 'scss/md.scss';
 @forward 'scss/ui.scss';
 @forward 'scss/footer.scss';
+@forward 'scss/utils/utils.scss';
 
 @media(max-width:$mobile-max-width){
     
@@ -130,10 +131,7 @@ main
 {
   position:relative;
 }
-.pointer
-{
-  cursor: pointer;
-}
+
 //POST CARDS
 .card_a{
   text-decoration: none;
@@ -190,24 +188,6 @@ main
 {
   width:100%;
 
-}
-.post_category{
-
-}
-.post_category_init{
-
-}
-.post_category_open{
-
-}
-.post_category_closed{
-  
-}
-.big_category_closed{
-  
-}
-.big_category_opened{
-  
 }
 .category_title_name{
   width: calc(100% - 80px);
@@ -399,10 +379,6 @@ main
 
 //STACKS 
 
-.need_invert{
-  filter:var(--make-dark);
-}
-
 #stack_groups
 {
   display: flex;
@@ -561,19 +537,4 @@ main
   max-width: 850px;
   margin-bottom: 50px;
   flex-wrap: wrap;
-}
-.contact_warp
-{
-  max-width: 80px;
-  display: flex;
-  width:100%;
-  flex-direction: column;
-  margin: 0 auto;
-  justify-content: space-between;
-}
-.cont_pic{
-  width: 100%;
-}
-.contact_img {
-  height: 80px;
 }

@@ -21,8 +21,7 @@
             "imglink" :"https://logos-world.net/wp-content/uploads/2021/04/VRChat-Emblem.png",
             "desc" : "VRCHAT",
             "need_invert" : true,
-            "otherlink" : true
+            "other_link" : true
         }
-
     ]
 }
