@@ -1,11 +1,12 @@
 <script>
-    import SpringImage from '../../../components/image/springImage.svelte'
+    import SpringComponent from '../../../components/springComponent.svelte'
     import { onMount } from 'svelte';
     import { _ as i18n,isLoading } from 'svelte-i18n'
     let scrolling;
     let innerWidth;
 
 
+    $: triggingOption = innerWidth > 1200 ? [{x:0,y:1400}] : Array.from({length: 1}, (_, i) => ({x:0,y:0}));
 </script>
 
 <style lang="scss">
@@ -40,16 +41,13 @@
         <h2>{$i18n('about.metabus.p1.title')}</h2>
         <p1>{$i18n('about.metabus.p1.content')}</p1>
 
-        <SpringImage 
-            imageSettings={{src:'/img/introduce/metabus_intro.png',alt:'metabus',style:'',class:'',curve:(s)=>{
-                return {
-                    x:s > 0 ? 0 : s,
-                    y:0
-                }
-            }}}
-            trigging={{x:0,y:innerWidth > 1200 ? 300 : 0}}
-        />
         <div style="height: 100vh;"></div>
+        <SpringComponent componentSettings={{style:'',class:'',curve:(s)=>{return {x:s,y:0}}}} trigging={triggingOption[0]}>
+            <img src="/img/introduce/metabus_intro.png" alt="metabus" style="height: 600px;">
+        </SpringComponent>
+        <div style="height: 100vh;"></div>
+
+        
 
     </div>
 </div>
