@@ -5,10 +5,8 @@
     import { _ as i18n,isLoading } from "svelte-i18n";
     import Loading from "../../components/loading.svelte"
     import { MOBILE_MAX_WIDTH } from "../../../constants";
+    import Banner from "../../../lib/components/banner.svelte"
 
-    onMount(()=>{
-        console.log("Contact")
-    })
     let innerWidth;
     let scrolling;
 </script>
@@ -22,6 +20,14 @@
     }
 </style>
 <svelte:window bind:scrollY={scrolling} bind:innerWidth={innerWidth}/>
+<Banner settings={{
+    img:'/img/introduce/contact.jpg',
+    style:'',
+    class:''
+}}>
+    <h1>{$i18n('contact.title')}</h1>
+    <h2>{$i18n('contact.subtitle')}</h2>
+</Banner>
 <div class="main-class">
     <h1>
         Contact
