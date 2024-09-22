@@ -17,7 +17,7 @@
       <div class="main-class">
         <h1>{$i18n('about-me.title')}</h1>
         <p>{$i18n('about-me.p1')}</p>
-        <p1>{$i18n('about-me.p2')}</p1>
+        <p>{$i18n('about-me.p2')}</p>
       </div>
     </div>
     <div>
