@@ -21,7 +21,22 @@
     },
     "about-me" : {
         "title" : "About Me",
-        "p1" : "I am a software engineer with a passion for AI, web development."
+        "subtitle" : "wondering the world",
+        "p1" : "저는 AI, 웹 개발에 열정을 가진 소프트웨어 엔지니어입니다.",
+        "p2" : "저는 넓은 세상에 대한 호기심으로, 이 세상에 없던 새로운 것을 만들어내는 도전을 좋아합니다.",
+        "history" : {
+            "title" : "경력",
+            "p1":{
+                "name":"주식회사 나노인터렉티브",
+                "date":"2022.04 ~ ",
+                "title" : "게임 개발자",
+                "desc" : "게임 회사" ,
+                "content" : {
+                    "c1" : "PHP, PGSQL, CSS등을 사용한 웹 게임 (ConquerX2) 개발 및 운영 지원 (2022.04 ~ )",
+                    "c2" : "Unity를 사용한 3D 모바일 게임 기획 및 개발 (2023.02 ~ ) "
+                }
+            }
+        }
     },
     "about":{
         "metabus":{
@@ -62,5 +77,10 @@
             "title":"AI & Data",
             "p1":"AI & Data"
         }
+    },
+    "contact":{
+        "toemail" : "이메일로 연락하기",
+        "title" : "Lutica Lab에 연락하기",
+        "subtitle" : "저는 세상을 바꿀 여러분들의 아이디어를 기다립니다."
     }
 }

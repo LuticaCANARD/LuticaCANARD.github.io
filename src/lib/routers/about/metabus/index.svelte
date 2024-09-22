@@ -1,6 +1,6 @@
 <script>
+    import Banner from '../../../components/banner.svelte'
     import SpringComponent from '../../../components/springComponent.svelte'
-    import { onMount } from 'svelte';
     import { _ as i18n,isLoading } from 'svelte-i18n'
     let scrolling;
     let innerWidth;
@@ -34,12 +34,10 @@
 </style>
 <svelte:window bind:scrollY={scrolling} bind:innerWidth={innerWidth}/>
 <div>
-    <div class="intro-main-picture" style={innerWidth > 1200 ? `background-position: center ${-scrolling*0.4}px` : 'background-position: center' }>
-        <div class="intro-main-title" >
-            <h1 style="color: white;">{$i18n('about.metabus.title')}</h1>
-            <h2 style="color: white;">{$i18n('about.metabus.subtitle')}</h2>
-        </div>
-    </div>
+    <Banner settings={{img:'/img/introduce/metabus_intro.png',style:'',class:''}} >
+        <h1>{$i18n('about.metabus.title')}</h1>
+        <h2>{$i18n('about.metabus.subtitle')}</h2>
+    </Banner>
     <div class="intro-main">
         <h2>{$i18n('about.metabus.p1.title')}</h2>
         <p1>{$i18n('about.metabus.p1.content')}</p1>

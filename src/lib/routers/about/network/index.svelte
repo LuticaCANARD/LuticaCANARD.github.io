@@ -1,4 +1,5 @@
 <script>
+    import Banner from '../../../../lib/components/banner.svelte'
     import { _ as i18n,isLoading } from 'svelte-i18n'
 
 </script>
@@ -7,12 +8,14 @@
 </style>    
 
 <div>
-    <div>
-        <div>
-            <h1>{$i18n('about.network.title')}</h1>
-            <h2>{$i18n('about.network.subtitle')}</h2>
-        </div>
-    </div>
+    <Banner settings={{
+        img:'/img/introduce/network.png',
+        style:'',
+        class:''
+    }}>
+        <h1>{$i18n('about.network.title')}</h1>
+        <h2>{$i18n('about.network.subtitle')}</h2>
+    </Banner>
     <div class="main-class">
         <div class="content-desc">
             <h2>{$i18n('about.network.p1.title')}</h2>

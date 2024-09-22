@@ -1,18 +1,22 @@
 <script>
-  import Loading from "../../../lib/components/loading.svelte"
+  import Banner from "../../../lib/components/banner.svelte"
+import Loading from "../../../lib/components/loading.svelte"
   import { onMount } from 'svelte';
   import { _  as i18n,isLoading } from 'svelte-i18n'
 </script>
-<style>
-.about-me{
-
-}
-</style>
 <div>
   {#if $isLoading}
     <Loading />
   {:else}
   <div>
+    <Banner settings={{
+        img:'/img/introduce/about-me.png',
+        style:'',
+        class:''
+    }}>
+        <h1>{$i18n('about-me.title')}</h1>
+        <h2>{$i18n('about-me.subtitle')}</h2>
+    </Banner>
     <div class="about-me">
       <div class="main-class">
         <h1>{$i18n('about-me.title')}</h1>
