@@ -4,7 +4,7 @@
      * @type {{
      * style: string,
      * class: string,
-     * curve?:(s:number)=>{x:number,y:number}
+     * curve?:(s:number)=>{x:number,y:number},
      * }}
      */
     export let componentSettings;
@@ -35,8 +35,12 @@
 </style>
 <svelte:window bind:scrollY={scrollY_} on:scroll={onScrollInterrupt} />
 
-<div class="spr-wrapper" style={ !ItWasShown ? componentSettings.style + `;transform:translate(${curveFunction(scrollY_ - trigging.y).x}px,${curveFunction(scrollY_ - trigging.y).y}px)` 
-    : componentSettings.style 
-} >
-    <slot/>
+<div class="spr-wrapper">
+    <div>
+        <div style={ !ItWasShown ? componentSettings.style + `;transform:translate(${curveFunction(scrollY_ - trigging.y).x}px,${curveFunction(scrollY_ - trigging.y).y}px)` 
+            : componentSettings.style 
+        } >
+            <slot/>
+        </div>
+    </div>
 </div>
