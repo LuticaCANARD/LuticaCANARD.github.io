@@ -17,7 +17,7 @@
     if( settings.class === undefined){
         settings.class = "";
     }
-    let heightTxt = settings.heightCSS ?? `${settings.height ?? 600}px`;
+    let finalHeight = settings.heightCSS ?? `${settings.height ?? 600}px`;
     $: innerWidth > MOBILE_HEADER_WIDTH ? 
     style = settings.style+`;background-image: url(${settings.img});background-size: cover; background-position: center ${-scrolling*0.4}px;height: ${heightTxt};` : 
     style = settings.style+`;background-image: url(${settings.img});background-size: cover;height: ${heightTxt};`;
