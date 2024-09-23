@@ -18,8 +18,12 @@
     let last_scroll = 0;
     $: mobile_menu_on = false;
     let goUp = false;
+    let landingPage = false;
+    $: showLanding = !landingPage || scroll_ > innerH;
     onMount(()=>{
         routePath.subscribe((val)=>{
+            if(val === '/')
+                landingPage = true;
             state_rel = false;
             scroll_ = 0;
             return;
@@ -124,6 +128,8 @@ bind:innerHeight={innerH} bind:outerHeight={boxHeight}/>
     }
 </style>
 {#key state_rel}
+{#key showLanding}
+{#if showLanding}
 <header class={state_rel ? "onMountTop" : "notMountTop"} style={goUp && state_rel ? 'transform:translate(0,-120px)' : ''}>
     {#if $isLoading}
     <!-- i18n Loading ....-->
@@ -183,5 +189,9 @@ bind:innerHeight={innerH} bind:outerHeight={boxHeight}/>
     {/if}
     
     {/if}
+
 </header>
+{/if}
+{/key}
+
 {/key}
