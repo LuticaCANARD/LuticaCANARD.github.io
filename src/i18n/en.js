@@ -15,7 +15,6 @@ export default {
             "web" : "Web",
             "network" : "Network",
             "main": "About Me",
-            "about": "About Me",
         },
         "contact": {
             "main":"Contact"

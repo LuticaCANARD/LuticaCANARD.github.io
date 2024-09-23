@@ -4,7 +4,7 @@
  *  "subtitle"? : string,
  * }} IntroTemplate
  * @typedef {{
- *      [K in `p${number}`] : string 
+ *   [K in `p${number}`] : string 
  * }} ParagraphTemplate
  * @typedef {{
  *   "toemail" : string,
@@ -12,7 +12,7 @@
  * } ContactTemplate
  * 
  * @typedef {{
- *      "darkMode" : string
+ *    "darkMode" : string
  * }
  * } SettingsTemplate
  * 
@@ -28,11 +28,10 @@
  *      "web" : string,
  *      "network" : string,
  *      "main" : string,
- *      "about" : string
  * },
  * "contact" : {
  *      "main" : string
- * },}} MenuTemplate
+ * }}} MenuTemplate
  * 
  * @typedef {{
  *   "tab-name" : string,
