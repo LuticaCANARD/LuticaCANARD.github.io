@@ -1,8 +1,9 @@
 /**
+ * @typedef {import('./i18nTypes.mjs').TranslateTemplate} TranslateTemplate
  * @type {TranslateTemplate} 
  */
 export default{
-    "main-title": "Lutica Lab",
+    "tab-name": "Lutica Lab",
     "error404" : "원하는 페이지를 찾을 수 없습니다.",
     "menus":{
         "home": {

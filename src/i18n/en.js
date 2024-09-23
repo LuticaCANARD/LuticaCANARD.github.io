@@ -1,8 +1,9 @@
 /**
+ * @typedef {import('./i18nTypes.mjs').TranslateTemplate} TranslateTemplate
  * @type {TranslateTemplate} 
  */
 export default {
-    "main-title": "Lutica Lab",
+    "tab-name": "Lutica Lab",
     "error404" : "404 Not Found",
     "menus":{
         "home": {
@@ -13,7 +14,8 @@ export default {
             "metabus" : "Metabus",
             "web" : "Web",
             "network" : "Network",
-            "main": "About Me"
+            "main": "About Me",
+            "about": "About Me",
         },
         "contact": {
             "main":"Contact"
