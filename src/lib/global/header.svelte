@@ -9,6 +9,7 @@
     import SetDarkmodeButton from '../components/setDarkmodeButton.svelte'
     import {routePath} from '../../store.js'
     import MobileHeader from '../components/header/moblie/mobileHeader.svelte'
+  import UtilButtons from '../components/header/utilButtons.svelte'
     const menu = HeaderData;
     $: innerW = 0; 
     $: scroll_ = 0;
@@ -24,6 +25,8 @@
         routePath.subscribe((val)=>{
             if(val === '/' || val === '')
                 landingPage = true;
+            else
+                landingPage = false;
             state_rel = false;
             scroll_ = 0;
             return;
@@ -150,10 +153,7 @@ bind:innerHeight={innerH} bind:outerHeight={boxHeight}/>
             <HeaderItem displayHeader={item} />
             {/each}
         </ul>
-        <div>
-            <LangChoice />
-            <SetDarkmodeButton />
-        </div>
+        <UtilButtons/>
     </nav>
     
     {:else}
@@ -181,10 +181,7 @@ bind:innerHeight={innerH} bind:outerHeight={boxHeight}/>
     {#if mobile_menu_on}
     <div>
         <MobileHeader menuInfo={menu} />
-        <div>
-            <LangChoice />
-            <SetDarkmodeButton />
-        </div>
+        <UtilButtons/>
     </div>
     {/if}
     

@@ -6,8 +6,17 @@ import en from '../i18n/en';
 export default ()=>{
     addMessages('ko', ko);
     addMessages('en', en);
+    const supportedLanguages = ['ko', 'en'];
+    let userLang = getLocaleFromNavigator();
+    if(!userLang){
+        userLang = 'ko';
+    }
+    if(!supportedLanguages.includes(userLang)){
+        userLang = userLang.split('-')[0];
+    }
+
     init({
         fallbackLocale: 'ko',
-        initialLocale: getLocaleFromNavigator(),
+        initialLocale: userLang,
     })
 } 
