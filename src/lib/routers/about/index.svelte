@@ -1,6 +1,6 @@
 <script>
   import Banner from "../../../lib/components/banner.svelte"
-import Loading from "../../../lib/components/loading.svelte"
+  import Loading from "../../../lib/components/loading.svelte"
   import { onMount } from 'svelte';
   import { _  as i18n,isLoading } from 'svelte-i18n'
 </script>
