@@ -1,5 +1,9 @@
-{
-    "main-title": "Lutica Lab",
+/**
+ * @typedef {import('./i18nTypes.mjs').TranslateTemplate} TranslateTemplate
+ * @type {TranslateTemplate} 
+ */
+export default {
+    "tab-name": "Lutica Lab",
     "error404" : "404 Not Found",
     "menus":{
         "home": {
@@ -10,7 +14,7 @@
             "metabus" : "Metabus",
             "web" : "Web",
             "network" : "Network",
-            "main": "About Me"
+            "main": "About Me",
         },
         "contact": {
             "main":"Contact"
@@ -77,10 +81,14 @@
             "title":"AI & Data",
             "p1":"AI & Data"
         }
-    }
+    },
     "contact":{
         "toemail" : "이메일로 연락하기",
         "title" : "Lutica Lab에 연락하기",
         "subtitle" : "저는 세상을 바꿀 여러분들의 아이디어를 기다립니다."
+    },
+    "landing":{
+        "title":"Lutica Lab",
+        "subtitle":"wondering the world"
     }
 }

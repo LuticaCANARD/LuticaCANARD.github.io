@@ -136,7 +136,7 @@ bind:innerHeight={innerH} bind:outerHeight={boxHeight}/>
                 <img src="/img/logo/logo.png" alt="logo of Lutica Lab">
             </a>
             <a href="/" use:link class="linknone">
-                <h2 class="linknone">{$i18('main-title')}</h2>
+                <h2 class="linknone">{$i18('tab-name')}</h2>
             </a>
         </div>
         <ul>
@@ -159,7 +159,7 @@ bind:innerHeight={innerH} bind:outerHeight={boxHeight}/>
             </a>
             {#if innerW > 200}
             <a href="/" use:link class="linknone">
-                <h2 class="linknone">{$i18('main-title')}</h2>
+                <h2 class="linknone">{$i18('tab-name')}</h2>
             </a>
             {/if}
             

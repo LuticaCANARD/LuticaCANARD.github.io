@@ -1,5 +1,9 @@
-{
-    "main-title": "Lutica Lab",
+/**
+ * @typedef {import('./i18nTypes.mjs').TranslateTemplate} TranslateTemplate
+ * @type {TranslateTemplate} 
+ */
+export default{
+    "tab-name": "Lutica Lab",
     "error404" : "원하는 페이지를 찾을 수 없습니다.",
     "menus":{
         "home": {
@@ -10,7 +14,6 @@
             "metabus" : "Metabus",
             "web" : "Web",
             "network" : "Network",
-            "about": "About Me",
             "main" : "소개"
         },
         "contact": {
@@ -36,7 +39,8 @@
                     "c1" : "PHP, PGSQL, CSS등을 사용한 웹 게임 (ConquerX2) 개발 및 운영 지원 (2022.04 ~ )",
                     "c2" : "Unity를 사용한 3D 모바일 게임 기획 및 개발 (2023.02 ~ ) "
                 }
-            }
+            },
+            
         },
         "education" : {
             "title" : "학력",
@@ -111,6 +115,10 @@
     "contact":{
         "toemail" : "이메일로 연락하기",
         "title" : "Lutica Lab에 연락하기",
-        "subtitle" : "저는 세상을 바꿀 여러분들의 아이디어를 기다립니다."
+        "subtitle" : "저는 세상을 바꿀 여러분들의 아이디어를 기다립니다.",
+    },
+    "landing":{
+        "title":"Lutica Lab",
+        "subtitle":"wondering the world"
     }
 }

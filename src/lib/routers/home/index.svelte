@@ -9,7 +9,7 @@
         img:'/img/welcome.png',
         style:'',
         class:'',
-        height: 550
+        heightCSS:'calc(100vh - 220px)' // 220px is the height of the header and footer
     }}>
         <h1>{$i18n('landing.title')}</h1>
         <h2>{$i18n('landing.subtitle')}</h2>
