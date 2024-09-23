@@ -19,8 +19,8 @@
     }
     let finalHeight = settings.heightCSS ?? `${settings.height ?? 600}px`;
     $: innerWidth > MOBILE_HEADER_WIDTH ? 
-    style = settings.style+`;background-image: url(${settings.img});background-size: cover; background-position: center ${-scrolling*0.4}px;height: ${heightTxt};` : 
-    style = settings.style+`;background-image: url(${settings.img});background-size: cover;height: ${heightTxt};`;
+    style = settings.style+`;background-image: url(${settings.img});background-size: cover; background-position: center ${-scrolling*0.4}px;height: ${finalHeight};` : 
+    style = settings.style+`;background-image: url(${settings.img});background-size: cover;height: ${finalHeight};`;
 </script>
 <style lang="scss">
     .intro-main-picture{
