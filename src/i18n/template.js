@@ -19,5 +19,9 @@
  * }
  * } SettingsTemplate
  * 
- * @typedef {ContactTemplate & SettingsTemplate & any} TranslateTemplate
+ * @typedef {{
+ *    "landing" : IntroTemplate
+ * }} LandingTemplate
+ * 
+ * @typedef { ContactTemplate & SettingsTemplate & LandingTemplate & any } TranslateTemplate
  */

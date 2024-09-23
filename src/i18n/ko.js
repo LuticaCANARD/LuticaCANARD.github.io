@@ -115,5 +115,9 @@ export default{
         "toemail" : "이메일로 연락하기",
         "title" : "Lutica Lab에 연락하기",
         "subtitle" : "저는 세상을 바꿀 여러분들의 아이디어를 기다립니다."
+    },
+    "landing":{
+        "title":"Lutica Lab",
+        "subtitle":"wondering the world"
     }
 }
