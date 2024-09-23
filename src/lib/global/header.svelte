@@ -22,7 +22,7 @@
     $: showLanding = !landingPage || scroll_ > innerH;
     onMount(()=>{
         routePath.subscribe((val)=>{
-            if(val === '/')
+            if(val === '/' || val === '')
                 landingPage = true;
             state_rel = false;
             scroll_ = 0;
