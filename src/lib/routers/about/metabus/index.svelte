@@ -44,7 +44,10 @@
 
         <div style="height: 100vh;"></div>
         <SpringComponent componentSettings={{style:'',class:'',curve:(s)=>{return {x:s,y:0}}}} trigging={triggingOption[0]}>
-            <img src="/img/introduce/metabus_intro.png" alt="metabus" style="height: 600px;"/>
+            <div style="position: relative;">
+                <img src="/img/introduce/metabus_intro.png" alt="metabus" style="height: 600px;"/>
+                <p style="position: absolute; top:20px; left:20px;">테스트임 ㅋㅋ</p>
+            </div>
         </SpringComponent>
         <div style="height: 100vh;"></div>
         <SpringComponent componentSettings={{style:'position:relative;left:100px',class:'',curve:(s)=>{return {x:-s,y:0}}}} trigging={triggingOption[1]}>
