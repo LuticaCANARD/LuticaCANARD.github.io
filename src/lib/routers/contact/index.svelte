@@ -18,6 +18,11 @@
         display: grid;
         grid-gap: 20px;
     }
+    .send-email{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
 </style>
 <svelte:window bind:scrollY={scrolling} bind:innerWidth={innerWidth}/>
 <Banner settings={{
@@ -40,9 +45,11 @@
     {#if $isLoading}
         <Loading />
     {:else}
+    <div class="send-email">
         <a href="mailto:presan100@gmail.com" class="linknone">
             <h2>{$i18n('contact.toemail')}</h2>
         </a>
+    </div>
     {/if}
 
 
