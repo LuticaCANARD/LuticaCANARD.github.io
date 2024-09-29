@@ -54,7 +54,6 @@
             <img src="/img/introduce/metabus_intro.png" alt="metabus" style="height: 600px;"/>
         </SpringComponent>
         <div style="height: 100vh;"></div>
-
         
 
     </div>

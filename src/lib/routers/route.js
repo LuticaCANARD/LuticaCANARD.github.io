@@ -6,6 +6,7 @@ import MetabusIntroduce from '../routers/about/metabus/index.svelte'
 import AIDataIntroduce from '../routers/about/AIData/index.svelte'
 import NetworkIntroduce from '../routers/about/network/index.svelte'
 import WebIntroduce from '../routers/about/web/index.svelte'
+import Blackjack from '../routers/game/blackjack/index.svelte'
 
 export default {
     '/' : Home,
@@ -14,6 +15,7 @@ export default {
     '/about/AIData'  : AIDataIntroduce,
     '/about/Network' : NetworkIntroduce,
     '/about/Web'     : WebIntroduce,
-    '/contact' : Contact,
+    '/contact'       : Contact,
+    '/game/blackjack': Blackjack,
     '*' : ErrorPage
 }
